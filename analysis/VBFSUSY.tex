@@ -48,11 +48,51 @@ The processes taken into account are
 pp \longrightarrow \charginopm \charginomp jj, \quad pp \longrightarrow \charginopm \neutralinotwo jj, \quad pp \longrightarrow \neutralinotwo \neutralinotwo
 \end{equation}
 
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.75\textwidth]{analysis/pics/VBFXsection.png}
+	\end{tabular}
+	\caption{VBF production cross-section at \CM = 8 \tev as a function of mass for various channels after imposing \ensuremath{\deltaeta > 4.2} using Madgraph 4.}
+	\label{fig:VBF_xsec}
+\end{figure}
 
-The search strategy is based on two important steps: the first one is the reduction of the background contributions coming from V + jets events (where V is ether the W or Z boson) using the VBF properties of the event; the second is the usage of the properties of the centrally produces supersymmetric particles in order to reduce the all the non-supersymmetric background contributions.
+The cross-section prediction for those processes are summarized in Figure \ref{fig:VBF_xsec} as function of the \charginomp - \neutralinotwo mass.
 
-The main feature of VBF processes is the production of two jets aimed at the forward-backward region of the detector with high \pt and large \deltaeta. By adding in the event selection the requirements on the di-jet \deltaeta as well as the di-jet invariant mass \ensuremath{m_{j_{1}j_{2}}} the background contribution coming from V+jets and \ttbar is kepts under control. 
+Te search strategy can be divided in 2 distinct parts: the first one considers the kinematic of the jets produced via VBF in order to reduce the contribution coming  from V + jets events (where V is ether the W or Z boson); the second one takes into account the properties of the supersymmetric particles falling into the inner region of the detector (centrally produced) in order to reduce the all the non-supersymmetric background contributions.
 
-(1) VBF processes: VBF processes are characterised by the production of two energetic jets produced in the forward-backward regions with large|∆η|. Requirements on |∆η| as well as Mj1j2, where Mj1j2 is the dijet invariant mass, are eﬀective in reducing V +jets and tt background events, where the jets are less energetic and more central. Moreover, the leading jet is expected to have high pT since the incoming partons need signiﬁcant momentum to create a pair of heavy supersymmetric states. This motivates a pT cut on the leading jet to reduce background.
+The main feature of VBF processes is the production of two jets aimed at the forward-backward region of the detector with high \pt and large \deltaeta. By adding in the event selection the requirements on the di-jet \deltaeta as well as the di-jet invariant mass \ensuremath{m_{j_{1}j_{2}}} the background contribution coming from V+jets and \ttbar events is kept under control. In order to generate supersymmetric particles, the incoming partons need to have an high momentum, therefore the leading jet from the VBF-produced di-jet pair is expected to have high \pt. The addition of a \pt cut on leading jets keeps further reduces background contributions. Figure \ref{fig:VBF_mjj_ptj1} shows an early study on \ensuremath{m_{j_{1}j_{2}}} and leading jet \pt distributions for for \charginopm \charginopm pair production by VBF processes, V+jets background, and VV background produced by VBF processes.
 
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.50\textwidth]{analysis/pics/VBFDiJetMass.png}
+		\includegraphics[width=0.50\textwidth]{analysis/pics/VBFFirstLeadingJetPt.png} 		
+	\end{tabular}
+	\caption{\ensuremath{m_{j_{1}j_{2}}} (left) and \pt of the leading jet (right) distributions normalized to arbitrary units for \charginopm \charginopm pair production by VBF processes, V+jets background, and VV background produced by VBF processes.}
+	\label{fig:VBF_mjj_ptj1}
+\end{figure}
+
+
+The remaining background contributions come from all the centrally produced particles. By considering an R-parity conserving model the decay of \charginopm and \neutralinotwo is the following
+
+\begin{equation}
+ \charginopm \longrightarrow \stau^{\pm} \nu \longrightarrow \tau^{\pm} \neutralinoone \nu
+\end{equation}
+
+\begin{equation}
+\neutralinotwo \longrightarrow \stau^{\pm} \tau^{\mp} \longrightarrow \tau^{\pm} \tau^{\mp} \neutralinoone
+\end{equation}
+
+The \neutralinoone LSP travels through the detector undetected increasing \met. The processes that mimics signal are all the VV (where V may be wither W or Z) pairs produced via VBF where the bosons decays leptonically. A \met cut is eﬀective in reducing this background as shown on Figure \ref{fig:VBF_met_pttau}. Moreover, requiring multiple $\tau$’s in the event further reduces background. The \pt of the \ensuremath{\tau} coming from the \charginopm and \neutralinotwo decays is strongly correlated to the mass difference between the \charginopm and the \neutralinoone LSP. In Figure \ref{fig:VBF_met_pttau}, the normalized distribution of the \pt of \ensuremath{\tau} is displayed for \ensuremath{\Delta M = m_{\charginopm} - m_{\neutralinoone} =} 30 \gev and 15 \gev. For smaller \ensuremath{\Delta M}, the distribution peaks at lower \pt and the signal acceptance is less efficient.
+
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.50\textwidth]{analysis/pics/VBFMet.png}
+		\includegraphics[width=0.50\textwidth]{analysis/pics/Pheno_VBF_TauPt.png} 		
+	\end{tabular}
+	\caption{(left) \met distribution normalized to arbitrary units for \charginopm \charginopm pair production by VBF processes, V+jets background, and VV background produced by VBF processes. (right) \pt of \ensuremath{\tau} distribution normalized to arbitrary units in \ensuremath{\geq 2j + 2\tau} ﬁnal state for \ensuremath{\Delta M = m_{\charginopm} - m_{\neutralinoone} =} 30 \gev and 15 \gev.}
+	\label{fig:VBF_met_pttau}
+\end{figure}
 
