@@ -1,9 +1,29 @@
+\section{The Analysis Strategy}
 
-\clearpage
+The most important aspect of any SUSY analysis is the methodology used to estimate the background contribution in the signal region. The first step consists in the determination of all the main background sources and the definition of an estimation technique for each of the contributions. 
 
-\section{Event Selection}
+In the Standard Model, all small processes leading to like-sign di-$\hadtau$ final states have small cross sections. On the other hand production of QCD events in a hadron collider has large cross sections. Therefore, even small fake jet-$\hadtau$ fake rates from QCD processes, matter. Also, in QCD events, additional jet activity from initial or final jet radiation processes is expected, which gives these type of events a high probability to pass the VBF selection criteria. Those motivations lead to the determination of QCD as main background source for this analysis. 
 
-The di-\hadtau channels suffer from huge QCD multijet background, with a rate several orders of magnitude larger than the rate in other channels.  Hence this mode, more than any of the others, relies on the efficient background rejection. Fortunately, the VBF and \met selections provide the required background suppression.
+The Monte Carlo simulation of QCD events is not reliable due to the complicated modeling of the interactions at the partonic level and the complex fragmentation processes of the resulting jets. Therefore the decision to use a data-driven approach. The number of QCD events in signal region (SR) is estimated directly from data from a defined control region (CR) using the proper correction factor. This correction factor can be properly measured in other exclusive control regions. 
+
+
+The following formula gives a simple description of the whole methodology:
+
+\begin{equation}
+N^{QCD}_{SR} =  N^{DATA}_{CR} * CF
+\label{eq:qcdbgpred_simple}
+\end{equation} 
+
+where $N^{QCD}_{SR}$ is the number of QCD events predicted in the signal region, $N^{DATA}_{CR}$ is the number of data events in the control region and CF is the correction factor. 
+
+\todo{Better rephrasing}
+Minor contributions are expected from background sources like VV, W+jets, \ttbar, Drell-Yan and Higgs. 
+
+Further details on the event selection, the  data-driven method and the control regions definition is given in the next section.
+
+\subsection{Event Selection}
+
+As mentioned in the chapter introduction the di-\hadtau channel suffers from huge QCD multijet background, with a rate several orders of magnitude larger than the rate in other channels.  Hence this mode, more than any of the others, relies on the efficient background rejection. Fortunately, the VBF and \met selections provide the required background suppression.
 %QCD multijet is the prevailing background in this particular channel ($\sim 65-70 \%$ of the total BG).
 %Apart from QCD jets, the other prevailing backgrounds are Drell-Yan processes giving rise to tau leptons. 
 %As it will be shown later, a semi-clean $Z \to \tau\tau$ sample can be obtained with very small (and well
@@ -17,21 +37,31 @@ Similarly to what explained on Section \ref{section::search_strategy}, the event
 The main differences with the other VBF SUSY searches with final states to light leptons, are the substantially tighter \hadtau requirements targeting at the suppression of QCD jet background and the looser missing transverse energy (\met) requirement, to recover some of the signal acceptance lost due to the larger discriminator based on isolation
 $\hadtau$ \pt thresholds needed to stay efficient with respect to the trigger.  
 
-The selected events are required to have at least two Hadron-Plus-Strips (HPS) \hadtau with \pt of 45 \gev and a pseudorapidity of $|\eta| \le 2.1$ in order to ensure that both tracks are reconstructed fully within the acceptance of the tracking system. In addition, a \hadtau is required to have exactly one signal charged hadron with \pt = 5 \gev. Higher multiplicity $\hadtau$ are constrained by the trigger. Each of the \hadtau candidates is also required to fulfill the reconstruction and identification criteria described on Table~\ref{table:tauobjdefinition}. Specifically a \hadtau candidate is required to pass through a number of discriminators for the proper identification. They are:
-i) {\textit DecayModeFindingNewDMs} (ii) {\textit byTightIsolationMVA3newDMwLT}: BDT based tauID discriminator based on isolation, \pt and $\tau$ lifetime information, trained on 1-prong, 2-prong and 3-prong \hadtau candidates. (iii) {\textit againstElectronMediumMVA5}: MVA based discriminator to reject electrons faking taus. (iv) {\textit againstMuonLoose3}: to reject $\mu$ faking $\tau$. The like sign \hadtau candidates with the highest \pt and separated from each other by a minimum \deltar = 0.3 are then chosen to form a di-\hadtau candidate. 
+The selected events are required to have at least two Hadron-Plus-Strips (HPS) \hadtau with \pt of 45 \gev and a pseudorapidity of $|\eta| \le 2.1$ in order to ensure that both tracks are reconstructed fully within the acceptance of the tracking system. In addition, a \hadtau is required to have exactly one signal charged hadron with \pt = 5 \gev. Higher multiplicity \hadtau are constrained by the trigger. Each of the \hadtau candidates is also required to fulfill the reconstruction and identification criteria described on Table~\ref{table:tauobjdefinition}. Specifically a \hadtau candidate is required to pass through a number of discriminators for the proper identification. They are:
+
+\begin{itemize}
+	
+\item {\textit DecayModeFindingNewDMs} 
+\item {\textit byTightIsolationMVA3newDMwLT}: BDT based tauID discriminator based on isolation, \pt and $\tau$ lifetime information, trained on 1-prong, 2-prong and 3-prong \hadtau candidates. 
+\item {\textit againstElectronMediumMVA5}: MVA based discriminator to reject electrons faking taus. 
+\item {\textit againstMuonLoose3}: to reject $\mu$ faking $\tau$. 
+
+\end{itemize}
+
+The like sign \hadtau candidates with the highest \pt and separated from each other by a minimum \deltar = 0.3 are then chosen to form a di-\hadtau candidate. 
 Further, to reduce top pair contamination the event is required not to have any jet identified as a b--quark jet by the b--tagging algorithms using the {\textit combined secondary vertex loose} (CSVL) working point. Only jets with \pt $\ge 30 \gev$ and separated from the taus in the $\hadtau\hadtau$ pairs by $\Delta R \ge 0.3$ are searched for b--tags. The higher \pt cut of 30 $\gev$ on b-jets (a looser veto requirement than other analyses with light leptons) allows us to be more efficient with respect to the signal since the higher \pt threshold on taus reduces the contamination of $t\overline{t}$ to a large extent. Further, the event is required to have at least 30 \gev of \met. All the above described selections is what will be referred as {\textit central selections}.
 
-Subsequently, the following event-wide requirements are imposed. The {\textit {VBF selections}} are imposed by requiring at least two jets with \pt = 30 \gev and absolute pseudorapidity $|\eta| \le 5.0$. Only jets separated from the leptons in the \hadtau\hadtau pair by $\deltar \ge 0.3$ are considered. All jet candidates passing the above requirements and having $\vert \Delta\eta \vert \ge 4.2$ and $\eta_{1}\cdot\eta_{2} < 0$ are combined to form di-jet candidates.
+Subsequently, the following event-wide requirements are imposed. The {\textit {VBF selections}} are imposed by requiring at least two jets with \pt = 30 \gev and absolute pseudorapidity $|\eta| \le 5.0$. Only jets separated from the leptons in the \hadtau\hadtau pair by $\deltar \ge 0.3$ are considered. All jet candidates passing the above requirements and having $\vert \Delta\eta \vert \ge 4.2$ and $\eta_{1}\cdot\eta_{2} < 0$ are combined to form di-jet candidates. The final and the most important of the requirement is an invariant mass of the di-jet candidate, namely \mjj, above the threshold of 250 \gev. In order to max the event acceptance the analysis code algorithm takes into account every possible di-jet candidate combination and chooses the one that best passes the VBF requirements and has the highest \mjj. 
 
-The selection criteria are summarized the following way:
+For better visualization and understanding all the selection criteria are summarized the following way:
 
 \begin{itemize}
 	\item \textbf{Central selection}
 	\begin{itemize}
 		\item Trigger: HLT\_DoubleMediumIsoPFTau35\_Trk*\_eta2p1\_Prong1\_v*
-		\item 2 one-prong hadronically decaying $\tau$ with $p_{T}^{\tau}\geq45~$GeV 
+		\item 2 one-prong hadronically decaying $\tau$ with $p_{T}^{\tau}\geq45~$\gev 
 		\item $\met > $ 30
-		\item at least 2 jets with $p_{T}^{jet}\geq30~$GeV, $|\eta_{jet}|\leq5$ and loose jetID
+		\item at least 2 jets with $p_{T}^{jet}\geq30~$\gev, $|\eta_{jet}|\leq5$ and loose jetID
 		\item $\Delta R(jet,\tau)\geq0.3$
 		\item b-tag veto
 	\end{itemize}
@@ -39,29 +69,88 @@ The selection criteria are summarized the following way:
 	\begin{itemize}
 		\item $|\Delta\eta(jet,jet)| > 4.2$
 		\item $sign(\eta^{jet 1}\cdot\eta^{jet 2})==-1$
-		\item $M^{jet,jet}>250~$GeV
+		\item $\mjj>250~$\gev
 	\end{itemize}
 \end{itemize}
 
-\section{The Analysis Strategy}
-
-The most important aspect of any SUSY analysis is the methodology used to estimate the background contribution in the signal region. The first step consists in the determination of all the main background sources and the definition of an estimation technique for each of the contributions. 
-
-In the Standard Model, all small processes leading to like-sign di-$\hadtau$ final states have small cross sections. On the other hand production of QCD events in a hadron collider has large cross sections. Therefore, even small fake jet-$\hadtau$ fake rates from QCD processes, matter. Also, in QCD events, additional jet activity from initial or final jet radiation processes is expected, which gives these type of events a high probability to pass the VBF selection criteria. Those motivations lead to the determination of QCD as main background source for this analysis. 
-
-The Monte Carlo simulation of QCD events is not reliable due to the complicated modeling of the interactions at the partonic level and the complex fragmentation processes of the resulting jets. Therefore the decision to use a data-driven approach. The number of QCD events in signal region (SR) is estimated directly from data from a defined control region (CR) using the proper correction factor. This correction factor can be properly measured in other exclusive control regions. The following formula gives a simple description of the whole methodology:
-
-\begin{equation}
-N^{QCD}_{SR} =  N^{DATA}_{CR} * CF
-\label{eq:qcdbgpred_simple}
-\end{equation} 
-
-where $N^{QCD}_{SR}$ is the number of QCD events predicted in the signal region, $N^{DATA}_{CR}$ is the number of data events in the control region and CF is the correction factor. 
-
-\todo{Better rephrasing}
-The other background sources such as VV, W+jets, \ttbar, Drell-Yan and Higgs are stupid so we don't give a shit about it.   
-Further details on this data-driver method and the control regions definition is given in the next section.
 \subsection {LS-di-Tau Data-Driven QCD background prediction} \label{sec:bgestimation}
+
+The previously introduced estimation method has been developed under the following assumptions:
+\begin{itemize}
+	\item[1] all control regions are QCD dominated;
+	\item[2] $\epsilon^{QCD}_{VBF}$ is independent from any trigger efficiency concerning $\hadtau$ isolation such that each contribution to the numerator and denominator cancels out;
+	\item[3] $\epsilon^{QCD}_{VBF}$ is independent from ant MET cut applied in order to reduce QCD background contributions. 
+\end{itemize}
+
+Details and results on the validation process done for all the statements is given in Section \ref{QCD_bg_pred_validation}.
+
+This method is based on the use of exclusive control regions as shown on Figure \ref{fig:crs} defined by 2 variables:
+
+\begin{enumerate}
+	\item \textbf{Tau Isolation Discriminator}: Each reconstructed $\hadtau$ must fulfill the standard object selection criteria as defined on Table \ref{table:tauobjdefinition}. Additionally, $\tau's$ are separated (classified) using different isolation side bands, namely:
+	
+	\begin{enumerate}
+		\item Tight or T isolated $\hadtau$ for \texttt{byTight\-IsolationMVA3newDMwLT};
+		\item Medium or M isolated $\hadtau$ for \texttt{byMedium\-IsolationMVA3newDMwLT} but failed \texttt{byTight\-IsolationMVA3newDMwLT};
+		\item Loose or L isolated $\hadtau$  for \texttt{byLoose\-IsolationMVA3newDMwLT} but failed \texttt{byTight\-IsolationMVA3newDMwLT} and \texttt{byMedium\-IsolationMVA3newDMwLT}.
+	\end{enumerate}
+	
+	Each event with a successfully reconstructed LS di-$\tau$ pair falls into a exclusive isolation region as shows on Figure \ref{fig:tauisoregions}:
+	
+	\begin{itemize}
+		\item SR or signal region consisting of 2 tight isolated $\hadtau$;
+		\item 1T or One Tight isolated $\hadtau$ region consisting of one tight isolated $\hadtau$ and an additional medium or loose isolated $\hadtau$;
+		\item AT or Anti Tight isolation region consisting of at least one medium isolated $\hadtau$ and an additional medium or loose isolated $\hadtau$;
+		\item AM or Anti Medium isolation region consisting of 2 loose isolated $\hadtau$.
+	\end{itemize}
+	
+	\begin{figure}[tbh!]
+		\centering
+		\begin{tabular}{cc}
+			\includegraphics[width=0.75\textwidth]{PLOTS/diTauHadLSotherPlots/tauisoregions.png}
+		\end{tabular}
+		\caption{Definitions of the exclusive isolation region depending on the isolation of each of the $\hadtau$ where SR is Signal Region consisting of 2 tight isolated $\hadtau$, 1T is One Tight isolated Tau region consisting of one tight isolated $\hadtau$ and an additional medium or loose isolated $\hadtau$, AT is Anti Tight isolation region consisting of at least one medium isolated $\hadtau$ and an additional medium or loose isolated $\hadtau$,  AM is Anti Medium isolation region consisting of 2 loose isolated $\hadtau$}
+		\label{fig:tauisoregions}
+	\end{figure}
+	
+	\item \textbf{Inversion of the VBF Cuts}: We define a second dimension of exclusivity using VBF cuts described in \ref{sec:eventselection}. The regions are defined the following way:
+	
+	\begin{enumerate}
+		\item VBF region: consisting of all the events that passed all VBF cuts previously mentioned;
+		\item VBF inverted region: consisting of all the events that at least fails one of the VBF cuts previously mentioned;
+	\end{enumerate} 
+\end{enumerate}
+
+Using these definitions, we define one signal region and 7 control regions, shown in Figure \ref{fig:crs}. In order to keep the QCD background contribution low in signal region and control region 2 an additional cut of  MET $ > $ 30 GeV is required. 
+
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.75\textwidth]{PLOTS/diTauHadLSotherPlots/controlregions.png}
+	\end{tabular}
+	\caption{Definition of Signal and Control Regions using different $\hadtau$ isolation criteria and VBF selection.}
+	\label{fig:crs}
+\end{figure}
+
+The signal and control regions are define under the assumption of central selection being orthogonal to VBF selection. Figure \ref{fig:LS_mjjshapestab_vs_tauiso_data} and \ref{fig:LS_mjjshapestab_vs_tauiso_mc} shows the results of the stability study of $M_{jj}$ shape distribution among different $\tau$ isolation sidebands for Data and MC. Further studies are shown in Section \ref{subsubsec:shapecomp}.
+
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.75\textwidth]{PLOTS/diTauHadLSotherPlots/LS_mjjshapestab_vs_tauiso_data.pdf}
+	\end{tabular}
+	\caption{$M_{jj}$ shape comparisons among different $\tau$ isolation sidebands for Data (CR3, CR5, CR7)}
+	\label{fig:LS_mjjshapestab_vs_tauiso_data}
+\end{figure}
+
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.75\textwidth]{PLOTS/diTauHadLSotherPlots/LS_mjjshapestab_vs_tauiso_mc.pdf}
+	\end{tabular}
+	\caption{$M_{jj}$ shape comparisons among different $\tau$ isolation sidebands for all MC contributions (CR3, CR5, CR7)}
+	\label{fig:LS_mjjshapestab_vs_tauiso_mc}
+\end{figure}
 
 The estimation of the events in the signal region is done similarly to any other data driven ABCD method by counting the number of events in CR2 (two $\tau$ with tight isolation and inverted VBF selection criteria) and multiplying it with a proper conversion factor described in the following equation:
 
@@ -70,14 +159,7 @@ N^{QCD}_{SR} = \left( N^{DATA}_{CR2} - N^{\overline{QCD} BG}_{CR2} \right) * \le
 \label{eq:qcdbgpred}
 \end{equation}
 
-where:
-
-\begin{itemize}
-	\item $N^{QCD}_{SR}$ is the number of QCD events predicted in the signal region;
-	\item  $N^{DATA}_{CR2}$ is the number of data events in control region 2;
-	\item $N^{\overline{QCD} BG}_{CR2}$ is the number of all non-QCD MC samples events in control region 2;
-	\item $\epsilon^{QCD}_{VBF}$ is the efficiency of VBF cuts in a given Tau isolation region derived with the following equation.
-\end{itemize}
+where $N^{QCD}_{SR}$ is the number of QCD events predicted in the signal region, $N^{DATA}_{CR2}$ is the number of data events in control region 2, $N^{\overline{QCD} BG}_{CR2}$ is the number of all non-QCD MC samples events in control region 2 and $\epsilon^{QCD}_{VBF}$ is the efficiency of VBF cuts in a given Tau isolation region derived with the following equation.
 
 \begin{equation}
 \epsilon^{QCD}_{VBF} = \frac {N^{DATA}_{VBF CR} - N^{\overline{QCD} BG}_{VBFCR}}{\left( N^{DATA}_{VBFCR} - N^{\overline{QCD} BG}_{VBFCR} \right) + \left( N^{DATA}_{\overline{VBF}CR} - N^{\overline{QCD} BG}_{\overline{VBF}CR} \right) }
@@ -87,10 +169,10 @@ where:
 where:
 
 \begin{itemize}
-	\item $N^{DATA}_{VBF CR}$ is the number of the events in data for a given $ \tau $ isolation region and VBF region;
-	\item $N^{\overline{QCD} BG}_{VBFCR}$ is the number of all non-QCD MC events for a given $ \tau $ isolation region and VBF region;
-	\item $N^{DATA}_{\overline{VBF}CR}$ is the number of events in data in the same isolation Control Region but inverted VBF region;
-	\item $N^{\overline{QCD} BG}_{\overline{VBF}CR}$ is the number of all non-QCD MC events for a given $ \tau $ isolation region but inverted VBF region.
+\item $N^{DATA}_{VBF CR}$ is the number of the events in data for a given $ \tau $ isolation region and VBF region;
+\item $N^{\overline{QCD} BG}_{VBFCR}$ is the number of all non-QCD MC events for a given $ \tau $ isolation region and VBF region;
+\item $N^{DATA}_{\overline{VBF}CR}$ is the number of events in data in the same isolation Control Region but inverted VBF region;
+\item $N^{\overline{QCD} BG}_{\overline{VBF}CR}$ is the number of all non-QCD MC events for a given $ \tau $ isolation region but inverted VBF region.
 \end{itemize}
 
 Three different predictions for the QCD contribution will be given, one for each pair of tau isolation control regions below the two tight isolation. The estimation of the QCD contamination, in the signal region,  as shown on Equation \ref{eq:qcdbgpred}, has two sources of systematics:  
@@ -189,11 +271,8 @@ Systematics for the simulation are estimated by scaling non-QCD contributions by
 
 
 
-
-
-
-
-
+\section{Data Driven method validation}
+\label{QCD_bg_pred_validation}
 
 \subsection{Bullshit}
 
@@ -296,3 +375,4 @@ The signal and control regions are define under the assumption of central select
 	\caption{$M_{jj}$ shape comparisons among different $\tau$ isolation sidebands for all MC contributions (CR3, CR5, CR7)}
 	\label{fig:LS_mjjshapestab_vs_tauiso_mc}
 \end{figure}
+
