@@ -7,3 +7,7 @@ thesis.out
 thesis.pdf
 thesis.synctex.gz
 thesis.synctex.gz(busy)
+diagrams/backgrounds.synctex.gz
+*.pdf
+diagrams/backgrounds.log
+*.aux
