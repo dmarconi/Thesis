@@ -228,14 +228,52 @@
 		\vertex [right=of b] (d);
 		\vertex [above right=of d] (e);
 		\vertex [below right=of d] (f);
+		\vertex [above right=of e] (g){\(b\)};
+		\vertex [right=of e] (h);
+		\vertex [above right=of h] (i){\(u\)};
+		\vertex [right=of h] (l){\(\bar{d}\)};
+		\vertex [right=of f] (n);
+		\vertex [below right=of f] (o) {\(\bar{b}\)};
+		\vertex [right=of n] (p){\(\tau\)};
+		\vertex [below right=of n] (q){\(\bar{\nu_{\tau}}\)};
 		
 		\diagram* {
 			(a) -- [gluon, edge label'=\(g\)] (b) -- [gluon, edge label'=\(g\)] (c);
 			(b) -- [gluon, edge label'=\(g\)] (d);
 			(f) -- [fermion, edge label'=\(\bar{t}\)] (d) -- [fermion, edge label'=\(t\)] (e);
-		
+			(e) -- [fermion] (g);
+			(e) -- [scalar] (h);
+			(i) -- [fermion] (h) -- [fermion] (l);
+			(o) -- [fermion] (f);
+			(f) -- [scalar] (n);
+			(q) -- [fermion] (n) -- [fermion] (p);		
 		};
 	\end{feynman}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\begin{feynman}
+\vertex (a);
+\vertex [below right=of a] (b);
+\vertex [below left=of b] (c);
+\vertex [right=of b] (d);
+\vertex [above right=of d] (e);
+\vertex [above right=of e] (f){\(g\)};
+\vertex [right=of e] (g){\(u\)};
+\vertex [below right=of d] (h);
+\vertex [right=of h] (i){\(d\)};
+\vertex [below right=of h] (l){\(\bar{d}\)};
+
+
+\diagram* {
+	(c) -- [fermion, edge label'=\(u\)] (b) -- [gluon, edge label'=\(g\)] (a);
+	(b)  -- [fermion, edge label'=\(u\)] (d) -- [fermion, edge label'=\(u\)] (e) -- [fermion, edge label'=\(u\)] (g);
+	(e) -- [gluon, edge label'=\(g\)] (f);
+	(d) -- [gluon, edge label'=\(g\)] (h);
+	(l) -- [fermion] (h) -- [fermion] (i);
+	
+};
+\end{feynman}
 \end{tikzpicture}
 
 \end{document}
