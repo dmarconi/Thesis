@@ -252,28 +252,52 @@
 \end{tikzpicture}
 
 \begin{tikzpicture}
-\begin{feynman}
-\vertex (a);
-\vertex [below right=of a] (b);
-\vertex [below left=of b] (c);
-\vertex [right=of b] (d);
-\vertex [above right=of d] (e);
-\vertex [above right=of e] (f){\(g\)};
-\vertex [right=of e] (g){\(u\)};
-\vertex [below right=of d] (h);
-\vertex [right=of h] (i){\(d\)};
-\vertex [below right=of h] (l){\(\bar{d}\)};
-
-
-\diagram* {
-	(c) -- [fermion, edge label'=\(u\)] (b) -- [gluon, edge label'=\(g\)] (a);
-	(b)  -- [fermion, edge label'=\(u\)] (d) -- [fermion, edge label'=\(u\)] (e) -- [fermion, edge label'=\(u\)] (g);
-	(e) -- [gluon, edge label'=\(g\)] (f);
-	(d) -- [gluon, edge label'=\(g\)] (h);
-	(l) -- [fermion] (h) -- [fermion] (i);
-	
-};
-\end{feynman}
+	\begin{feynman}
+		\vertex (a);
+		\vertex [below right=of a] (b);
+		\vertex [below left=of b] (c);
+		\vertex [right=of b] (d);
+		\vertex [above right=of d] (e);
+		\vertex [above right=of e] (f){\(g\)};
+		\vertex [right=of e] (g){\(u\)};
+		\vertex [below right=of d] (h);
+		\vertex [right=of h] (i){\(d\)};
+		\vertex [below right=of h] (l){\(\bar{d}\)};
+		
+		
+		\diagram* {
+			(c) -- [fermion, edge label'=\(u\)] (b) -- [gluon, edge label'=\(g\)] (a);
+			(b)  -- [fermion, edge label'=\(u\)] (d) -- [fermion, edge label'=\(u\)] (e) -- [fermion, edge label'=\(u\)] (g);
+			(e) -- [gluon, edge label'=\(g\)] (f);
+			(d) -- [gluon, edge label'=\(g\)] (h);
+			(l) -- [fermion] (h) -- [fermion] (i);
+			
+		};
+	\end{feynman}
 \end{tikzpicture}
+
+\begin{tikzpicture}
+	\begin{feynman}
+		\vertex (a);
+		\vertex [below right=of a] (b);
+		\vertex [below right=of b] (c);
+		\vertex [below left=of c] (d);
+		\vertex [below left=of d] (e);
+		\vertex [above right=of b] (f);
+		\vertex [above right=of f] (g){\(u\)};
+		\vertex [below right=of f] (h){\(\bar{d}\)};
+		\vertex [right=of c] (i);
+		\vertex [right=of i] (l){\(u\)};
+		\vertex [below right=of i] (m);
+		
+		\diagram* {
+			(e) -- [fermion, edge label'=\(u\)] (c) -- [gluon, edge label'=\(g\)] (b) -- [gluon, edge label'=\(g\)] (a);
+			(b) -- [gluon, edge label'=\(g\)] (f);
+			(h) -- [fermion] (f) -- [fermion] (g);
+			(c) -- [fermion, edge label'=\(u\)] (i) -- [fermion] (l);
+			(i) -- [gluon, edge label'=\(g\)] (m);
+		};
+	\end{feynman}
+\end{tikzpicture}	
 
 \end{document}
