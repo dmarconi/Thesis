@@ -14,3 +14,7 @@ diagrams/backgrounds.log
 diagrams/backgrounds2.synctex.gz
 
 diagrams/backgrounds2.log
+diagrams/signal.tex~
+diagrams/signal.synctex.gz
+diagrams/signal.log
+*.swp
