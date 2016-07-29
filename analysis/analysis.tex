@@ -1,8 +1,105 @@
 \section{The Analysis Strategy}
 
-The most important aspect of any SUSY analysis is the methodology used to estimate the background contribution in the signal region. The first step consists in the determination of all the main background sources and the definition of an estimation technique for each of the contributions. 
+The most important aspect of any SUSY analysis is the methodology used to estimate the background contribution in the signal region. The first step consists in the determination of all the irreducible background sources and the definition of an estimation technique for each of the contributions. Four types of background contributions has been considered in this analysis. 
 
-In the Standard Model, all small processes leading to like-sign di-$\hadtau$ final states have small cross sections. On the other hand production of QCD events in a hadron collider has large cross sections. Therefore, even small fake jet-$\hadtau$ fake rates from QCD processes, matter. Also, in QCD events, additional jet activity from initial or final jet radiation processes is expected, which gives these type of events a high probability to pass the VBF selection criteria. Those motivations lead to the determination of QCD as main background source for this analysis. 
+The first irreducible background contribution is coming from the Standard Model VBF processes resulting in two \hadtau and two jets as shown in Figure \ref{fig:background_SMVBF}. This background contribution is well modeled being purely electroweak and its cross section is very small. Therefore this background is considered minor and its contribution is directly taken from simulation.
+
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.50\textwidth]{diagrams/pics/background_SMVBFminus.pdf}
+		\includegraphics[width=0.50\textwidth]{diagrams/pics/background_SMVBFplus.pdf} 		
+	\end{tabular}
+	\caption{Feynman diagrams of irreducible backgrounds of Standard Model Vector Boson Fusion processes with 2 \hadtau and 2 jets final state. }
+	\label{fig:background_SMVBF}
+\end{figure}
+
+Secondly, all the Standard Model VBF processes resulting in three leptons, with one of the leptons, the opposite charged one, failing to pass the tauID, are considered as shown on \ref{fig:background_SMVBFZ0Wmiss}.
+
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.50\textwidth]{diagrams/pics/background_SMVBFZ0Wmissminus.pdf}
+		\includegraphics[width=0.50\textwidth]{diagrams/pics/background_SMVBFZ0Wmissplus.pdf} 		
+	\end{tabular}
+	\caption{Feynman diagrams of irreducible backgrounds of Standard Model Vector Boson  processes ending with three $\tau$ where the opposite charged one fails to pass the tauID selection criteria. }
+	\label{fig:background_SMVBFZ0Wmiss}
+\end{figure}
+
+Those processes are again purely electroweak, therefore their cross section is low and the simulation modeling is expected to be good. Additionally the probability for events coming from this background contribution to pass the event selection is very low. In conclusion, this topology of events is considered having a minor impact on the total background contribution.  
+
+Thirdly, there are the standard model backgrounds where one of the \hadtau has a mis-reconstructed charge as shown in Figures \ref{fig:background_SMVBFZ0}, \ref{fig:background_SMVBFH} and \ref{fig:background_ttbar}. 
+
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.50\textwidth]{diagrams/pics/background_SMVBFZ0Z0.pdf}
+		\includegraphics[width=0.50\textwidth]{diagrams/pics/background_SMVBFZ0W.pdf} 		
+	\end{tabular}
+	\caption{Feynman diagrams of irreducible backgrounds of Standard Model Vector Boson Fusion $Z^{0}$ production. }
+	\label{fig:background_SMVBFZ0}
+\end{figure}
+
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.50\textwidth]{diagrams/pics/background_HZ0.pdf}
+		\includegraphics[width=0.50\textwidth]{diagrams/pics/background_HW.pdf} 		
+	\end{tabular}
+	\caption{Feynman diagrams of irreducible backgrounds of Standard Model Vector Boson Fusion Higgs production. }
+	\label{fig:background_SMVBFH}
+\end{figure}
+
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.75\textwidth]{diagrams/pics/background_ttbar.pdf}
+	\end{tabular}
+	\caption{Di-leptonic \ttbar production where both jets fail the b-tag and one of the \hadtau has a mis-reconstructed charge.}
+	\label{fig:background_ttbar}
+\end{figure}
+
+All of these processes have a very low cross section compared to the one coming from the main background contribution, therefore those processes are all considered having a minor impact on the background estimation and their event contribution is taken directly from simulation.
+
+The last background contribution comes from all the QCD events resulting in 4 jets with 2 of those jests reconstructed as a fake \hadtau. Even though the probability of a jet to fake an \hadtau is low the production of QCD events in a hadron collider has huge cross sections. Therefore, even small fake jet-$\hadtau$ fake rates from QCD processes, matter. Also, in QCD events, additional jet activity from initial or final jet radiation processes is expected, which gives these type of events a high probability to pass the VBF selection criteria. Those motivations lead to the determination of QCD as main background source for this analysis. Examples of some QCD processes are shown in Figure \ref{fig:background_QCDinitrad} and \ref{fig:background_QCDfinrad}.
+
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.75\textwidth]{diagrams/pics/background_QCDinitrad.pdf}
+	\end{tabular}
+	\caption{Feynman diagrams of a 4 jet QCD prodution with initial state radiation where 2 jets are misreconstructed as \hadtau. }
+	\label{fig:background_QCDinitrad}
+\end{figure}
+
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.75\textwidth]{diagrams/pics/background_QCDfinrad.pdf}
+	\end{tabular}
+	\caption{Feynman diagrams of a 4 jet QCD prodution with final state radiation where 2 jets are misreconstructed as \hadtau. }
+	\label{fig:background_QCDfinrad}
+\end{figure}
+
+Similarly to the processes described before there are all QCD processes resulting in 1 \hadtau and 3 jets with one of the jets mis-reconstructed as the second \hadtau. Exaples of those processes are shown on Figure
+
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.75\textwidth]{diagrams/pics/background_W3jets.pdf}
+	\end{tabular}
+	\caption{Feynman diagrams of W boson plus 3 jets production where 1 jet is mis-reconstructed as \hadtau. }
+	\label{fig:background_W3jets}
+\end{figure}
+
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.75\textwidth]{diagrams/pics/background_singlet.pdf}
+	\end{tabular}
+	\caption{Feynman diagrams of single top production where 1 jet is mis-reconstructed as \hadtau. }
+	\label{fig:background_singlet}
+\end{figure}
 
 The Monte Carlo simulation of QCD events is not reliable due to the complicated modeling of the interactions at the partonic level and the complex fragmentation processes of the resulting jets. Therefore the decision to use a data-driven approach. The number of QCD events in signal region (SR) is estimated directly from data from a defined control region (CR) using the proper correction factor. This correction factor can be properly measured in other exclusive control regions. 
 
@@ -13,26 +110,35 @@ N^{QCD}_{SR} =  N^{DATA}_{CR} * CF
 \label{eq:qcdbgpred_simple}
 \end{equation} 
 
-where $N^{QCD}_{SR}$ is the number of QCD events predicted in the signal region, $N^{DATA}_{CR}$ is the number of data events in the control region and CF is the correction factor. 
-
-Four other types of background contributions has been considered in this analysis. 
-
-Further details on the event selection, the  data-driven method and the control regions definition is given in the next section. 
-
-The first irreducible background contribution is coming from the Standard Model VBF processes resulting in two \hadtau and two jets as shown in Figure \ref{fig:background_SMVBF}. This background contribution is well modeled being purely electroweak and its cross section is very small. Therefore this  background is considered minor and its contribution is directly taken from simulation.
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.50\textwidth]{diagrams/pics/signal_C1N2.pdf}
-		\includegraphics[width=0.50\textwidth]{diagrams/pics/signal_C1C1.pdf} 		
-	\end{tabular}
-	\caption{Diagrams of (left) \charginopm \neutralinotwo and (right) \charginopm \charginomp pair production through vector-boson fusion followed by their decays to $\tau$ leptons and the LSP.}
-	\label{fig:background_SMVBF}
-\end{figure}
+where $N^{QCD}_{SR}$ is the number of QCD events predicted in the signal region, $N^{DATA}_{CR}$ is the number of data events in the control region and CF is the correction factor. Further details on the event selection, the data-driven method and the control regions definition is given in the next section.
 
 \clearpage
-\subsection{Monte Carlo Samples}
+\subsection{Monte Carlo Samples and Triggers}
+
+\begin{table}[ht]
+	\centering{
+		\begin{tabular}{| l |}
+			\hline
+			\\
+			\texttt{CMSSW collection label: TriggerResults\_HLT}  \\
+			\\
+			\texttt{CMSSW type: edm::TriggerResults} \\
+		
+			\\
+			\hline		
+			\texttt{HLT\_DoubleMediumIsoPFTau35\_Trk5\_eta2p1\_Prong1\_v2 OR} \\
+			\texttt{HLT\_DoubleMediumIsoPFTau35\_Trk5\_eta2p1\_Prong1\_v3 OR} \\
+			\texttt{HLT\_DoubleMediumIsoPFTau35\_Trk5\_eta2p1\_Prong1\_v4 OR} \\
+			\texttt{HLT\_DoubleMediumIsoPFTau35\_Trk5\_eta2p1\_Prong1\_v6 OR} \\
+			\texttt{HLT\_DoubleMediumIsoPFTau35\_Trk1\_eta2p1\_Prong1\_v1 OR} \\
+			\texttt{HLT\_DoubleMediumIsoPFTau35\_Trk1\_eta2p1\_Prong1\_v3 OR} \\
+			\texttt{HLT\_DoubleMediumIsoPFTau35\_Trk1\_eta2p1\_Prong1\_v4}    \\
+			\hline
+		\end{tabular}
+	}
+	\caption{ List of the required trigger paths.}
+	\label{teble:triggers} % is used to refer this table in the text
+\end{table}
 
 \begin{table}[ht]
 	\tiny
@@ -235,10 +341,7 @@ As mentioned in the chapter introduction the di-\hadtau channel suffers from hug
 %As it will be shown later, a semi-clean $Z \to \tau\tau$ sample can be obtained with very small (and well
 %understood) changes to the selections used in the main analysis, and can be used for calibration and validation purposes. 
 
-All the collision data events passing the requirements of the
-HLT\_-DoubleMediumIsoPFTau35\_Trk*\_eta2p1\_Prong1\_v*
-trigger are considered as the interesting events 
-for offline analysis.
+All the collision data events passing the requirements of the triggers shown on Table \ref{teble:triggers} are considered as the interesting events for offline analysis.
 Similarly to what explained on Section \ref{section::search_strategy}, the event selection criteria is divided in two dinstinct parts: the central part, which takes into account the LSP and the decay products of the multiple \hadtau, and the VBF part, which cuts over the kinematic properties of the jets coming from a VBF process.
 The main differences with the other VBF SUSY searches with final states to light leptons, are the substantially tighter \hadtau requirements targeting at the suppression of QCD jet background and the looser missing transverse energy (\met) requirement, to recover some of the signal acceptance lost due to the larger discriminator based on isolation
 $\hadtau$ \pt thresholds needed to stay efficient with respect to the trigger.  
