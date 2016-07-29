@@ -6,8 +6,6 @@ In the Standard Model, all small processes leading to like-sign di-$\hadtau$ fin
 
 The Monte Carlo simulation of QCD events is not reliable due to the complicated modeling of the interactions at the partonic level and the complex fragmentation processes of the resulting jets. Therefore the decision to use a data-driven approach. The number of QCD events in signal region (SR) is estimated directly from data from a defined control region (CR) using the proper correction factor. This correction factor can be properly measured in other exclusive control regions. 
 
-
-
 The following formula gives a simple description of the whole methodology:
 
 \begin{equation}
@@ -17,10 +15,21 @@ N^{QCD}_{SR} =  N^{DATA}_{CR} * CF
 
 where $N^{QCD}_{SR}$ is the number of QCD events predicted in the signal region, $N^{DATA}_{CR}$ is the number of data events in the control region and CF is the correction factor. 
 
-\todo{Better rephrasing}
-Minor contributions are expected from background sources like VV, W+jets, \ttbar, Drell-Yan and Higgs. 
+Four other types of background contributions has been considered in this analysis. 
 
-Further details on the event selection, the  data-driven method and the control regions definition is given in the next section.
+Further details on the event selection, the  data-driven method and the control regions definition is given in the next section. 
+
+The first irreducible background contribution is coming from the Standard Model VBF processes resulting in two \hadtau and two jets as shown in Figure \ref{fig:background_SMVBF}. This background contribution is well modeled being purely electroweak and its cross section is very small. Therefore this  background is considered minor and its contribution is directly taken from simulation.
+
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.50\textwidth]{diagrams/pics/signal_C1N2.pdf}
+		\includegraphics[width=0.50\textwidth]{diagrams/pics/signal_C1C1.pdf} 		
+	\end{tabular}
+	\caption{Diagrams of (left) \charginopm \neutralinotwo and (right) \charginopm \charginomp pair production through vector-boson fusion followed by their decays to $\tau$ leptons and the LSP.}
+	\label{fig:background_SMVBF}
+\end{figure}
 
 \clearpage
 \subsection{Monte Carlo Samples}
