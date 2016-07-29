@@ -4,7 +4,6 @@ thesis.blg
 thesis.log
 thesis.toc
 thesis.out
-thesis.pdf
 thesis.synctex.gz
 thesis.synctex.gz(busy)
 diagrams/backgrounds.synctex.gz
@@ -17,3 +16,4 @@ diagrams/signal.tex~
 diagrams/signal.synctex.gz
 diagrams/signal.log
 *.swp
+.gitignore~
