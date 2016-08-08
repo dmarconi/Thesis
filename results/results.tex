@@ -71,27 +71,16 @@ The following systematics have been considered:
 
 \begin{itemize}
   \item \textbf{Parton Distribution Functions (PDF):} The systematic effect due to imprecise knowledge of the parton 
-distribution functions is determined by comparing CTEQ6.6L, MSTW2008nnlo, and NNPDF20 PDF with the default PDF and 
-variations within the family of parametrization \cite{CTEQ}. The maximal deviation from the central value is used the overall 
-systematic due to PDFs. We obtain a value of 16\% on the cross section uncertainty and 23\% on the signal acceptance.
+distribution functions is determined by comparing CTEQ6.6L \cite{Nadolsky:2008zw}, MSTW2008nnlo \cite{Martin:2009iq}, and NNPDF20 PDF \cite{Ubiali:2008uk} with the default PDF and variations within the family of parametrization. The maximal deviation from the central value is used the overall systematic due to PDFs. We obtain a value of 16\% on the cross section uncertainty and 23\% on the signal acceptance.
 
-  \item \textbf{Initial State Radiation (ISR) and Final State Radiation (FSR):} The systematic effect due to imprecise 
-modeling of initial and final state radiation is determined by re-weighting events to account for effects such as 
-missing a terms in the soft-collinear approach \cite{softCollinear} and missing NLO terms in the parton shower approach \cite{partonShower}. We 
-obtain uncertainties of 0.9\% and 1.2\% for ISR and FSR respectively.
+  \item \textbf{Initial State Radiation (ISR) and Final State Radiation (FSR):} The systematic effect due to imprecise modeling of initial and final state radiation is determined by re-weighting events to account for effects such as missing a terms in the soft-collinear approach \cite{softCollinear} and missing NLO terms in the parton shower approach \cite{partonShower}. We obtain uncertainties of 0.9\% and 1.2\% for ISR and FSR respectively.
 
-  \item \textbf{Luminosity:} We consider a 2.6\% uncertainty on the measured luminosity \cite{REFLUMI}.
-  \item \textbf{Trigger, Reconstruction, and Selection:} 
-  An overall uncertainty is applied for the trigger uncertainties determined on the
-  correction factors described in AN-12-321 and which are measured using tag-and-probe methods. 
-  We consider 6.8\% uncertainty per hadronic tau leg \cite{CMS-PAS-TAU-11-001}.
-  Scale factors for $\tau_{h}$ identification are taken from the tau POG and obtained using a fit of data in a Z$\to\tau\tau$ enhanced region and fixing the cross section to that measured using ee/$\mu\mu$. We consider a 100\% correlation among the 2 tau legs, therefore we consider 13.6\% uncertainty on the signal acceptance.
+  \item \textbf{Luminosity:} We consider a 2.6\% uncertainty on the measured luminosity \cite{CMS:2012rua}.
+  
+  \item \textbf{Trigger, Reconstruction, and Selection:}  An overall uncertainty is applied for the trigger uncertainties determined on the
+  correction factors described in AN-12-321 and which are measured using tag-and-probe methods. We consider 6.8\% uncertainty per hadronic tau leg \cite{CMS:2011msa}. Scale factors for $\tau_{h}$ identification are taken from the tau POG and obtained using a fit of data in a Z$\to\tau\tau$ enhanced region and fixing the cross section to that measured using ee/$\mu\mu$. We consider a 100\% correlation among the 2 tau legs, therefore we consider 13.6\% uncertainty on the signal acceptance.
 
-  \item \textbf{$b$-Tagging Efficiency:} We consider a 30\% uncertainty on the mis-tag rate as measured by the 
-b-tagging POG \cite{CMS_PAS_BTV_11-001}. For the case of our signal, the systematic 
-uncertainty on the requirement of 0 jets mis-tagged as b-jets is determined by propagating the 30\% uncertainty on the 
-mis-tag rate through the following equation (which represents the signal efficiency for requiring 0 
-jets mis-tagged as b-Jets):
+  \item \textbf{$b$-Tagging Efficiency:} We consider a 30\% uncertainty on the mis-tag rate as measured by the b-tagging POG \cite{CMS:2011cra}. For the case of our signal, the systematic uncertainty on the requirement of 0 jets mis-tagged as b-jets is determined by propagating the 30\% uncertainty on the mis-tag rate through the following equation (which represents the signal efficiency for requiring 0 jets mis-tagged as b-Jets):
 
 \begin{equation}\label{eq:nttbar}
   \epsilon^{\textrm{NBtag} < 1} = 1 - \sum_{n=1} P(n) \cdot \sum_{m=1}^{n} C(n,m) \cdot f^{m} \cdot (1-f)^{n-m}
