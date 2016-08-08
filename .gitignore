@@ -17,3 +17,5 @@ diagrams/signal.synctex.gz
 diagrams/signal.log
 *.swp
 .gitignore~
+
+thesis.pdf
