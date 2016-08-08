@@ -48,7 +48,7 @@ Particle Flow jets (PFJets) are used in this analysis.PFJets use information fro
 \subsubsection{b-Jet Tagging}
 B-tagged jets are used to reduce \ttbar background in the signal region and to obtain $t\bar{t}$ enriched control samples used to estimate the signal rate. 
 This analysis uses the "loose" working point of the combined secondary vertex algorithm.
-The details of the algorithm can be found in \cite{CMS_PAS_BTV_11-001}.The EPS13 prescription is used for the b-tagging and mis-tagging scale factors and efficiencies. They are applied using the method called ``Event reweighting using scale factors only" \url{https://twiki.cern.ch/twiki/bin/viewauth/CMS/BTagSFMethods\#1c\_Event\_reweighting\_using\_scale}. Table~\ref{table:bjetobjdefinition} shows the selection criteria.
+The details of the algorithm can be found in \cite{CMS:2011cra}.The EPS13 prescription is used for the b-tagging and mis-tagging scale factors and efficiencies. They are applied using the method called ``Event reweighting using scale factors only" \url{https://twiki.cern.ch/twiki/bin/viewauth/CMS/BTagSFMethods\#1c\_Event\_reweighting\_using\_scale}. Table~\ref{table:bjetobjdefinition} shows the selection criteria.
 
 \begin{table}[htb]
   \caption{definition of $b$-jets.}
@@ -89,28 +89,11 @@ The challenge in identifying hadronically decaying taus is discriminating agains
   }
 \end{table}
 
-The single hadron plus zero strips decay mode attempts to reconstruct $\tau \to \nu\pi^{\pm}$ decays or $\tau \to 
-\nu\pi^{\pm}\pi^{0}$ decays where the neutral pion has very low energy. The single hadron plus one or two 
-electromagnetic strips attempts to reconstruct tau decays that produce neutral pions where the resulting neutral pion 
-decays produce collinear photons. Similarly, the single hadron plus two strips mode attempts to reconstruct taus that 
-decay via e.g. $\tau \to \nu\pi^{\pm}\pi^{0}$ where the neutral pion decays to well separated photons resulting in two 
-electromagnetic strips. The three hadrons decay mode attempts to reconstruct tau decays that occur via 
-$\rho(770)$ resonance. In all cases, electromagnetic strips are required to have $E_{T} > 1$ GeV/c. Additionally,
-the particle flow charged hadrons are required to be compatible with a common 
-vertex and have a net charge of $|q|=1$.
+The single hadron plus zero strips decay mode attempts to reconstruct $\tau \to \nu\pi^{\pm}$ decays or $\tau \to \nu\pi^{\pm}\pi^{0}$ decays where the neutral pion has very low energy. The single hadron plus one or two electromagnetic strips attempts to reconstruct tau decays that produce neutral pions where the resulting neutral pion decays produce collinear photons. Similarly, the single hadron plus two strips mode attempts to reconstruct taus that decay via e.g. $\tau \to \nu\pi^{\pm}\pi^{0}$ where the neutral pion decays to well separated photons resulting in two electromagnetic strips. The three hadrons decay mode attempts to reconstruct tau decays that occur via $\rho(770)$ resonance. In all cases, electromagnetic strips are required to have $E_{T} > 1$ GeV/c. Additionally, the particle flow charged hadrons are required to be compatible with a common vertex and have a net charge of $|q|=1$.
 
-In order to enforce the isolation requirement on the reconstructed tau, a region of size R = 0.5 around the tau decay 
-mode direction is defined. Any PF candidates not used for the reconstruction of electromagnetic strips and charged 
-hadrons not involved in the reconstruction of the tau decay modes are used to calculate isolation. The "Tight" mva isolation (with lifetime) working points are used to define the signal regions.
+In order to enforce the isolation requirement on the reconstructed tau, a region of size R = 0.5 around the tau decay mode direction is defined. Any PF candidates not used for the reconstruction of electromagnetic strips and charged hadrons not involved in the reconstruction of the tau decay modes are used to calculate isolation. The "Tight" mva isolation (with lifetime) working points are used to define the signal regions.
 
-In order to discriminate against muons, HPS taus are required to pass the lepton rejection 
-discriminator which requires the lead track of the tau not be associated with a global muon signature. In order to 
-discriminate against electrons, HPS taus are required to pass a MVA discriminator which uses the amount of HCAL energy 
-associated to the tau with respect to the measured momentum of the track (H/p). Additionally, the MVA discriminator 
-considers the amount of electromagnetic energy in a narrow strip around the leading track with respect to the total 
-electromagnetic energy of the tau. Finally, HPS taus must not reside in the ECAL cracks. 
-In all channels, the identification and isolation used follows the Tau POG recommended criteria.
-The exact discriminator names and working points for each channel are listed and described in their respective sections. Table~\ref{table:bjetobjdefinition} shows the selection criteria for $\tau$ leptons.
+In order to discriminate against muons, HPS taus are required to pass the lepton rejection discriminator which requires the lead track of the tau not be associated with a global muon signature. In order to discriminate against electrons, HPS taus are required to pass a MVA discriminator which uses the amount of HCAL energy associated to the tau with respect to the measured momentum of the track (H/p). Additionally, the MVA discriminator considers the amount of electromagnetic energy in a narrow strip around the leading track with respect to the total electromagnetic energy of the tau. Finally, HPS taus must not reside in the ECAL cracks. In all channels, the identification and isolation used follows the Tau POG recommended criteria. The exact discriminator names and working points for each channel are listed and described in their respective sections. Table~\ref{table:bjetobjdefinition} shows the selection criteria for $\tau$ leptons.
 
 
 \begin{table}[htb]
