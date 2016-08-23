@@ -12,7 +12,7 @@ Electrons are reconstructed by matching tracks in the inner detector with energy
 
 \subsection {The Jet reconstruction}
 
-Jets within the range \ensuremath{|\eta| < 4.7} are reconstructed using the anti-\ensuremath{k_{T}} algorithm \cite{antikt} with a distance parameter of 0.5. As mentioned previously,the particles reconstructed by the PF algorithm are used as input to the jet reconstruction. Reconstructed jets are required not to overlap with identified electrons, muons, or τh within \ensuremath{\deltar < 0.5}, and to pass two levels of jet identification criteria: (i) misidentified jets, mainly arising from calorimeter noise, are rejected by requiring reconstructed jets to pass a set of loose jet identification criteria \cite{CMS:2010xta} and (ii) jets originating from pileup interactions are rejected through an MVA-based jet identification discriminant, relying on information about the vertex and energy distribution within the jet \cite{CMS:2013wea}. The energy of reconstructed jets is calibrated as a function of jet \pt and \ensuremath{\eta} \cite{1748-0221-6-11-P11002}. The contribution of pileup to the energy of jets originating from the hard scattering is compensated by determining a median transverse momentum density (\ensuremath{\rho}) for each event, and subtracting the product of ρ times the area of the jet, computed in the \ensuremath{\eta-\Phi} plane,from there constructed jet pT \cite{Cacciari:2008gn, Cacciari:2007fd}. Jets originating from the hadronization of b quarks are identified through the combined secondary vertex (CSV) algorithm \cite{Chatrchyan:2012jua}, which exploits observables related to the long lifetime of b hadrons and the higher particle multiplicity and mass of b jets compared to light-quark and gluon jets.
+Jets within the range \ensuremath{|\eta| < 4.7} are reconstructed using the anti-\ensuremath{k_{T}} algorithm \cite{antikt} with a distance parameter of 0.5. As mentioned previously,the particles reconstructed by the PF algorithm are used as input to the jet reconstruction. Reconstructed jets are required not to overlap with identified electrons, muons, or \hadtau within \ensuremath{\deltar < 0.5}, and to pass two levels of jet identification criteria: (i) misidentified jets, mainly generating from calorimeter noise, are rejected by requiring reconstructed jets to pass a set of loose jet identification criteria \cite{CMS:2010xta} and (ii) jets originating from pileup interactions are rejected through an MVA-based jet identification discriminant, based on information about the vertex and energy distribution within the jet \cite{CMS:2013wea}. The energy of reconstructed jets is calibrated as a function of jet \pt and \ensuremath{\eta} \cite{1748-0221-6-11-P11002}. The contribution of pileup to the energy of jets originating from the hard scattering is compensated by determining a median transverse momentum density (\ensuremath{\rho}) for each event, and subtracting the product of (\ensuremath{\rho}) times the area of the jet, computed in the \ensuremath{\eta-\Phi} plane,from there constructed jet \pt \cite{Cacciari:2008gn, Cacciari:2007fd}. Jets originating from the hadronization of b quarks are identified through the combined secondary vertex (CSV) algorithm \cite{Chatrchyan:2012jua}, which exploits observables related to the long lifetime of b hadrons and the higher particle multiplicity and mass of b jets compared to light-quark and gluon jets.
 
 \begin{figure}
 	\centering
@@ -78,7 +78,7 @@ The reconstruction and identification of \hadtau decays in the HPS algorithm is 
 	\item \textbf{Identification:} discriminators that separate \hadtau decays from quark and gluon jets, and from electrons and muons, are computed. This provides a reduction in the jet \ensuremath{\longrightarrow \hadtau}, \ensuremath{e \longrightarrow \hadtau}, and \ensuremath{\mu \longrightarrow \hadtau} misidentification rates.
 \end{itemize}
 
-\subsection{Identification of decay modes}
+\subsubsection{Identification of decay modes}
 
 Reconstruction of specific \hadtau decay modes requires reconstruction of neutral pions that are present in most of the hadronic \ensuremath{\tau} decays. The high probability for photons originating from \ensuremath{\pi^{0} \longrightarrow \gamma \gamma} decays to convert to \ensuremath{e^{+}e^{-}} pairs within the volume of the CMS tracking detector is taken into account by clustering the photon and electron constituents of the \ensuremath{\tau}-seeding jet into “strips” in the \ensuremath{\eta - \phi} plane. The clustering of electrons and photons of \ensuremath{\pt > 0.5} \gev into strips proceeds via an iterative procedure. The electron or photon of highest \pt not yet included into any strip is used to seed a new strip. The initial position of the strip in the \ensuremath{\eta - \phi} plane is set according to the \ensuremath{\eta} and \ensuremath{\phi} of the seed \ensuremath{e} or \ensuremath{\gamma}. The \ensuremath{e} or \ensuremath{\gamma} of next-highest \pt that is within an \ensuremath{\eta \times \phi} window centred on the strip location is merged into the strip. The strip position is then recomputed as an energy-weighted average of all electrons and photons contained in the strip:
 
@@ -119,12 +119,10 @@ The distributions in the decay modes and in the mass of \hadtau candidates in \e
 
 Requiring reconstructed \hadtau candidates to pass strict isolation requirements constitutes the main handle for reducing the large multijet background. Tau leptons are usually isolated relative to other particles in the event, and so are their decay products, in contrast to quark and gluon jets. Two types of \hadtau isolation discriminants have been developed, using simple cutoff-based selections and an MVA approach.
 
-\begin{itemize}
-	\item Cutoff-based discriminants
-	\item Discriminants against electrons and muons
-\end{itemize}
+
+\subsubsection{Discriminants against electrons and muons}
+
+Electrons and muons have a sizable probability to get reconstructed in the \ensuremath{h^{\pm}} decay mode. Electrons radiating a bremsstrahlung photon that subsequently converts may also get reconstructed in the \ensuremath{h^{\pm}\pi^{0}s} decay mode. In particular, electrons and muons originating from decays of W and Z bosons, which are produced with cross sections of \ensuremath{\approx100} nb at the LHC at \ensuremath{\sqrt{s} = 8} \tev have a high chance to pass isolation-based τh identification criteria. Dedicated discriminants have been developed to separate τh from electrons and muons. The separation of τh from electrons is based on an MVA approach. A cutoff-based and an MVA based discriminant are used to separate \hadtau from muons.
 
 \clearpage
-
-\section {The Jet reconstruction}
 
