@@ -142,10 +142,10 @@ The isolation discriminator is a BDT \cite{Hocker:2007ht} discriminator based on
 
 Particle Flow jets (PFJets) are used in this analysis. The \antikt clustering algorithm with a reconstruction cone of \ensuremath{R = 0.5} is used, defined in \ensuremath{\eta-\phi (R = \sqrt{{\Delta \eta}^2 + {\Delta \phi}^{2}})} \cite{1126-6708-2008-04-063}. 
 
-The PF jets used in this analysis are corrected using L1 FastJet, L2 Relative, and L3 Absolute corrections. The L1 FastJet corrections use the event-by-event UE/PU (Underlining Events / Pileup) densities to remove the additional contributions to the measured jet energies due to underlying event and pile-up particles. The L2 and L3 corrections use jet balancing and \ensuremath{\gamma+} jets events to improve and provide a better energy response as a function of \pt and \ensuremath{\eta}. This analysis uses the "loose" working point Jet-Id selection criteria. Table~\ref{table:bjetobjdefinition} shows the detailed selection criteria used for the recommended loose working point. The efficiency is $> 98$ for the entire $\eta$ and \pt range. The "loose'' working point has been validated in other studies.
+The PF jets used in this analysis are corrected using L1 FastJet, L2 Relative, and L3 Absolute corrections. The L1 FastJet corrections use the event-by-event UE/PU (Underlining Events / Pile Up) densities to remove the additional contributions to the measured jet energies due to underlying event and pile-up particles. The L2 and L3 corrections use jet balancing and \ensuremath{\gamma} + jets events to improve and provide a better energy response as a function of \pt and \ensuremath{\eta}. This analysis uses the "loose" working point Jet-Id selection criteria. Table~\ref{table:bjetobjdefinition} shows the detailed selection criteria used for the recommended loose working point. The efficiency is $> 98$ for the entire $\eta$ and \pt range. The "loose'' working point has been validated in other studies.
 
 \subsection{b-Jets} 
-This analysis uses the loose working point of the combined secondary vertex algorithm \cite{CMS:2011cra}. The EPS13 prescription is used for the b-tagging and mis-tagging scale factors and efficiencies. They are applied using the method called ``Event reweighing using scale factors only" \url{https://twiki.cern.ch/twiki/bin/viewauth/CMS/BTagSFMethods\#1c\_Event\_reweighting\_using\_scale}. Table~\ref{table:bjetobjdefinition} shows the detailed selection criteria.
+This analysis uses the loose working point of the combined secondary vertex algorithm \cite{CMS:2011cra}. The EPS13 prescription is used for the b-tagging and mis-tagging scale factors and efficiencies. They are applied using the method called ``Event reweighing using scale factors only" \cite{Ferencek:btag2015}. Table~\ref{table:bjetobjdefinition} shows the detailed selection criteria.
 
 \subsection{Missing Transverse Energy}
 
@@ -155,7 +155,7 @@ Detection of weakly interacting particles is crucial both for SM measurements an
 \met =  - \sum_{j} \pt^{j}
 \end{equation}
  
-where the sum runs over all reconstructed PF particles in the event and \ensuremath{\pt^{j}} is the transverse momentum of PF particle j. Figure \ref{fig:true_met} shows the energy and \ensuremath{\phi} resolution of the reconstructed \met in simulation versus the true \met. Again, the PF approach is compared to the calorimetric-based approach and performs substantially better. Table~\ref{table:metobjdefinition} shows the detailed selection criteria.
+where \ensuremath{\pt^{j}} is the transverse momentum of PF particle j. Figure \ref{fig:true_met} shows the energy and \ensuremath{\phi} resolution of the reconstructed \met in simulation versus the true \met. Again, the PF approach is compared to the calorimetric-based approach and performs substantially better. Table~\ref{table:metobjdefinition} shows the detailed selection criteria.
 
 \begin{figure}[tbh!]
 	\centering
