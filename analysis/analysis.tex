@@ -7,8 +7,8 @@ The first irreducible background contribution is coming from the Standard Model 
 \begin{figure}[tbh!]
 	\centering
 	\begin{tabular}{cc}
-		\includegraphics[width=0.50\textwidth]{diagrams/pics/background_SMVBFminus.pdf}
-		\includegraphics[width=0.50\textwidth]{diagrams/pics/background_SMVBFplus.pdf} 		
+		\includegraphics[width=0.48\textwidth]{diagrams/pics/background_SMVBFminus.pdf}
+		\includegraphics[width=0.48\textwidth]{diagrams/pics/background_SMVBFplus.pdf} 		
 	\end{tabular}
 	\caption{Feynman diagrams of irreducible backgrounds of Standard Model Vector Boson Fusion processes with two \hadtau and two jets final state. }
 	\label{fig:background_SMVBF}
@@ -19,8 +19,8 @@ Secondly, all the Standard Model VBF processes resulting in three leptons, with 
 \begin{figure}[tbh!]
 	\centering
 	\begin{tabular}{cc}
-		\includegraphics[width=0.50\textwidth]{diagrams/pics/background_SMVBFZ0Wmissminus.pdf}
-		\includegraphics[width=0.50\textwidth]{diagrams/pics/background_SMVBFZ0Wmissplus.pdf} 		
+		\includegraphics[width=0.48\textwidth]{diagrams/pics/background_SMVBFZ0Wmissminus.pdf}
+		\includegraphics[width=0.48\textwidth]{diagrams/pics/background_SMVBFZ0Wmissplus.pdf} 		
 	\end{tabular}
 	\caption{Feynman diagrams of irreducible backgrounds of Standard Model Vector Boson  processes ending with three $\tau$ where the opposite charged one fails to pass the tauID selection criteria. }
 	\label{fig:background_SMVBFZ0Wmiss}
@@ -33,8 +33,8 @@ Thirdly, there are the Standard Model backgrounds where one of the \hadtau has a
 \begin{figure}[tbh!]
 	\centering
 	\begin{tabular}{cc}
-		\includegraphics[width=0.50\textwidth]{diagrams/pics/background_SMVBFZ0Z0.pdf}
-		\includegraphics[width=0.50\textwidth]{diagrams/pics/background_SMVBFZ0W.pdf} 		
+		\includegraphics[width=0.48\textwidth]{diagrams/pics/background_SMVBFZ0Z0.pdf}
+		\includegraphics[width=0.48\textwidth]{diagrams/pics/background_SMVBFZ0W.pdf} 		
 	\end{tabular}
 	\caption{Feynman diagrams of irreducible backgrounds of Standard Model Vector Boson Fusion $Z^{0}$ production. }
 	\label{fig:background_SMVBFZ0}
@@ -43,8 +43,8 @@ Thirdly, there are the Standard Model backgrounds where one of the \hadtau has a
 \begin{figure}[tbh!]
 	\centering
 	\begin{tabular}{cc}
-		\includegraphics[width=0.50\textwidth]{diagrams/pics/background_HZ0.pdf}
-		\includegraphics[width=0.50\textwidth]{diagrams/pics/background_HW.pdf} 		
+		\includegraphics[width=0.48\textwidth]{diagrams/pics/background_HZ0.pdf}
+		\includegraphics[width=0.48\textwidth]{diagrams/pics/background_HW.pdf} 		
 	\end{tabular}
 	\caption{Feynman diagrams of irreducible backgrounds of Standard Model Vector Boson Fusion Higgs production. }
 	\label{fig:background_SMVBFH}
@@ -291,13 +291,13 @@ W + 4 jets & \texttt{4JetsToLNu\_TuneZ2Star\_8TeV-madgraph/Summer12\_DR53X-PU\_S
 			&\\
 			$bg \longrightarrow tW^{+}$ & /Tbar \texttt{tW-channel-DR\_TuneZ2star\_8TeV-powheg-tauola/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1} \\
 			&\\
-			$q\textquoteright b \longrightarrow qt$ & \texttt{/T\_t-channel\_TuneZ2star\_8TeV-powheg-tauola/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1} \\
+			q\textquoteright b \ensuremath{\longrightarrow} qt & \texttt{/T\_t-channel\_TuneZ2star\_8TeV-powheg-tauola/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1} \\
 			&\\
 			$qb \longrightarrow q’t$ & \texttt{/Tbar\_t-channel\_TuneZ2star\_8TeV-powheg-tauola/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1} \\
 			&\\
-			$qq\textquoteright \longrightarrow tb$ & \texttt{/T\_s-channel\_TuneZ2star\_8TeV-powheg-tauola/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1} \\
+			qq\textquoteright \ensuremath{\longrightarrow} tb & \texttt{/T\_s-channel\_TuneZ2star\_8TeV-powheg-tauola/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1} \\
 			&\\
-			$qq\textquoteright \longrightarrow tb$ & \texttt{/Tbar\_s-channel\_TuneZ2star\_8TeV-powheg-tauola/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1} \\
+			qq\textquoteright \ensuremath{\longrightarrow} tb & \texttt{/Tbar\_s-channel\_TuneZ2star\_8TeV-powheg-tauola/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1} \\
 
 			&\\
 			\hline
@@ -310,34 +310,14 @@ W + 4 jets & \texttt{4JetsToLNu\_TuneZ2Star\_8TeV-madgraph/Summer12\_DR53X-PU\_S
 \clearpage
 
 \subsection{Event Selection}
+\label{sec:eventselection}
 
 As mentioned in the chapter introduction the di-\hadtau channel suffers from huge QCD multijet background, with a rate several orders of magnitude larger than the rate in other channels.  Hence this mode, more than any of the others, relies on the efficient background rejection. Fortunately, the VBF and \met selections provide the required background suppression.
-%QCD multijet is the prevailing background in this particular channel ($\sim 65-70 \%$ of the total BG).
-%Apart from QCD jets, the other prevailing backgrounds are Drell-Yan processes giving rise to tau leptons. 
-%As it will be shown later, a semi-clean $Z \to \tau\tau$ sample can be obtained with very small (and well
-%understood) changes to the selections used in the main analysis, and can be used for calibration and validation purposes. 
 
-All the collision data events passing the requirements of the
-HLT\_-DoubleMediumIsoPFTau35\_Trk*\_eta2p1\_Prong1\_v*
-trigger are considered as the interesting events 
-for offline analysis.
-Similarly to what explained in Section \ref{section::search_strategy}, the event selection criteria is divided in two dinstinct parts: the central part, which takes into account the LSP and the decay products of the multiple \hadtau, and the VBF part, which cuts over the kinematic properties of the jets coming from a VBF process.
-The main differences with the other VBF SUSY searches with final states to light leptons, are the substantially tighter \hadtau requirements targeting at the suppression of QCD jet background and the looser missing transverse energy (\met) requirement, to recover some of the signal acceptance lost due to the larger discriminator based on isolation
-$\hadtau$ \pt thresholds needed to stay efficient with respect to the trigger.  
+All the collision data events passing the requirements of the \texttt{HLT\_\-DoubleMedium\-Iso\-PFTau35\_\-Trk*\_\-eta2p1\_\-Prong1\_\-v*} trigger are considered as the interesting events for offline analysis. Similarly to what explained in Section \ref{section::search_strategy}, the event selection criteria is divided in two dinstinct parts: the central part, which takes into account the LSP and the decay products of the multiple \hadtau, and the VBF part, which cuts over the kinematic properties of the jets coming from a VBF process. The main differences with the other VBF SUSY searches with final states to light leptons, are the substantially tighter \hadtau requirements targeting at the suppression of QCD jet background and the looser missing transverse energy (\met) requirement, to recover some of the signal acceptance lost due to the larger discriminator based on isolation $\hadtau$ \pt thresholds needed to stay efficient with respect to the trigger.  
 
-The selected events are required to have at least two Hadron-Plus-Strips (HPS) \hadtau with \pt of 45 \gev and a pseudorapidity of $|\eta| \le 2.1$ in order to ensure that both tracks are reconstructed fully within the acceptance of the tracking system. In addition, a \hadtau is required to have exactly one signal charged hadron with \pt = 5 \gev. Higher multiplicity \hadtau are constrained by the trigger. Each of the \hadtau candidates is also required to fulfill the reconstruction and identification criteria described on Table~\ref{table:tauobjdefinition}. Specifically a \hadtau candidate is required to pass through a number of discriminators for the proper identification. They are:
-
-\begin{itemize}
-	
-\item {\textit DecayModeFindingNewDMs} 
-\item {\textit byTightIsolationMVA3newDMwLT}: BDT based tauID discriminator based on isolation, \pt and $\tau$ lifetime information, trained on 1-prong, 2-prong and 3-prong \hadtau candidates. 
-\item {\textit againstElectronMediumMVA5}: MVA based discriminator to reject electrons faking taus. 
-\item {\textit againstMuonLoose3}: to reject $\mu$ faking $\tau$. 
-
-\end{itemize}
-
-The like sign \hadtau candidates with the highest \pt and separated from each other by a minimum \deltar = 0.3 are then chosen to form a di-\hadtau candidate. 
-Further, to reduce top pair contamination the event is required not to have any jet identified as a b--quark jet by the b--tagging algorithms using the {\textit combined secondary vertex loose} (CSVL) working point. Only jets with \pt $\ge 30 \gev$ and separated from the taus in the $\hadtau\hadtau$ pairs by $\Delta R \ge 0.3$ are searched for b--tags. The higher \pt cut of 30 $\gev$ on b-jets (a looser veto requirement than other analyses with light leptons) allows us to be more efficient with respect to the signal since the higher \pt threshold on taus reduces the contamination of $t\overline{t}$ to a large extent. Further, the event is required to have at least 30 \gev of \met. All the above described selections is what will be referred as {\textit central selections}.
+The selected events are required to have at least two \hadtau candidates. Higher multiplicity \hadtau are constrained by the trigger. The like sign \hadtau candidates with the highest \pt and separated from each other by a minimum \deltar = 0.3 are then chosen to form a di-\hadtau candidate. 
+Further, to reduce top pair contamination the event is required not to have any jet identified as a b--quark jet by the b--tagging algorithms using the {\textit combined secondary vertex loose} (CSVL) working point. Only jets with \pt $\ge 30 \gev$ and separated from the taus in the di--\hadtau pairs by $\Delta R \ge 0.3$ are searched for b--tags. The higher \pt cut of 30 $\gev$ on b-jets (a looser veto requirement than other analyses with light leptons) allows us to be more efficient with respect to the signal since the higher \pt threshold on taus reduces the contamination of $t\overline{t}$ to a large extent. Further, the event is required to have at least 30 \gev of \met. All the above described selections is what will be referred as {\textit central selections}.
 
 Subsequently, the following event-wide requirements are imposed. The {\textit {VBF selections}} are imposed by requiring at least two jets with \pt = 30 \gev and absolute pseudorapidity $|\eta| \le 5.0$. Only jets separated from the leptons in the \hadtau\hadtau pair by $\deltar \ge 0.3$ are considered. All jet candidates passing the above requirements and having $\vert \Delta\eta \vert \ge 4.2$ and $\eta_{1}\cdot\eta_{2} < 0$ are combined to form di-jet candidates. The final and the most important of the requirement is an invariant mass of the di-jet candidate, namely \mjj, above the threshold of 250 \gev. In order to max the event acceptance the analysis code algorithm takes into account every possible di-jet candidate combination and chooses the one that best passes the VBF requirements and has the highest \mjj. 
 

@@ -67,7 +67,7 @@ The $\tau$ lepton was discovered between 1974 and 1977 by the team under Martin 
 	\end{center}
 \end{figure}
 
-\subsection{Algorithm for \hadtau reconstruction and identiﬁcation}
+\subsection{Algorithm for hadronic Tau reconstruction and identiﬁcation}
 
 The \hadtau decays are reconstructed and identified using the hadrons-plus-strips (HPS) algorithm \cite{Chatrchyan:2012zz} and is seeded by jets of \ensuremath{\pt > 14 \gev} and \ensuremath{|\eta| < 2.5}, reconstructed using the anti-\ensuremath{k_{T}} algorithm \cite{antikt} with a distance parameter of 0.5. The algorithm is designed to reconstruct individual decay modes of the \ensuremath{\tau} lepton, taking advantage of the excellent performance of the PF algorithm in reconstructing individual charged and neutral particles.
 The reconstruction and identification of \hadtau decays in the HPS algorithm is performed in two steps:
@@ -134,9 +134,9 @@ The challenge in identifying \hadtau candidates is discriminating against generi
 
 \hadtau candidates are required to have a \pt of 45 \gev and a pseudo-rapidity of $|\eta| \le 2.1$ in order to ensure that both tracks are reconstructed fully within the acceptance of the tracking system. In addition, a \hadtau is required to have exactly one signal charged hadron with \pt = 5 \gev and must not reside in the ECAL cracks.
 
-One-prong \hadtau candidates are selected using the \texttt{DecayModeFindingNewDMs} discriminator. In order to discriminate against muons, HPS taus are required to pass the \texttt{againstMuonLoose3} rejection discriminator which requires the lead track of the tau not be associated with a global muon signature. In order to discriminate against electrons, HPS taus are required to pass the \texttt{againstElectronMediumMVA5} discriminator which uses the amount of HCAL energy associated to the tau with respect to the measured momentum of the track. Additionally, the MVA discriminator considers the amount of electromagnetic energy in a narrow strip around the leading track with respect to the total electromagnetic energy of the tau. 
+One-prong \hadtau candidates are selected using the \texttt{Decay\-Mode\-Finding\-New\-DMs} discriminator. In order to discriminate against muons, HPS taus are required to pass the \texttt{against\-Muon\-Loose3} rejection discriminator which requires the lead track of the tau not be associated with a global muon signature. In order to discriminate against electrons, HPS taus are required to pass the \texttt{against\-Electron\-Medium\-MVA5} discriminator which uses the amount of HCAL energy associated to the tau with respect to the measured momentum of the track. Additionally, the MVA discriminator considers the amount of electromagnetic energy in a narrow strip around the leading track with respect to the total electromagnetic energy of the tau. 
 
-The isolation discriminator is a BDT \cite{Hocker:2007ht} discriminator based on isolation, \pt and \hadtau lifetime information and defines the different TauID working points starting from the loose one with (\texttt{byLooseIsolationMVA3newDMwLT}) to the tighter one (\texttt{byTightIsolationMVA3newDMwLT}). Table~\ref{table:bjetobjdefinition} shows the detailed selection criteria for an \hadtau candidate.
+The isolation discriminator is a BDT \cite{Hocker:2007ht} discriminator based on isolation, \pt and \hadtau lifetime information and defines the different TauID working points starting from the loose one with (\texttt{byLoose\-Isolation\-MVA3\-newDMwLT}) to the tighter one (\texttt{byTight\-Isolation\-MVA3new\-DMwLT}). Table~\ref{table:bjetobjdefinition} shows the detailed selection criteria for an \hadtau candidate.
 
 \subsection{Jets}
 
@@ -160,8 +160,8 @@ where \ensuremath{\pt^{j}} is the transverse momentum of PF particle j. Figure \
 \begin{figure}[tbh!]
 	\centering
 	\begin{tabular}{cc}
-		\includegraphics[width=0.50\textwidth]{objreconstruction/pics/true_met-a.png}
-		\includegraphics[width=0.50\textwidth]{objreconstruction/pics/true_met-b.png} 		
+		\includegraphics[width=0.48\textwidth]{objreconstruction/pics/true_met-a.png}
+		\includegraphics[width=0.48\textwidth]{objreconstruction/pics/true_met-b.png} 		
 	\end{tabular}
 	\caption{The energy and \ensuremath{\phi} resolution of the \met in simulation. Red triangles show the resolution for the PF approach. Blue squares show the resolution for the calorimetric approach. The full lines show the results of fits of the data points and the dashed lines show the results of fits of an alternative resolution measure \cite{CMS:2009nxa}}
 	\label{fig:true_met}
