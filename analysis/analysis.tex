@@ -1,5 +1,4 @@
-\section{The Analysis Strategy}
-
+\section{Background Contributions}
 The most important aspect of any search for new physics is the methodology used to estimate the background contribution in the signal region. The first step consists in the determination of all the irreducible background sources and the definition of an estimation technique for each of the contributions. Four types of background contributions have been considered in this analysis. 
 
 The first irreducible background contribution is coming from the Standard Model VBF processes resulting in two \hadtau and two jets as shown in Figure \ref{fig:background_SMVBF}. This background contribution is well modeled being purely electroweak and its cross section is very small. Therefore this background is considered minor and its contribution is directly taken from simulation.
@@ -101,20 +100,7 @@ Similarly to the processes described before there are QCD processes resulting in
 	\label{fig:background_singlet}
 \end{figure}
 
-The Monte Carlo simulation of QCD events is not reliable due to the complicated modeling of the interactions at the partonic level and the complex fragmentation processes of the resulting jets. Therefore the decision to use a data-driven approach. The number of QCD events in signal region (SR) is estimated directly from data from a defined control region (CR) using the proper correction factor. This correction factor can be properly measured in other exclusive control regions. 
-
-The following formula gives a simple description of the whole methodology:
-
-\begin{equation}
-N^{QCD}_{SR} =  N^{DATA}_{CR} * CF
-\label{eq:qcdbgpred_simple}
-\end{equation} 
-
-where $N^{QCD}_{SR}$ is the number of QCD events predicted in the signal region, $N^{DATA}_{CR}$ is the number of data events in the control region and CF is the correction factor. Further details on the event selection, the data-driven method and the control regions definition is given in the next section.
-
-\clearpage
-
-\section{Monte Carlo Samples}
+\subsection{Monte Carlo Samples}
 
 \begin{table}[ht]
 	\tiny
@@ -316,10 +302,10 @@ As mentioned in the chapter introduction the di-\hadtau channel suffers from hug
 
 All the collision data events passing the requirements of the \texttt{HLT\_\-DoubleMedium\-Iso\-PFTau35\_\-Trk*\_\-eta2p1\_\-Prong1\_\-v*} trigger are considered as the interesting events for offline analysis. Similarly to what explained in Section \ref{section::search_strategy}, the event selection criteria is divided in two dinstinct parts: the central part, which takes into account the LSP and the decay products of the multiple \hadtau, and the VBF part, which cuts over the kinematic properties of the jets coming from a VBF process. The main differences with the other VBF SUSY searches with final states to light leptons, are the substantially tighter \hadtau requirements targeting at the suppression of QCD jet background and the looser missing transverse energy (\met) requirement, to recover some of the signal acceptance lost due to the larger discriminator based on isolation $\hadtau$ \pt thresholds needed to stay efficient with respect to the trigger.  
 
-The selected events are required to have at least two \hadtau candidates. Higher multiplicity \hadtau are constrained by the trigger. The like sign \hadtau candidates with the highest \pt and separated from each other by a minimum \deltar = 0.3 are then chosen to form a di-\hadtau candidate. 
+The selected events are required to have at least two \hadtau candidates as defined in Section \ref{subsec::objsel_tau}. Higher multiplicity \hadtau are constrained by the trigger. The like sign \hadtau candidates with the highest \pt and separated from each other by a minimum \deltar = 0.3 are then chosen to form a di-\hadtau candidate. 
 Further, to reduce top pair contamination the event is required not to have any jet identified as a b--quark jet by the b--tagging algorithms using the {\textit combined secondary vertex loose} (CSVL) working point. Only jets with \pt $\ge 30 \gev$ and separated from the taus in the di--\hadtau pairs by $\Delta R \ge 0.3$ are searched for b--tags. The higher \pt cut of 30 $\gev$ on b-jets (a looser veto requirement than other analyses with light leptons) allows us to be more efficient with respect to the signal since the higher \pt threshold on taus reduces the contamination of $t\overline{t}$ to a large extent. Further, the event is required to have at least 30 \gev of \met. All the above described selections is what will be referred as {\textit central selections}.
 
-Subsequently, the following event-wide requirements are imposed. The {\textit {VBF selections}} are imposed by requiring at least two jets with \pt = 30 \gev and absolute pseudorapidity $|\eta| \le 5.0$. Only jets separated from the leptons in the \hadtau\hadtau pair by $\deltar \ge 0.3$ are considered. All jet candidates passing the above requirements and having $\vert \Delta\eta \vert \ge 4.2$ and $\eta_{1}\cdot\eta_{2} < 0$ are combined to form di-jet candidates. The final and the most important of the requirement is an invariant mass of the di-jet candidate, namely \mjj, above the threshold of 250 \gev. In order to max the event acceptance the analysis code algorithm takes into account every possible di-jet candidate combination and chooses the one that best passes the VBF requirements and has the highest \mjj. 
+Subsequently, the following event-wide requirements are imposed. The {\textit {VBF selections}} are imposed by requiring at least two jets as defined in Section \ref{subsec::objsel_jet}. Only jets separated from the leptons in the \hadtau\hadtau pair by $\deltar \ge 0.3$ are considered. All jet candidates passing the above requirements and having $\vert \Delta\eta \vert \ge 4.2$ and $\eta_{1}\cdot\eta_{2} < 0$ are combined to form di-jet candidates. The final and the most important of the requirement is an invariant mass of the di-jet candidate, namely \mjj, above the threshold of 250 \gev. In order to max the event acceptance the analysis code algorithm takes into account every possible di-jet candidate combination and chooses the one that best passes the VBF requirements and has the highest \mjj. 
 
 For better visualization and understanding all the selection criteria are summarized the following way:
 
@@ -345,7 +331,19 @@ For better visualization and understanding all the selection criteria are summar
 
 \section {LS-di-Tau Data-Driven QCD background prediction} \label{sec:bgestimation}
 
-The previously introduced estimation method has been developed under the following assumptions:
+The Monte Carlo simulation of QCD events is not reliable due to the complicated modeling of the interactions at the partonic level and the complex fragmentation processes of the resulting jets. Therefore the decision to use a data-driven approach. The number of QCD events in signal region (SR) is estimated directly from data from a defined control region (CR) using the proper correction factor. This correction factor can be properly measured in other exclusive control regions. 
+
+The following formula gives a simple description of the whole methodology:
+
+\begin{equation}
+N^{QCD}_{SR} =  N^{DATA}_{CR} * CF
+\label{eq:qcdbgpred_simple}
+\end{equation} 
+
+where $N^{QCD}_{SR}$ is the number of QCD events predicted in the signal region, $N^{DATA}_{CR}$ is the number of data events in the control region and CF is the correction factor. Further details on the event selection, the data-driven method and the control regions definition is given in the next section.
+
+This estimation method has been developed under the following assumptions:
+
 \begin{itemize}
 	\item[1] all control regions are QCD dominated;
 	\item[2] $\epsilon^{QCD}_{VBF}$ is independent from any trigger efficiency concerning $\hadtau$ isolation such that each contribution to the numerator and denominator cancels out;
@@ -544,3 +542,6 @@ Systematics for the simulation are estimated by scaling non-QCD contributions by
 \section{Data Driven method validation}
 \label{QCD_bg_pred_validation}
 
+While a data-driven approach with an ABCD method in data is utilizable in order to get a prediction for the number of background events expected in the signal region, there are two advantages of a simulation-based approach. On the one hand, one can ascertain that the control regions contain only QCD. On the other hand, one can provide a closure test for the data-driven prediction, especially regarding the universality of the VBF efficiency with respect to a loosening of the τh isolation or a relaxation of the \met requirement, as stated in Sec. ???.
+
+In order to achieve the goal to ensure QCD purity in the control regions, a straightforward use of the simulation is not possible, due to the low probability of jets to fake \hadtau with any identification (ID), be it tight (T), medium (M), or loose (L). These low rates decrease the number of simulated events with two reconstructed \hadtau leptons passing all selection requirements below any reasonable amount for direct usage. What can be done, is to estimate the probability of one jet to be misidentified as a \hadtau lepton (O ≈ 1 ) of a given exclusive isolation (see Tab. ??? in Sec. ??? for definitions), 100 instead. Using all simulated events with four or more jets, one can determine the chance of each such event to be reconstructed as one event with two \hadtau leptons and at least two jets, translating two jet objects to become \hadtau objects (see Sec. ???). This way, a meaningful study of systematic uncertainties of the background estimation method on data becomes possible and the prerequisite assumptions of QCD purity and stability of the VBF efficiency with respect to \hadtaufake isolation can be tested. Finally, the results of the application of this method and thereby estimated systematic uncertainties will be shown (see Sec. ???). As well, possible future data-driven improvements for this method will be outlined (see Sec. ???).

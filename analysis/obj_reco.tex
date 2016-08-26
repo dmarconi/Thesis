@@ -122,13 +122,15 @@ Requiring reconstructed \hadtau candidates to pass strict isolation requirements
 Electrons and muons have a sizable probability to get reconstructed in the \ensuremath{h^{\pm}} decay mode. Electrons radiating a bremsstrahlung photon that subsequently converts may also get reconstructed in the \ensuremath{h^{\pm}\pi^{0}s} decay mode. In particular, electrons and muons originating from decays of W and Z bosons, which are produced with cross sections of \ensuremath{\approx100} nb at the LHC at \ensuremath{\sqrt{s} = 8} \tev have a high chance to pass isolation-based \hadtau identification criteria. Dedicated discriminants have been developed to separate \hadtau from electrons and muons. The separation of \hadtau from electrons is based on an MVA approach, with an efficiency and \ensuremath{e\to \tau} misidentification rate going from \ensuremath{93.3\%} and \ensuremath{2.38 \times 10^{−2}} (Very loose) to \ensuremath{72.1\%} and \ensuremath{3.54 \times 10^{−4}} (Very tight) in \ensuremath{Z/\gamma^{*} \longrightarrow \tau\tau} events.
 A cutoff-based and an MVA based discriminant are used to separate \hadtau from muons. The expected efficiency of the \hadtau against muon discriminants in \ensuremath{Z/\gamma^{*} \longrightarrow \tau\tau} events goes from \ensuremath{99.3\%} (Loose) to \ensuremath{99.1}\% (Tight) for the cutoff-based approach and \ensuremath{99.5\%} (Loose) to \ensuremath{98\%} (Tight) for the MVA one. The \ensuremath{\mu \to \tau} misidentification rate efficiency of the \hadtau isolation discriminants in \ensuremath{Z/\gamma^{*} \longrightarrow \mu\mu} events goes from \ensuremath{1.77 \times 10^{−3}} (Loose) to \ensuremath{7.74 \times 10^{−4}}\% (Tight) for the cutoff-based approach and \ensuremath{5.20 \times 10^{−4}} (Loose) to \ensuremath{3.18 \times 10^{−4}} (Tight) for the MVA one \cite{Khachatryan:2015dfa}.
 
-\section {Analysis Physics objects}
+\section {Analysis Physics Objects}
 
 \subsection{Primary Vertices}
+\label{subsec::objsel_vertex}
 
 The determination of collisions Primary Vertices (PV) for each of the bunch crossing is critical for reducing pile up effects and to detect long lived particles such as mesons. CMS reconstructs PVs starting from the vertices of all well reconstructed charged particle tracks in the event \cite{CMS-PAS-TRK-10-005}. The first step consist on clustering the tracks according to the position on the z-axis of their closest track segment with respect to the beam line \cite{CMS-IN-2011-014}. Then, a PV is reconstructed from each cluster with two or more constituents using a dedicated fit procedure. Which PV corresponds to the hardest interaction in the event is determined based on the tracks associated to the PV. The transverse momenta of all tracks associated to the PV are summed and the vertex with the highest sum is chosen. Every event used in this analysis requires at least a reconstructed PV. Table~\ref{table:vertexobjdefinition} shows the detailed selection criteria for such requirement.
 
 \subsection{Tau}
+\label{subsec::objsel_tau}
 
 The challenge in identifying \hadtau candidates is discriminating against generic quark and gluon QCD jets which are produced with a cross section several orders of magnitude larger. CMS has developed several algorithms to reconstruct and identify \hadtau based on Particle Flow (PF) objects. For this analysis, the Tau POG recommended Hadron Plus Strips algorithm (HPS) is used. 
 
@@ -139,15 +141,18 @@ One-prong \hadtau candidates are selected using the \texttt{Decay\-Mode\-Finding
 The isolation discriminator is a BDT \cite{Hocker:2007ht} discriminator based on isolation, \pt and \hadtau lifetime information and defines the different TauID working points starting from the loose one with (\texttt{byLoose\-Isolation\-MVA3\-newDMwLT}) to the tighter one (\texttt{byTight\-Isolation\-MVA3new\-DMwLT}). Table~\ref{table:bjetobjdefinition} shows the detailed selection criteria for an \hadtau candidate.
 
 \subsection{Jets}
+\label{subsec::objsel_jet}
 
 Particle Flow jets (PFJets) are used in this analysis. The \antikt clustering algorithm with a reconstruction cone of \ensuremath{R = 0.5} is used, defined in \ensuremath{\eta-\phi (R = \sqrt{{\Delta \eta}^2 + {\Delta \phi}^{2}})} \cite{1126-6708-2008-04-063}. 
 
-The PF jets used in this analysis are corrected using L1 FastJet, L2 Relative, and L3 Absolute corrections. The L1 FastJet corrections use the event-by-event UE/PU (Underlining Events / Pile Up) densities to remove the additional contributions to the measured jet energies due to underlying event and pile-up particles. The L2 and L3 corrections use jet balancing and \ensuremath{\gamma} + jets events to improve and provide a better energy response as a function of \pt and \ensuremath{\eta}. This analysis uses the "loose" working point Jet-Id selection criteria. Table~\ref{table:bjetobjdefinition} shows the detailed selection criteria used for the recommended loose working point. The efficiency is $> 98$ for the entire $\eta$ and \pt range. The "loose'' working point has been validated in other studies.
+The PF jets used in this analysis are corrected using L1 FastJet, L2 Relative, and L3 Absolute corrections. The L1 FastJet corrections use the event-by-event UE/PU (Underlining Events / Pile Up) densities to remove the additional contributions to the measured jet energies due to underlying event and pile-up particles. The L2 and L3 corrections use jet balancing and \ensuremath{\gamma} + jets events to improve and provide a better energy response as a function of \pt and \ensuremath{\eta}. This analysis uses the "loose" working point Jet-Id selection criteria jets \pt = 30 \gev and absolute pseudorapidity $|\eta| \le 5.0$. Table~\ref{table:bjetobjdefinition} shows the detailed selection criteria used for the recommended loose working point. The efficiency is $> 98$ for the entire $\eta$ and \pt range. The "loose'' working point has been validated in other studies.
 
 \subsection{b-Jets} 
+\label{subsec::objsel_bjet}
 This analysis uses the loose working point of the combined secondary vertex algorithm \cite{CMS:2011cra}. The EPS13 prescription is used for the b-tagging and mis-tagging scale factors and efficiencies. They are applied using the method called ``Event reweighing using scale factors only" \cite{Ferencek:btag2015}. Table~\ref{table:bjetobjdefinition} shows the detailed selection criteria.
 
 \subsection{Missing Transverse Energy}
+\label{subsec::objsel_met}
 
 Detection of weakly interacting particles is crucial both for SM measurements and searches for new physics. Although such particles leave no trace in any of CMS’s subdetectors, their transverse momenta can be estimated as the missing transverse energy in the event, making use of momentum conservation:
 
