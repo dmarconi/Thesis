@@ -1,20 +1,49 @@
 \section{Physic Object Recostruction}
 
+\subsection{Primary Vertices object definition}
+
 \begin{table}[htb]
-  \caption{definition of Vertex.}
-   \label{table:vertexobjdefinition}
-  \ttfamily\scriptsize\selectfont
-  \begin{center}
-    \begin{tabular}{|l|ll|}
-      \hline
-      \multicolumn{3}{|l|}{collection \texttt{label: recoVertex}}\\
-      \multicolumn{3}{|l|}{type: \texttt{offlinePrimaryVertices}}\\
-      \hline
-      vertex.size() & $>$ & 0 \\
-      \hline
-    \end{tabular}
-  \end{center}
+	\caption{definition of Vertex.}
+	\label{table:vertexobjdefinition}
+	\ttfamily\scriptsize\selectfont
+	\begin{center}
+		\begin{tabular}{|l|ll|}
+			\hline
+			\multicolumn{3}{|l|}{collection \texttt{label: recoVertex}}\\
+			\multicolumn{3}{|l|}{type: \texttt{offlinePrimaryVertices}}\\
+			\hline
+			vertex.size() & $>$ & 0 \\
+			\hline
+		\end{tabular}
+	\end{center}
 \end{table}
+
+\subsection{Trigger Paths definition}
+
+\begin{table}[htb]
+	
+	\caption{Trigger paths list.}
+	\label{table:triggerdefinition}
+	\ttfamily\scriptsize\selectfont
+	\begin{center}
+		\begin{tabular}{|l|l|}
+			\hline
+			\multicolumn{2}{|l|}{collection \texttt{label: TriggerResults\_HLT}}\\
+			\multicolumn{2}{|l|}{type: \texttt{edm::TriggerResults}}\\
+			\hline
+			\texttt{HLT\_DoubleMediumIsoPFTau35\_Trk5\_eta2p1\_Prong1\_v2} & OR \\
+			\texttt{HLT\_DoubleMediumIsoPFTau35\_Trk5\_eta2p1\_Prong1\_v3} & OR \\
+			\texttt{HLT\_DoubleMediumIsoPFTau35\_Trk5\_eta2p1\_Prong1\_v4} & OR \\
+			\texttt{HLT\_DoubleMediumIsoPFTau35\_Trk5\_eta2p1\_Prong1\_v6} & OR \\
+			\texttt{HLT\_DoubleMediumIsoPFTau35\_Trk1\_eta2p1\_Prong1\_v1} & OR \\
+			\texttt{HLT\_DoubleMediumIsoPFTau35\_Trk1\_eta2p1\_Prong1\_v3} & OR \\
+			\texttt{HLT\_DoubleMediumIsoPFTau35\_Trk1\_eta2p1\_Prong1\_v4} & \\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
+
+\clearpage
 
 \subsection{Jet object definition}
 
@@ -43,7 +72,7 @@
   \end{center}
 \end{table}
 
-\subsubsection{b-Jet object definition}
+\subsection{b-Jet object definition}
 
 \begin{table}[htb]
   \caption{definition of $b$-jets.}
@@ -90,6 +119,10 @@
   \end{tabular}
   \end{center}
 \end{table}
+
+\clearpage
+
+\subsection{MET object definition}
 
 \begin{table}[htb]
   \caption{definition of \met}
