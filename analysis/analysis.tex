@@ -1,3 +1,41 @@
+\section{Event Selection}
+\label{sec:eventselection}
+
+As mentioned in Section \ref{section::search_strategy} the di-\hadtau channel suffers from huge QCD multijet background, with a rate several orders of magnitude larger than the rate in other channels.  Hence this search channel, more than any of the others, relies on the efficient background rejection. Fortunately, the VBF and \met selections provide the required background suppression.
+
+All the collision data events passing the requirements of the \texttt{HLT\_\-DoubleMedium\-Iso\-PFTau35\_\-Trk*\_\-eta2p1\_\-Prong1\_\-v*} trigger are considered as the interesting events for offline analysis. Similarly to what explained in Section \ref{section::search_strategy}, the event selection criteria is divided in two dinstinct parts: the central part, which takes into account the LSP and the decay products of the multiple \hadtau, and the VBF part, which cuts over the kinematic properties of the jets coming from a VBF process. The main differences with the other VBF SUSY searches with final states to light leptons, are the substantially tighter \hadtau requirements targeting at the suppression of QCD jet background and the looser missing transverse energy (\met) requirement, to recover some of the signal acceptance lost due to the larger discriminator based on isolation $\hadtau$ \pt thresholds needed to stay efficient with respect to the trigger.  
+
+The selected events are required to have at least two \hadtau candidates as defined in Section \ref{subsec::objsel_tau}. Higher multiplicity \hadtau are constrained by the trigger. The like sign \hadtau candidates with the highest \pt and separated from each other by a minimum \deltar = 0.3 are then chosen to form a di-\hadtau candidate. 
+Further, to reduce top pair contamination the event is required not to have any jet identified as a b--quark jet by the b--tagging algorithms using the {\textit combined secondary vertex loose} (CSVL) working point. Only jets with \pt $\ge 30 \gev$ and separated from the taus in the di--\hadtau pairs by $\Delta R \ge 0.3$ are searched for b--tags. The higher \pt cut of 30 $\gev$ on b-jets (a looser veto requirement than other analyses with light leptons) allows us to be more efficient with respect to the signal since the higher \pt threshold on taus reduces the contamination of $t\overline{t}$ to a large extent. Further, the event is required to have at least 30 \gev of \met. All the above described selections is what will be referred as {\textit central selections}.
+
+Subsequently, the following event-wide requirements are imposed. The {\textit {VBF selections}} are imposed by requiring at least two jets as defined in Section \ref{subsec::objsel_jet}. Only jets separated from the leptons in the \hadtau\hadtau pair by $\deltar \ge 0.3$ are considered. All jet candidates passing the above requirements and having $\vert \Delta\eta \vert \ge 4.2$ and $\eta_{1}\cdot\eta_{2} < 0$ are combined to form di-jet candidates. The final and the most important of the requirement is an invariant mass of the di-jet candidate, namely \mjj, above the threshold of 250 \gev. In order to max the event acceptance the analysis code algorithm takes into account every possible di-jet candidate combination and chooses the one that best passes the VBF requirements and has the highest \mjj. 
+
+For better visualization and understanding all the selection criteria are summarized the following way:
+
+\begin{itemize}
+	\item \textbf{Central selection}
+	\begin{itemize}
+		\item Trigger: \texttt{HLT\_DoubleMediumIsoPFTau35\_Trk*\_eta2p1\_Prong1\_v*}
+		\item 2 one-prong hadronically decaying $\tau$ with $p_{T}^{\tau}\geq45~$\gev 
+		\item $\met > $ 30
+		\item at least 2 jets with $p_{T}^{jet}\geq30~$\gev, $|\eta_{jet}|\leq5$ and loose jetID
+		\item $\Delta R(jet,\tau)\geq0.3$
+		\item b-tag veto
+	\end{itemize}
+	\item \textbf{VBF selection}
+	\begin{itemize}
+		\item $|\Delta\eta(jet,jet)| > 4.2$
+		\item $sign(\eta^{jet 1}\cdot\eta^{jet 2})==-1$
+		\item $\mjj>250~$\gev
+	\end{itemize}
+\end{itemize}
+
+\clearpage
+
+\section{Signal and Background Samples}
+
+The background yields are taken from simulation. Simulated samples of signal and background events are generated using Monte Carlo (MC) event generators. The signal event samples are generated with the \texttt{MadGraph v5.1.5} program \cite{Alwall:2011uj}, considering pair production of gauginos with two associated partons. The signal events are generated requiring a pseudorapidity gap $|\deltaeta| > 4.2$ between the two partons, with $\pt > 30$ \pt for each parton. Background event samples with a Higgs boson produced through VBF processes, and single top are generated with the \texttt{POWHEG v1.0r1380} program \cite{Frixione:2007vw}. The \texttt{MadGraph v5.1.3} generator is used to describe Z+jets, W+jets, tt, di-boson, and VBF Z boson production. The MC background and signal yields are normalized to the integrated luminosity of the data. The \ttbar background is normalized to the next-to-next-to-leading-logarithm level using the calculations of references \cite{Czakon:2013goa,Melnikov:2006kv}. The Z+jets and W+jets processes are normalized to next-to-next-to-leading-order using the results from the \texttt{FEWZ v2.1} \cite{Gavin:2010az} generator. The di-boson background processes are normalized to next-to-leading-order using the \texttt{MCFM v5.8} \cite{Campbell:2010ff} generator, while the VBF Z boson events are normalized to next-to-leading order using the \texttt{VBFNLO v2.6} \cite{Arnold:2008rz,Arnold:2011wj}program. The single-top and VBF Higgs boson background yields are taken from the powheg program, where the next-to-leading order effects are incorporated. Signal cross sections are calculated at leading order using the MadGraph generator. All MC samples incorporate the \texttt{CTEQ6L1} \cite{Pumplin:2002vw} or \texttt{CTEQ6M} \cite{Nadolsky:2008zw} parton distribution functions (PDF). The corresponding evaluation of uncertainties in the signal cross sections is discussed in Section \ref{sec:systematics}. The range of signal cross sections is $50^{–1}$ fb for \charginopm = \neutralinotwo masses of 100–-300\gev. The \texttt{POWHEG} and \texttt{MadGraph} generators are interfaced with the \texttt{PYTHIA v6.4.22} \cite{Sjostrand:2006za} program, which is used to describe the parton shower and hadronisation processes. The decays of $\tau$ leptons are described using the \texttt{tauola (27.1215)} \cite{Davidson:2010rw} program. The background samples are processed with a detailed simulation of the CMS apparatus using the \texttt{Geant4} package \cite{Agostinelli:2002hh}, while the response for signal samples is modeled with the CMS fast simulation program \cite{Abdullin:2011zz}. For the signal acceptance and \mjj shapes based on the fast simulation, the differences with respect to the \texttt{Geant4}-based results are found to be small ($< 5\%$). Corrections are applied to account for the differences. For all MC samples, multiple proton-proton interactions are superimposed on the primary collision process, and events are reweighted such that the distribution of reconstructed collision vertices matches that in data. The distribution of the number of pileup interactions per event has a mean of 21 and a root-mean-square of 5.5.
+
 \section{Background Contributions}
 The most important aspect of any search for new physics is the methodology used to estimate the background contribution in the signal region. The first step consists in the determination of all the irreducible background sources and the definition of an estimation technique for each of the contributions. Four types of background contributions have been considered in this analysis. 
 
@@ -100,236 +138,8 @@ Similarly to the processes described before there are QCD processes resulting in
 	\label{fig:background_singlet}
 \end{figure}
 
-\subsection{Monte Carlo Samples}
 
-\begin{table}[ht]
-	\tiny
-	\centering{
-		\begin{tabular}{| l | l |}
-			\hline
-			&\\
-				Process &Official CMS Datasets /DY*/AODSIM \\
-			&\\
-				\hline		
-				&\\
-				$Z \longrightarrow \tau\tau$ & \texttt{ToTauTau\_M-20\_CT10\_TuneZ2star\_v2\_8TeV-powheg-tauola-pythia6/Summer12 DR53X-PU\_S10\_START53\_V7A-v2} \\
-				&\\
-				$Z \longrightarrow \mu\mu$ & \texttt{ToMuMu\_M-20\_CT10\_TuneZ2star\_v2\_8TeV-powheg-pythia6/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1} \\
-				&\\
-				$Z \longrightarrow ee$ & \texttt{ToEE\_M-20\_CT10\_TuneZ2star\_v2 8TeV-powheg-pythia6/Summer12\_DR53X-PU\_S10\_START53 V7A-v1} \\
-				&\\
-				$Z \longrightarrow ll~(10 < m_{ll} < 50)$ & \texttt{JetsToLL\_M-10To50\_TuneZ2Star\_8TeV-madgraph/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1} \\
-				&\\
-				$Z \longrightarrow ll~(m_{ll} > 50)$ & \texttt{JetsToLL\_M-50\_TuneZ2Star\_8TeV-madgraph-tarball/Summer12\_DR53X-PU\_S10 START53\_V7A-v1} \\
-				&\\
-				$Z \longrightarrow ll + 1jets$ &
-				\texttt{1JetsToLL\_M-50\_TuneZ2Star\_8TeV-madgraph/Summer12\_DR53X-PU\_S10 START53\_V7A-v1} \\
-				&\\
-				$Z \longrightarrow ll + 2jets$ & \texttt{2JetsToLL\_M-50\_TuneZ2Star\_8TeV-madgraph/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1} \\
-				&\\
-				$Z \longrightarrow ll + 3jets$ &
-				\texttt{3JetsToLL\_M-50\_TuneZ2Star\_8TeV-madgraph/Summer12 DR53X-PU\_S10\_START53\_V7A-v1} \\
-				&\\
-				$Z \longrightarrow ll + 4jets$ &
-				\texttt{4JetsToLL\_M-50\_TuneZ2Star\_8TeV-madgraph/Summer12 DR53X-PU\_S10\_START53\_V7A-v1} \\
-				&\\
-				$Z \longrightarrow ll~EWK$ &
-				\texttt{JJ01JetsToLL\_M-50\_MJJ-200\_TuneZ2Star 8TeV-madgraph\_tauola/Summer12\_DR53X-PU\_S10 START53\_V7A-v1} \\
-				&\\
-				\hline
-		\end{tabular}
-	}
-	\caption{ Drell Yang simulated samples.}
-	\label{teble:samples_DY} % is used to refer this table in the text
-\end{table}
-
-\begin{table}[ht]
-	\tiny
-	\centering{
-		\begin{tabular}{| l | l |}
-			\hline
-			&\\
-			Process &Official CMS Datasets /W*/AODSIM \\
-			&\\
-			\hline		
-			&\\
-W + 0 jets & \texttt{JetsToLNu\_TuneZ2Star\_8TeV-madgraph-tarball/Summer12\_DR53X-PU\_S10 START53\_V7A-v2} \\
-&\\
-W + 1 jet & \texttt{1JetsToLNu\_TuneZ2Star\_8TeV-madgraph/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1} \\
-&\\
-W + 2 jets & \texttt{2JetsToLNu\_TuneZ2Star\_8TeV-madgraph/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1} \\
-&\\
-W + 3 jets &
-\texttt{3JetsToLNu\_TuneZ2Star\_8TeV-madgraph/Summer12\_DR53X-PU\_S10 START53\_V7A-v1} \\
-&\\
-W + 4 jets & \texttt{4JetsToLNu\_TuneZ2Star\_8TeV-madgraph/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1} \\
-			&\\
-			\hline
-		\end{tabular}
-	}
-	\caption{ W boson plus additional jets simulated samples.}
-	\label{teble:samples_Wjets} % is used to refer this table in the text
-\end{table}
-
-\begin{table}[ht]
-	\tiny
-	\centering{
-		\begin{tabular}{| l | l |}
-			\hline
-			&\\
-			Process &Official CMS Datasets /TTJets*/AODSIM \\
-			&\\
-			\hline		
-			\ttbar & \texttt{MassiveBinDECAY\_TuneZ2star\_8TeV-madgraph-tauola/Summer12\_DR53X-PU\_S10\_START53\_V7C-v1} \\
-			&\\
-			
-			&\\
-			\hline
-		\end{tabular}
-	}
-	\caption{Standard model top production simulated sample.}
-	\label{teble:samples_ttbar} % is used to refer this table in the text
-\end{table}
-
-\begin{table}[ht]
-	\tiny
-	\centering{
-		\begin{tabular}{| l | l |}
-			\hline
-			&\\
-			Process &Official CMS Datasets */AODSIM \\
-			&\\
-			\hline		
-			&\\
-			$WW(\longrightarrow 2l2\nu)$ & \texttt{WJetTo2L2Nu\_8TeV-powheg-pythia6/Summer12\_DR53X-PU\_S10\_START53\_V7C-v1} \\
-			&\\
-			$W^{+}W^{+}$ & \texttt{/WpWpqq\_8TeV-madgraph/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1} \\
-			&\\
-			$W^{−}W^{−}$ & \texttt{/WmWmqq\_TeV-madgraph/Summer12\_R53X-PU\_10\_START53\_V7A-v1} \\
-			&\\
-			WW double scattering & \texttt{/WW\_DoubleScattering\_8TeV-pythia8/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1} \\
-			&\\
-			WW EWK & \texttt{/WWjjTo2L2Nu\_8TeV\_madgraph\_qed6\_qcd0/Summer12\_DR53X-PU\_S10\_\_V19-v1} \\
-			&\\
-			$WZ~(\longrightarrow 2q2\nu)$ & \texttt{/WZJetsTo2Q2Nu\_TuneZ2star\_8TeV-madgraph-tauloa/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1} \\
-			&\\
-			$WZ~(\longrightarrow 2l2\nu)$ & \texttt{/WZJetsTo2L2Nu\_TuneZ2star\_8TeV-madgraph-tauloa/\_DR53X-PU\_S10\_START53\_V7A-v1} \\
-			&\\
-			$WZ~(\longrightarrow 3l)$ & \texttt{/WZJetsTo3L\_TuneZ2star\_8TeV-madgraph-tauloa/Summer12\_DR53X-PU\_S10 START53\_V7A-v1} \\
-			&\\
-			$ZZ~(\longrightarrow 2q2\nu)$ & \texttt{/ZZJetsTo2Q2Nu\_TuneZ2star\_8TeV-madgraph-tauloa/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1} \\
-			&\\
-			$ZZ~(\longrightarrow 2l2\nu)$ & \texttt{/ZZJetsTo2L2Nu\_TuneZ2star\_8TeV-madgraph-tauloa/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1} \\
-			&\\
-			$ZZ~(\longrightarrow 2l2q)$ & \texttt{/ZZJetsTo2L2Q\_TuneZ2star\_8TeV-madgraph-tauloa/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1} \\
-			&\\
-			$ZZ~(\longrightarrow 4l)$ & \texttt{/ZZJetsTo4L\_TuneZ2star\_8TeV-madgraph-tauloa/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1} \\
-
-			&\\
-			\hline
-		\end{tabular}
-	}
-	\caption{ Standard model production of two vector bosons simulated samples.}
-	\label{teble:samples_VV} % is used to refer this table in the text
-\end{table}
-
-\begin{table}[ht]
-	\tiny
-	\centering{
-		\begin{tabular}{| l | l |}
-			\hline
-			&\\
-			Process &Official CMS Datasets /VBF */AODSIM \\
-			&\\
-			\hline
-			&\\
-			$H \longrightarrow WW(\longrightarrow 2l)$ & \texttt{HToWWTo2LAndTau2Nu\_M-125\_8TeV-powheg-pythia6/Summer12\_DR53X-\_S10\_START53\_V7A-v1} \\
-			&\\
-			$H \longrightarrow ZZ(\longrightarrow 2l2\nu)$ & \texttt{HToZZTo2L2Nu\_M-120\_8TeV-powheg-pythia6/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1} \\
-			&\\
-			$H \longrightarrow ZZ~(\longrightarrow 2l2q)$ & \texttt{HToZZTo2L2Q\_M-125\_8TeV-powheg-pythia6/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1} \\
-			&\\
-			$H \longrightarrow ZZ~(→ 4l)$ & \texttt{HToZZTo4L\_M-125\_8TeV-powheg-pythia6/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1} \\
-			&\\
-			$H \longrightarrow ZZ~(\longrightarrow 4\nu)$ & \texttt{HToZZTo4Nu\_M-120\_8TeV-pythia6/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1} \\
-			&\\
-			$H \longrightarrow \tau\tau$ & \texttt{HToTauTau\_M-125\_8TeV-powheg-pythia6/Summer12\_DR53X-PU\_S} \\
-			&\\
-			\hline
-		\end{tabular}
-	}
-	\caption{Standard model Higgs production by vector boson fusion simulated
-		samples}
-	\label{teble:samples_higgs} % is used to refer this table in the text
-\end{table}
-
-\begin{table}[ht]
-	\tiny
-	\centering{
-		\begin{tabular}{| l | l |}
-			\hline
-			&\\
-			Process &Official CMS Datasets /VBF */AODSIM \\
-			&\\
-			\hline
-			&\\
-			$bg \longrightarrow tW^{-}$ & \texttt{/T\_tW-channel-DR\_TuneZ2star\_8TeV-powheg-tauola/Summer12\_DR53X-PU\_S10 START53\_V7A-v1} \\
-			&\\
-			$bg \longrightarrow tW^{+}$ & /Tbar \texttt{tW-channel-DR\_TuneZ2star\_8TeV-powheg-tauola/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1} \\
-			&\\
-			q\textquoteright b \ensuremath{\longrightarrow} qt & \texttt{/T\_t-channel\_TuneZ2star\_8TeV-powheg-tauola/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1} \\
-			&\\
-			$qb \longrightarrow q’t$ & \texttt{/Tbar\_t-channel\_TuneZ2star\_8TeV-powheg-tauola/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1} \\
-			&\\
-			qq\textquoteright \ensuremath{\longrightarrow} tb & \texttt{/T\_s-channel\_TuneZ2star\_8TeV-powheg-tauola/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1} \\
-			&\\
-			qq\textquoteright \ensuremath{\longrightarrow} tb & \texttt{/Tbar\_s-channel\_TuneZ2star\_8TeV-powheg-tauola/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1} \\
-
-			&\\
-			\hline
-		\end{tabular}
-	}
-	\caption{Single top simulated samples.}
-	\label{teble:samples_singlet} % is used to refer this table in the text
-\end{table}
-
-\clearpage
-
-\section{Event Selection}
-\label{sec:eventselection}
-
-As mentioned in the chapter introduction the di-\hadtau channel suffers from huge QCD multijet background, with a rate several orders of magnitude larger than the rate in other channels.  Hence this mode, more than any of the others, relies on the efficient background rejection. Fortunately, the VBF and \met selections provide the required background suppression.
-
-All the collision data events passing the requirements of the \texttt{HLT\_\-DoubleMedium\-Iso\-PFTau35\_\-Trk*\_\-eta2p1\_\-Prong1\_\-v*} trigger are considered as the interesting events for offline analysis. Similarly to what explained in Section \ref{section::search_strategy}, the event selection criteria is divided in two dinstinct parts: the central part, which takes into account the LSP and the decay products of the multiple \hadtau, and the VBF part, which cuts over the kinematic properties of the jets coming from a VBF process. The main differences with the other VBF SUSY searches with final states to light leptons, are the substantially tighter \hadtau requirements targeting at the suppression of QCD jet background and the looser missing transverse energy (\met) requirement, to recover some of the signal acceptance lost due to the larger discriminator based on isolation $\hadtau$ \pt thresholds needed to stay efficient with respect to the trigger.  
-
-The selected events are required to have at least two \hadtau candidates as defined in Section \ref{subsec::objsel_tau}. Higher multiplicity \hadtau are constrained by the trigger. The like sign \hadtau candidates with the highest \pt and separated from each other by a minimum \deltar = 0.3 are then chosen to form a di-\hadtau candidate. 
-Further, to reduce top pair contamination the event is required not to have any jet identified as a b--quark jet by the b--tagging algorithms using the {\textit combined secondary vertex loose} (CSVL) working point. Only jets with \pt $\ge 30 \gev$ and separated from the taus in the di--\hadtau pairs by $\Delta R \ge 0.3$ are searched for b--tags. The higher \pt cut of 30 $\gev$ on b-jets (a looser veto requirement than other analyses with light leptons) allows us to be more efficient with respect to the signal since the higher \pt threshold on taus reduces the contamination of $t\overline{t}$ to a large extent. Further, the event is required to have at least 30 \gev of \met. All the above described selections is what will be referred as {\textit central selections}.
-
-Subsequently, the following event-wide requirements are imposed. The {\textit {VBF selections}} are imposed by requiring at least two jets as defined in Section \ref{subsec::objsel_jet}. Only jets separated from the leptons in the \hadtau\hadtau pair by $\deltar \ge 0.3$ are considered. All jet candidates passing the above requirements and having $\vert \Delta\eta \vert \ge 4.2$ and $\eta_{1}\cdot\eta_{2} < 0$ are combined to form di-jet candidates. The final and the most important of the requirement is an invariant mass of the di-jet candidate, namely \mjj, above the threshold of 250 \gev. In order to max the event acceptance the analysis code algorithm takes into account every possible di-jet candidate combination and chooses the one that best passes the VBF requirements and has the highest \mjj. 
-
-For better visualization and understanding all the selection criteria are summarized the following way:
-
-\begin{itemize}
-	\item \textbf{Central selection}
-	\begin{itemize}
-		\item Trigger: \texttt{HLT\_DoubleMediumIsoPFTau35\_Trk*\_eta2p1\_Prong1\_v*}
-		\item 2 one-prong hadronically decaying $\tau$ with $p_{T}^{\tau}\geq45~$\gev 
-		\item $\met > $ 30
-		\item at least 2 jets with $p_{T}^{jet}\geq30~$\gev, $|\eta_{jet}|\leq5$ and loose jetID
-		\item $\Delta R(jet,\tau)\geq0.3$
-		\item b-tag veto
-	\end{itemize}
-	\item \textbf{VBF selection}
-	\begin{itemize}
-		\item $|\Delta\eta(jet,jet)| > 4.2$
-		\item $sign(\eta^{jet 1}\cdot\eta^{jet 2})==-1$
-		\item $\mjj>250~$\gev
-	\end{itemize}
-\end{itemize}
-
-\clearpage
-
-\section {LS-di-Tau Data-Driven QCD background prediction} \label{sec:bgestimation}
+\section {LS di-Tau Data-Driven QCD background prediction} \label{sec:bgestimation}
 
 The Monte Carlo simulation of QCD events is not reliable due to the complicated modeling of the interactions at the partonic level and the complex fragmentation processes of the resulting jets. Therefore the decision to use a data-driven approach. The number of QCD events in signal region (SR) is estimated directly from data from a defined control region (CR) using the proper correction factor. This correction factor can be properly measured in other exclusive control regions. 
 
@@ -541,8 +351,6 @@ Systematics for the simulation are estimated by scaling non-QCD contributions by
 
 \section{Data Driven method validation}
 \label{QCD_bg_pred_validation}
-
-\todo{rework the whole chapter}
 
 While a data-driven approach with an ABCD method in data is utilizable in order to get a prediction for the number of background events expected in the signal region, there are two advantages of a simulation-based approach. On the one hand, one can ascertain that the control regions contain only QCD. On the other hand, one can provide a closure test for the data-driven prediction, especially regarding the universality of the VBF efficiency with respect to a loosening of the τh isolation or a relaxation of the \met requirement, as stated in Sec. ???.
 
