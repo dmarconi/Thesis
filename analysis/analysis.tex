@@ -342,5 +342,54 @@ In order to achieve the goal to ensure QCD purity in the control regions, a stra
 
 \subsection*{Fixation of fake \hadtau mass}
 
+\subsection{$\epsilon^{VBF}$-stability with regard to $\tau_{h}$-isolation and $E_{T}^{miss}$-cuts}\label{dihad:subsec:stability}
+To test the stability and estimate the systematics, we determine on the diced MC all possible efficiencies of $\epsilon^{VBF}$ in all even and odd control region pairs for a range of $E_{T}^{miss}$-cuts in table \ref{dihad:tab:stability}.
+\begin{table}[!h]
+	\centering
+	\begin{tabular}{|c||c|c|c|}
+		\hline
+		region     & $\epsilon^{VBF}(E_{T}^{miss}\geq0)$ [$\%$]& $\epsilon^{VBF}(E_{T}^{miss}\geq10)$ [$\%$]& $\epsilon^{VBF}(E_{T}^{miss}\geq20)$ [$\%$]\\ \hline \hline
+		LS SR/CR2  & $12.78\pm0.53$ & $12.91\pm0.58$ & $13.06\pm0.67$ \\ \hline
+		LS CR3/CR4 & $12.20\pm0.43$ & $12.48\pm0.47$ & $12.46\pm0.53$ \\ \hline
+		LS CR5/CR6 & $11.61\pm0.41$ & $11.93\pm0.45$ & $11.91\pm0.50$ \\ \hline
+		LS CR7/CR8 & $12.10\pm0.60$ & $12.44\pm0.66$ & $12.75\pm0.83$ \\ \hline \hline
+		OS SR/CR2  & $11.46\pm0.72$ & $11.74\pm0.80$ & $12.23\pm1.04$ \\ \hline
+		OS CR3/CR4 & $10.62\pm0.31$ & $10.66\pm0.33$ & $10.85\pm0.36$ \\ \hline
+		OS CR5/CR6 & $10.98\pm0.48$ & $11.09\pm0.52$ & $11.59\pm0.67$ \\ \hline
+		OS CR7/CR8 & $10.67\pm0.36$ & $10.61\pm0.37$ & $11.12\pm0.47$ \\ \hline \hline
+		WAM        & $11.33\pm0.15$ & $11.43\pm0.16$ & $11.66\pm0.19$ \\ \hline
+		\hline
+		\hline
+		region     & $\epsilon^{VBF}(E_{T}^{miss}\geq30)$ [$\%$]& $\epsilon^{VBF}(E_{T}^{miss}\geq40)$ [$\%$]& $\epsilon^{VBF}(E_{T}^{miss}\geq50)$ [$\%$]\\ \hline \hline
+		LS SR/CR2  & $13.76\pm0.89$ & $14.99\pm1.49$ & $18.09\pm2.93$ \\ \hline
+		LS CR3/CR4 & $13.18\pm0.68$ & $14.54\pm1.11$ & $16.58\pm2.08$ \\ \hline
+		LS CR5/CR6 & $12.20\pm0.56$ & $13.06\pm0.84$ & $13.34\pm1.12$ \\ \hline
+		LS CR7/CR8 & $14.05\pm1.25$ & $15.93\pm2.19$ & $19.26\pm4.14$ \\ \hline \hline
+		OS SR/CR2  & $13.14\pm1.58$ & $16.04\pm2.98$ & $21.23\pm6.13$ \\ \hline
+		OS CR3/CR4 & $11.08\pm0.41$ & $12.61\pm0.69$ & $14.45\pm1.23$ \\ \hline
+		OS CR5/CR6 & $12.19\pm0.95$ & $14.38\pm1.70$ & $18.22\pm3.42$ \\ \hline
+		OS CR7/CR8 & $11.37\pm0.54$ & $13.01\pm0.90$ & $14.76\pm1.62$ \\ \hline \hline
+		WAM        & $11.98\pm0.23$ & $13.43\pm0.39$ & $14.85\pm0.65$ \\ \hline
+	\end{tabular}
+	\caption{Stability of epsilonVBF in regard to $E_{T}^{miss}$, sign and $\tau_{h}$-isolation. LS and OS regions are slightly correlated. Here, events can be the same, but the chosen jets to fake $\tau_{h}$ must differ. For efficiencies of one sign, efficiencies are expected to be highly correlated. This is not accounted for in the weighted arithmetic mean (WAM) values shown.}
+	\label{dihad:tab:stability}
+\end{table}
+We do observe a quadratic dependence on $E_{T}^{miss}$, as seen in fig. \ref{dihad:fig:Stability}.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{PLOTS/diTauHadLSQCDPlots/stability/Stability.pdf}
+	\caption{\label{dihad:fig:Stability}Deviation of the weighted arithmetic mean (WAM) of the VBF efficiency of all (LS and OS) control region ratios with respect to $E_{T}^{miss}$. We observe a quadratic dependence of small size at the cut-value of 30 GeV we use in this analysis.}
+\end{figure}
+
+We derive two systematic errors out of this:
+\begin{enumerate}
+	\item Stability of $\epsilon^{VBF}$ regarding $\tau_{h}$-isolation: Maximum relative difference to weighted arithmetic mean at $E_{T}^{miss}\geq30$. Amounts to $+17.26\%$ and $-7.58\%$.
+	\item Stability of $\epsilon^{VBF}$ regarding $E_{T}^{miss}$-cut: Relative difference to $\epsilon^{VBF}$ within uncertainties of weighted arithmetic
+	mean at no cut on $E_{T}^{miss}$ as seen in fig. \ref{dihad:fig:Stability}. Amounts to $+8.30\%$ on the upper edge and $+3.26\%$ on the lower edge.
+\end{enumerate}
+
+\clearpage
+
 
 
