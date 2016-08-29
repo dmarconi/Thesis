@@ -176,7 +176,7 @@ The second dimension of exclusivity is based on the VBF cuts described in \ref{s
 		\item VBF inverted region: consisting of all the events that at least fails one of the VBF cuts previously mentioned;
 	\end{enumerate} 
 
-Using these definitions one signal region (SR) and seven control regions (CR) are defined as shown in Figure \ref{fig:crs}. The SR falls into the region defined by two tight isolated $\hadtau$ and all the VBF cuts applied, close to it the control region 2 (CR2) features the same \hadtau isolation requirements but inverted VBF selection requirement. In order to keep the QCD background contribution low in SR and CR2 an additional cut of  MET $ > $ 30 GeV is required.
+Using these definitions one signal region (SR) and seven control regions (CR) are defined as shown in Figure \ref{fig:crs}. The SR falls into the region defined by two tight isolated $\hadtau$ and all the VBF cuts applied, close to it the control region 2 (CR2) features the same \hadtau isolation requirements but inverted VBF selection requirement. In order to keep the QCD background contribution low in SR and CR2 an additional cut of  \met $ > $ 30\gev is required.
 
 The estimation of the events in the signal region is done similarly to any other data driven ABCD method by counting the number of events in CR2 and multiplying it with a proper conversion factor described in the following equation:
 
@@ -185,7 +185,7 @@ N^{QCD}_{SR} = \left( N^{DATA}_{CR2} - N^{\overline{QCD} BG}_{CR2} \right) * \le
 \label{eq:qcdbgpred}
 \end{equation}
 
-where $N^{QCD}_{SR}$ is the number of QCD events predicted in the signal region, $N^{DATA}_{CR2}$ is the number of data events in control region 2, $N^{\overline{QCD} BG}_{CR2}$ is the number of all non-QCD MC samples events in control region 2 and $\epsilon^{QCD}_{VBF}$ is the efficiency of VBF cuts in a lower \hadtau isolation region. Those  control regions are defined as CR3 (One Tight isolation region), CR5  (Anti Tight isolation region) and CR7 (Anti Medium isolation region) followed by their corresponding VBF-inverted control regions CR4, CR6, CR8. An overview of the defined SR and CRs is shown on Figure \ref{fig:crs}. The $\epsilon^{QCD}_{VBF}$ for each of the different \hadtau isolation region is with the following equation.
+where $N^{QCD}_{SR}$ is the number of QCD events predicted in the signal region, $N^{DATA}_{CR2}$ is the number of data events in CR2, $N^{\overline{QCD} BG}_{CR2}$ is the number of all non-QCD MC samples events in CR2 and $\epsilon^{QCD}_{VBF}$ is the efficiency of VBF cuts in a lower \hadtau isolation region. Those  control regions are defined as CR3 (One Tight isolation region), CR5  (Anti Tight isolation region) and CR7 (Anti Medium isolation region) followed by their corresponding VBF-inverted control regions CR4, CR6, CR8. An overview of the defined SR and CRs is shown on Figure \ref{fig:crs}. The $\epsilon^{QCD}_{VBF}$ for each of the different \hadtau isolation region is with the following equation.
 
 \begin{figure}[tbh!]
 	\centering
@@ -203,15 +203,6 @@ where $N^{QCD}_{SR}$ is the number of QCD events predicted in the signal region,
 
 where $N^{DATA}_{VBF CR}$ is the number of the events in data for a given $ \tau $ isolation region and VBF region, $N^{\overline{QCD} BG}_{VBFCR}$ is the number of all non-QCD MC events for a given $ \tau $ isolation region and VBF region, $N^{DATA}_{\overline{VBF}CR}$ is the number of events in data in the same isolation Control Region but inverted VBF region and$N^{\overline{QCD} BG}_{\overline{VBF}CR}$ is the number of all non-QCD MC events for a given $ \tau $ isolation region but inverted VBF region.
 
-\todo{finish this fucking sentence where you talk about the 3 independent measurements}
-Three different predictions for the QCD contribution will be given, one for each pair of tau isolation control regions below the two tight isolation. The estimation of the QCD contamination, in the signal region,  as shown on Equation \ref{eq:qcdbgpred}, has two sources of systematics:  
-
-\begin{itemize}
-	\item[1]Uncertainty on the generated Monte Carlo samples used in the analysis
-	\item[2]  Uncertainty on the stability of the VBF efficiency in regard to a loosening of the tau-identification as previously described in section \ref{sec:crsdef};
-	\item[3] Uncertainty on the stability of the VBF efficiency in regard to a loosening of the \met cut, since the $\epsilon^{QCD}_{VBF}$ is calculated in CRs where no \met cut is applied.
-\end{itemize}
-
 This estimation method has been developed under the following assumptions:
 
 \begin{itemize}
@@ -219,6 +210,8 @@ This estimation method has been developed under the following assumptions:
 	\item[2] $\epsilon^{QCD}_{VBF}$ is independent from any trigger efficiency concerning $\hadtau$ isolation such that each contribution to the numerator and denominator cancels out;
 	\item[3] $\epsilon^{QCD}_{VBF}$ is independent from ant MET cut applied in order to reduce QCD background contributions. 
 \end{itemize}
+
+Using the events coming from the defined control regions as input for equations \ref{eq:qcdbgpred} and \ref{eq:vbfeff} gives the possibility to determine three different predictions for the QCD background contribution, one for each pair of tau isolation control regions below the two-tight isolation region. The estimation of the QCD contamination, in the signal region, as shown on Equation \ref{eq:qcdbgpred}, has three sources of systematics. The first source comes from the generated Monte Carlo samples used in the analysis. The two remaining ones comes from the assumptions about the stability of the $\epsilon^{QCD}_{VBF}$, made when defining the data-driven method, one in regard to a loosening of the tau-identification and the other in regard to a loosening of the \met cut, since the $\epsilon^{QCD}_{VBF}$ is calculated in CRs where no \met cut is applied.
 
 Details and results on the validation process done for all the statements is given in Section \ref{QCD_bg_pred_validation}.
 
