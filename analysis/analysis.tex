@@ -139,20 +139,78 @@ Similarly to the processes described before there are QCD processes resulting in
 
 \section{Signal and Background Samples}
 
-The background yields are taken from simulation. Simulated samples of signal and background events are generated using Monte Carlo (MC) event generators. The signal event samples are generated with the \texttt{MadGraph v5.1.5} program \cite{Alwall:2011uj}, considering pair production of gauginos with two associated partons. The signal events are generated requiring a pseudorapidity gap $|\deltaeta| > 4.2$ between the two partons, with $\pt > 30$ \pt for each parton. Background event samples with a Higgs boson produced through VBF processes, and single top are generated with the \texttt{POWHEG v1.0r1380} program \cite{Frixione:2007vw}. The \texttt{MadGraph v5.1.3} generator is used to describe Z+jets, W+jets, tt, di-boson, and VBF Z boson production. The MC background and signal yields are normalized to the integrated luminosity of the data. The \ttbar background is normalized to the next-to-next-to-leading-logarithm level using the calculations of references \cite{Czakon:2013goa,Melnikov:2006kv}. The Z+jets and W+jets processes are normalized to next-to-next-to-leading-order using the results from the \texttt{FEWZ v2.1} \cite{Gavin:2010az} generator. The di-boson background processes are normalized to next-to-leading-order using the \texttt{MCFM v5.8} \cite{Campbell:2010ff} generator, while the VBF Z boson events are normalized to next-to-leading order using the \texttt{VBFNLO v2.6} \cite{Arnold:2008rz,Arnold:2011wj}program. The single-top and VBF Higgs boson background yields are taken from the powheg program, where the next-to-leading order effects are incorporated. Signal cross sections are calculated at leading order using the MadGraph generator. All MC samples incorporate the \texttt{CTEQ6L1} \cite{Pumplin:2002vw} or \texttt{CTEQ6M} \cite{Nadolsky:2008zw} parton distribution functions (PDF). The corresponding evaluation of uncertainties in the signal cross sections is discussed in Section \ref{sec:systematics}. The range of signal cross sections is $50^{–1}$ fb for \charginopm = \neutralinotwo masses of 100–-300\gev. The \texttt{POWHEG} and \texttt{MadGraph} generators are interfaced with the \texttt{PYTHIA v6.4.22} \cite{Sjostrand:2006za} program, which is used to describe the parton shower and hadronisation processes. The decays of $\tau$ leptons are described using the \texttt{tauola (27.1215)} \cite{Davidson:2010rw} program. The background samples are processed with a detailed simulation of the CMS apparatus using the \texttt{Geant4} package \cite{Agostinelli:2002hh}, while the response for signal samples is modeled with the CMS fast simulation program \cite{Abdullin:2011zz}. For the signal acceptance and \mjj shapes based on the fast simulation, the differences with respect to the \texttt{Geant4}-based results are found to be small ($< 5\%$). Corrections are applied to account for the differences. For all MC samples, multiple proton-proton interactions are superimposed on the primary collision process, and events are reweighted such that the distribution of reconstructed collision vertices matches that in data. The distribution of the number of pileup interactions per event has a mean of 21 and a root-mean-square of 5.5. For all datasets, a common \texttt{Physics Analysis Toolkit} (\texttt{PAT}) \cite{Adam:2010zza} sequence has been used to generate a PAT format, then further reduced in size by the ntuple producer \cite{bib:thentuplemaker}.
+The background yields are taken from simulation. Simulated samples of signal and background events are generated using Monte Carlo (MC) event generators. The signal event samples are generated with the \texttt{MadGraph v5.1.5} program \cite{Alwall:2011uj}, considering pair production of gauginos with two associated partons. The signal events are generated requiring a pseudorapidity gap $|\deltaeta| > 4.2$ between the two partons, with $\pt > 30$ \pt for each parton. Background event samples with a Higgs boson produced through VBF processes, and single top are generated with the \texttt{POWHEG v1.0r1380} program \cite{Frixione:2007vw}. The \texttt{MadGraph v5.1.3} generator is used to describe Z+jets, W+jets, tt, di-boson, and VBF Z boson production. The MC background and signal yields are normalized to the integrated luminosity of the data. The \ttbar background is normalized to the next-to-next-to-leading-logarithm level using the calculations of references \cite{Czakon:2013goa,Melnikov:2006kv}. The Z+jets and W+jets processes are normalized to next-to-next-to-leading-order using the results from the \texttt{FEWZ v2.1} \cite{Gavin:2010az} generator. The di-boson background processes are normalized to next-to-leading-order using the \texttt{MCFM v5.8} \cite{Campbell:2010ff} generator, while the VBF Z boson events are normalized to next-to-leading order using the \texttt{VBFNLO v2.6} \cite{Arnold:2008rz,Arnold:2011wj}program. The single-top and VBF Higgs boson background yields are taken from the powheg program, where the next-to-leading order effects are incorporated. Signal cross sections are calculated at leading order using the MadGraph generator. All MC samples incorporate the \texttt{CTEQ6L1} \cite{Pumplin:2002vw} or \texttt{CTEQ6M} \cite{Nadolsky:2008zw} parton distribution functions (PDF). The corresponding evaluation of uncertainties in the signal cross sections is discussed in Section \ref{sec:systematics}. The range of signal cross sections is $50^{–1}$ fb for \charginopm = \neutralinotwo masses of 100–-300\gev. The \texttt{POWHEG} and \texttt{MadGraph} generators are interfaced with the \texttt{PYTHIA v6.4.22} \cite{Sjostrand:2006za} program, which is used to describe the parton shower and hadronization processes. The decays of $\tau$ leptons are described using the \texttt{tauola (27.1215)} \cite{Davidson:2010rw} program. The background samples are processed with a detailed simulation of the CMS apparatus using the \texttt{Geant4} package \cite{Agostinelli:2002hh}, while the response for signal samples is modeled with the CMS fast simulation program \cite{Abdullin:2011zz}. For the signal acceptance and \mjj shapes based on the fast simulation, the differences with respect to the \texttt{Geant4}-based results are found to be small ($< 5\%$). Corrections are applied to account for the differences. For all MC samples, multiple proton-proton interactions are superimposed on the primary collision process, and events are reweighted such that the distribution of reconstructed collision vertices matches that in data. The distribution of the number of pileup interactions per event has a mean of 21 and a root-mean-square of 5.5. For all datasets, a common \texttt{Physics Analysis Toolkit} (\texttt{PAT}) \cite{Adam:2010zza} sequence has been used to generate a PAT format, then further reduced in size by the ntuple producer \cite{bib:thentuplemaker}.
 
 \section {LS di-Tau Data-Driven QCD background prediction} \label{sec:bgestimation}
 
-The Monte Carlo simulation of QCD events is not reliable due to the complicated modeling of the interactions at the partonic level and the complex fragmentation processes of the resulting jets. Therefore the decision to use a data-driven approach. The number of QCD events in signal region (SR) is estimated directly from data from a defined control region (CR) using the proper correction factor. This correction factor can be properly measured in other exclusive control regions. 
+The QCD background contribution for the like-sign di-\hadtau channel is done using a ABCD data-driven approach. This method consist in  dividing the analyzed data in different exclusive regions, defined by two variables. The first variable is the \hadtau isolation discriminator used in the object reconstruction, namely:
+ 	
+ 	\begin{enumerate}
+ 		\item Tight or T isolated $\hadtau$ for \texttt{byTight\-IsolationMVA3newDMwLT};
+ 		\item Medium or M isolated $\hadtau$ for \texttt{byMedium\-IsolationMVA3newDMwLT} but failed \texttt{byTight\-IsolationMVA3newDMwLT};
+ 		\item Loose or L isolated $\hadtau$  for \texttt{byLoose\-IsolationMVA3newDMwLT} but failed \texttt{byTight\-IsolationMVA3newDMwLT} and \texttt{byMedium\-IsolationMVA3newDMwLT}.
+ 	\end{enumerate}
+ 	
+Each event with a successfully reconstructed LS di-$\hadtau$ pair falls into a exclusive isolation region as shows on Figure \ref{fig:tauisoregions}:
+ 	
+ 	\begin{itemize}
+ 		\item SR or signal region consisting of two tight isolated $\hadtau$;
+ 		\item 1T or One Tight isolated $\hadtau$ region consisting of one tight isolated $\hadtau$ and an additional medium or loose isolated $\hadtau$;
+ 		\item AT or Anti Tight isolation region consisting of at least one medium isolated $\hadtau$ and an additional medium or loose isolated $\hadtau$;
+ 		\item AM or Anti Medium isolation region consisting of two loose isolated $\hadtau$.
+ 	\end{itemize}
+ 
+ 	\begin{figure}[tbh!]
+ 		\centering
+ 		\begin{tabular}{cc}
+ 			\includegraphics[width=0.75\textwidth]{PLOTS/diTauHadLSotherPlots/tauisoregions.png}
+ 		\end{tabular}
+ 		\caption{Definitions of the exclusive isolation region depending on the isolation of each of the $\hadtau$ where SR is Signal Region consisting of two tight isolated $\hadtau$, 1T is One Tight isolated Tau region consisting of one tight isolated $\hadtau$ and an additional medium or loose isolated $\hadtau$, AT is Anti Tight isolation region consisting of at least one medium isolated $\hadtau$ and an additional medium or loose isolated $\hadtau$,  AM is Anti Medium isolation region consisting of two loose isolated $\hadtau$}
+ 		\label{fig:tauisoregions}
+ 	\end{figure}
+ 
+The second dimension of exclusivity is based on the VBF cuts described in \ref{sec:eventselection}. The regions are defined the following way:
+	
+	\begin{enumerate}
+		\item VBF region: consisting of all the events that passed all VBF cuts previously mentioned;
+		\item VBF inverted region: consisting of all the events that at least fails one of the VBF cuts previously mentioned;
+	\end{enumerate} 
 
-The following formula gives a simple description of the whole methodology:
+Using these definitions one signal region (SR) and seven control regions (CR) are defined as shown in Figure \ref{fig:crs}. The SR falls into the region defined by two tight isolated $\hadtau$ and all the VBF cuts applied, close to it the control region 2 (CR2) features the same \hadtau isolation requirements but inverted VBF selection requirement. In order to keep the QCD background contribution low in SR and CR2 an additional cut of  MET $ > $ 30 GeV is required.
+
+The estimation of the events in the signal region is done similarly to any other data driven ABCD method by counting the number of events in CR2 and multiplying it with a proper conversion factor described in the following equation:
 
 \begin{equation}
-N^{QCD}_{SR} =  N^{DATA}_{CR} * CF
-\label{eq:qcdbgpred_simple}
-\end{equation} 
+N^{QCD}_{SR} = \left( N^{DATA}_{CR2} - N^{\overline{QCD} BG}_{CR2} \right) * \left[ \frac{\epsilon^{QCD}_{VBF}}{1 - \epsilon^{QCD}_{VBF}} \right]
+\label{eq:qcdbgpred}
+\end{equation}
 
-where $N^{QCD}_{SR}$ is the number of QCD events predicted in the signal region, $N^{DATA}_{CR}$ is the number of data events in the control region and CF is the correction factor. Further details on the event selection, the data-driven method and the control regions definition is given in the next section.
+where $N^{QCD}_{SR}$ is the number of QCD events predicted in the signal region, $N^{DATA}_{CR2}$ is the number of data events in control region 2, $N^{\overline{QCD} BG}_{CR2}$ is the number of all non-QCD MC samples events in control region 2 and $\epsilon^{QCD}_{VBF}$ is the efficiency of VBF cuts in a lower \hadtau isolation region. Those  control regions are defined as CR3 (One Tight isolation region), CR5  (Anti Tight isolation region) and CR7 (Anti Medium isolation region) followed by their corresponding VBF-inverted control regions CR4, CR6, CR8. An overview of the defined SR and CRs is shown on Figure \ref{fig:crs}. The $\epsilon^{QCD}_{VBF}$ for each of the different \hadtau isolation region is with the following equation.
+
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.75\textwidth]{PLOTS/diTauHadLSotherPlots/controlregions.png}
+	\end{tabular}
+	\caption{Definition of Signal and Control Regions using different $\hadtau$ isolation criteria and VBF selection.}
+	\label{fig:crs}
+\end{figure}
+
+\begin{equation}
+\epsilon^{QCD}_{VBF} = \frac {N^{DATA}_{VBF CR} - N^{\overline{QCD} BG}_{VBFCR}}{\left( N^{DATA}_{VBFCR} - N^{\overline{QCD} BG}_{VBFCR} \right) + \left( N^{DATA}_{\overline{VBF}CR} - N^{\overline{QCD} BG}_{\overline{VBF}CR} \right) }
+\label{eq:vbfeff}
+\end{equation}
+
+where $N^{DATA}_{VBF CR}$ is the number of the events in data for a given $ \tau $ isolation region and VBF region, $N^{\overline{QCD} BG}_{VBFCR}$ is the number of all non-QCD MC events for a given $ \tau $ isolation region and VBF region, $N^{DATA}_{\overline{VBF}CR}$ is the number of events in data in the same isolation Control Region but inverted VBF region and$N^{\overline{QCD} BG}_{\overline{VBF}CR}$ is the number of all non-QCD MC events for a given $ \tau $ isolation region but inverted VBF region.
+
+\todo{finish this fucking sentence where you talk about the 3 independent measurements}
+Three different predictions for the QCD contribution will be given, one for each pair of tau isolation control regions below the two tight isolation. The estimation of the QCD contamination, in the signal region,  as shown on Equation \ref{eq:qcdbgpred}, has two sources of systematics:  
+
+\begin{itemize}
+	\item[1]Uncertainty on the generated Monte Carlo samples used in the analysis
+	\item[2]  Uncertainty on the stability of the VBF efficiency in regard to a loosening of the tau-identification as previously described in section \ref{sec:crsdef};
+	\item[3] Uncertainty on the stability of the VBF efficiency in regard to a loosening of the \met cut, since the $\epsilon^{QCD}_{VBF}$ is calculated in CRs where no \met cut is applied.
+\end{itemize}
 
 This estimation method has been developed under the following assumptions:
 
@@ -163,54 +221,6 @@ This estimation method has been developed under the following assumptions:
 \end{itemize}
 
 Details and results on the validation process done for all the statements is given in Section \ref{QCD_bg_pred_validation}.
-
-This method is based on the use of exclusive control regions as shown on Figure \ref{fig:crs} defined by 2 variables:
-
-\begin{enumerate}
-	\item \textbf{Tau Isolation Discriminator}: Each reconstructed $\hadtau$ must fulfill the standard object selection criteria as defined on Table \ref{table:tauobjdefinition}. Additionally, $\tau's$ are separated (classified) using different isolation side bands, namely:
-	
-	\begin{enumerate}
-		\item Tight or T isolated $\hadtau$ for \texttt{byTight\-IsolationMVA3newDMwLT};
-		\item Medium or M isolated $\hadtau$ for \texttt{byMedium\-IsolationMVA3newDMwLT} but failed \texttt{byTight\-IsolationMVA3newDMwLT};
-		\item Loose or L isolated $\hadtau$  for \texttt{byLoose\-IsolationMVA3newDMwLT} but failed \texttt{byTight\-IsolationMVA3newDMwLT} and \texttt{byMedium\-IsolationMVA3newDMwLT}.
-	\end{enumerate}
-	
-	Each event with a successfully reconstructed LS di-$\tau$ pair falls into a exclusive isolation region as shows on Figure \ref{fig:tauisoregions}:
-	
-	\begin{itemize}
-		\item SR or signal region consisting of 2 tight isolated $\hadtau$;
-		\item 1T or One Tight isolated $\hadtau$ region consisting of one tight isolated $\hadtau$ and an additional medium or loose isolated $\hadtau$;
-		\item AT or Anti Tight isolation region consisting of at least one medium isolated $\hadtau$ and an additional medium or loose isolated $\hadtau$;
-		\item AM or Anti Medium isolation region consisting of 2 loose isolated $\hadtau$.
-	\end{itemize}
-	
-	\begin{figure}[tbh!]
-		\centering
-		\begin{tabular}{cc}
-			\includegraphics[width=0.75\textwidth]{PLOTS/diTauHadLSotherPlots/tauisoregions.png}
-		\end{tabular}
-		\caption{Definitions of the exclusive isolation region depending on the isolation of each of the $\hadtau$ where SR is Signal Region consisting of 2 tight isolated $\hadtau$, 1T is One Tight isolated Tau region consisting of one tight isolated $\hadtau$ and an additional medium or loose isolated $\hadtau$, AT is Anti Tight isolation region consisting of at least one medium isolated $\hadtau$ and an additional medium or loose isolated $\hadtau$,  AM is Anti Medium isolation region consisting of 2 loose isolated $\hadtau$}
-		\label{fig:tauisoregions}
-	\end{figure}
-	
-	\item \textbf{Inversion of the VBF Cuts}: We define a second dimension of exclusivity using VBF cuts described in \ref{sec:eventselection}. The regions are defined the following way:
-	
-	\begin{enumerate}
-		\item VBF region: consisting of all the events that passed all VBF cuts previously mentioned;
-		\item VBF inverted region: consisting of all the events that at least fails one of the VBF cuts previously mentioned;
-	\end{enumerate} 
-\end{enumerate}
-
-Using these definitions, we define one signal region and 7 control regions, shown in Figure \ref{fig:crs}. In order to keep the QCD background contribution low in signal region and control region 2 an additional cut of  MET $ > $ 30 GeV is required. 
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.75\textwidth]{PLOTS/diTauHadLSotherPlots/controlregions.png}
-	\end{tabular}
-	\caption{Definition of Signal and Control Regions using different $\hadtau$ isolation criteria and VBF selection.}
-	\label{fig:crs}
-\end{figure}
 
 The signal and control regions are define under the assumption of central selection being orthogonal to VBF selection. Figure \ref{fig:LS_mjjshapestab_vs_tauiso_data} and \ref{fig:LS_mjjshapestab_vs_tauiso_mc} shows the results of the stability study of $M_{jj}$ shape distribution among different $\tau$ isolation sidebands for Data and MC. Further studies are shown in Section \ref{subsubsec:shapecomp}.
 
@@ -232,36 +242,7 @@ The signal and control regions are define under the assumption of central select
 	\label{fig:LS_mjjshapestab_vs_tauiso_mc}
 \end{figure}
 
-The estimation of the events in the signal region is done similarly to any other data driven ABCD method by counting the number of events in CR2 (two $\tau$ with tight isolation and inverted VBF selection criteria) and multiplying it with a proper conversion factor described in the following equation:
 
-\begin{equation}
-N^{QCD}_{SR} = \left( N^{DATA}_{CR2} - N^{\overline{QCD} BG}_{CR2} \right) * \left[ \frac{\epsilon^{QCD}_{VBF}}{1 - \epsilon^{QCD}_{VBF}} \right]
-\label{eq:qcdbgpred}
-\end{equation}
-
-where $N^{QCD}_{SR}$ is the number of QCD events predicted in the signal region, $N^{DATA}_{CR2}$ is the number of data events in control region 2, $N^{\overline{QCD} BG}_{CR2}$ is the number of all non-QCD MC samples events in control region 2 and $\epsilon^{QCD}_{VBF}$ is the efficiency of VBF cuts in a given Tau isolation region derived with the following equation.
-
-\begin{equation}
-\epsilon^{QCD}_{VBF} = \frac {N^{DATA}_{VBF CR} - N^{\overline{QCD} BG}_{VBFCR}}{\left( N^{DATA}_{VBFCR} - N^{\overline{QCD} BG}_{VBFCR} \right) + \left( N^{DATA}_{\overline{VBF}CR} - N^{\overline{QCD} BG}_{\overline{VBF}CR} \right) }
-\label{eq:vbfeff}
-\end{equation}
-
-where:
-
-\begin{itemize}
-\item $N^{DATA}_{VBF CR}$ is the number of the events in data for a given $ \tau $ isolation region and VBF region;
-\item $N^{\overline{QCD} BG}_{VBFCR}$ is the number of all non-QCD MC events for a given $ \tau $ isolation region and VBF region;
-\item $N^{DATA}_{\overline{VBF}CR}$ is the number of events in data in the same isolation Control Region but inverted VBF region;
-\item $N^{\overline{QCD} BG}_{\overline{VBF}CR}$ is the number of all non-QCD MC events for a given $ \tau $ isolation region but inverted VBF region.
-\end{itemize}
-
-Three different predictions for the QCD contribution will be given, one for each pair of tau isolation control regions below the two tight isolation. The estimation of the QCD contamination, in the signal region,  as shown on Equation \ref{eq:qcdbgpred}, has two sources of systematics:  
-
-\begin{itemize}
-	\item[1]Uncertainty on the generated Monte Carlo samples used in the analysis
-	\item[2]  Uncertainty on the stability of the VBF efficiency in regard to a loosening of the tau-identification as previously described in section \ref{sec:crsdef};
-	\item[3] Uncertainty on the stability of the VBF efficiency in regard to a loosening of the \met cut, since the $\epsilon^{QCD}_{VBF}$ is calculated in CRs where no \met cut is applied.
-\end{itemize}
 
 \begin{table}[ht]
 	\centering{
