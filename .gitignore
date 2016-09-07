@@ -19,3 +19,5 @@ diagrams/signal.log
 .gitignore~
 
 thesis.pdf
+
+.DS_Store
