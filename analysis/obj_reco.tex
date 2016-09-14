@@ -23,6 +23,8 @@
 \todo{start this chapter / section by explaining what is to be accomplished 
 	(studying final states of collisions) and what the strategy is (reconstruction of all particles in the final state, which allows doing jets, letpon isolation, …)}
 
+
+
 \section{The Particle Flow Algorithm}
 
 \todo{This is my idea about how one should describe the particle flow:
@@ -37,7 +39,7 @@
 	
 	Consult Christian before taking action.}
 
-The information available from all CMS subdetectors is employed in the particle-ﬂow (PF) algorithm \cite{CMS:2009nxa,CMS:2010byl} to identify and reconstruct individual particles in the event, namely muons, electrons, photons, and charged and neutral hadrons. These particles are used to reconstruct jets, \hadtau candidates, and the vector imbalance in transverse momentum in the event, referred to as \ptvecmiss, as well as to quantify the isolation of leptons. 
+The raw data collected by the CMS experiment is the input of a detailed offline reconstructions of the collision final states. CMS developed over the years an algorithm, called the Particle Flow (PF) \cite{CMS:2009nxa,CMS:2010byl}, that attempts to identify and to reconstruct the kinematic properties of each of the particles in the final states. For this purpose all the information coming from each of the CMS subdetectors is combined. This algorithm heavily relies on the precise measurement of the momenta of charged particles with the silicon tracker, and the precise measurement of photon and electron energies with the highly granular and hermetic ECAL, to overcome the coarser granularity of the HCAL. The reconstructed particles are then used to reconstruct jets, \hadtau candidates, and the vector imbalance in transverse momentum in the event, referred to as \ptvecmiss, as well as to quantify the isolation of leptons. 
 
 \subsection{Electrons reconstruction}
 
@@ -131,11 +133,8 @@ The $\tau$ lepton was discovered between 1974 and 1977 by the team under Martin 
 \end{figure}
 
 \subsection{Algorithm for hadronic Tau reconstruction and identiﬁcation}
-
-The \hadtau decays are reconstructed and identified using the hadrons-plus-strips (HPS) algorithm \cite{Chatrchyan:2012zz} and is seeded by jets of \ensuremath{\pt > 14 \gev} and \ensuremath{|\eta| < 2.5}, reconstructed using the anti-\ensuremath{k_{T}} algorithm \cite{antikt} with a distance parameter of 0.5. The algorithm is designed to reconstruct individual decay modes of the \ensuremath{\tau} lepton, taking advantage of the excellent performance of the PF algorithm in reconstructing individual charged and neutral particles.
+The \hadtau decays are reconstructed and identified using the hadrons-plus-strips (HPS) algorithm \cite{Chatrchyan:2012zz}, a cut-based algorithm focusing on the reconstruction of neutral pions. The HPS algorithm is seeded by jets of \ensuremath{\pt > 14 \gev} and \ensuremath{|\eta| < 2.5}, reconstructed using the anti-\ensuremath{k_{T}} algorithm \cite{antikt} with a distance parameter of 0.5. The algorithm is designed to reconstruct individual decay modes of the \ensuremath{\tau} lepton, taking advantage of the excellent performance of the PF algorithm in reconstructing individual charged and neutral particles.
 The reconstruction and identification of \hadtau decays in the HPS algorithm is performed in two steps:
-
-\todo{you should explain the “plus strips” in “hadrons plus strips”, already in the beginning}
 
 \begin{itemize}
 	\item \textbf{Reconstruction:} combinations of charged and neutral particles reconstructed by the PF algorithm that are compatible with specific \hadtau decays are constructed, and the four-momentum, expressed in terms of (\pt, \ensuremath{\eta}, \ensuremath{\phi} , and mass) of \hadtau candidates, is computed.
