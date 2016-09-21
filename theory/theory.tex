@@ -49,7 +49,30 @@ The second component are the four different forces acting between the leptons an
 	\label{fig:higgs_potential}
 \end{figure}
 
-The third component of the Standard Model is the Higgs mechanism. In this sector of the theory, scalar fields interact with each other in such a way that the ground state acquires a non-zero field strength, breaking the electroweak symmetries spontaneously. The potential describing these self-interactions is displayed in \ref{fig:higgs_potential}. The interaction energies of electroweak gauge bosons, leptons and quarks with this field manifest themselves as non-zero masses of these particles. If this picture is correct, a scalar particle, the Higgs boson, should be observed with a mass of less than about 700 GeV, the final experimentum crucis of the Standard Model.
+The third component of the Standard Model is the Higgs mechanism. 
+In this sector, the lowest energy state (vacuum) is degenerated, i.e. it is no longer invariant under symmetry transformations, while the symmetry of the Lagrangian remains. A “Higgs-field” is introduced, with a non-zero vacuum state. An Lagrangian of such a field is:
+
+\begin{equation}
+\label{eq:higgs_lagrangian}
+\mathcal{L}(x) = [D^{\mu}\phi(x)][D_{\mu}\phi(x)] - \mu^{2}|\phi(x)|^{2} - \lambda|\phi(x)|^{4} -  \dfrac{1}{4}F_{\mu\nu}(x)F^{\mu\nu}(x)
+\end{equation}
+
+where \ensuremath{F_{\mu\nu}(x) =  \partial_{\mu}A_{\nu}(x) - \partial_{\nu}A_{\mu}(x)} is the Lagrangian density of the free field, \ensuremath{D^{\mu}} the covariant derivative, \ensuremath{\phi(x)} the scalar Higgs field, and \ensuremath{\mu^{2}},  real parameters.
+Equation \ref{eq:higgs_lagrangian} is invariant under \ensuremath{U(1)} transformations, giving raise to a massless photon. If the Higgs field is defined in multiple components, a similar invariance under \ensuremath{SU(2)} transformations can be avoided:
+
+\begin{equation}
+\Phi(x) = \binom{\phi_{a}(x)}{\phi_{b}(x)}
+\end{equation}
+
+It can be written in an arbitrary gauge:
+
+\begin{equation}
+\Phi(x) = \dfrac{1}{\sqrt{2}}\binom{\eta_{1}(x) + i\eta_{2}(x)}{v + \sigma(x) + i\eta_{3}(x)}
+\end{equation}
+
+In this sector of the theory, scalar fields interact with each other in such a way that the ground state acquires a non-zero field strength, breaking the electroweak symmetries spontaneously. 
+
+The potential describing these self-interactions is displayed in \ref{fig:higgs_potential}. The interaction energies of electroweak gauge bosons, leptons and quarks with this field manifest themselves as non-zero masses of these particles. If this picture is correct, a scalar particle, the Higgs boson, should be observed with a mass of less than about 700 GeV, the final experimentum crucis of the Standard Model.
 
 The the overall picture of all known Standard Model particles is shown on picture \ref{fig:SM_particles}
 
