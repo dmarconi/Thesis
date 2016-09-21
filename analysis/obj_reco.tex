@@ -1,43 +1,38 @@
-\todo{General comments
+\todo{General comments}
 	
-	- connect your sentences
-	(look up sentence connectors)
+\todo{connect your sentences (look up sentence connectors)}
 	
-	- browse the web about how to write introductions
+\todo{browse the web about how to write introductions}
 	
-	- NEW
-	you have too much text per page :-)
-	For a more professional look and a better reading experience: make your font large enough, make the distance between lines large enough, put some extra distance between paragraphs.}
+	\todo{you have too much text per page :-)}
+	\todo{For a more professional look and a better reading experience: make your font large enough, make the distance between lines large enough, put some extra distance between paragraphs.}
 
 \todo{where do you cover track reconstruction, local calorimeter reconstruction, local muon reconstruction?}
 
-\todo{I recommend to move the information of this chapter as follows:
+\todo{I recommend to move the information of this chapter as follows:}
 	
-	General information about particle reconstruction, (reconstruction algorithms and reconstruction quality) belongs to the chapter about CMS. 
+\todo{	- General information about particle reconstruction, (reconstruction algorithms and reconstruction quality) belongs to the chapter about CMS. }
 	
-	The description of the specific object definitions you employed belong to the analysis chapter.
+\todo{	The description of the specific object definitions you employed belong to the analysis chapter.}
 	
-	A simpler title would simply be
-	“particle reconstruction”}
+\todo{	A simpler title would simply be: particle reconstruction}
 
 \todo{start this chapter / section by explaining what is to be accomplished 
-	(studying final states of collisions) and what the strategy is (reconstruction of all particles in the final state, which allows doing jets, letpon isolation, …)}
+	(studying final states of collisions) and what the strategy is (reconstruction of all particles in the final state, which allows doing jets, letpon isolation, …)
 
 
 
 \section{The Particle Flow Algorithm}
 
-\todo{This is my idea about how one should describe the particle flow:
+\todo{This is my idea about how one should describe the particle flow:}
 	
-	You need to give an idea of the basic idea behind the particle flow algorithm:
+\todo{	- You need to give an idea of the basic idea behind the particle flow algorithm:}
 	
-	- what information does the algorithm use for input (tracks, calorimeter hits, calorimeter clusters, muon hits, muon segments,….)
-	- what are the basic steps of the algorithm
-	- how is the input information filtered at each step
+\todo{	- what information does the algorithm use for input (tracks, calorimeter hits, calorimeter clusters, muon hits, muon segments,….)}
+\todo{	- what are the basic steps of the algorithm}
+\todo{	- how is the input information filtered at each step}
 	
-	no need to go in great detail, but the reader should get an idea.
-	
-	Consult Christian before taking action.}
+\todo{	no need to go in great detail, but the reader should get an idea. Consult Christian before taking action.}
 
 The raw data collected by the CMS experiment is the input of a detailed offline reconstructions of the collision final states. CMS developed over the years an algorithm, called the Particle Flow (PF) \cite{CMS:2009nxa,CMS:2010byl}, that attempts to identify and to reconstruct the kinematic properties of each of the particles in the final states. For this purpose all the information coming from each of the CMS subdetectors is combined. This algorithm heavily relies on the precise measurement of the momenta of charged particles with the silicon tracker, and the precise measurement of photon and electron energies with the highly granular and hermetic ECAL, to overcome the coarser granularity of the HCAL. The reconstructed particles are then used to reconstruct jets, \hadtau candidates, and the vector imbalance in transverse momentum in the event, referred to as \ptvecmiss, as well as to quantify the isolation of leptons. 
 
@@ -87,13 +82,11 @@ Jets within the range \ensuremath{|\eta| < 4.7} are reconstructed using the anti
 	\label{fig:PF_event_display}
 \end{figure}
 
-\todo{MET and MET-like variables belong to the object definition section of the analysis chapter 
+\todo{MET and MET-like variables belong to the object definition section of the analysis chapter} 
 	
-	you say MET and |sum p_T^jet| are  the same, while they are not
-	
-	besides, MET does not belong to a section  named “jet reconstruction”
-	
-	do you use the multivariate technique in [26]? if not don’t mention it}
+\todo{	you say MET and \ensuremath{|sum p_T^jet|} are  the same, while they are not}	
+\todo{	besides, MET does not belong to a section  named “jet reconstruction”}
+\todo{	do you use the multivariate technique in [26]? if not don’t mention it}
 
 Two algorithms are used to reconstruct \ptvecmiss, the imbalance in transverse momentum in the event, whose magnitude is referred to as \met. The standard algorithm computes the negative vectorial sum of all particle momenta reconstructed using the PF algorithm. In addition, a multivariate regression algorithm \cite{Khachatryan:2014gga} has been developed to reduce the effect of pileup on the resolution in \met. The algorithm utilizes the fact that pileup predominantly produces jets of low \pt, while leptons and high-\pt jets are produced almost exclusively in the hard-scatter. The transverse mass, \mt, of the system constituted by an electron or a muon and \met is used to either select or remove events that are due to W+jets and tt production. 
 
@@ -186,24 +179,18 @@ The distributions in the decay modes and in the mass of \hadtau candidates in \e
 \todo{isolation reference should come earlier in the subsection}
 
 \todo{I don’t think “cutoff-based selection” is a proper expression
-	
-	do you need to describe both the cut-based and the MVA discriminant? Only mention the one(s) you use.}
+		do you need to describe both the cut-based and the MVA discriminant? Only mention the one(s) you use.}
 
-Requiring reconstructed \hadtau candidates to pass strict isolation requirements constitutes the main handle for reducing the large multijet background. Tau leptons are usually isolated relative to other particles in the event, and so are their decay products, in contrast to quark and gluon jets. Two types of \hadtau isolation discriminants have been developed, using simple cutoff-based selections and an MVA approach. The expected efficiency of the \hadtau isolation discriminants in \ensuremath{Z/\gamma^{*} \longrightarrow \tau\tau} events goes from \ensuremath{49.0\%} (Loose) to \ensuremath{38.1}\% (Tight) for the cutoff-based approach and \ensuremath{55.9\%} (Very Loose) to \ensuremath{27.3\%} (Tight) for the MVA one. \todo{just “rate”, not “rate efficiency”
-	
-	how is the rate defined? it’s really not clear from the text what these numbers mean.}The Jet \ensuremath{\to \tau} misidentification rate efficiency of the \hadtau isolation discriminants in Multi-jet events goes from \ensuremath{3.86 \times 10^{−3}} (Loose) to \ensuremath{1.75 \times 10^{−3}}\% (Tight) for the cutoff-based approach and \ensuremath{6.21 \times 10^{−3}} (Very Loose) to \ensuremath{4.43 \times 10^{−3}} (Tight) for the MVA one \cite{Khachatryan:2015dfa}.
+Requiring reconstructed \hadtau candidates to pass strict isolation requirements constitutes the main handle for reducing the large multijet background. Tau leptons are usually isolated relative to other particles in the event, and so are their decay products, in contrast to quark and gluon jets. Two types of \hadtau isolation discriminants have been developed, using simple cutoff-based selections and an MVA approach. The expected efficiency of the \hadtau isolation discriminants in \ensuremath{Z/\gamma^{*} \longrightarrow \tau\tau} events goes from \ensuremath{49.0\%} (Loose) to \ensuremath{38.1}\% (Tight) for the cutoff-based approach and \ensuremath{55.9\%} (Very Loose) to \ensuremath{27.3\%} (Tight) for the MVA one. \todo{just “rate”, not “rate efficiency”. how is the rate defined? it’s really not clear from the text what these numbers mean.}The Jet \ensuremath{\to \tau} misidentification rate efficiency of the \hadtau isolation discriminants in Multi-jet events goes from \ensuremath{3.86 \times 10^{−3}} (Loose) to \ensuremath{1.75 \times 10^{−3}}\% (Tight) for the cutoff-based approach and \ensuremath{6.21 \times 10^{−3}} (Very Loose) to \ensuremath{4.43 \times 10^{−3}} (Tight) for the MVA one \cite{Khachatryan:2015dfa}.
  
 \subsubsection{Discriminants against electrons and muons}
 
-\todo{rate is not defined
+\todo{rate is not defined}
 
-note there is a rate > 1
-i don’t know whether this is correct,
-cause I don’t understand the rate definition.
+\todo{note there is a rate > 1. i don’t know whether this is correct, cause I don’t understand the rate definition.}
 
-avoid mentioning both MVA and cut-based. only mention the ones you use.
-
-you need references for the discriminators earlier in the subsection}
+\todo{avoid mentioning both MVA and cut-based. only mention the ones you use.}
+\todo{you need references for the discriminators earlier in the subsection}
 
 Electrons and muons have a sizable probability to get reconstructed in the \ensuremath{h^{\pm}} decay mode. Electrons radiating a bremsstrahlung photon that subsequently converts may also get reconstructed in the \ensuremath{h^{\pm}\pi^{0}s} decay mode. In particular, electrons and muons originating from decays of W and Z bosons, which are produced with cross sections of \ensuremath{\approx100} nb at the LHC at \ensuremath{\sqrt{s} = 8} \tev have a high chance to pass isolation-based \hadtau identification criteria. Dedicated discriminants have been developed to separate \hadtau from electrons and muons. The separation of \hadtau from electrons is based on an MVA approach, with an efficiency and \ensuremath{e\to \tau} misidentification rate going from \ensuremath{93.3\%} and \ensuremath{2.38 \times 10^{−2}} (Very loose) to \ensuremath{72.1\%} and \ensuremath{3.54 \times 10^{−4}} (Very tight) in \ensuremath{Z/\gamma^{*} \longrightarrow \tau\tau} events.
 A cut based and an MVA based discriminant are used to separate \hadtau from muons. The expected efficiency of the \hadtau against muon discriminants in \ensuremath{Z/\gamma^{*} \longrightarrow \tau\tau} events goes from \ensuremath{99.3\%} (Loose) to \ensuremath{99.1}\% (Tight) for the cutoff-based approach and \ensuremath{99.5\%} (Loose) to \ensuremath{98\%} (Tight) for the MVA one. The \ensuremath{\mu \to \tau} misidentification rate efficiency of the \hadtau isolation discriminants in \ensuremath{Z/\gamma^{*} \longrightarrow \mu\mu} events goes from \ensuremath{1.77 \times 10^{−3}} (Loose) to \ensuremath{7.74 \times 10^{−4}}\% (Tight) for the cutoff-based approach and \ensuremath{5.20 \times 10^{−4}} (Loose) to \ensuremath{3.18 \times 10^{−4}} (Tight) for the MVA one \cite{Khachatryan:2015dfa}.
@@ -220,17 +207,14 @@ The determination of collisions Primary Vertices (PV) for each of the bunch cros
 \subsection{Tau}
 \label{subsec::objsel_tau}
 
-\todo{hm, you write 4.3.2 as if 4.2 does not exist
+\todo{hm, you write 4.3.2 as if 4.2 does not exist}
 	
-	refer back to the section about taus (4.2)
+\todo{	refer back to the section about taus (4.2)}
 	
-	4.2 and 4.3.2 are not in sync
+\todo{	4.2 and 4.3.2 are not in sync}
 	
-	avoid words like DecayModeFindingNewDMs
-	(you can have them in an appendix)
-	if you really need them here, they should already be introduced in 4.2
-	
-	this should move to the object definitions of the analysis chapter}
+\todo{	avoid words like DecayModeFindingNewDMs(you can have them in an appendix) if you really need them here, they should already be introduced in 4.2}
+\todo{	this should move to the object definitions of the analysis chapter}
 
 The challenge in identifying \hadtau candidates is discriminating against generic quark and gluon QCD jets which are produced with a cross section several orders of magnitude larger. CMS has developed several algorithms to reconstruct and identify \hadtau based on Particle Flow (PF) objects. For this analysis, the Tau POG recommended Hadron Plus Strips algorithm (HPS) is used. 
 
@@ -243,11 +227,10 @@ The isolation discriminator is a BDT \cite{Hocker:2007ht} discriminator based on
 \subsection{Jets}
 \label{subsec::objsel_jet}
 
-\todo{hm, written as if the earlier section about jets does not exist
+\todo{hm, written as if the earlier section about jets does not exist}
 	
-	reference back (unless you give up the earlier section about jets)
-	
-	should become part of the object definition section of the analysis chapter}
+\todo{	reference back (unless you give up the earlier section about jets)}
+\todo{should become part of the object definition section of the analysis chapter}
 
 Particle Flow jets (PFJets) are used in this analysis. The \antikt clustering algorithm with a reconstruction cone of \ensuremath{R = 0.5} is used, defined in \ensuremath{\eta-\phi (R = \sqrt{{\Delta \eta}^2 + {\Delta \phi}^{2}})} \cite{1126-6708-2008-04-063}. 
 
@@ -256,11 +239,10 @@ The PF jets used in this analysis are corrected using L1 FastJet, L2 Relative, a
 \subsection{b-Jets} 
 \label{subsec::objsel_bjet}
 
-\todo{again written, as if you didn’t write about b-jets earlier.
+\todo{again written, as if you didn’t write about b-jets earlier.}
 	
-	refer back, unless you decide to give up the earlier description of b-jets, as I suggested,
-	
-	should become part of “object definitions” in analysis chapter}
+	\todo{refer back, unless you decide to give up the earlier description of b-jets, as I suggested,}
+\todo{should become part of “object definitions” in analysis chapter}
 
 This analysis uses the loose working point of the combined secondary vertex algorithm \cite{CMS:2011cra}. The EPS13 prescription is used for the b-tagging and mis-tagging scale factors and efficiencies. They are applied using the method called ``Event reweighing using scale factors only" \cite{Ferencek:btag2015}. Table~\ref{table:bjetobjdefinition} shows the detailed selection criteria.
 
