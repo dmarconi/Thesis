@@ -2,6 +2,8 @@
 
 The Standard Model \cite{Spiesberger:2000ks} is an effective description of all known fundamental particles.  Despite this criticism, the Standard Model provides a valid framework for the description of Nature, from microscopic scales up to cosmological distances.The Standard Model consists of three components.
 
+\subsection{Matter}
+
 The first component states that the basic constituents of matter are leptons and quarks which are realized in three families of identical structure. The entire ensemble of these constituents has been identified experimentally. Table \ref{table:fermions} shows all the fermions of the Standard Model and their charges, arranged in the three families.
 
 	\begin{figure}[tbh!]
@@ -37,8 +39,17 @@ The first component states that the basic constituents of matter are leptons and
 		\caption{The four fundamental forces in nature as described by the Standard Model.}
 		\label{fig:SM_forces}
 	\end{figure}
+
+\subsection{Interactions}
+
+The interactions are mediated by bosons. They are the quanta of the gauge fields, and couple to the corresponding charges. The interactions are described by symmetry transformations U of the group SU(n). They are unitary (UU† = 1) and special (det(U) = 1). An operator
+
+
+-----------------------------
 	
 The second component are the four different forces acting between the leptons and quarks. The electromagnetic and weak forces are unified in the Standard Model. The fields associated with these forces, as well as the fields associated with the strong force, are spin-1 fields, describing the photon \ensuremath{\gamma}, the electroweak gauge bosons \W and \Z, and the gluons g. The interactions of the force fields with the fermionic constituents of matter as well as their self-interactions are described by Abelian and non-Abelian \ensuremath{SU(3) \times SU(2) \times U(1)} gauge theories. The experimental exploration of these fundamental gauge symmetries is far advanced in the sector of lepton/quark-gauge boson interactions, yet much less is known so far from experiment about the self-interactions of the force fields. The gravitational interaction is mediated by a spin-2 field, describing the graviton G, with a character quite different from spin-1 gauge fields. The gravity sector is attached ad hoc to the other sectors of the Standard Model, not properly formulated yet as a quantum phenomenon. Figure \ref{fig:SM_forces} shows the four fundamental forces in nature as described by the Standard Model.
+
+
 
 \begin{figure}[tbh!]
 	\centering
@@ -48,6 +59,9 @@ The second component are the four different forces acting between the leptons an
 	\caption{The Higgs potential of the Standard Model.}
 	\label{fig:higgs_potential}
 \end{figure}
+
+
+\subsection{The Higgs Mechanism}
 
 The third component of the Standard Model is the Higgs mechanism. 
 In this sector, the lowest energy state (vacuum) is degenerated, i.e. it is no longer invariant under symmetry transformations, while the symmetry of the Lagrangian remains. A “Higgs-field” is introduced, with a non-zero vacuum state. An Lagrangian of such a field is:
@@ -69,6 +83,14 @@ It can be written in an arbitrary gauge:
 \begin{equation}
 \Phi(x) = \dfrac{1}{\sqrt{2}}\binom{\eta_{1}(x) + i\eta_{2}(x)}{v + \sigma(x) + i\eta_{3}(x)}
 \end{equation}
+
+with the four real fields \ensuremath{\sigma(x)} and \ensuremath{\eta_{i}(x)}, \ensuremath{i = 1, 2, 3}, and \ensuremath{v = ( - \mu^{2}/ \lambda) ^{-1/2}}. This can always be transformed to
+
+\begin{equation}
+\Phi(x) = \dfrac{1}{\sqrt{2}}\binom{0}{v + \sigma(x)}
+\end{equation}
+
+which does not include the \ensuremath{\eta_{i}(x)}. These were absorbed by the boson fields \W \Z, giving them their masses. The fermions gain their masses by a direct coupling to the higgs field \ensuremath{\sigma(x)}. \todo{Change this statement for god sake}The Higgs boson is not discovered yet, but hints of an higgs-like particle at a mass of approximately 125 GeV have been seen at different experiments [10][11][12].
 
 In this sector of the theory, scalar fields interact with each other in such a way that the ground state acquires a non-zero field strength, breaking the electroweak symmetries spontaneously. 
 
@@ -96,6 +118,21 @@ The the overall picture of all known Standard Model particles is shown on pictur
 \end{figure}
 
 \clearpage
+
+\subsection{Limitations}
+
+\todo{Total Rework}
+
+Although the Standard Model is very successful in describing physics at the electroweak scale, a few questions remain:
+
+\begin{itemize}
+	\item Gravity: The Standard Model does not include gravity and already for this reason alone, it cannot be a complete description of nature.
+	\item No Electrostrong Unification: The hope of physics in the end is to unify all forces, but while the strong force is well represented by the SU(3), it is not unified with the other forces like it is the case for the electromagnetic and the weak force.
+	\item Dark Matter: Astrophysical observations indicate a much greater accumulation of matter in the visible universe than can be explained by baryonic matter [13]. This “dark matter” cannot be explained by neutrinos, which could form only a small fraction of it. The “Modified Newtonian Dynamics” (MOND) [14] was developed in order to explain this excess within the existing theories. It was very successful, especially in explaining the measurement of galaxy rotation curves [15], until the bullet cluster [16] was discovered. Being actually two clusters passing each other, the bullet cluster shows a discrepancy between the center of the masses detected by direct observation and the center of the masses detected by gravitational lensing. This cannot be explained by MOND alone.
+	\item WW Scattering: In the Standard Model, the four-vector-boson interaction becomes divergent with rising energy. If the Higgs mechanism turns out to be realized, a new term due to interactions of the vector-bosons with the Higgs is introduced, which cancels out this divergence. But this will only work, if the higgs mass is of the order of 100 GeV, and the WW scattering problem turns into the “fine-tuning” problem.
+	\item Neutrino Masses: In the original Standard Model, neutrinos are set to be massless. Experiments showed that neutrinos indeed have non-zero masses [17]. In case of a sterile Dirac neutrino5, the Standard Model can be extended to include massive neutrinos. If it turns out that neutrinos are Majorana particles6, new physics beyond the Standard Model has to be introduced to explain the tiny masses of the neutrinos.
+	\item Hierarchy Problem: In the Standard Model, the quantum corrections to the Higgs mass are quadratically divergent. If the Standard Model is assumed to be valid up to the Planck scale7, these corrections are huge compared to the physical Higgs mass.
+\end{itemize}
 
 \section{Supersymmetry}
 
