@@ -11,14 +11,20 @@
 
 As mentioned in Section \ref{section::search_strategy} the di-\hadtau channel's main background contribution comes from QCD multijet, with a rate several orders of magnitude larger than the rate in other contributions.  Hence this search channel, more than any of the others, relies on the efficient background rejection. Fortunately, the VBF and \met selections provide the required background suppression.
 
-All the collision data events passing the requirements of the triggers shown on Table \ref{table:triggerdefinition} are considered as the interesting events for offline analysis. As previously introduced in Section \ref{section::search_strategy}, the event selection criteria is divided in two distinct parts: the central part, which takes into account the LSP and the decay products of the multiple \hadtau, and the VBF part, which cuts over the kinematic properties of the jets coming from a VBF process. The main differences with the other VBF SUSY searches with final states to light leptons, are the substantially tighter \hadtau requirements targeting at the suppression of QCD jet background and the looser missing transverse energy (\met) requirement, to recover some of the signal acceptance lost due to the larger discriminator based on isolation $\hadtau$ \pt thresholds needed to stay efficient with respect to the trigger.  
+All the collision data events passing the requirements of the triggers shown on Table \ref{table:triggerdefinition} are considered as the interesting events for offline analysis. 
+
+As previously introduced in Section \ref{section::search_strategy}, the event selection criteria is divided in two distinct parts: the central part, which takes into account the LSP and the decay products of the multiple \hadtau, and the VBF part, which cuts over the kinematic properties of the jets coming from a VBF process. 
+
+The main differences with the other VBF SUSY searches with final states to light leptons, are the substantially tighter \hadtau requirements targeting at the suppression of QCD jet background and the looser missing transverse energy (\met) requirement, to recover some of the signal acceptance lost due to the larger discriminator based on isolation $\hadtau$ \pt thresholds needed to stay efficient with respect to the trigger.  
 
 %TODO Higher multiplicity t_h: I understand what you mean, but most readers won’t
 
 The selected events are required to have at least two \hadtau candidates as defined in Section \ref{subsec::objsel_tau}. Higher multiplicity \hadtau are constrained by the trigger. The like sign \hadtau candidates with the highest \pt and separated from each other by a minimum \deltar = 0.3 are then chosen to form a di-\hadtau candidate. 
-Further, to reduce top pair contamination the event is required not to have any jet identified as a b--quark jet by the b--tagging algorithms using the {\textit combined secondary vertex loose} (CSVL) working point. Only jets with \pt $\ge 30 \gev$ and separated from the taus in the di--\hadtau pairs by $\Delta R \ge 0.3$ are searched for b--tags. The higher \pt cut of 30 $\gev$ on b-jets (a looser veto requirement than other analyses with light leptons) allows us to be more efficient with respect to the signal since the higher \pt threshold on taus reduces the contamination of $t\overline{t}$ to a large extent. Further, the event is required to have at least 30 \gev of \met. All the above described selections is what will be referred as {\textit central selections}.
+Further, to reduce top pair contamination the event is required not to have any jet identified as a b--quark jet by the b--tagging algorithms using the {\textit combined secondary vertex loose} (CSVL) working point. 
 
-Subsequently, the following event-wide requirements are imposed. The {\textit {VBF selections}} are imposed by requiring at least two jets as defined in Section \ref{subsec::objsel_jet}. Only jets separated from the leptons in the \hadtau\hadtau pair by $\deltar \ge 0.3$ are considered. All jet candidates passing the above requirements and having $\vert \Delta\eta \vert \ge 4.2$ and $\eta_{1}\cdot\eta_{2} < 0$ are combined to form di-jet candidates. The final and the most important of the requirement is an invariant mass of the di-jet candidate, namely \mjj, above the threshold of 250 \gev. In order to increase the event acceptance the analysis code algorithm takes into account every possible di-jet candidate combination and chooses the one that passes the VBF requirements and has the highest \mjj. 
+Only jets with \pt $\ge 30\gev$ and separated from the taus in the di--\hadtau pairs by $\Delta R \ge 0.3$ are searched for b--tags. The higher \pt cut of 30\gev on b-jets (a looser veto requirement than other analyses with light leptons) allows us to be more efficient with respect to the signal since the higher \pt threshold on taus reduces the contamination of $t\overline{t}$ to a large extent. Further, the event is required to have at least 30\gev of \met. All the above described selections is what will be referred as {\textit central selections}.
+
+Subsequently, the following event-wide requirements are imposed. The {\textit {VBF selections}} are imposed by requiring at least two jets as defined in Section \ref{subsec::objsel_jet}. Only jets separated from the leptons in the \hadtau\hadtau pair by $\deltar \ge 0.3$ are considered. All jet candidates passing the above requirements and having $\vert \Delta\eta \vert \ge 4.2$ and $\eta_{1}\cdot\eta_{2} < 0$ are combined to form di-jet candidates. The final and the most important of the requirement is an invariant mass of the di-jet candidate, namely \mjj, above the threshold of 250\gev. In order to increase the event acceptance the analysis code algorithm takes into account every possible di-jet candidate combination and chooses the one that passes the VBF requirements and has the highest \mjj. 
 
 For better visualization and understanding all the selection criteria are summarized the following way:
 
@@ -47,121 +53,6 @@ For better visualization and understanding all the selection criteria are summar
 \clearpage
 
 
-\section{Background Contributions}
-
-%TODO I would move this to the strategy chapter. Once you have informed the reader about the topology you are interested in, you want to explain which are the backgrounds to expect. Then, in the analysis chapter it’s nice to motivate your object definitions and event selection by referring back to this background section.
-
-The most important aspect of any search for new physics is the methodology used to estimate the background contribution in the signal region. The first step consists in the determination of all the irreducible background sources and the definition of an estimation technique for each of the contributions. Four types of background contributions have been considered in this analysis. 
-
-The first irreducible background contribution is coming from the Standard Model VBF processes resulting in two \hadtau and two jets as shown in Figure \ref{fig:background_SMVBF}. This background contribution is well modeled being purely electroweak and its cross section is very small. Therefore this background is considered minor and its contribution is directly taken from simulation.
-
-%TODO I don’t see the point of so many graphs for backgrounds that don’t matter in the end. I’d reduce this drastically:
-%TODO I would keep one VBF bkg graph, cause VBF is your topic
-%TODO I would keep one V+jets,one tt, and one multijet graph because those are your main backgrounds
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.48\textwidth]{diagrams/pics/background_SMVBFminus.pdf}
-		\includegraphics[width=0.48\textwidth]{diagrams/pics/background_SMVBFplus.pdf} 		
-	\end{tabular}
-	\caption{Feynman diagrams of irreducible backgrounds of Standard Model Vector Boson Fusion processes with two \hadtau and two jets final state. }
-	\label{fig:background_SMVBF}
-\end{figure}
-
-Secondly, all the Standard Model VBF processes resulting in three leptons, with one of the leptons, the opposite charged one, failing to pass the tauID, are considered as shown on \ref{fig:background_SMVBFZ0Wmiss}.
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.48\textwidth]{diagrams/pics/background_SMVBFZ0Wmissminus.pdf}
-		\includegraphics[width=0.48\textwidth]{diagrams/pics/background_SMVBFZ0Wmissplus.pdf} 		
-	\end{tabular}
-	\caption{Feynman diagrams of irreducible backgrounds of Standard Model Vector Boson  processes ending with three $\tau$ where the opposite charged one fails to pass the tauID selection criteria. }
-	\label{fig:background_SMVBFZ0Wmiss}
-\end{figure}
-
-%TODO “modeling is reliable”, more careful would be to state that the rate and relative theoretical uncertainty on the rate is small compared to QCD
-
-Those processes are again purely electroweak, therefore their cross section is low and the simulation modeling is reliable. Additionally the probability for events coming from this background contribution to pass the event selection is very low. In conclusion, this topology of events is considered to be a minor contribution to the total background.  
-
-Thirdly, there are the Standard Model backgrounds where one of the \hadtau has a mis-reconstructed charge as shown in Figures \ref{fig:background_SMVBFZ0}, \ref{fig:background_SMVBFH} and \ref{fig:background_ttbar}. 
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.48\textwidth]{diagrams/pics/background_SMVBFZ0Z0.pdf}
-		\includegraphics[width=0.48\textwidth]{diagrams/pics/background_SMVBFZ0W.pdf} 		
-	\end{tabular}
-	\caption{Feynman diagrams of irreducible backgrounds of Standard Model Vector Boson Fusion $Z^{0}$ production. }
-	\label{fig:background_SMVBFZ0}
-\end{figure}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.48\textwidth]{diagrams/pics/background_HZ0.pdf}
-		\includegraphics[width=0.48\textwidth]{diagrams/pics/background_HW.pdf} 		
-	\end{tabular}
-	\caption{Feynman diagrams of irreducible backgrounds of Standard Model Vector Boson Fusion Higgs production. }
-	\label{fig:background_SMVBFH}
-\end{figure}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.75\textwidth]{diagrams/pics/background_ttbar.pdf}
-	\end{tabular}
-	\caption{\ttbar production where both jets fail the b-tag and one of the jets is reconstructed as a \hadtaufake.}
-	%TODO “one of the jets is reconstructed as a fake” rather say something like is part of background if one of the jets is reconstructed as a tau”	
-	\label{fig:background_ttbar}
-\end{figure}
-
-All of these processes have a very low cross section compared to the one coming from the main background contribution, therefore those processes are all considered a minor background and their event contribution is taken directly from simulation.
-
-The last background contribution comes from all the QCD events resulting in 4 jets with 2 of those jests reconstructed as a fake \hadtau. Even though the probability of a jet to fake an \hadtau is low the production of QCD events in a hadron collider has huge cross sections. Therefore, even small \hadtaufake rates from QCD processes, matter. Also, in QCD events, additional jet activity from initial or final jet radiation processes is expected, which gives these type of events a high probability to pass the VBF selection criteria. Those motivations lead to the determination of QCD as main background source for this analysis. Examples of some QCD processes are shown in Figure \ref{fig:background_QCDinitrad} and \ref{fig:background_QCDfinrad}.
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.75\textwidth]{diagrams/pics/background_QCDinitrad.pdf}
-	\end{tabular}
-	\caption{Feynman diagrams of a four jet QCD prodution with initial state radiation where two jets are misreconstructed as \hadtau. }
-	\label{fig:background_QCDinitrad}
-\end{figure}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.75\textwidth]{diagrams/pics/background_QCDfinrad.pdf}
-	\end{tabular}
-	\caption{Feynman diagrams of a 4 jet QCD prodution with final state radiation where two jets are misreconstructed as \hadtau. }
-	\label{fig:background_QCDfinrad}
-\end{figure}
-
-%TODO a QCD event with a hard isolated t_h AND a fake t_h? that sounds really rare, perhaps impossible, is it relevant?
-
-Similarly to the processes described before there are QCD processes resulting in one \hadtau and three jets with one of the jets mis-reconstructed as the second \hadtau. Exaples of those processes are shown on Figure
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.75\textwidth]{diagrams/pics/background_W3jets.pdf}
-	\end{tabular}
-	\caption{Feynman diagrams of W boson plus 3 jets production where one jet is mis-reconstructed as \hadtau. }
-	\label{fig:background_W3jets}
-\end{figure}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.75\textwidth]{diagrams/pics/background_singlet.pdf}
-	\end{tabular}
-	\caption{Feynman diagrams of single top production where one jet is mis-reconstructed as \hadtau. }
-	\label{fig:background_singlet}
-\end{figure}
-
-\clearpage
 
 \section{Signal and Background Samples}
 
@@ -169,18 +60,29 @@ Similarly to the processes described before there are QCD processes resulting in
 
 %TODO you need to explain more precisely where MC is used: signal prediction, *part* of the bkg prediction, optimization, design of QCD background prediction
 
-%TODO one topic per paragraph
-
 %TODO you use “normalize” for 2 different things. Rephrase to make clear  - that you *normalize* the MC yields to the integrated luminosity of the data (quote number) - *by using* cross sections predicted with …  
 
-%TPDO PYTHIA part: what about jet-parton matching?
+The background yields are taken from simulation. Simulated samples of signal and background events are generated using Monte Carlo (MC) event generators.
 
-The background yields are taken from simulation. Simulated samples of signal and background events are generated using Monte Carlo (MC) event generators. The signal event samples are generated with the \texttt{MadGraph v5.1.5} program \cite{Alwall:2011uj}, considering pair production of gauginos with two associated partons. The signal events are generated requiring a pseudorapidity gap $|\deltaeta| > 4.2$ between the two partons, with $\pt > 30$ \pt for each parton. Background event samples with a Higgs boson produced through VBF processes, and single top are generated with the \texttt{POWHEG v1.0r1380} program \cite{Frixione:2007vw}. The \texttt{MadGraph v5.1.3} generator is used to describe Z+jets, W+jets, tt, di-boson, and VBF Z boson production. The MC background and signal yields are normalized to the integrated luminosity of the data. The \ttbar background is normalized to the next-to-next-to-leading-logarithm level using the calculations of references \cite{Czakon:2013goa,Melnikov:2006kv}. The Z+jets and W+jets processes are normalized to next-to-next-to-leading-order using the results from the \texttt{FEWZ v2.1} \cite{Gavin:2010az} generator. The di-boson background processes are normalized to next-to-leading-order using the \texttt{MCFM v5.8} \cite{Campbell:2010ff} generator, while the VBF Z boson events are normalized to next-to-leading order using the \texttt{VBFNLO v2.6} \cite{Arnold:2008rz,Arnold:2011wj}program. The single-top and VBF Higgs boson background yields are taken from the powheg program, where the next-to-leading order effects are incorporated. Signal cross sections are calculated at leading order using the MadGraph generator. All MC samples incorporate the \texttt{CTEQ6L1} \cite{Pumplin:2002vw} or \texttt{CTEQ6M} \cite{Nadolsky:2008zw} parton distribution functions (PDF). The corresponding evaluation of uncertainties in the signal cross sections is discussed in Section \ref{sec:systematics}. The range of signal cross sections is $50^{–1}$ fb for \charginopm = \neutralinotwo masses of 100–-300\gev. The \texttt{POWHEG} and \texttt{MadGraph} generators are interfaced with the \texttt{PYTHIA v6.4.22} \cite{Sjostrand:2006za} program, which is used to describe the parton shower and hadronization processes. The decays of $\tau$ leptons are described using the \texttt{tauola (27.1215)} \cite{Davidson:2010rw} program. The background samples are processed with a detailed simulation of the CMS apparatus using the \texttt{Geant4} package \cite{Agostinelli:2002hh}, while the response for signal samples is modeled with the CMS fast simulation program \cite{Abdullin:2011zz}. For the signal acceptance and \mjj shapes based on the fast simulation, the differences with respect to the \texttt{Geant4}-based results are found to be small ($< 5\%$). Corrections are applied to account for the differences. For all MC samples, multiple proton-proton interactions are superimposed on the primary collision process, and events are reweighted such that the distribution of reconstructed collision vertices matches that in data. The distribution of the number of pileup interactions per event has a mean of 21 and a root-mean-square of 5.5. For all datasets, a common \texttt{Physics Analysis Toolkit} (\texttt{PAT}) \cite{Adam:2010zza} sequence has been used to generate a PAT format, then further reduced in size by the ntuple producer \cite{bib:thentuplemaker}.
+ The signal event samples are generated with the \texttt{MadGraph v5.1.5} program \cite{Alwall:2011uj}, considering pair production of gauginos with two associated partons. The signal events are generated requiring a pseudorapidity gap $|\deltaeta| > 4.2$ between the two partons, with $\pt > 30$ \pt for each parton. Signal cross sections are calculated at leading order using the MadGraph generator. The range of signal cross sections is $50^{–1}$ fb for \charginopm = \neutralinotwo masses of 100–-300\gev.
+ 
+ Background event samples with a Higgs boson produced through VBF processes, and single top are generated with the \texttt{POWHEG v1.0r1380} program \cite{Frixione:2007vw}. 
+ The \texttt{MadGraph v5.1.3} generator is used to describe Z+jets, W+jets, tt, di-boson, and VBF Z boson production. The MC background and signal yields are normalized to the integrated luminosity of the data. 
+ The \ttbar background is normalized to the next-to-next-to-leading-logarithm level using the calculations of references \cite{Czakon:2013goa,Melnikov:2006kv}. 
+ The Z+jets and W+jets processes are normalized to next-to-next-to-leading-order using the results from the \texttt{FEWZ v2.1} \cite{Gavin:2010az} generator. 
+ The di-boson background processes are normalized to next-to-leading-order using the \texttt{MCFM v5.8} \cite{Campbell:2010ff} generator, while the VBF Z boson events are normalized to next-to-leading order using the \texttt{VBFNLO v2.6} \cite{Arnold:2008rz,Arnold:2011wj}program. 
+ The single-top and VBF Higgs boson background yields are taken from the powheg program, where the next-to-leading order effects are incorporated.
+ 
+  All MC samples incorporate the \texttt{CTEQ6L1} \cite{Pumplin:2002vw} or \texttt{CTEQ6M} \cite{Nadolsky:2008zw} parton distribution functions (PDF). The corresponding evaluation of uncertainties in the signal cross sections is discussed in Section \ref{sec:systematics}. The \texttt{POWHEG} and \texttt{MadGraph} generators are interfaced with the \texttt{PYTHIA v6.4.22} \cite{Sjostrand:2006za} program, which is used in the mathing between the matrix elements and the parton shower, and the hadronization processes. 
+  
+  
+  The decays of $\tau$ leptons are described using the \texttt{tauola (27.1215)} \cite{Davidson:2010rw} program. The background samples are processed with a detailed simulation of the CMS apparatus using the \texttt{Geant4} package \cite{Agostinelli:2002hh}, while the response for signal samples is modeled with the CMS fast simulation program \cite{Abdullin:2011zz}. For the signal acceptance and \mjj shapes based on the fast simulation, the differences with respect to the \texttt{Geant4}-based results are found to be small ($< 5\%$). Corrections are applied to account for the differences. 
+  
+  For all MC samples, multiple proton-proton interactions are superimposed on the primary collision process, and events are reweighted such that the distribution of reconstructed collision vertices matches that in data. The distribution of the number of pileup interactions per event has a mean of 21 and a root-mean-square of 5.5. 
+  
+  For all datasets, a common \texttt{Physics Analysis Toolkit} (\texttt{PAT}) \cite{Adam:2010zza} sequence has been used to generate a PAT format, then further reduced in size by the ntuple producer \cite{bib:thentuplemaker}.
 
 %TODO how is the trigger modeled in MC? you use the same reconstruction software on MC as on data? geant4 is not the full story: electronics and propagation of light through material is emulated (digitization step)
-
-%TODO “For all…” you can remove that last sentence
-
 
 \section {LS di-Tau Data-Driven QCD background prediction} \label{sec:bgestimation}
 
@@ -227,11 +129,16 @@ The second dimension of exclusivity is based on the VBF cuts described in \ref{s
 		\item VBF inverted region: consisting of all the events that at least fails one of the VBF cuts previously mentioned;
 	\end{enumerate} 
 
-Using these definitions one signal region (SR) and seven control regions (CR) are defined as shown in Figure \ref{fig:crs}. The SR falls into the region defined by two tight isolated $\hadtau$ and all the VBF cuts applied, close to it the control region 2 (CR2) features the same \hadtau isolation requirements but inverted VBF selection requirement. In order to keep the QCD background contribution low in SR and CR2 an additional cut of  \met $ > $ 30\gev is required.
+Using these definitions one signal region (SR) and seven control regions (CR) are defined as shown in Figure \ref{fig:crs}. The SR falls into the region defined by two tight isolated $\hadtau$ and all the VBF cuts applied, close to it the control region two (CR2) features the same \hadtau isolation requirements but inverted VBF selection requirement. In order to keep the QCD background contribution low in SR and CR2 an additional cut of  \met $ > $ 30\gev is required.
 
-The estimation of the events in the signal region is done similarly to any other data driven ABCD method by counting the number of events in CR2 and multiplying it with a proper conversion factor described in the following equation:
+The estimation of the events in the signal region is equivalent to the classic ABCD method consisting in counting the number of events in CR2 and multiplying it with a proper conversion factor. This estimation method has been developed under the following assumptions:
 
-%TODO This is *not* the general ABCD method, because you have this efficiency stuff. I know it comes down to the same thing, but you confuse the reader by saying that it is the QBCD method. May be remove the confusion bu saying that you use a method “equivalent” to the classic ABCD method.
+\begin{itemize}
+	\item[1] The VBF selection efficiency is independent from any trigger efficiency concerning $\hadtau$ isolation such that each contribution to the numerator and denominator cancels out;
+	\item[2] The VBF selection efficiency is also independent from any \met cut applied in order to reduce QCD background contributions. 
+\end{itemize}
+
+ The number of   in the following equation:
 
 \begin{equation}
 N^{QCD}_{SR} = \left( N^{DATA}_{CR2} - N^{\overline{QCD} BG}_{CR2} \right) * \left[ \frac{\epsilon^{QCD}_{VBF}}{1 - \epsilon^{QCD}_{VBF}} \right]
@@ -258,16 +165,6 @@ Those  control regions are defined as CR3 (One Tight isolation region), CR5  (An
 \end{equation}
 
 where $N^{DATA}_{VBF CR}$ is the number of the events in data for a given $ \tau $ isolation region and VBF region, $N^{\overline{QCD} BG}_{VBFCR}$ is the number of all non-QCD MC events for a given $ \tau $ isolation region and VBF region, $N^{DATA}_{\overline{VBF}CR}$ is the number of events in data in the same isolation Control Region but inverted VBF region and$N^{\overline{QCD} BG}_{\overline{VBF}CR}$ is the number of all non-QCD MC events for a given $ \tau $ isolation region but inverted VBF region.
-
-%TODO it’s always good to give assumptions in the beginning. And you don’t really make the first assumption, cause you have corrections for the non QCD background.
-
-This estimation method has been developed under the following assumptions:
-
-\begin{itemize}
-	\item[1] all control regions are QCD dominated;
-	\item[2] $\epsilon^{QCD}_{VBF}$ is independent from any trigger efficiency concerning $\hadtau$ isolation such that each contribution to the numerator and denominator cancels out;
-	\item[3] $\epsilon^{QCD}_{VBF}$ is independent from ant MET cut applied in order to reduce QCD background contributions. 
-\end{itemize}
 
 %TODO here the reader needs to be referred to the table
 

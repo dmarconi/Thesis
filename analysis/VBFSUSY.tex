@@ -85,3 +85,112 @@ The search strategy can be divided in two distinct parts: the first one consider
 
 Besides the two oppositely directed forward jets that define the VBF configuration, the search requires the presence of at least two leptons coming from the different decay modes of the $\tau$ and large \met. The chosen search channels are $e\mu jj$, $\mu\mu jj$, $\mu\hadtau jj$, and $\hadtau\hadtau jj$. The final states are further differentiated into like-sign (LS) and opposite-sign (OS) di-lepton pairs for a total of eight different search channels. This thesis focuses its attention on the di-\hadtau LS channel search and its background estimation strategy. 
 
+
+\section{Background Contributions}
+
+The most important aspect of any search for new physics is the methodology used to estimate the background contribution in the signal region. The first step consists in the determination of all the irreducible background sources and the definition of an estimation technique for each of the contributions. Four types of background contributions have been considered in this analysis. 
+
+The first irreducible background contribution is coming from the Standard Model VBF processes resulting in two \hadtau and two jets as shown in Figure \ref{fig:background_SMVBF}. This background contribution is well modeled being purely electroweak and its cross section is very small. Therefore this background is considered minor and its contribution is directly taken from simulation.
+
+%TODO I don’t see the point of so many graphs for backgrounds that don’t matter in the end. I’d reduce this drastically:
+%TODO I would keep one VBF bkg graph, cause VBF is your topic
+%TODO I would keep one V+jets,one tt, and one multijet graph because those are your main backgrounds
+
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.48\textwidth]{diagrams/pics/background_SMVBFminus.pdf}
+		\includegraphics[width=0.48\textwidth]{diagrams/pics/background_SMVBFplus.pdf} 		
+	\end{tabular}
+	\caption{Feynman diagrams of irreducible backgrounds of Standard Model Vector Boson Fusion processes with two \hadtau and two jets final state. }
+	\label{fig:background_SMVBF}
+\end{figure}
+
+Secondly, all the Standard Model VBF processes resulting in three leptons, with one of the leptons, the opposite charged one, failing to pass the tauID, are considered as shown on \ref{fig:background_SMVBFZ0Wmiss}.
+
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.48\textwidth]{diagrams/pics/background_SMVBFZ0Wmissminus.pdf}
+		\includegraphics[width=0.48\textwidth]{diagrams/pics/background_SMVBFZ0Wmissplus.pdf} 		
+	\end{tabular}
+	\caption{Feynman diagrams of irreducible backgrounds of Standard Model Vector Boson  processes ending with three $\tau$ where the opposite charged one fails to pass the tauID selection criteria. }
+	\label{fig:background_SMVBFZ0Wmiss}
+\end{figure}
+
+Those processes are again purely electroweak, therefore the rate and relative theoretical uncertainty on the rate is small compared to QCD. Additionally the probability for events coming from this background contribution to pass the event selection is very low. In conclusion, this topology of events is considered to be a minor contribution to the total background.  
+
+Thirdly, there are the Standard Model backgrounds where one of the \hadtau has a mis-reconstructed charge as shown in Figures \ref{fig:background_SMVBFZ0}, \ref{fig:background_SMVBFH} and \ref{fig:background_ttbar}. 
+
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.48\textwidth]{diagrams/pics/background_SMVBFZ0Z0.pdf}
+		\includegraphics[width=0.48\textwidth]{diagrams/pics/background_SMVBFZ0W.pdf} 		
+	\end{tabular}
+	\caption{Feynman diagrams of irreducible backgrounds of Standard Model Vector Boson Fusion $Z^{0}$ production. }
+	\label{fig:background_SMVBFZ0}
+\end{figure}
+
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.48\textwidth]{diagrams/pics/background_HZ0.pdf}
+		\includegraphics[width=0.48\textwidth]{diagrams/pics/background_HW.pdf} 		
+	\end{tabular}
+	\caption{Feynman diagrams of irreducible backgrounds of Standard Model Vector Boson Fusion Higgs production. }
+	\label{fig:background_SMVBFH}
+\end{figure}
+
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.75\textwidth]{diagrams/pics/background_ttbar.pdf}
+	\end{tabular}
+	\caption{\ttbar production is part of background if one of the jets is reconstructed as a \hadtau.}
+	\label{fig:background_ttbar}
+\end{figure}
+
+All of these processes have a very low cross section compared to the one coming from the main background contribution, therefore those processes are all considered a minor background and their event contribution is taken directly from simulation.
+
+The last background contribution comes from all the QCD events resulting in 4 jets with 2 of those jests reconstructed as a fake \hadtau. Even though the probability of a jet to fake an \hadtau is low the production of QCD events in a hadron collider has huge cross sections. Therefore, even small \hadtaufake rates from QCD processes, matter. Also, in QCD events, additional jet activity from initial or final jet radiation processes is expected, which gives these type of events a high probability to pass the VBF selection criteria. Those motivations lead to the determination of QCD as main background source for this analysis. Examples of some QCD processes are shown in Figure \ref{fig:background_QCDinitrad} and \ref{fig:background_QCDfinrad}.
+
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.75\textwidth]{diagrams/pics/background_QCDinitrad.pdf}
+	\end{tabular}
+	\caption{Feynman diagrams of a four jet QCD prodution with initial state radiation where two jets are misreconstructed as \hadtau. }
+	\label{fig:background_QCDinitrad}
+\end{figure}
+
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.75\textwidth]{diagrams/pics/background_QCDfinrad.pdf}
+	\end{tabular}
+	\caption{Feynman diagrams of a 4 jet QCD prodution with final state radiation where two jets are misreconstructed as \hadtau. }
+	\label{fig:background_QCDfinrad}
+\end{figure}
+
+Similarly to the processes described before there are QCD processes resulting in one \hadtau and three jets with one of the jets mis-reconstructed as the second \hadtau. Examples of those processes are shown on Figure \ref{fig:background_W3jets}
+
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.75\textwidth]{diagrams/pics/background_W3jets.pdf}
+	\end{tabular}
+	\caption{Feynman diagrams of W boson plus 3 jets production where one jet is mis-reconstructed as \hadtau. }
+	\label{fig:background_W3jets}
+\end{figure}
+
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.75\textwidth]{diagrams/pics/background_singlet.pdf}
+	\end{tabular}
+	\caption{Feynman diagrams of single top production where one jet is mis-reconstructed as \hadtau. }
+	\label{fig:background_singlet}
+\end{figure}
+
+\clearpage
