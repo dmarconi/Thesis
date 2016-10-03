@@ -9,17 +9,15 @@
 
 %TODO read it again and try to make your text easier to understand for a reader that is less familiar with LHC analyses
 
-As mentioned in Section \ref{section::search_strategy} the di-\hadtau channel's main background contribution comes from QCD multijet, with a rate several orders of magnitude larger than the rate in other contributions.  Hence this search channel, more than any of the others, relies on the efficient background rejection. Fortunately, the VBF and \met selections provide the required background suppression.
+As mentioned in Section \ref{section::search_strategy} the di-\hadtau channel's main background contribution comes from QCD multijet, with a rate several orders of magnitude larger than the rate in other contributions. Hence this search channel, more than any of the others, relies on the efficient background rejection. Fortunately, the VBF and \met selections provide the required background suppression.
 
 All the collision data events passing the requirements of the triggers shown on Table \ref{table:triggerdefinition} are considered as the interesting events for offline analysis. 
 
 As previously introduced in Section \ref{section::search_strategy}, the event selection criteria is divided in two distinct parts: the central part, which takes into account the LSP and the decay products of the multiple \hadtau, and the VBF part, which cuts over the kinematic properties of the jets coming from a VBF process. 
 
-The main differences with the other VBF SUSY searches with final states to light leptons, are the substantially tighter \hadtau requirements targeting at the suppression of QCD jet background and the looser missing transverse energy (\met) requirement, to recover some of the signal acceptance lost due to the larger discriminator based on isolation $\hadtau$ \pt thresholds needed to stay efficient with respect to the trigger.  
+The main differences with the other VBF SUSY searches with final states to light leptons, are the substantially tighter \hadtau requirements targeting at the suppression of QCD jet background and the looser missing transverse energy (\met) requirement, to recover some of the signal acceptance lost due to the larger discriminator based on isolation $\hadtau$ \pt thresholds needed to stay efficient with respect to the trigger. 
 
-%TODO Higher multiplicity t_h: I understand what you mean, but most readers won’t
-
-The selected events are required to have at least two \hadtau candidates as defined in Section \ref{subsec::objsel_tau}. Higher multiplicity \hadtau are constrained by the trigger. The like sign \hadtau candidates with the highest \pt and separated from each other by a minimum \deltar = 0.3 are then chosen to form a di-\hadtau candidate. 
+The selected events are required to have at least two \hadtau candidates as defined in Section \ref{subsec::objsel_tau}. The reconstruction of more than two \hadtau is constrained by the trigger. The like sign \hadtau candidates with the highest \pt and separated from each other by a minimum \deltar = 0.3 are then chosen to form a di-\hadtau candidate. 
 Further, to reduce top pair contamination the event is required not to have any jet identified as a b--quark jet by the b--tagging algorithms using the {\textit combined secondary vertex loose} (CSVL) working point. 
 
 Only jets with \pt $\ge 30\gev$ and separated from the taus in the di--\hadtau pairs by $\Delta R \ge 0.3$ are searched for b--tags. The higher \pt cut of 30\gev on b-jets (a looser veto requirement than other analyses with light leptons) allows us to be more efficient with respect to the signal since the higher \pt threshold on taus reduces the contamination of $t\overline{t}$ to a large extent. Further, the event is required to have at least 30\gev of \met. All the above described selections is what will be referred as {\textit central selections}.
@@ -28,7 +26,7 @@ Subsequently, the following event-wide requirements are imposed. The {\textit {V
 
 For better visualization and understanding all the selection criteria are summarized the following way:
 
-%TODO it’s more elegant to have this in a table instead of a bullet list.
+%TODO (LOW priority) it’s more elegant to have this in a table instead of a bullet list.
 
 \begin{itemize}
 	\item \textbf{Central selection}
@@ -48,7 +46,7 @@ For better visualization and understanding all the selection criteria are summar
 	\end{itemize}
 \end{itemize}
 
-%todo you need a cutflow table here, and a discussion about how event yields for data and MC samples reduces with cuts.
+%todo (LOW PRIORITY) you need a cutflow table here, and a discussion about how event yields for data and MC samples reduces with cuts.
 
 \clearpage
 
@@ -82,7 +80,9 @@ The background yields are taken from simulation. Simulated samples of signal and
   
   For all datasets, a common \texttt{Physics Analysis Toolkit} (\texttt{PAT}) \cite{Adam:2010zza} sequence has been used to generate a PAT format, then further reduced in size by the ntuple producer \cite{bib:thentuplemaker}.
 
-%TODO how is the trigger modeled in MC? you use the same reconstruction software on MC as on data? geant4 is not the full story: electronics and propagation of light through material is emulated (digitization step)
+%TODO how is the trigger modeled in MC? you use the same reconstruction software on MC as on data? 
+
+%TODO (LOW PRIORITY) geant4 is not the full story: electronics and propagation of light through material is emulated (digitization step)(check recent CMS papers)
 
 \section {LS di-Tau Data-Driven QCD background prediction} \label{sec:bgestimation}
 
@@ -152,8 +152,7 @@ Those  control regions are defined as CR3 (One Tight isolation region), CR5  (An
 \begin{figure}[tbh!]
 	\centering
 	\begin{tabular}{cc}
-		\includegraphics[width=0.75\textwidth]{PLOTS/diTauHadLSotherPlots/controlregions.png}
-		%TODO i find the direction of the axes confusing: from left to right I would expect increasing VBF, from bottom to top I expect increasing levels of isolation while it’s the opposite in your drawing
+		\includegraphics[width=0.75\textwidth]{PLOTS/diTauHadLSotherPlots/controlregions.pdf}
 	\end{tabular}
 	\caption{Definition of Signal and Control Regions using different $\hadtau$ isolation criteria and VBF selection.}
 	\label{fig:crs}
@@ -166,18 +165,13 @@ Those  control regions are defined as CR3 (One Tight isolation region), CR5  (An
 
 where $N^{DATA}_{VBF CR}$ is the number of the events in data for a given $ \tau $ isolation region and VBF region, $N^{\overline{QCD} BG}_{VBFCR}$ is the number of all non-QCD MC events for a given $ \tau $ isolation region and VBF region, $N^{DATA}_{\overline{VBF}CR}$ is the number of events in data in the same isolation Control Region but inverted VBF region and$N^{\overline{QCD} BG}_{\overline{VBF}CR}$ is the number of all non-QCD MC events for a given $ \tau $ isolation region but inverted VBF region.
 
-%TODO here the reader needs to be referred to the table
+Using the events in the defined control regions coming from Tables \ref{table:CReventcount1}, \ref{table:CReventcount2} and \ref{table:CReventcount3} as input for equations \ref{eq:qcdbgpred} and \ref{eq:vbfeff} is possible to determine three different predictions for the QCD background contribution, one for each pair of tau isolation control regions below the two-tight isolation region.
 
-%TODO one topic per paragraph
-
-Using the events coming from the defined control regions as input for equations \ref{eq:qcdbgpred} and \ref{eq:vbfeff} gives the possibility to determine three different predictions for the QCD background contribution, one for each pair of tau isolation control regions below the two-tight isolation region. The estimation of the QCD contamination, in the signal region, as shown on Equation \ref{eq:qcdbgpred}, has three sources of systematics. The first source comes from the generated Monte Carlo samples used in the analysis. The two remaining ones comes from the assumptions about the stability of the $\epsilon^{QCD}_{VBF}$, made when defining the data-driven method, one in regard to a loosening of the tau-identification and the other in regard to a loosening of the \met cut, since the $\epsilon^{QCD}_{VBF}$ is calculated in CRs where no \met cut is applied.
+The estimation of the QCD contamination, in the signal region, as shown on Equation \ref{eq:qcdbgpred}, has three sources of systematics. The first source comes from the generated Monte Carlo samples used in the analysis. The two remaining ones comes from the assumptions about the stability of the $\epsilon^{QCD}_{VBF}$, made when defining the data-driven method, one in regard to the relaxation of the tau-identification and the other in regard to a loosening of the \met cut, since the $\epsilon^{QCD}_{VBF}$ is calculated in CRs where no \met cut is applied.
 
 Details and results on the validation process done for all the statements is given in Section \ref{QCD_bg_pred_validation}.
 
-
-%TODO explain what should we learn from figure 6.12 and 6.13
-
-The signal and control regions are define under the assumption of central selection being orthogonal to VBF selection. Figure \ref{fig:LS_mjjshapestab_vs_tauiso_data} and \ref{fig:LS_mjjshapestab_vs_tauiso_mc} shows the results of the stability study of $M_{jj}$ shape distribution among different $\tau$ isolation sidebands for Data and MC. Further studies are shown in Section \ref{dihad:tab:stability}.
+The signal and control regions are define under the assumption of central selection being orthogonal to VBF selection. Figure \ref{fig:LS_mjjshapestab_vs_tauiso_data} and \ref{fig:LS_mjjshapestab_vs_tauiso_mc} shows a stability study of $M_{jj}$ shape distribution among different $\tau$ isolation sidebands for Data and MC. This study shows that within the statistical uncertainties the distributions are compatible for different control regions. Further studies are shown in Section \ref{dihad:tab:stability}.
 
 \begin{figure}[tbh!]
 	\centering
@@ -283,14 +277,16 @@ The signal and control regions are define under the assumption of central select
 	\label{table:VBFeffBKGprediction} % is used to refer this table in the text
 \end{table}
 
-%TODO replace “systematics” with amore precise description, and motivate the method.
+%TODO replace “systematics” with a more precise description, and motivate the method.
 
-Systematics for the simulation are estimated by scaling non-QCD contributions by $\pm50~\%$. A systematic error on $\epsilon^{QCD}_{VBF}$ is assigned by using the maximal variation among all $\epsilon^{QCD}_{VBF}$ measurements in different $\tau$ isolation regions with respect to its weighted mean. Similar procedure is done for the assignation of the $\epsilon^{QCD}_{VBF}$ coming from \met cut stability. All the statistical uncertainties are propagated accordingly. Tables \ref{table:CReventcount1} , \ref{table:CReventcount2} and \ref{table:CReventcount3} show the event counting for all the control regions previously defined for data and all MC samples. All the numbers except the ones coming from the QCD sample are used as input for the QCD background estimation method. For each of the 3 different $\tau$ isolation regions out of the signal region (1T, AT, AM) an independent measurements of $\epsilon^{QCD}_{VBF}$  and prediction for $N^{QCD}_{SR}$ is made. Due to low statistics in the $\tau$ isolation sidebands the final results will include uncertainties coming from the $\epsilon^{QCD}_{VBF}$ stabilities studies on MC shown in section \ref{subsec:stability}.
+A more precise description for the simulation are estimated by scaling non-QCD contributions by $\pm50~\%$. A systematic error on $\epsilon^{QCD}_{VBF}$ is assigned by using the maximal variation among all $\epsilon^{QCD}_{VBF}$ measurements in different $\tau$ isolation regions with respect to its weighted mean. Similar procedure is done for the assignation of the $\epsilon^{QCD}_{VBF}$ coming from \met cut stability. All the statistical uncertainties are propagated accordingly. Tables \ref{table:CReventcount1} , \ref{table:CReventcount2} and \ref{table:CReventcount3} show the event counting for all the control regions previously defined for data and all MC samples. All the numbers except the ones coming from the QCD sample are used as input for the QCD background estimation method. For each of the 3 different $\tau$ isolation regions out of the signal region (1T, AT, AM) an independent measurements of $\epsilon^{QCD}_{VBF}$  and prediction for $N^{QCD}_{SR}$ is made. Due to low statistics in the $\tau$ isolation sidebands the final results will include uncertainties coming from the $\epsilon^{QCD}_{VBF}$ stabilities studies on MC shown in section \ref{subsec:stability}.
 
 \clearpage
 
 \section{Data Driven method validation}
 \label{QCD_bg_pred_validation}
+
+The data-driven approach previously described gave the prediction of the nember of background events 
 
 While a data-driven approach with an ABCD method in data is utilizable in order to get a prediction for the number of background events expected in the signal region, there are two advantages of a simulation-based approach. On the one hand, one can ascertain that the control regions contain only QCD. On the other hand, one can provide a closure test for the data-driven prediction, especially regarding the universality of the VBF efficiency with respect to a loosening of the τh isolation or a relaxation of the \met requirement, as stated in Sec. ???.
 
