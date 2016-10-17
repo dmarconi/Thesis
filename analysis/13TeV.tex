@@ -5,7 +5,6 @@
 \begin{itemize}
 	\item List of samples used for the studies
 	\item brief details on how the signal samples has been generated and how data is stored now (miniaods)
-	
 \end{itemize}
 
 \section{Event selection}
@@ -16,6 +15,7 @@
 	\item MET cut removed (chosen variable for cuts optimization)
 	\item Dijet delta eta cut removed (obsolete because strictly correlated to the $m_{jj}$ cut) 
 	\item $m_{jj}$ cut removed (chosen variable for cuts optimization)
+	\item \hadtau isolation requirement has still high impact on statistics
 \end{itemize}
 
 \section{Sensitivity and cross section limit studies}
@@ -23,8 +23,20 @@
 \begin{itemize}
 	\item Optimization of cuts to exclude signal at the lowest cross section;
 	\item the reference study formula is $\dfrac{S}{\sqrt{B + (0.5 \cdot B)^{2}}} > 2$
-	\item signal events can also be express as: $S = \epsilon ( Pt_{\tau} , m_{jj} ,  \met )\sigma L$
+	\item signal events can also be express as: $S = \epsilon ( Pt_{\tau} , m_{jj} ,  \met )\cdot \sigma \cdot L$
 	\item The sensitivity study is done as function of 3 different variables: $\tau_{pt}$, MET and $m_{jj}$
 	\item Background prediction in SR: two-fold ABCD method involving 2 different correction factors
+	\item LtoT conversion factor:
+	\begin{itemize}
+		\item $LtoT = A * B$;
+		\item Events with at least 4 jets;
+		\item A: (the matched tau 
+		is also tight isolated)/(at least one jet matched 
+		to a loose tau)
+		\item B: (the matched tau 
+		is also tight isolated)/(at least one jet matched 
+		to a tau (no iso requirement))
+	\item VBF conversion factor: same as before (Excluding removed cuts)
+	\end{itemize}
 \end{itemize}
 
