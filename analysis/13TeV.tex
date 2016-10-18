@@ -1,21 +1,41 @@
 
+\todo {Things that need to be done for the plots}
+\begin{itemize}
+	\item (Code) Change cut from 1 to max 3 prong decays
+	\item (Plots) Shape comparisons of main analysis variables for CR3, CR2, SR (Gives the idea of the uncertainty)
+	\item (Plots) Sensitivity study rebooted for all signal points and tau pt bins
+	\item (Table) Cross section limits of 7 TeV studies (Just put al the numbers in the formula)
+\end{itemize}
+
+
+\begin{itemize}
+	\item Brief introduction of the chapter content
+	\item State that everything is based on the 7 TeV studies and will go in details on the differences
+\end{itemize}
+
 
 \section{Signal and background samples}
 
 \begin{itemize}
 	\item List of samples used for the studies
-	\item brief details on how the signal samples has been generated and how data is stored now (miniaods)
+	\item brief details on how the signal samples has been generated and how data is stored now (miniaods), everything on the production chain (if too much refers to appendix)
 \end{itemize}
 
 \section{Event selection}
 
 \begin{itemize}
-	\item Different trigger choice $\rightarrow$  Lower tau pt selection;
-	\item tau reconstruction commissioned down to 20 \gev (chosen variable for cuts optimization);
+	\item Different trigger choice 
+	\begin{itemize}
+		\item  Lower tau pt selection;
+		\item Switch from 1-prong to 3-prong
+	\end{itemize}
+	\item make clear the experiment will gain access to a trigger triggering only on di-jet properties (no MET Lvl 1 seed like for 7 TeV)
+	\item tau reconstruction commissioned (reference to internal notes if necessary) down to 20 \gev (chosen variable for cuts optimization);
 	\item MET cut removed (chosen variable for cuts optimization)
-	\item Dijet delta eta cut removed (obsolete because strictly correlated to the $m_{jj}$ cut) 
-	\item $m_{jj}$ cut removed (chosen variable for cuts optimization)
+	\item Dijet delta eta cut removed (obsolete because strongly correlated to the $m_{jj}$ cut) 
+	\item $m_{jj}$ cut removed (chosen variable for cuts optimization), be aware of the fact that there's gonna be an online cut coming from the chosen trigger anyway.
 	\item \hadtau isolation requirement has still high impact on statistics
+	\item mention new b-jet and lepton veto used (reference to internal notes if necessary)
 \end{itemize}
 
 \section{Sensitivity and cross section limit studies}
@@ -28,16 +48,25 @@
 	\item Background prediction in SR: two-fold ABCD method involving 2 different (Schematic rappresentation needed) correction factors
 	\item LtoT conversion factor:
 	\begin{itemize}
-		\item $LtoT = A * B$;
 		\item Events with at least 4 jets;
+		\item $ALto2T = A * B$;
 		\item A: (the matched tau is also tight isolated)/(at least one jet matched to a loose tau)
 		\item B: (the matched tau is also tight isolated)/(at least one jet matched to a tau (no iso requirement))
-		\item VBF conversion factor: same as before (Excluding removed cuts)
 	\end{itemize}
+		\item VBF conversion factor: same as before (Excluding removed cuts)
 		\item Min cross section for $m_{jj} < 200$ and $130 < \met < 150$;
 		\item Need to show impact of the $Pt_{\tau}$ over the limit.
-		\item Uncertanties over the conversion factors?
+		\item Uncertanties over the conversion factors (Taken from sape comparison)
 \end{itemize}
+
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.75\textwidth]{PLOTS/diTauHadLSotherPlots/controlregions13TeV.pdf}
+	\end{tabular}
+	\caption{Definition of Signal and Control Regions using different $\hadtau$ isolation criteria and VBF selection.}
+	\label{fig:crs_13tev}
+\end{figure}
 
 \begin{figure}[tbh!]
 	\centering
