@@ -139,6 +139,61 @@
 \end{table}
 
 \section{Physic Object Recostruction at 13 TeV}
+
+\subsection{Tau object definition}
+
+\begin{table}[htb]
+	\caption{definition of \ensuremath{\tau} leptons.}
+	\label{table:tauobjdefinition_13TeV}
+	\begin{center}
+		\ttfamily\scriptsize\selectfont
+		\begin{tabular}{|l|ll|}
+			\hline
+			\multicolumn{3}{|l|}{ collection label: \texttt{patTaus}}\\
+			\multicolumn{3}{|l|}{ type: \texttt{pat::Tau}}\\
+			\hline
+			fabs(tau.eta()) & $<=$ & 2.1 \\
+			tau.pt() & $>=$ & 20 \\
+			tau.leadPFChargedHadrCand()-$>$pt() & $>=$ & 5.0 \\
+			tau.tauID(``byTightIsolationMVArun2v1DBdR03oldDMwLT'') & $>$ & 0.5 ||\\
+			~tau.tauID(``byMediumIsolationMVArun2v1DBdR03oldDMwLT'') & $>$ & 0.5 ||\\
+			~tau.tauID(``byLooseIsolationMVArun2v1DBdR03oldDMwLT'') & $>$ & 0.5 \\
+			(byLooseIsolationMVArun2v1DBnewDMwLT & $>$ & 0.5 $\&\&$ \\ 
+			~signalPFChargedHadrCands().size() & $<$ & 4) \\
+			tau.tauID(``againstElectronMediumMVA6'') & $>$ & 0.5 \\
+			tau.tauID(``againstMuonLoose3'') & $>$ & 0.5 \\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
+
+\subsection{Jet object definition}
+
+\begin{table}[htb]
+	\caption{definition of jets.}
+	\label{table:jetobjdefinition_13TeV}
+	\begin{center}
+		\ttfamily\scriptsize\selectfont
+		\begin{tabular}{|l|ll|}
+			\hline
+			\multicolumn{3}{|l|}{ collection label: selectedPatJets}\\
+			\multicolumn{3}{|l|}{ type: \texttt{pat::Jet}}\\
+			\hline
+			jet.pt() & $>=$ & 30. \\
+			fabs(jet.eta()) & $<=$ & 5.0 \\
+			jet.neutralHadronEnergyFraction() & $<$ &  0.99 \\
+			jet.neutralEmEnergyFraction() & $<$ & 0.99 \\
+			jet.numberOfDaughters() & $>$& 1 \\
+			if(fabs(jet.eta()) $<$ 2.4) && \\
+			~~~jet.chargedHadronEnergyFraction() & $>$ & 0 \\
+			~~~jet.chargedEmEnergyFraction() & $<$ & 0.99 \\
+			~~~jet.chargedMultiplicity() & $>$ & 0 \\
+			DeltaR(jet,tau) & $>=$ & 0.3 \\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
+
 \section{Monte Carlo Samples at 8 TeV}
 
 \begin{table}[ht]
@@ -179,7 +234,7 @@
 		\end{tabular}
 	}
 	\caption{ Drell Yang simulated samples.}
-	\label{teble:samples_DY} % is used to refer this table in the text
+	\label{table:samples_DY} % is used to refer this table in the text
 \end{table}
 
 \begin{table}[ht]
@@ -207,7 +262,7 @@
 		\end{tabular}
 	}
 	\caption{ W boson plus additional jets simulated samples.}
-	\label{teble:samples_Wjets} % is used to refer this table in the text
+	\label{table:samples_Wjets} % is used to refer this table in the text
 \end{table}
 
 \begin{table}[ht]
@@ -227,7 +282,7 @@
 		\end{tabular}
 	}
 	\caption{Standard model top production simulated sample.}
-	\label{teble:samples_ttbar} % is used to refer this table in the text
+	\label{table:samples_ttbar} % is used to refer this table in the text
 \end{table}
 
 \begin{table}[ht]
@@ -269,7 +324,7 @@
 		\end{tabular}
 	}
 	\caption{ Standard model production of two vector bosons simulated samples.}
-	\label{teble:samples_VV} % is used to refer this table in the text
+	\label{table:samples_VV} % is used to refer this table in the text
 \end{table}
 
 \begin{table}[ht]
@@ -299,7 +354,7 @@
 	}
 	\caption{Standard model Higgs production by vector boson fusion simulated
 		samples}
-	\label{teble:samples_higgs} % is used to refer this table in the text
+	\label{table:samples_higgs} % is used to refer this table in the text
 \end{table}
 
 \begin{table}[ht]
@@ -329,8 +384,48 @@
 		\end{tabular}
 	}
 	\caption{Single top simulated samples.}
-	\label{teble:samples_singlet} % is used to refer this table in the text
+	\label{table:samples_singlet} % is used to refer this table in the text
 \end{table}
+
+\clearpage
+
+
+\section{Monte Carlo Samples at 13\tev}
+
+\begin{table}[ht]
+	\tiny
+	\centering{
+		\begin{tabular}{| l | l |}
+			\hline
+			&\\
+			Process &Official CMS Datasets QCD*/RunIISpring15MiniAODv2 \\
+			&\\
+			\hline		
+			&\\
+			QCD $100 < \HT < 200\gev$ & \texttt{HT100to200\_TuneCUETP8M1\_13TeV\-madgraphMLM\-pythia8/}	\\
+			&\\
+			QCD $200 < \HT < 300\gev$ & \texttt{HT200to300\_TuneCUETP8M1\_13TeV\-madgraphMLM\-pythia8/}	\\
+			&\\
+			QCD $300 < \HT < 500\gev$ & \texttt{HT300to500\_TuneCUETP8M1\_13TeV\-madgraphMLM\-pythia8/}	\\
+			&\\
+			QCD $500 < \HT < 700\gev$ & \texttt{HT500to700\_TuneCUETP8M1\_13TeV\-madgraphMLM\-pythia8/}	\\
+			&\\
+			QCD $700 < \HT < 1000\gev$ & \texttt{HT700to1000\_TuneCUETP8M1\_13TeV\-madgraphMLM\-pythia8/} \\
+			&\\
+			QCD $1000 < \HT < 1500\gev$ & \texttt{HT1000to1500\_TuneCUETP8M1\_13TeV\-madgraphMLM\-pythia8/}	\\
+			&\\
+			QCD $1500 < \HT < 2000\gev$ & \texttt{HT1500to2000\_TuneCUETP8M1\_13TeV\-madgraphMLM\-pythia8/}	\\
+			&\\
+			QCD $2000 < \HT < \infty\gev$ & \texttt{HT2000toInf\_TuneCUETP8M1\_13TeV\-madgraphMLM\-pythia8/}	\\
+			&\\
+			\hline
+		\end{tabular}
+	}
+	\caption{QCD simulated samples.}
+	\label{table:samples_QCD_13tev} % is used to refer this table in the text
+\end{table}
+
+
 
 \clearpage
 
