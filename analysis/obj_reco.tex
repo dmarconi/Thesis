@@ -18,17 +18,9 @@
 
 %TODO{start this chapter section by explaining what is to be accomplished, like studying final states of collisions, and what the strategy is, like reconstruction of all particles in the final state, which allows doing jets, letpon isolation, …}
 
-\section{The Particle Flow Algorithm}
+The final aim of the CMS detector is the study of collision final states and several are the steps needed to transform the raw detector hits data into useful information for an high energy physics analysis. The CMS research team converged its effort into a complex software algorithm, called Particle Flow, that combines all the information coming from all the experiment sub-detectors and reconstructs all the final state basic objects. Those reconstructed object spaces from simple particles such as electrons and muons to complex ones such as jets and hadronic taus. Particle Flow also reconstruct variables useful in the analysis selection such as jets imbalance and missing tranverse momentum. After a brief introduction on the Particle flow algorithm this chapter will give further information on the reconstruction on the most important objects used in the analysis described in this thesis.
 
-%TODO{This is my idea about how one should describe the particle flow:}
-	
-%TODO{	- You need to give an idea of the basic idea behind the particle flow algorithm:}
-	
-%TODO{	- what information does the algorithm use for input (tracks, calorimeter hits, calorimeter clusters, muon hits, muon segments,….)}
-%TODO{	- what are the basic steps of the algorithm}
-%TODO{	- how is the input information filtered at each step}
-	
-%TODO{	no need to go in great detail, but the reader should get an idea. Consult Christian before taking action.}
+\section{The Particle Flow Algorithm}
 
 The raw data collected by the CMS experiment is the input of a detailed offline reconstructions of the collision final states. CMS developed over the years an algorithm, called the Particle Flow (PF) \cite{CMS:2009nxa,CMS:2010byl}, that attempts to identify and to reconstruct the kinematic properties of each of the particles in the final states. For this purpose all the information coming from each of the CMS subdetectors is combined. This algorithm heavily relies on the precise measurement of the momenta of charged particles with the silicon tracker, and the precise measurement of photon and electron energies with the highly granular and hermetic ECAL, to overcome the coarser granularity of the HCAL. The reconstructed particles are then used to reconstruct jets, \hadtau candidates, and the vector imbalance in transverse momentum in the event, referred to as \ptvecmiss, as well as to quantify the isolation of leptons. 
 
@@ -40,17 +32,13 @@ Electrons are reconstructed by matching tracks in the inner detector with energy
 
  The identification of muons is based on linking track segments reconstructed in the silicon tracking detector and in the muon system \cite{Chatrchyan:2012xi}. The matching between track segments is done outside-in, starting from a track in the muon system, and inside-out, starting from a track reconstructed in the inner detector. In case a link can be established, the track parameters are refitted using the combined hits in the inner and outer detectors, with the resulting track referred to as a global muon track. Quality criteria are applied on the multiplicity of hits, on the number of matched segments, and on the ﬁt quality of the global muon track, quantified through a \ensuremath{\chisquare}.
 
-%TODO{you need a subsection about hadrons and photons}
-
 \subsection {The Jet reconstruction}
 
 %TODO{Jet reconstruction does not belong to the particle flow algorithm. Probably you want to have the section about jets in the object definition section of your analysis chapter. You might want a few words and figures about jets in the particle reconstruction section of the CMS section}
 
-%TODO{paragraphs in this subsection are too long, they cover too many topics}
-
 Jets within the range \ensuremath{|\eta| < 4.7} are reconstructed using the anti-\ensuremath{k_{T}} algorithm \cite{antikt} with a distance parameter of 0.5. As mentioned previously,the particles reconstructed by the PF algorithm are used as input to the jet reconstruction. Reconstructed jets are required not to overlap with identified electrons, muons, or \hadtau within \ensuremath{\deltar < 0.5}, and to pass two levels of jet identification criteria: (i) misidentified jets, mainly generating from calorimeter noise, are rejected by requiring reconstructed jets to pass a set of loose jet identification criteria \cite{CMS:2010xta} and (ii) jets originating from pileup interactions are rejected through an MVA-based jet identification discriminant, based on information about the vertex and energy distribution within the jet \cite{CMS:2013wea}. 
 
-The energy of reconstructed jets is calibrated as a function of jet \pt and \ensuremath{\eta} \cite{1748-0221-6-11-P11002}. A display of a simple hadronic jet in the $(x, y)$ view and in the $(\eta,\phi)$ view, on the ECAL surface and the HCAL surface is available on Figure 	\ref{fig:PF_event_display}. The contribution of pileup to the energy of jets originating from the hard scattering is compensated by determining a median transverse momentum density (\ensuremath{\rho}) for each event, and subtracting the product of (\ensuremath{\rho}) times the area of the jet, computed in the \ensuremath{\eta-\Phi} plane,from there constructed jet \pt \cite{Cacciari:2008gn, Cacciari:2007fd}. 
+The energy of reconstructed jets is calibrated as a function of jet \pt and \ensuremath{\eta} \cite{1748-0221-6-11-P11002}. A display of a simple hadronic jet in the $(x, y)$ view and in the $(\eta,\phi)$ view, on the ECAL surface and the HCAL surface is available on Figure \ref{fig:PF_event_display}. The contribution of pileup to the energy of jets originating from the hard scattering is compensated by determining a median transverse momentum density (\ensuremath{\rho}) for each event, and subtracting the product of (\ensuremath{\rho}) times the area of the jet, computed in the \ensuremath{\eta-\Phi} plane,from there constructed jet \pt \cite{Cacciari:2008gn, Cacciari:2007fd}. 
 
 Jets originating from the hadronization of b quarks are identified through the combined secondary vertex (CSV) algorithm \cite{Chatrchyan:2012jua}, which exploits observables related to the long lifetime of b hadrons and the higher particle multiplicity and mass of b jets compared to light-quark and gluon jets.
 
@@ -64,14 +52,7 @@ Two algorithms are used to reconstruct \ptvecmiss, the imbalance in transverse m
 
 \clearpage
 
-\section {The Tau Lepton}
-
-%TODO   i don’t like subsubsections, and you don’t need them anyway:
-%TODO	section{tau lepton reconstruction}
-%TODO	subsection{intruduction}
-%TODO	subsection{reconstruction algorithm}
-%TODO	subsection{isolation}
-%TODO	subsection{electron and muon veto}
+\section {Tau lepton reconstruction}
 
 The $\tau$ lepton was discovered between 1974 and 1977 by the team under Martin Perl while studying the $e^{+}+e^{-}\longrightarrow e^{\pm}+\mu^{\mp}$. With a mean lifetime of $2.9\times10^{−13}$ s and a mass of 1776.82 \mev \cite{Agashe:2014kda} is the heaviest of the leptons, enough to decay into hadrons, and it does so in about two thirds of the cases, typically into either one or three charged pions or kaons and up to two neutral pions \ensuremath{\pi^{0}}, and one neutrino \ensuremath{\nu_{\tau}}. The \ensuremath{\pi^{0}} meson decays almost exclusively into \ensuremath{\gamma\gamma}. Among all the possible hadronic decays as shown on Table \ref{table:tau_hdecay} the ones called "one-prong", where only one charged hadron is produced, are the most frequent. The $\tau$ decays also leptonically, with a branching ratio of $17\%$ for each channel, via the following decay $\tau\longrightarrow\nu_{\tau}W^{*}\longrightarrow\nu_{\tau}l\nu_{l}$.
 
@@ -96,7 +77,7 @@ The $\tau$ lepton was discovered between 1974 and 1977 by the team under Martin 
 	\end{center}
 \end{figure}
 
-\subsection{Algorithm for hadronic Tau reconstruction and identiﬁcation}
+\subsection{Reconstruction algorithm}
 The \hadtau decays are reconstructed and identified using the hadrons-plus-strips (HPS) algorithm \cite{Chatrchyan:2012zz}, a cut-based algorithm focusing on the reconstruction of neutral pions. The HPS algorithm is seeded by jets of \ensuremath{\pt > 14 \gev} and \ensuremath{|\eta| < 2.5}, reconstructed using the anti-\ensuremath{k_{T}} algorithm \cite{antikt} with a distance parameter of 0.5. The algorithm is designed to reconstruct individual decay modes of the \ensuremath{\tau} lepton, taking advantage of the excellent performance of the PF algorithm in reconstructing individual charged and neutral particles.
 The reconstruction and identification of \hadtau decays in the HPS algorithm is performed in two steps:
 
@@ -139,29 +120,16 @@ The combinations of charged particles and strips considered by the HPS algorithm
 
 Hypotheses that fail the mass window selection for the corresponding decay mode are discarded. When multiple combinations of charged hadrons and strips pass the mass window and the signal cone requirements, the hypothesis for the candidate with largest \pt is retained. All other combinations are discarded, resulting in a unique \hadtau candidate to be associated to each jet.
 
-%TODO{what about quoting an efficiency here?}
-
 The distributions in the decay modes and in the mass of \hadtau candidates in \ensuremath{Z/\gamma^{*} \longrightarrow \tau\tau} events are shown in Figure \ref{fig:Ztautau_decaymodes}. The contribution of the \ensuremath{Z/\gamma^{*} \longrightarrow \tau\tau} signal is split according to the reconstructed \hadtau mode, as shown in the legend. For \hadtau candidates reconstructed in the \ensuremath{h^{\pm}\pi^{0}s} and \ensuremath{h^{\pm}h^{\pm}h^{\pm}} modes, the \ensuremath{m_{\hadtau}} distribution peaks near the intermediate \ensuremath{ρ\rho(770)} and \ensuremath{a_{1}(1260)} meson resonances (cf. Table \ref{table:tau_hdecay}), as expected. The narrow peak at the charged pion mass is due to \hadtau candidates reconstructed in the \ensuremath{h^{\pm}} mode.
 
-\subsubsection{Tau-isolation discriminants}
+\subsubsection{Isolation}
 
-%TODO{isolation reference should come earlier in the subsection}
-
-%TODO{I don’t think “cutoff-based selection” is a proper expression do you need to describe both the cut-based and the MVA discriminant? Only mention the one(s) you use.}
-
-%TODO{. how is the rate defined? it’s really not clear from the text what these numbers mean.}
-
-Requiring reconstructed \hadtau candidates to pass strict isolation requirements constitutes the main handle for reducing the large multijet background. Tau leptons are usually isolated relative to other particles in the event, and so are their decay products, in contrast to quark and gluon jets. Two types of \hadtau isolation discriminants have been developed, using simple cutoff-based selections and an MVA approach. The expected efficiency of the \hadtau isolation discriminants in \ensuremath{Z/\gamma^{*} \longrightarrow \tau\tau} events goes from \ensuremath{49.0\%} (Loose) to \ensuremath{38.1}\% (Tight) for the cutoff-based approach and \ensuremath{55.9\%} (Very Loose) to \ensuremath{27.3\%} (Tight) for the MVA one. The Jet \ensuremath{\to \tau} misidentification rate of the \hadtau isolation discriminants in Multi-jet events goes from \ensuremath{3.86 \times 10^{−3}} (Loose) to \ensuremath{1.75 \times 10^{−3}}\% (Tight) for the cutoff-based approach and \ensuremath{6.21 \times 10^{−3}} (Very Loose) to \ensuremath{4.43 \times 10^{−3}} (Tight) for the MVA one \cite{Khachatryan:2015dfa}.
+Requiring reconstructed \hadtau candidates to pass strict isolation requirements constitutes the main handle for reducing the large multijet background \cite{Khachatryan:2015dfa}. Tau leptons are usually isolated relative to other particles in the event, and so are their decay products, in contrast to quark and gluon jets. Two types of \hadtau isolation discriminants have been developed, using simple cutoff-based selections and an MVA approach. The expected efficiency of the \hadtau isolation discriminants in \ensuremath{Z/\gamma^{*} \longrightarrow \tau\tau} events goes from \ensuremath{49.0\%} (Loose) to \ensuremath{38.1}\% (Tight) for the cutoff-based approach and \ensuremath{55.9\%} (Very Loose) to \ensuremath{27.3\%} (Tight) for the MVA one. The Jet \ensuremath{\to \tau} misidentification rate of the \hadtau isolation discriminants in Multi-jet events goes from \ensuremath{3.86 \times 10^{−3}} (Loose) to \ensuremath{1.75 \times 10^{−3}}\% (Tight) for the cutoff-based approach and \ensuremath{6.21 \times 10^{−3}} (Very Loose) to \ensuremath{4.43 \times 10^{−3}} (Tight) for the MVA one.
  
-\subsubsection{Discriminants against electrons and muons}
+\subsubsection{Electron and Muon veto}
 
-%TODO{rate is not defined}
-
-%TODO{avoid mentioning both MVA and cut-based. only mention the ones you use.}
-%TODO{you need references for the discriminators earlier in the subsection}
-
-Electrons and muons have a sizable probability to get reconstructed in the \ensuremath{h^{\pm}} decay mode. Electrons radiating a bremsstrahlung photon that subsequently converts may also get reconstructed in the \ensuremath{h^{\pm}\pi^{0}s} decay mode. In particular, electrons and muons originating from decays of W and Z bosons, which are produced with cross sections of \ensuremath{\approx100} nb at the LHC at \ensuremath{\sqrt{s} = 8} \tev have a high chance to pass isolation-based \hadtau identification criteria. Dedicated discriminants have been developed to separate \hadtau from electrons and muons. The separation of \hadtau from electrons is based on an MVA approach, with an efficiency and \ensuremath{e\to \tau} misidentification rate going from \ensuremath{93.3\%} and \ensuremath{2.38 \times 10^{−2}} (Very loose) to \ensuremath{72.1\%} and \ensuremath{3.54 \times 10^{−4}} (Very tight) in \ensuremath{Z/\gamma^{*} \longrightarrow \tau\tau} events \cite{Khachatryan:2015dfa}.
-A cut based and an MVA based discriminant are used to separate \hadtau from muons. The expected efficiency of the \hadtau against muon discriminants in \ensuremath{Z/\gamma^{*} \longrightarrow \tau\tau} events goes from \ensuremath{99.3\%} (Loose) to \ensuremath{99.1}\% (Tight) for the cutoff-based approach and \ensuremath{99.5\%} (Loose) to \ensuremath{98\%} (Tight) for the MVA one. The \ensuremath{\mu \to \tau} misidentification rate efficiency of the \hadtau isolation discriminants in \ensuremath{Z/\gamma^{*} \longrightarrow \mu\mu} events goes from \ensuremath{1.77 \times 10^{−3}} (Loose) to \ensuremath{7.74 \times 10^{-4}} (Tight) for the cutoff-based approach and \ensuremath{5.20 \times 10^{−4}} (Loose) to \ensuremath{3.18 \times 10^{−4}} (Tight) for the MVA one \cite{Khachatryan:2015dfa}.
+Electrons and muons have a sizable probability to get reconstructed in the \ensuremath{h^{\pm}} decay mode. Electrons radiating a bremsstrahlung photon that subsequently converts may also get reconstructed in the \ensuremath{h^{\pm}\pi^{0}s} decay mode. In particular, electrons and muons originating from decays of W and Z bosons, which are produced with cross sections of \ensuremath{\approx100} nb at the LHC at \ensuremath{\sqrt{s} = 8} \tev have a high chance to pass isolation-based \hadtau identification criteria. Dedicated discriminants have been developed to separate \hadtau from electrons and muons \cite{Khachatryan:2015dfa}. The separation of \hadtau from electrons is based on an MVA approach, with an efficiency and \ensuremath{e\to \tau} misidentification rate going from \ensuremath{93.3\%} and \ensuremath{2.38 \times 10^{−2}} (Very loose) to \ensuremath{72.1\%} and \ensuremath{3.54 \times 10^{−4}} (Very tight) in \ensuremath{Z/\gamma^{*} \longrightarrow \tau\tau} events.
+A cut based and an MVA based discriminant are used to separate \hadtau from muons. The expected efficiency of the \hadtau against muon discriminants in \ensuremath{Z/\gamma^{*} \longrightarrow \tau\tau} events goes from \ensuremath{99.3\%} (Loose) to \ensuremath{99.1}\% (Tight) for the cutoff-based approach and \ensuremath{99.5\%} (Loose) to \ensuremath{98\%} (Tight) for the MVA one. The \ensuremath{\mu \to \tau} misidentification rate efficiency of the \hadtau isolation discriminants in \ensuremath{Z/\gamma^{*} \longrightarrow \mu\mu} events goes from \ensuremath{1.77 \times 10^{−3}} (Loose) to \ensuremath{7.74 \times 10^{-4}} (Tight) for the cutoff-based approach and \ensuremath{5.20 \times 10^{−4}} (Loose) to \ensuremath{3.18 \times 10^{−4}} (Tight) for the MVA one.
 
 \section {Analysis Physics Objects}
 
@@ -198,7 +166,7 @@ The isolation discriminator is a BDT \cite{Hocker:2007ht} discriminator based on
 %TODO{hm, written as if the earlier section about jets does not exist}
 	
 %TODO{	reference back (unless you give up the earlier section about jets)}
-%TODO{should become part of the object definition section of the analysis chapter}
+%TODO{ should become part of the object definition section of the analysis chapter}
 
 Particle Flow jets (PFJets) are used in this analysis. The \antikt clustering algorithm with a reconstruction cone of \ensuremath{R = 0.5} is used, defined in \ensuremath{\eta-\phi (R = \sqrt{{\Delta \eta}^2 + {\Delta \phi}^{2}})} \cite{1126-6708-2008-04-063}. 
 
@@ -224,8 +192,6 @@ Detection of weakly interacting particles is crucial both for SM measurements an
 \end{equation}
  
 where \ensuremath{\pt^{j}} is the transverse momentum of PF particle j. Figure \ref{fig:true_met} shows the energy and \ensuremath{\phi} resolution of the reconstructed \met in simulation versus the true \met. Again, the PF approach is compared to the calorimetric-based approach and performs substantially better. Table~\ref{table:metobjdefinition} shows the detailed selection criteria.
-
-%TODO{not sure why MET gets the “honour” of a figure while all the other objects don’t. If you show these figures, they better move to the particle reconstruction section of the CMS chapter.}
 
 \begin{figure}[tbh!]
 	\centering
