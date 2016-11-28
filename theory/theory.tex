@@ -62,41 +62,19 @@ The second component are the four different forces acting between the leptons an
 
 
 \subsection{The Higgs Mechanism}
-
-The third component of the Standard Model is the Higgs mechanism. 
-In this sector, the lowest energy state (vacuum) is degenerated, i.e. it is no longer invariant under symmetry transformations, while the symmetry of the Lagrangian remains. A “Higgs-field” is introduced, with a non-zero vacuum state. An Lagrangian of such a field is:
-
-\begin{equation}
-\label{eq:higgs_lagrangian}
-\mathcal{L}(x) = [D^{\mu}\phi(x)][D_{\mu}\phi(x)] - \mu^{2}|\phi(x)|^{2} - \lambda|\phi(x)|^{4} -  \dfrac{1}{4}F_{\mu\nu}(x)F^{\mu\nu}(x)
-\end{equation}
-
-where \ensuremath{F_{\mu\nu}(x) =  \partial_{\mu}A_{\nu}(x) - \partial_{\nu}A_{\mu}(x)} is the Lagrangian density of the free field, \ensuremath{D^{\mu}} the covariant derivative, \ensuremath{\phi(x)} the scalar Higgs field, and \ensuremath{\mu^{2}},  real parameters.
-Equation \ref{eq:higgs_lagrangian} is invariant under \ensuremath{U(1)} transformations, giving raise to a massless photon. If the Higgs field is defined in multiple components, a similar invariance under \ensuremath{SU(2)} transformations can be avoided:
-
-\begin{equation}
-\Phi(x) = \binom{\phi_{a}(x)}{\phi_{b}(x)}
-\end{equation}
-
-It can be written in an arbitrary gauge:
-
-\begin{equation}
-\Phi(x) = \dfrac{1}{\sqrt{2}}\binom{\eta_{1}(x) + i\eta_{2}(x)}{v + \sigma(x) + i\eta_{3}(x)}
-\end{equation}
-
-with the four real fields \ensuremath{\sigma(x)} and \ensuremath{\eta_{i}(x)}, \ensuremath{i = 1, 2, 3}, and \ensuremath{v = ( - \mu^{2}/ \lambda) ^{-1/2}}. This can always be transformed to
-
-\begin{equation}
-\Phi(x) = \dfrac{1}{\sqrt{2}}\binom{0}{v + \sigma(x)}
-\end{equation}
-
-which does not include the \ensuremath{\eta_{i}(x)}. These were absorbed by the boson fields \W \Z, giving them their masses. The fermions gain their masses by a direct coupling to the higgs field \ensuremath{\sigma(x)}. \todo{Change this statement for god sake}The Higgs boson is not discovered yet, but hints of an higgs-like particle at a mass of approximately 125 GeV have been seen at different experiments [10][11][12].
-
-In this sector of the theory, scalar fields interact with each other in such a way that the ground state acquires a non-zero field strength, breaking the electroweak symmetries spontaneously. 
-
-The potential describing these self-interactions is displayed in \ref{fig:higgs_potential}. The interaction energies of electroweak gauge bosons, leptons and quarks with this field manifest themselves as non-zero masses of these particles. If this picture is correct, a scalar particle, the Higgs boson, should be observed with a mass of less than about 700 GeV, the final experimentum crucis of the Standard Model.
-
-The the overall picture of all known Standard Model particles is shown on picture \ref{fig:SM_particles}
+Even though the Electroweak Unification lead to the successful discovery of the W and Z bosons this theory is formulated round massless particles. An elegant way to circumvent the problem is 
+Riprendiamo il modello del Capitolo precedente ma promuoviamo la simmetria per trasformazioni di fase globale ad una simmetria per trasformazioni di fase dipendenti dal punto. Questo richiede, oltre al campo scalare complesso di partenza, l’ introduzione di un campo vettoriale Aμ analogo al campo elettromagntico, come discusso nel Cap. 3. La lagrangiana risultante `e:
+ L = (Dμφ)† Dμφ − V (φ) − 1FμνFμν 4
+ V(φ)=μ2φ†φ+λ(φ†φ)2 −εφ† −ε∗φ 
+ Dμ = ∂μ − ieAμFμν =∂νAμ−∂μAν
+ Nel limite ε → 0, L `e invariante sotto le trasformazioni di gauge:
+ φ(x) → eiα(x)φ(x); φ(x)† → e−iα(x)φ(x)†;Aμ → Aμ + 1∂μα(x) e(5.50)(5.51) (5.52)  dove α(x) `e una funzione reale arbitraria di x ed e una nuova costante di accoppiamento, che coincide con la carica elettrica se identifichiamo Aμ con il campo elettromagnetico. Come prima deve essere λ > 0, per ottenere una teoria stabile, ma μ2 pu`o avere entrambi i segni.1. μ2 > 0. La configurazione di minima energia corrisponde a φ = 0, Aμ = 0. Se quantizziamo φ ed Aμ otteniamo una teoria con:• una particella carica e la sua antiparticella, entrambe con massa μ ̸= 0;• una particella di spin 1 e massa nulla (due stati di polarizzazione) in tutto simile al fotone;Per λ ed e sufficientemente piccoli, la lagrangiana descrive le interazioni di particelle scalari con il campo elettromagnetico (elettrodinamica scalare, costante di accoppiamento e) e le loro autointerazioni (costante di accoppiamento λ).
+La configurazione di minima energia si ottiene per Aμ = 0, per minimizzare l’ energia elettrostatica, quindi ricadiamo nel caso del modello di Goldstone, per cui (con ε → 0, reale):  ̄  ̄  −μ2 V(φ)=min: φ=η= 2λ +O(ε)Per studiare le fluttuazioni intorno alla configurazione di minimo, poniamo di nuovo: σ1(x) + iσ2(x)e sviluppiamo la lagrangiana in (5.50). Lo spettro di massa delle particelle associate si ottiene come prima dai termini quadratici nei campi σi e Aμ. Prima di considerare questi termini, tuttavia, notiamo che sotto le trasformazioni (5.52) con α infinitesimo, il campo φ trasforma come:  φ=η+ √2(5.53)(5.54)    ovvero:
+σ1(x) + iσ2(x)φ → φ + iαφ = η + √2 + iηα(x) (5.55)
+σ1(x) → σ1′ (x) = σ1(x); σ2(x) → σ2′ (x) = σ2(x) + √2ηα(x) (5.56) 
+dove abbiamo trattato sia le σi sia α come grandezze del primo ordine ed abbiamo trascura- to termini che sono almeno del secondo ordine. Naturalmente, allo stesso tempo dobbiamo trasformare Aμ secondo la (5.52).Il campo σ2 si trasforma in modo non omogeneo per l’ aggiunta di un termine proporzionale ad α ma, a differenza del caso globale, il termine aggiuntivo `e una funzione di x di cui possiamo disporre a nostro piacimento. In particolare, dati i campi σi(x) ed Aμ(x), possiamo scegliere:  in modo tale da avere:
+σ2(x)α(x) = − √2η (5.57)σ2′(x)=0 (gaugeunitaria) (5.58)
+Il campo σ2, che nel modello con simmetria globale corrispondeva al bosone di Goldstone, pu`o essere completamente eliminato nel caso di simmetria di gauge e non corrisponde quindi ad alcun grado di libert`a fisico. La gauge identificata dalla condizione (5.58) `e comunemente indicata col nome di gauge unitaria.
 
 \begin{figure}[tbh!]
 	\centering
