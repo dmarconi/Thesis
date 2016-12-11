@@ -65,36 +65,26 @@ The second component are the four different forces acting between the leptons an
 
 \subsection{The Higgs Mechanism}
 
-The starting point is a theory based on the $SU(2)_{L} \oplus U(1)_{Y}$ symmetry with massless terms:
 
-\begin{equation}
-L_{eW} = \bar{l}i\gamma^{\mu} D_{\mu}l + \bar{e}_{R}i\gamma^{\mu}D_{\mu}e_{R} − \dfrac{1}{4}[W_{\mu\nu}W^{\mu\nu} +B_{\mu\nu}B^{\mu\nu}]
-\end{equation}
 
-with the leptonic fields defined as:
+in order to obtain a stable theory $\lambda > 0$, however $\mu^{2}$ can have two cases depending on the sign choice:
 
-\begin{equation}
-\binom{(\nu_{e})_{L}}{e_{L}}_{Y=−2} ; (e_{R})_{Y=−2}
-\end{equation}
+1. $\mu^{2} > 0$. The energy minimum is at $\phi = 0$ and $A_{\mu} = 0$. The resulting theory consists of:
 
-and the covariant derivatives and tensors defined as:
+\begin{enumerate}
+	\item a charged particle and its anti-partner, both with mass $\mu^{2} \neq 0$;
+	\item a massless particle with spin 0, similar to the photon.
+\end{enumerate}
 
-\begin{equation}
-D_{\mu}l = [\partial_{\mu} + igW_{\mu} \dfrac{\tau}{2}  + ig^{\prime}(-\dfrac{1}{2})B_{\mu}]l 
-\end{equation}
+For small values of $\lambda$ and $e$ the Lagrangian describes the interactions between scalar particles with the electromagnetic field (trough the coupling constant $e$) and their self-interactions (through the couping constant $\lambda$).
 
-\begin{equation}
-D_{\mu}e_{R} = [\partial_{\mu} + ig^{\prime}(-1)B_{\mu}]e_{R}
-\end{equation}
 
-\begin{equation}
-W_{\mu\nu} =\partial_{\nu}W_{\mu}−\partial_{\mu}W_{\nu} 
-\end{equation}
+1. $\mu^{2} < 0$. The energy minimum is at $A_{\mu} = 0$
 
-\begin{equation}
-B_{\mu\nu} =\partial_{\nu}B_{\mu}−\partial_{\mu}B_{\nu} 
-\end{equation}
 
+2. μ2 < 0. La configurazione di minima energia si ottiene per Aμ = 0, per minimizzare l’
+energia elettrostatica, quindi ricadiamo nel caso del modello di Goldstone, per cui (con ϵ → 0,
+reale):
 
 \begin{figure}[tbh!]
 	\centering
@@ -114,6 +104,72 @@ B_{\mu\nu} =\partial_{\nu}B_{\mu}−\partial_{\mu}B_{\nu}
 	\caption{Running of the gauge coupling constants in the SM (dashed lines) and in the model in Ref.~\cite{PhysRevD.90.013005} (solid lines). Here the $M_{331}$ scale is set to 11~TeV}
 	\label{fig:gauge_unification}
 \end{figure}
+
+\subsection{The bosonic masses}
+
+The starting point is a theory based on the $SU(2)_{L} \oplus U(1)_{Y}$ symmetry:
+
+\begin{equation}
+\mathcal{L}_{eW} = \bar{l}i\gamma^{\mu} D_{\mu}l + \bar{e}_{R}i\gamma^{\mu}D_{\mu}e_{R} − \dfrac{1}{4}[W_{\mu\nu}W^{\mu\nu} +B_{\mu\nu}B^{\mu\nu}]
+\label{eq::lagrangian_ew}
+\end{equation}
+
+with the leptonic fields defined as:
+
+\begin{equation}
+\binom{(\nu_{e})_{L}}{e_{L}}_{Y=−2} ; (e_{R})_{Y=−2}
+\end{equation}
+
+and the covariant derivatives and tensors defined as:
+
+\begin{equation}
+D_{\mu}l = [\partial_{\mu} + igW_{\mu} \dfrac{\tau}{2}  + ig^{\prime}(-\dfrac{1}{2})B_{\mu}]l 
+\end{equation}
+
+\begin{equation}
+D_{\mu}e_{R} = [\partial_{\mu} + ig^{\prime}(-1)B_{\mu}]e_{R}
+\end{equation}
+
+\begin{equation}
+W_{\mu\nu} =\partial_{\nu}W_{\mu} - \partial_{\mu}W_{\nu} 
+\end{equation}
+
+\begin{equation}
+B_{\mu\nu} =\partial_{\nu}B_{\mu} - \partial_{\mu}B_{\nu} 
+\end{equation}
+
+At this stage the theory describes massless fermions and vectorial fields. The introduction of a scalar field triggers a symmetry breaking while keeping the electromagnetism gauge still intact:
+
+\begin{equation}
+SU(2)_{L} \oplus U(1)_{Y} \rightarrow U(1)_{em}
+\end{equation}
+
+The optimal choice in order to generate the electron and quarks mass is to choose a $SU(2)_{L}$ doublet with $Y = +1$: 
+
+\begin{equation}
+\phi = \binom{(\phi{+})_{L}}{\phi^{0}}_{Y=+1}
+\end{equation}
+
+\begin{equation}
+D_{\mu}\phi = [\partial_{\mu} + igW_{\mu} \dfrac{\tau}{2}  + ig^{\prime}(+\dfrac{1}{2})B_{\mu}]\phi 
+\end{equation}
+
+
+with the addition of the fully symmetric Higgs doublet to \ref{eq::lagrangian_ew} the total lagrangian becomes:
+
+\begin{equation}
+\mathcal{L}_{tot} = \mathcal{L}_{eW} + \mathcal{L}_{\phi W}
+\end{equation}
+
+where:
+
+\begin{equation}
+\mathcal{L}_{\phi W} = (D_{\mu}\phi)^{\dagger} (^{\mu}\phi) - V (\phi);
+\end{equation}
+
+\begin{equation}
+V(\phi) = \mu^{2}\phi^{\dagger}\phi + \lambda(\phi^{\dagger}\phi)^{2}
+\end{equation}
 
 \clearpage
 
