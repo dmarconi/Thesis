@@ -66,9 +66,38 @@ The second component are the four different forces acting between the leptons an
 \subsection{The Higgs Mechanism}
 
 
+Riprendiamo il modello del Capitolo precedente ma promuoviamo la simmetria per trasfor- mazioni di fase globale ad una simmetria per trasformazioni di fase dipendenti dal punto. Questo richiede, oltre al campo scalare complesso di partenza, l’ introduzione di un campo vettoriale Aμ analogo al campo elettromagntico, come discusso nel Cap. 3. La lagrangiana risultante `e:
 
-in order to obtain a stable theory $\lambda > 0$, however $\mu^{2}$ can have two cases depending on the sign choice:
+by promoting a symmetry . This requires in addition to the starting complex scalar field also a vectorial field $A_{\mu}$ analog to the electromagnetic field. The resulting lagrangian is:
 
+\begin{equation}
+\mathcal{L} = (D_{\mu}\phi)^{\dagger} D^{\mu}\phi - V (\phi) - \dfrac{1}{4}F_{\mu\nu}F^{\mu\nu}\
+\label{eq::lagrangian_min}
+\end{equation}
+\begin{equation}
+V(\phi)=\mu^{2}\phi^{\dagger}\phi+\lambda(\phi^{\dagger}\phi)^{2} -\epsilon\phi^{\dagger} -\epsilon^{*}\phi
+\end{equation}
+
+\begin{equation}
+D^{\mu} = \partial^{\mu} - ieA^{\mu}
+\end{equation}
+
+\begin{equation}
+F^{\mu\nu} =\partial^{\nu}A^{\mu} - \partial^{\mu}A^{\nu}
+\end{equation}
+
+where $\epsilon \rightarrow 0$, $\mathcal{L}$ is invariant under gauge transformations:
+
+\begin{equation}
+\phi(x) \rightarrow e^{i\alpha(x)}\phi(x); \phi(x)^{\dagger} \rightarrow e ^{-i\alpha(x)}\phi(x)^{dagger};
+\end{equation}
+
+\begin{equation}
+A^{\mu} \rightarrow A^{\mu} + \dfrac{1}{e}\partial^{\mu}\alpha(x)
+\end{equation}
+
+Where $\alpha(x)$ is an arbitrary function of x and $e$ is a new coupling constant, identical to the electrical charge in case $A_{\mu}$ is identified as the electromagnetic field. In order to obtain a stable theory $\lambda > 0$, however $\mu^{2}$ can have two cases depending on the sign choice:
+ 
 1. $\mu^{2} > 0$. The energy minimum is at $\phi = 0$ and $A_{\mu} = 0$. The resulting theory consists of:
 
 \begin{enumerate}
@@ -78,13 +107,23 @@ in order to obtain a stable theory $\lambda > 0$, however $\mu^{2}$ can have two
 
 For small values of $\lambda$ and $e$ the Lagrangian describes the interactions between scalar particles with the electromagnetic field (trough the coupling constant $e$) and their self-interactions (through the couping constant $\lambda$).
 
+2. $\mu^{2} < 0$. The energy minimum is at $A_{\mu} = 0$, so in  case $\epsilon \rightarrow 0$:
 
-1. $\mu^{2} < 0$. The energy minimum is at $A_{\mu} = 0$
+\begin{equation}
+V(\bar{\phi})=min ; \bar{\phi}=\eta= 2\lambda +O(\epsilon)
+\end{equation}
+ 
+ in order to study the  variations around the minimum $\phi$ is defined as:
 
+\begin{equation}
+ \phi=\eta + \dfrac{\sigma_{1}(x) + i\sigma_{2}(x)}{\sqrt{2}} 
+\end{equation}
 
-2. μ2 < 0. La configurazione di minima energia si ottiene per Aμ = 0, per minimizzare l’
-energia elettrostatica, quindi ricadiamo nel caso del modello di Goldstone, per cui (con ϵ → 0,
-reale):
+and is used into the minimal Lagrangian \ref{eq::lagrangian_min}.
+
+The particle masses spectrum is obtained from the fileds $\sigma_{i}$ and $A_{\mu}$ quadratic terms. 
+ Lo spettro di massa delle particelle associate si ottiene come prima dai termini quadratici nei campi σi e Aμ. Prima di considerare questi termini, tuttavia, notiamo che sotto le trasformazioni (5.52) con α infinitesimo, il campo φ trasforma come:
+ 
 
 \begin{figure}[tbh!]
 	\centering
