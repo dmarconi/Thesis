@@ -328,6 +328,7 @@ therefore:
  g^{2} & -gg^{\prime} \\
 -gg^{\prime} & (g^{\prime})^{2} \\
 \end{pmatrix}
+\label{eq::matrix_mass}
 \end{equation}
 
 in order to allow the existence of a massless photon $det(\mathcal{M}) = 0$. Knowing that the vacuum configuration in invariant to gauge transformation associated to the electric charge is possible to introduce the massive field $Z_{\mu}$ and the electric field $A_{\mu}$ so that:
@@ -338,11 +339,51 @@ Z_{\mu} = cos\theta W^{3}_{\mu} - sin\theta B_{\mu}\\
 A_{\mu} = sin\theta W^{3}_{\mu} - cos\theta B_{\mu}
 
 \end{array}
+\label{eq::fields_rotation}
 \end{equation}
 
-with $\theta$ knows as the electroweak mixing angle. 
+with $\theta$ knows as the electroweak mixing angle. By using the condition that $A_{\mu}$ in the eigen-vector of \ref{eq::matrix_mass} with a zero eigen-value:
+
+\begin{equation}
+0 = 
+\begin{pmatrix}
+g^{2} & -gg^{\prime} \\
+-gg^{\prime} & (g^{\prime})^{2} \\
+\end{pmatrix}
+\binom{sin\theta}{cos\theta}
+=
+\binom{g^{2} sin\theta - gg^{\prime}cos\theta}{-gg^{\prime}sin\theta + (g^{\prime})^{2}cos\theta}
+\label{eq::matrix_rotation}
+\end{equation}
+
+the equation in solved for:
+
+\begin{equation}
+tan\theta = \dfrac{g^{\prime}}{g}
+\label{eq::matrix_solution}
+\end{equation}
+
+this condition couples the field $A_{\mu}$ defined in \ref{eq::fields_rotation} with the electron through the electromagnetic current with
+
+\begin{equation}
+gsin\theta = g^{\prime} cos\prime = e; 
+\end{equation}
+
+The theory symmetry breaking made by Weimber and Salam, based on a symmetric Lagrangian, reproduces the masses spectrum and the couplings on the vectorial fields. All those results has been experimentally confirmed.
 
 \clearpage
+
+\subsection{The fermionic masses}
+
+Per completare la teoria elettro-debole dobbiamo rendere conto della massa dell’ elettrone, che nella teoria di Glashow era descritta dal termine Lm che rompe esplicitamente la simmetria, cfr. la (4.10):
+
+In order to complete the electro-weak theory the calculation of the fermionic masses is mandatory. Starting with the electron mass taken from the $\mathcal{L}_{m}$ term of the Glashow theory:
+
+\begin{equation}
+\mathcal{L}_{m} = m_{e}\bar{e}e = m_{e}(\bar{e}_{L}e_{R} + \bar{e}_{R}e_{L})
+\end{equation}
+
+
 
 \subsection{Limitations}
 
