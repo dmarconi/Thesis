@@ -1,5 +1,5 @@
 
-The following chapter goes on the details of the analysis performed with 7\tev data. After a brief description on the data and Monte Carlo samples used the reader will get details on the selection choices used following the strategy suggested in Chapter \ref{sec:VBFSUSY}. The most important section motivates and describes the data-driven background estimation technique used for treating QCD background events where two jets get mis-reconstructed as \hadtau and pass the event selection. The validation of the assumption that has been made while describing the background estimation method is described in the final section of the chapter.
+The following chapter the analysis with two same sign \hadtau and two jets performed with 8\tev data. After a brief description on the data and Monte Carlo samples, details follow on the selection choices used following the strategy suggested in Chapter \ref{sec:VBFSUSY}. The most important section motivates and describes the data-driven background estimation technique used for treating QCD background events where two jets get mis-reconstructed as \hadtau and pass the event selection. The validation of the assumption that has been made while describing the background estimation method is described in the final section.
 
 \section {Data sample and trigger paths}
 
@@ -14,7 +14,7 @@ Even though the analysis original concept was relying on the usage of a VBF-base
 
 %TODO you use “normalize” for 2 different things. Rephrase to make clear  - that you *normalize* the MC yields to the integrated luminosity of the data (quote number) - *by using* cross sections predicted with …  
 
-The background yields are taken from simulation. Simulated samples of signal and background events are generated using Monte Carlo (MC) event generators.
+All the background yields, except for QCD, are taken from simulation. Simulated samples of signal and background events are generated using Monte Carlo (MC) event generators.
 
 The signal event samples are generated with the \texttt{MadGraph v5.1.5} program \cite{Alwall:2011uj}, considering pair production of gauginos with two associated partons. The signal events are generated requiring a pseudorapidity gap $|\deltaeta| > 4.2$ between the two partons, with $\pt > 30$ \pt for each parton. Signal cross sections are calculated at leading order using the MadGraph generator. The range of signal cross sections is $50^{–1}$ fb for \charginopm = \neutralinotwo masses of 100–-300\gev.
 
@@ -45,7 +45,7 @@ For all datasets, a common \texttt{Physics Analysis Toolkit} (\texttt{PAT}) \cit
 
 %TODO read it again and try to make your text easier to understand for a reader that is less familiar with LHC analyses
 
-As mentioned in Section \ref{section::search_strategy} the di-\hadtau channel's main background contribution comes from QCD multijet, with a rate several orders of magnitude larger than the rate in other contributions. Hence this search channel, more than any of the others, relies on the efficient background rejection. Fortunately, the VBF and \met selections provide the required background suppression.
+As mentioned in Section \ref{section::search_strategy} the di-\hadtau channel's main background contribution comes from QCD multijetevents, with a rate several orders of magnitude larger than the rate in other background contributions. Hence this search channel, more than any of the other lepton channels, relies on the efficient background rejection. Fortunately, the VBF and \met selections provide the required background suppression.
 
 All the collision data events passing the requirements of the triggers shown on Table \ref{table:triggerdefinition} are considered as the interesting events for offline analysis. 
 
@@ -53,10 +53,12 @@ As previously introduced in Section \ref{section::search_strategy}, the event se
 
 The main differences with the other VBF SUSY searches with final states to light leptons, are the substantially tighter \hadtau requirements targeting at the suppression of QCD jet background and the looser missing transverse energy (\met) requirement, to recover some of the signal acceptance lost due to the larger discriminator based on isolation $\hadtau$ \pt thresholds needed to stay efficient with respect to the trigger. 
 
+There are some differences this analysis has with the other existing VBF searches with final states to light leptons. The most important ones are the substantially tighter requirements on the \hadtau isolation and \pt, which allows a good QCD background suppression while remaining efficient with the trigger online requirements. However those requirements leads also to a reduction in the signal acceptance, for that reason a looser \met cut is introduced.
+
 The selected events are required to have at least two \hadtau candidates as defined in Section \ref{subsec::objsel_tau}. The reconstruction of more than two \hadtau is constrained by the trigger. The like sign \hadtau candidates with the highest \pt and separated from each other by a minimum \deltar = 0.3 are then chosen to form a di-\hadtau candidate. 
 Further, to reduce top pair contamination the event is required not to have any jet identified as a b--quark jet by the b--tagging algorithms using the {\textit combined secondary vertex loose} (CSVL) working point. 
 
-Only jets with \pt $\ge 30\gev$ and separated from the taus in the di--\hadtau pairs by $\Delta R \ge 0.3$ are searched for b--tags. The higher \pt cut of 30\gev on b-jets (a looser veto requirement than other analyses with light leptons) allows us to be more efficient with respect to the signal since the higher \pt threshold on taus reduces the contamination of $t\overline{t}$ to a large extent. Further, the event is required to have at least 30\gev of \met. All the above described selections is what will be referred as {\textit central selections}.
+Only jets with \pt $\ge 30\gev$ and separated from the taus in the di--\hadtau pairs by $\Delta R \ge 0.3$ are searched for b--tags. The \pt cut of 30\gev on b-jets (a looser veto requirement than other analyses with light leptons) allows to be more efficient with respect to the signal since the higher \pt threshold on taus reduces the contamination of $t\overline{t}$ to a large extent. Further, the event is required to have at least 30\gev of \met. All the above described selections is what will be referred as \textit{central selections}.
 
 Subsequently, the following event-wide requirements are imposed. The {\textit {VBF selections}} are imposed by requiring at least two jets as defined in Section \ref{subsec::objsel_jet}. Only jets separated from the leptons in the \hadtau\hadtau pair by $\deltar \ge 0.3$ are considered. All jet candidates passing the above requirements and having $\vert \Delta\eta \vert \ge 4.2$ and $\eta_{1}\cdot\eta_{2} < 0$ are combined to form di-jet candidates. The final and the most important of the requirement is an invariant mass of the di-jet candidate, namely \mjj, above the threshold of 250\gev. In order to increase the event acceptance the analysis code algorithm takes into account every possible di-jet candidate combination and chooses the one that passes the VBF requirements and has the highest \mjj. 
 
