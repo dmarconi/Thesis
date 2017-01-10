@@ -410,13 +410,14 @@ m_{e} = g_{e}\eta
 The concept of quark mixing as consequence of the previously introduced symmetry breaking was introduced by Cabibbo \cite{PhysRevLett.10.531}. In this scheme the left-handed fields are are associated to an electroweak doublet and the right-handed ones to singlets:
 
 \begin{equation}
-\binom{u}{d}_{L}; \quad u_{R}; d_{R}; s_{L}; s_{R}
+\binom{u}{d}_{L}; \quad u_{R}; \quad d_{R}; \quad s_{L}; \quad s_{R}.
 \end{equation}
 
 Cabibbo shows that the symmetry breaking leads to a mixing between $d_{L}$ and $s_{L}$ leading to a expression of the charged current in the form:
 
 \begin{equation}
 J^{1}_{\mu} + i J^{2}_{\mu}= \bar{u}_{L}\gamma_{\mu} (cos\theta d_{L} + sin\theta s_{L})
+\label{eq::charg_current}
 \end{equation}
 
 including a single electroweak parameter, the angle $\theta$ also known as the Cabibbo angle. By the introduction of the triplet:
@@ -431,7 +432,100 @@ s \\
 _{L}
 \end{equation}
 
-\subsection{Limitations}
+equation \ref{eq::charg_current} becomes:
+
+\begin{equation}
+J^{1}_{\mu} + i J^{2}_{\mu} = \bar{q}_{L}\mathcal{C}\gamma_{\mu}q_{L} =  \bar{q}_{L}
+\begin{pmatrix}
+0 &cos\theta &sin\theta \\
+0 &0 &0 \\
+0 &0 &0\\
+\end{pmatrix}
+\gamma_{\mu}q_{L}
+\label{eq::charg_current_matrix}
+\end{equation}
+
+However the Cabibbo's theory cannot be included in Glashow-Weimber-Salam electroweak theory because equation \ref{eq::charg_current_matrix} would lead to a flavor-changing neutral current, in contrast with what shown by experimental data. This current involves the $\mathcal{C}$ commutator which is not diagonal:
+
+\begin{equation}
+\left[\mathcal{C}, \mathcal{C}^{\dagger} \right]
+=
+\begin{pmatrix}
+1 &0 &0 \\
+0 &cos^{2}\theta &-sin\theta cos\theta \\
+0 &-sin\theta cos\theta &-sin^{2}\theta\\
+\end{pmatrix}
+\end{equation}
+
+The neutral current terms in the form of $\bar{d}_{L}\gamma_{\mu}s_{L}$ would produce the following decay $K_{L} \longrightarrow \mu^{+}\mu^{-}$ at the same rate of $K^{+} \longrightarrow \mu^{+}\nu$
+
+\subsection{The Glashow-Iliopoulos-Maiani mechanism}
+
+The flavor-changing neutral current issue was solved in 1970 by S. L. Glashow, J. Iliopoulos e L. Maiani \cite{Glashow:1970gm} by introducing the existence of a fourth quark, named "charm" quark, with the same electroweak quantum numbers of up quark. With the presence of the charm quark the $s_{L}$ quark goes into a new doublet as follows: 
+
+\begin{equation}
+\binom{u}{d}_{L}; \quad \binom{c}{s}_{L}; \quad u_{R}; \quad d_{R}; \quad c_{R}; \quad s_{R}.
+\end{equation}
+
+The $\mathcal{C}$ matrix becomes 4 x 4 and the charged weak current becomes:
+
+\begin{equation}
+J^{1}_{\mu} + i J^{2}_{\mu} = \bar{q}_{L} 
+\begin{pmatrix}
+0 &U_{GIM} \\
+0 &0 \\
+\end{pmatrix}
+\gamma_{\mu}q_{L}
+\label{eq::cab_current_gim}
+\end{equation}
+
+where:
+
+\begin{equation}
+U_{GIM} =
+\begin{pmatrix}
+cos\theta &sin\theta \\
+-sin\theta &cos\theta \\
+\end{pmatrix}
+\end{equation}
+
+Given the $U_{GIM}$ unitarity, the neutral current now becomes:
+
+\begin{equation}
+	\begin{aligned}
+		J^{3}_{\mu} = \bar{q}_{L}\left[\mathcal{C}, \mathcal{C}^{\dagger} \right]\gamma_{\mu}q_{L} = \\
+		\bar{q}_{L}
+		\begin{pmatrix}
+			U_{GIM}U_{GIM}^{\dagger} &0 \\
+			0 &-U_{GIM}^{\dagger}U_{GIM} \\
+		\end{pmatrix}
+		\gamma_{\mu}q_{L} = \bar{q}_{L}
+		\begin{pmatrix}
+			1 &0 \\
+			0 &-1 \\
+		\end{pmatrix}
+		\gamma_{\mu}q_{L}
+	\end{aligned}
+\end{equation}
+
+\subsection{CP violation and Kobayashi-Maskawa theory}
+
+After the introduction if the charm quark and the flavor-changing neutral currents suppression, the missing puzzle piece to a fundamental electroweak theory in 1973 was the natural inclusion of CP violation, observed in the neutral mesons K decays since 1964. 
+The starting point is demonstrating that a theory with two doublets the $U_{GIM}$ matrix can always become real under a phase transformation \cite{Glashow:1970gm}. The easiest way to show it starts from the general definition of the Cabibbo's current:
+
+\begin{equation}
+J^{C}_{\mu} = \bar{u}_{L}\gamma_{\mu}\left( e^{i\alpha} cos\theta d_{L} + e^{i\beta} sin\theta s_{L}   \right)
+\end{equation}
+
+and observe the two phses can be absorbed by the $d_{L}$ and $s_{L}$ definitions. At this point the second row of $U_{GIM}$ is fixed by the condition of being orthonormal to the first row, obtaining:
+
+\begin{equation}
+J^{1}_{\mu} + i J^{2}_{\mu} =  \bar{u}_{L}\gamma_{\mu} \left(cos\theta d_{L} + sin\theta s_{L}\right) + \bar{c}_{L}\gamma_{\mu}e^{i\phi} (-sin\theta d_{L} + cos\theta s_{L})
+\end{equation}
+
+is now possible to absorb the phase $e^{i\phi}$ in the field $c_{L}$ and obtain the real form of the current as shown in \ref{eq::cab_current_gim}. Given the number of existing left-handed doublets and right handed singlets N M. Kobayashi and T. Maskawa found out that the minimum case where the quark fields can exist with an irreducible phase is at $N = 3$. Given the existence of ad additional doublet the CP violation can now be included in the Weimberg-Salam theory.
+
+
 
 \todo{Total Rework}
 
