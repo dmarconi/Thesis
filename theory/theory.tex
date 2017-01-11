@@ -1,12 +1,11 @@
+
+This chapter covers in details the theoretical background needed by the research presented in this thesis. Starting with the description of the Standard Model, this chapter will analyze its limits and suggest one possible theoretical extension, Supersymmetry. This additional theory comes with a set of solutions to the problems happening in nature that Standard Model still can't describe
+
 \section{The Standard Model of Particle Physics}
 
-The Standard Model \cite{Spiesberger:2000ks} is an effective description of all known fundamental particles.  Despite this criticism, the Standard Model provides a valid framework for the description of Nature, from microscopic scales up to cosmological distances. In the following sections the most important aspects of the Standard Model will be given. The starting poin
+The Standard Model of particle physics is a theory that describes the interactions of three of the forces existing in nature, electromagnetic, weak and strong, and defines the fundamental constituents of matter \cite{Spiesberger:2000ks}. It was developed in the second half of the century as combined theoretical and experimental effort by the experimental communities from all around the world. Since the first formulation at the beginning of the 1970s the Standard Model successfully predicted all the particles that were later in the century discovered. The most recent particle discoveries such as the top quark (1995), the tauonic neutrino (2000) and finally the Higgs boson (2012) have given further credence to the Standard Model. 
 
-The Standard Model is an effective description of all know fundamental particles 
- 
-\subsection{Matter}
-
-The first component states that the basic constituents of matter are leptons and quarks which are realized in three families of identical structure. The entire ensemble of these constituents has been identified experimentally. \autoref{table:fermions} shows all the fermions of the Standard Model and their charges, arranged in the three families.
+According to this theoretical model the basic constituent of matter are leptons and quarks which are divided in three families of identical structure. \autoref{table:fermions} shows all the fermions of the Standard Model and their charges, arranged in the three families. Details on the main aspects of this theory are gonna be given in the following sections.
 
 \begin{figure}[tbh!]
 	\begin{center}
@@ -33,51 +32,31 @@ The first component states that the basic constituents of matter are leptons and
 	\end{center}
 \end{figure}
 
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.75\textwidth]{theory/pics/SM_forces.pdf}
-	\end{tabular}
-	\caption{The four fundamental forces in nature as described by the Standard Model.}
-	\label{fig:SM_forces}
-\end{figure}
-
-\subsection{Interactions}
-
-The interactions are mediated by bosons. They are the quanta of the gauge fields, and couple to the corresponding charges. The interactions are described by symmetry transformations U of the group \text{SU}(n). They are unitary (UU† = 1) and special (det(U) = 1). An operator
-
-
------------------------------
-
-The second component are the four different forces acting between the leptons and quarks. The electromagnetic and weak forces are unified in the Standard Model. The fields associated with these forces, as well as the fields associated with the strong force, are spin-1 fields, describing the photon \ensuremath{\gamma}, the electroweak gauge bosons \W and \Z, and the gluons g. The interactions of the force fields with the fermionic constituents of matter as well as their self-interactions are described by Abelian and non-Abelian \ensuremath{\text{SU}(3) \times \text{SU}(2) \times \text{U}(1)} gauge theories. The experimental exploration of these fundamental gauge symmetries is far advanced in the sector of lepton/quark-gauge boson interactions, yet much less is known so far from experiment about the self-interactions of the force fields. The gravitational interaction is mediated by a spin-2 field, describing the graviton G, with a character quite different from spin-1 gauge fields. The gravity sector is attached ad hoc to the other sectors of the Standard Model, not properly formulated yet as a quantum phenomenon. \autoref{fig:SM_forces} shows the four fundamental forces in nature as described by the Standard Model.
-
-
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.75\textwidth]{theory/pics/higgs_potential.pdf}
-	\end{tabular}
-	\caption{The Higgs potential of the Standard Model.}
-	\label{fig:higgs_potential}
-\end{figure}
-
 \subsection{The Higgs Mechanism}
 \label{higgs_mechanism}
 
-The starting point is the promotion from a global gauge transformation to the minimal to a point-dependent gauge transformation to the minimal Lagrangian . This requires in addition to the starting complex scalar field also a vectorial field $A_{\mu}$ analog to the electromagnetic field. The resulting Lagrangian is:
+The discovery of the Higgs boson lead to the confirmation of the mechanism that was developed in 1964 to face the problem of a symmetric Lagrangian with massless particles which was not representing experimental evidence. This mechanism works by introducing a gauge boson and spontaneously breaking the symmetry.
+
+The starting point is moving from a global gauge transformation to a point-dependent gauge transformation applied to the minimal Lagrangian $\mathcal{L}$. This requires in addition to the starting complex scalar field $\phi$ also a vectorial field $A_{\mu}$ analog to the electromagnetic field. The resulting Lagrangian is:
 
 \begin{equation}
 \mathcal{L} = (D_{\mu}\phi)^{\dagger} D^{\mu}\phi - V (\phi) - \dfrac{1}{4}F_{\mu\nu}F^{\mu\nu}\
 \label{eq::lagrangian_min}
 \end{equation}
+
+where $V(\phi)$ is the $\phi$ field potential:
+
 \begin{equation}
 V(\phi)=\mu^{2}\phi^{\dagger}\phi+\lambda(\phi^{\dagger}\phi)^{2} -\epsilon\phi^{\dagger} -\epsilon^{*}\phi
 \end{equation}
 
+$D^{\mu}$ is the covariant derivative:
+
 \begin{equation}
 D^{\mu} = \partial^{\mu} - ieA^{\mu}
 \end{equation}
+
+and $F^{\mu\nu}$ is the tensor of the vectorial field $A_{\mu}$:
 
 \begin{equation}
 F^{\mu\nu} =\partial^{\nu}A^{\mu} - \partial^{\mu}A^{\nu}
@@ -148,7 +127,7 @@ the $\sigma_{2}$ filed can be crossed out in case of a gauge symmetry. The gauge
 
 \subsection{The bosonic masses}
 
-The starting point is a theory based on the $\text{SU}(2)_{\text{L}} \oplus \text{U}(1)_{\text{Y}}$ symmetry:
+The starting point is the electroweak Lagrangian $\mathcal{L}_{\text{eW}}$ based on the $\text{SU}(2)_{\text{L}} \oplus \text{U}(1)_{\text{Y}}$ symmetry:
 
 \begin{equation}
 \mathcal{L}_{\text{eW}} = \bar{l}i\gamma^{\mu} D_{\mu}l + \bar{e}_{\text{R}}i\gamma^{\mu}D_{\mu}e_{\text{R}} - \dfrac{1}{4}[W_{\mu\nu}W^{\mu\nu} +B_{\mu\nu}B^{\mu\nu}]
@@ -353,13 +332,13 @@ The theory symmetry breaking made by Weimber and Salam, based on a symmetric Lag
 
 \subsection{The fermionic masses}
 
-In order to complete the electro-weak theory the calculation of the fermionic masses is mandatory. Starting with the electron mass taken from the $\mathcal{L}_{m}$ term of the Glashow theory:
+In order to complete the electro-weak theory the calculation of the fermionic masses is mandatory. Starting with the electron mass taken from the $\mathcal{L}_{\text{m}}$ term of the Glashow theory:
 
 \begin{equation}
 \mathcal{L}_{\text{m}} = m_{\text{e}}\bar{e}e = m_{\text{e}}(\bar{e}_{\text{L}}e_{\text{R}} + \bar{e}_{\text{R}}e_{\text{L}})
 \end{equation}
 
-Another invariant Lagrangian is obtainable by combining $\mathcal{L}_{m}$ with the Higgs field, which also has the electro-weak iso-spin of $1/2$. Following the symmetry breaking, $\phi$ gains a constant component, which reproduces the Lagrangian  $\mathcal{L}_{m}$, while the quantum component of $\phi$ gives raise to a new interaction between $\phi$ and the electron. The invariant Lagrangian becomes:
+Another invariant Lagrangian is obtainable by combining $\mathcal{L}_{\text{m}}$ with the Higgs field, which also has the electro-weak iso-spin of $1/2$. Following the symmetry breaking, $\phi$ gains a constant component, which reproduces the Lagrangian  $\mathcal{L}_{\text{m}}$, while the quantum component of $\phi$ gives raise to a new interaction between $\phi$ and the electron. The invariant Lagrangian becomes:
 
 \begin{equation}
 \mathcal{L}_{e\phi} = g_{e} (\bar{l}\phi e_{\text{R}} + \bar{e}_{\text{R}}\phi^{\dagger}l)
@@ -374,7 +353,7 @@ The invariant term $\bar{l}\phi$, under spontaneous symmetry breaking, in the un
 obtaining:
 
 \begin{equation}
-\mathcal{L}_{e\phi} = g_{e}\eta\bar{e}e + g_{e} \dfrac{\sigma}{\sqrt{2}}\bar{e}e = \mathcal{L}_{m} + \text{interactions}
+\mathcal{L}_{e\phi} = g_{e}\eta\bar{e}e + g_{e} \dfrac{\sigma}{\sqrt{2}}\bar{e}e = \mathcal{L}_{\text{m}} + \text{interactions}
 \end{equation}
 
 resulting in a electron with mass term:
@@ -604,20 +583,19 @@ The mass Lagrangian is now finally diagonal:
 
 the matrix $U_{\text{CKM}}$ is indeed the Cabibbo-Kobayashi-Maskawa matrix and it's misalignment breaks the electroweak symmetry.
 
-\clearpage
+\subsection{Standard Model limitations}
 
-\todo{Total Rework}
-
-Although the Standard Model is very successful in describing physics at the electroweak scale, a few questions remain:
+Over the decades the Standard Model has been successful in predicting particle existence and properties at the electroweak scale. However a few questions remain:
 
 \begin{itemize}
-	\item Gravity: The Standard Model does not include gravity and already for this reason alone, it cannot be a complete description of nature.
-	\item No Electrostrong Unification: The hope of physics in the end is to unify all forces, but while the strong force is well represented by the \text{SU}(3), it is not unified with the other forces like it is the case for the electromagnetic and the weak force.
-	\item Dark Matter: Astrophysical observations indicate a much greater accumulation of matter in the visible universe than can be explained by baryonic matter [13]. This “dark matter” cannot be explained by neutrinos, which could form only a small fraction of it. The “Modified Newtonian Dynamics” (MOND) [14] was developed in order to explain this excess within the existing theories. It was very successful, especially in explaining the measurement of galaxy rotation curves [15], until the bullet cluster [16] was discovered. Being actually two clusters passing each other, the bullet cluster shows a discrepancy between the center of the masses detected by direct observation and the center of the masses detected by gravitational lensing. This cannot be explained by MOND alone.
-	\item WW Scattering: In the Standard Model, the four-vector-boson interaction becomes divergent with rising energy. If the Higgs mechanism turns out to be realized, a new term due to interactions of the vector-bosons with the Higgs is introduced, which cancels out this divergence. But this will only work, if the higgs mass is of the order of 100 GeV, and the WW scattering problem turns into the “fine-tuning” problem.
-	\item Neutrino Masses: In the original Standard Model, neutrinos are set to be massless. Experiments showed that neutrinos indeed have non-zero masses [17]. In case of a sterile Dirac neutrino5, the Standard Model can be extended to include massive neutrinos. If it turns out that neutrinos are Majorana particles6, new physics beyond the Standard Model has to be introduced to explain the tiny masses of the neutrinos.
-	\item Hierarchy Problem: In the Standard Model, the quantum corrections to the Higgs mass are quadratically divergent. If the Standard Model is assumed to be valid up to the Planck scale7, these corrections are huge compared to the physical Higgs mass.
+	\item The Standard Model doesn't include gravity, therefore it can't be a complete description of nature;
+	\item Although the successful representation of the strong force by the \text{SU}(3), the Standard Model doesn't have the unification of the force coupling constants at the Planck scale.
+	\item Astrophysical researches give evidence to the existence of a much greater amount of matter in the universe that can be explained by baryonic matter \cite{deBoer:2005tm}, known also under the name of \textit{dark matter}. The only Standard Model candidate that has properties similar to Dark Matter are neutrinos, however le low rate of neutrino production can't justify the measured dark matter amount;
+	\item Neutrinos are considered massless by the Standard Model. Recent experiments showed that neutrinos have masses \cite{Fukuda:1998mi};
+	\item In the Standard Model, the quantum corrections to the Higgs mass are quadratically divergent. If the Standard Model is assumed to be valid up to the Planck scale, these corrections are huge compared to the physical Higgs mass.
 \end{itemize}
+
+\clearpage
 
 \section{Supersymmetry}
 
@@ -629,6 +607,7 @@ Supersymmetry is one of the most intriguing and fundamental concepts in modern t
 \begin{itemize}
 	\item Dark matter candidate
 	\item Higgs corrections \autoref{fig:higgs_loop}
+	\item Gravity inclusion
 \end{itemize}
 
 \begin{figure}[tbh!]
