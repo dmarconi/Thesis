@@ -628,6 +628,23 @@ S_{SUSY} =\int d^{4}x\left\{\partial\phi^{\dagger}\partial\phi + i\bar{\psi}\bar
 
 with $\phi$ a complex scalar field, $\psi$ a Weyl fermion field, and F an auxiliary field. The reason an auxiliary field is needed is because the degrees of freedom do not match: an on-shell Standard Model particle, a Dirac field, has two degrees of freedom, but four when it is off-shell; a sparticle term with a Grassmann object has 2 degrees of freedom. The two missing degrees of freedom to match the Dirac field’s number of degrees of freedom is matched by the auxiliary field.
 
+The simplest interaction deducible of the chiral supermultiplets fields $\phi$ $\psi$ and $F$ is:
+
+\begin{equation}
+\mathcal{L}_{\mathrm{int}} = \left(-\frac{1}{2}W^{ij}\psi_i\psi_j + W^iF_i\right) + \mathrm{c.c.}
+\label{eq::linteract}
+\end{equation}
+
+ $\mathcal{L}_{\mathrm{int}}$ has a few important properties such as is renormalizable and is also invariant under supersymmetry transformations. $W$ is known as the \textit{superpotential} defined as 
+
+\begin{equation}
+W = L^i\varphi_i + \frac{1}{2}M^{ij}\varphi_i\varphi_j + \frac{1}{6}y^{ijk}\varphi_i\varphi_j\varphi_k.
+\label{eq::superpotential}
+\end{equation}
+
+The linear term contains $L_i$ which affects the scalar part of the Lagrangian and is allowed only of $\varphi$ is a gauge singlet.
+
+
 \subsection{Particle content}
 
 While considering a supersymmetric extension of the Standard Model each of the known fundamental particles belongs to a chiral or gauge multiplets, and has a superpartner with spin differing by $1/2$. The way particles fits into multiplets starts with observing that only chiral supemultiplets can contain fermions for the reason that their left-handed parts transform differently under the gauge group rules than their right-handed parts. All of the Standard Model fermions have those transformation properties, therefore they're members of chiral supermultiplets. On the other hand their superpartners must be spin 0 and not spin 1 vector bosons.
@@ -642,39 +659,82 @@ All the chiral multiplets are summarized in Table \ref{fig:chiral_supermultiplet
 
 \begin{table}[tbh!]
 	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.75\textwidth]{theory/pics/chiral_supermultiplet.png}
+	\begin{tabular}{|c || c | c | c | c |}
+		\hline
+		\multicolumn{2}{|c|}{chiral supermultiplets} & spin 0 & spin 1/2 & $\mathrm{SU}(3)_{\mathrm{c}}$, $\mathrm{SU}(3)_{\mathrm{L}}$, $\mathrm{U}(1)_{\mathrm{Y}}$\\\hline\hline
+		\multirow{3}{*}{squarks, quarks (3 families)} &  $Q$  & ($\widetilde{u}_{\mathrm{L}}$, $\widetilde{d}_{\mathrm{L}}$) & ($u_{\mathrm{L}}$, $d_{\mathrm{L}}$) & $\mathbf{3}$, $\mathbf{2}$, 1/3 \\
+		& $\bar{u}$ & $\widetilde{\bar{u}}_{\mathrm{L}}$ ($\widetilde{u}_{\mathrm{R}}^*$) & $\bar{u}_{\mathrm{L}} \sim (u_{\mathrm{R}})^{\mathrm{c}}$ & $\bar{\mathbf{{3}}}$, $\mathbf{1}$, -4/3 \\
+		& $\bar{d}$ & $\widetilde{\bar{d}}_{\mathrm{L}}$ ($\widetilde{d}_{\mathrm{R}}^*$) & $\bar{d}_{\mathrm{L}} \sim (d_{\mathrm{R}})^{\mathrm{c}}$ & $\bar{\mathbf{3}}$, $\mathbf{1}$, 2/3 \\\hline
+		\multirow{2}{*}{sleptons (3 families)} & $L$ & ($\widetilde{\nu}_{e\mathrm{L}}$, $\widetilde{e}_{\mathrm{L}}$) & ($\nu_{\mathrm{L}}$, $e_{\mathrm{L}}$) & $\mathbf{1}$, $\mathbf{2}$, -1 \\
+		& $\bar{e}$ & $\widetilde{\bar{e}}_{\mathrm{L}}$ ($\widetilde{e}_{\mathrm{R}}^*$) & $\bar{e}_{\mathrm{L}} \sim (e_{\mathrm{R}})^{\mathrm{c}}$& $\mathbf{1}$, $\mathbf{1}$, 2 \\\hline
+		\multirow{2}{*}{higgs, higgsinos} & $H_{\text{u}}$ & $\left(H_{\text{u}}^+,~H_{\text{u}}^0\right)$ & $\left(\widetilde{H}_{\text{u}}^+,~ \widetilde{H}_{\text{u}}^0\right)$ & $\mathbf{1}$, $\mathbf{2}$, 1 \\
+		& $H_{\text{d}}$ & $\left(H_{\text{d}}^0,~H_{\text{d}}^-\right)$ & $\left(\widetilde{H}_{\text{d}}^0,~ \widetilde{H}_{\text{d}}^-\right)$ & $\mathbf{1}$, $\mathbf{2}$, -1 \\\hline
 	\end{tabular}
 	\caption{Chiral supermultiplets in the Minimal Supersymmetric Standard Model. The spin-0
 		fields are complex scalars, and the spin-1/2 fields are left-handed two-component Weyl fermions.}
 	\label{fig:chiral_supermultiplet}
 \end{table}
 
-The vector bosons of the Standard Model belong to the gauge multiplets. Their fermionic superpartners are referred as gauginos. In the Standard Model the color gauge interactions are mediated by the gluon g, whose spin-1/2 superpartner is the gluino $\tilde{g}$. The electroweak symmetry breaking is associated with the $\text{W}^{\pm}$, $\text{W}^{0}$ and $\text{B}^{0}$ bosons, whose superparters are the winos $\tilde{\text{W}}^{\pm}$, $\tilde{\text{W}}^{0}$ and bino $\tilde{\text{B}}^{0}$. After the symmetry breaking the Z boson and the photon $\gamma$ are given as mix of the $\text{B}^{0}$ and $\text{B}^{0}$ mass eigenstates. Similarly to what happens in the Standard Model where the 
+The vector bosons of the Standard Model belong to the gauge multiplets. Their fermionic superpartners are referred as gauginos. In the Standard Model the color gauge interactions are mediated by the gluon g, whose spin-1/2 superpartner is the gluino $\tilde{g}$. The electroweak symmetry breaking is associated with the $\text{W}^{\pm}$, $\text{W}^{0}$ and $\text{B}^{0}$ bosons, whose superparters are the winos $\tilde{\text{W}}^{\pm}$, $\tilde{\text{W}}^{0}$ and bino $\tilde{\text{B}}^{0}$. After the symmetry breaking the Z boson and the photon $\gamma$ are given as mix of the $\text{B}^{0}$ and $\text{B}^{0}$ mass eigenstates. 
 
  Table \ref{fig:gauge_supermultiplets} summarizes the gauge supermultiplets of a minimal supersymmetric extension of the Standard Model, the Z boson and the photon $\gamma$ are given as mix of the $\text{B}^{0}$ and $\text{B}^{0}$ mass eigenstates, also the SUSY gauge boson mix. From the mixing of the neutral gauginos $\tilde{\text{W}}^{0}$ and $\tilde{\text{B}}^{0}$ and higgsinos $H^{0}_{u}$ and $H^{0}_{d}$ comes the four neutralinos $\tilde{\chi}^{0}_{i}$ with $i \in 1,2,3,4$. Neutralinos couples to the gauge bosons, allowing for example a neutralino pair production through Drell-Yan processes. The mixing of the charged gauge bosons $\tilde{\text{W}}^{\pm}$ and higgsinos $\tilde{H}^{+}_{u}$ and $\tilde{H}^{-}_{d}$ creates the four charginos $\tilde{\chi}^{+}_{i}$ and $\tilde{\chi}^{-}_{i}$ with $i \in 1,2$. Because these particles are mixed states of other particles, if a particle is dominantly one of the states, one could call it “like” that particle state. For example, a second neutralino can be “winolike” if its mixed state comes mostly from the wino. “Bino-like” and “higgsino-like” describe similar situations for particles consisting of mixed states that are largely bino and higgsino, respectively.
 
 \begin{table}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.75\textwidth]{theory/pics/gauge_supermultiplets.png}
-	\end{tabular}
+\centering
+\begin{tabular}{|c || c | c | c |}
+	\hline
+	gauge supermultiplets & spin 1/2 & spin 1 & $\mathrm{SU}(3)_{\mathrm{c}}$, $\mathrm{SU}(3)_{\mathrm{L}}$, $\mathrm{U}(1)_{\mathrm{Y}}$\\\hline\hline
+	gluinos, gluons & $\widetilde{g}$ & $g$ & $\mathbf{8}$, $\mathbf{1}$, 0\\\hline
+	winos, $W$ bosons & $\widetilde{W}^\pm$, $\widetilde{W}^0$ & $W^\pm$, $W^0$ &   $\mathbf{1}$, $\mathbf{3}$, 0\\\hline
+	bino, $B$ boson & $\widetilde{B}$ & $B$ &   $\mathbf{1}$, $\mathbf{1}$, 0\\\hline
+\end{tabular}
 	\caption{Gauge supermultiplets in the Minimal Supersymmetric Standard Model.}
 	\label{fig:gauge_supermultiplets}
 \end{table}
 
 \subsection{The MSSM}
 
-\begin{itemize}
-	\item R-parity
-	\item further assumptions
-\end{itemize}
+The chiral and gauge supermultiplets in Tables \ref{fig:chiral_supermultiplet} and \ref{fig:gauge_supermultiplets} make up the particle content of the Minimal Supersymmetric Standard Model (MSSM). Up to now none of the superpartners of the Standard Model has been discovered. If supersymmety were unbroken, then all the sparticles would be extremely easy to detect; for example there would have to be for example selectrons with masses exactly equal to the electron mass. A similar statement can be applied to all the others superpatners of the known Standard Model particles. The experimental evidence collected so far shows clearly that superisymmetry a broken symmetry in the vacuum state chosen by Nature. It's crucial to understand a few details of the symmetry breaking mechanism.
 
-The chiral and gauge supermultiplets in Tables \ref{fig:chiral_supermultiplet} and \ref{fig:gauge_supermultiplets} make up the particle content of the Minimal Supersymmetric Standard Model (MSSM). Up to now none of the superpartners of the Standard Model has been discovered. If supersum
+Supersymmetry can be broken by introducing extra terms into the Lagrangian that explicitly breaks the symmetry. The way to break supersymmetry is defined as \textit{soft} \cite{Dimopoulos:1981zb} : it should be of positive mass dimension in order to maintain naturally a hierarchy between the electroweak scale and the Planck scale \cite{Martin:1997ns}. Soft also means the theory is still renormalizable and the cancellation of quadratic divergences is not ruined. One of the possible Lagrangian terms trat could break supersummetry is the quadratic term in the scalar field $\phi$
+
+The MSSM is characterized by the choice for a superpotential which includes all the gauge invariants and renormalizable term, but on the other hand takes into to account the softly broken supersimmetry and the conservation of the R-parity. The R-parity of a particle is imposed in order to justify the stability of the proton and is defined as:
+
+\begin{equation}
+P_{R} = (-1)^{3(B-L)+2s}
+\end{equation}
+
+where B, L and s are respectively the particle baryonic and lepton number and spin. 
+
+Is it possible to rewrite the scalar potential for the MSSM using the Higgs doublets:
+
+\begin{equation}
+W_{\mathrm{MSSM}} = \bar{u}\mathbf{y_u}QH_u - \bar{d}\mathbf{y_d}QH_d - \bar{e}\mathbf{y_e}LH_d + \mu H_uH_d.
+\label{eq::mssmpotential}
+\end{equation}
+The object $Q$ contains the left-handed squark and quark doublets, whereas the objects $\bar{u}$ and $\bar{d}$ contain $\tilde{u}^*_{\text{R}}$, ${u}^\dag_{\text{R}}$ and $\tilde{d}^*_{\text{R}}$, ${d}^\dag_{\text{R}}$, respectively. Similarly $L$ and $\bar{e}$ contain the slepton and lepton SU(2)$_{\mathrm{L}}$ doublets and singlets, respectively. The Yukawa matrices $\mathbf{y_u}$, $\mathbf{y_d}$, and $\mathbf{y_e}$ are dimensionless coupling parameters in family space.
+
+The superpotential of the MSSM does not cause
+electroweak symmetry breaking; this symmetry breaking is only caused by the soft SUSY-breaking terms  \cite{Martin:1997ns}. Taking kinetic mass terms together with the MSSM-potential from Equation \ref{eq::mssmpotential} and the soft breaking terms, one obtains the soft MSSM MSSM Lagrangian $\mathcal{L}_{\mathrm{soft}}^{\mathrm{MSSM}}$~\cite[p56]{martinsusyprimer97}:
+\begin{eqnarray}
+\mathcal{L}_{\mathrm{soft}}^{\mathrm{MSSM}} &=& -\frac{1}{2}\left(M_3\widetilde{g}\widetilde{g} + M_2 \widetilde{W}\widetilde{W} + M_1\widetilde{B}\widetilde{B} + \mathrm{c.c.}\right)\nonumber\\
+& & -\left(\widetilde{\bar{u}}\mathbf{a_u}\widetilde{Q}H_u - \widetilde{\bar{d}}\mathbf{a_d}\widetilde{Q}H_d  - \widetilde{\bar{e}}\mathbf{a_e}\widetilde{L}H_d + \mathrm{c.c.}\right)\nonumber\\
+& & -\widetilde{Q}^\dag\mathbf{m_Q^2}\widetilde{Q} - -\widetilde{L}^\dag\mathbf{m_L^2}\widetilde{L} - \widetilde{\bar{u}}\mathbf{m_u^2}(\widetilde{\bar{u}})^\dag - \widetilde{\bar{d}}\mathbf{m_d^2}(\widetilde{\bar{d}})^\dag - \widetilde{\bar{e}}\mathbf{m_e^2}(\widetilde{\bar{e}})^\dag\nonumber\\
+& & - m_{H_u}^2H_u^*H_u - m_{H_d}^2H_d^*H_d -(bH_uH_d + \mathrm{c.c.}).
+\label{eqn:lmssm_soft}
+\end{eqnarray}
+
+Here the Yukawa couplings $\bf{y_f}$ have been replaced by the dimensionful mass matrices $\bf{a_f}$. The parameters $M_1$, $M_2$, and $M_3$ are the bino, wino, and gluino mass terms. If a soft supersymmetry breaking scale of $m_{\mathrm{soft}}$ is assumed, one should have~\cite[p56]{martinsusyprimer97}
+
+\begin{eqnarray}
+M_1, M_2, M_3, \mathbf{a_u}, \mathbf{a_d}, \mathbf{a_e} &\sim& m_{\mathrm{soft}}\nonumber\\
+\mathbf{m_Q^2}, \mathbf{m_L^2}, \mathbf{m_{\bar{u}}^2}, \mathbf{m_{\bar{d}}^2}, \mathbf{m_{\bar{e}}}, m_{H_u}^2, m_{H_d}^2, b &\sim& m_{\mathrm{soft}}^2
+\label{eqn:massscalesmssm}
+\end{eqnarray}
+where it was thought that $m_{\mathrm{soft}}$ should not be much larger than 1000 GeV~\cite[p56]{martinsusyprimer97}.
 
 
-The most obvious and interesting feature of this theory is that none of the superpartners of the Standard Model particles has been discovered. If supersymmetry were unbroken, then there would have to be for example selectrons with masses exactly equal tothe electron mass. A similar statement applies to each of the other sleptons and squarks, and there would also have to be a massless gluino and photino. These particles would have been extraordinarily easy to detect long ago. Clearly, therefore, supersymmetry is a broken symmetry in the vacuum state chosen by Nature. This model results in
-105 masses, phases, and mixing angles that cannot be rotated away by redefinitions, nor have a counterpart in the Standard Model [62]. Several models have been developed based on certain assumptions in order to reduce the number of parameters
+This model results in 105 masses, phases, and mixing angles that cannot be rotated away by redefinitions, nor have a counterpart in the Standard Model [62]. Several models have been developed based on certain assumptions in order to reduce the number of parameters
 
 \subsection{Motivations}
 
@@ -683,6 +743,9 @@ The most obvious and interesting feature of this theory is that none of the supe
 	\item Higgs corrections \autoref{fig:higgs_loop}
 	\item Gravity inclusion
 \end{itemize}
+
+It results in pair production of supersymmetric particles at colliders and a lightest stable
+particle that is also a candidate for dark matter
 
 \begin{figure}[tbh!]
 	\centering
