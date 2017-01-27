@@ -592,7 +592,14 @@ Over the decades the Standard Model has been successful in predicting particle e
 	\item Although the successful representation of the strong force by the \text{SU}(3), the Standard Model doesn't have the unification of the force coupling constants at the Planck scale.
 	\item Astrophysical researches give evidence to the existence of a much greater amount of matter in the universe that can be explained by baryonic matter \cite{deBoer:2005tm}, known also under the name of \textit{dark matter}. The only Standard Model candidate that has properties similar to Dark Matter are neutrinos, however le low rate of neutrino production can't justify the measured dark matter amount;
 	\item Neutrinos are considered massless by the Standard Model. Recent experiments showed that neutrinos have masses \cite{Fukuda:1998mi};
-	\item In the Standard Model, the quantum corrections to the Higgs mass are quadratically divergent. If the Standard Model is assumed to be valid up to the Planck scale, these corrections are huge compared to the physical Higgs mass.
+	\item In the Standard Model, the quantum corrections to the Higgs mass are quadratically divergent. Starting from the assumption that every for of interaction possible by a particle will happen and will contribute to the total mass of the particle the mass of the Higgs boson is 
+	
+	\begin{equation}
+	\mu^{2}_{\text{eff}} = \mu^{2}_{0} + \delta\mu^{2}_{0} \approx 125\gev
+	\end{equation}
+	
+	where $\mu^{2}_{0}$ is the bare mass of the particle, and $\delta\mu^{2}_{0} $ is its total correction. Taking into account the assumption that Standard Model is correct up to the Plank scale, the total correction woul be of the order  $\delta\mu^{2}_{0}  \sim \Lambda^{2} \sim M^{2}_{\text{Planck}} \sim 10^{28}M^{2}_{\text{EW}}$ resulting in a very heavy Higgs Boson. These assumptions are in contrast with the discovery of the Higgs boson with an invariant mass around 125\gev by the experiments ATLAS \cite{Aad:2012tfa} and CMS \cite{Chatrchyan:2012xdj} giving raise to the so-called \textit{Hierarchy Problem}.
+	
 \end{itemize}
 
 \clearpage
@@ -714,8 +721,8 @@ W_{\mathrm{MSSM}} = \bar{u}\mathbf{y_u}QH_u - \bar{d}\mathbf{y_d}QH_d - \bar{e}\
 \end{equation}
 The object $Q$ contains the left-handed squark and quark doublets, whereas the objects $\bar{u}$ and $\bar{d}$ contain $\tilde{u}^*_{\text{R}}$, ${u}^\dag_{\text{R}}$ and $\tilde{d}^*_{\text{R}}$, ${d}^\dag_{\text{R}}$, respectively. Similarly $L$ and $\bar{e}$ contain the slepton and lepton SU(2)$_{\mathrm{L}}$ doublets and singlets, respectively. The Yukawa matrices $\mathbf{y_u}$, $\mathbf{y_d}$, and $\mathbf{y_e}$ are dimensionless coupling parameters in family space.
 
-The superpotential of the MSSM does not cause
-electroweak symmetry breaking; this symmetry breaking is only caused by the soft SUSY-breaking terms  \cite{Martin:1997ns}. Taking kinetic mass terms together with the MSSM-potential from Equation \ref{eq::mssmpotential} and the soft breaking terms, one obtains the soft MSSM MSSM Lagrangian $\mathcal{L}_{\mathrm{soft}}^{\mathrm{MSSM}}$~\cite[p56]{martinsusyprimer97}:
+The symmetry breaking is exclusively coming from the soft SUSY-breaking terms \cite{Martin:1997ns}. The soft MSSM Lagrangian $\mathcal{L}_{\mathrm{soft}}^{\mathrm{MSSM}}$ is built combining the MSSM superpottential shown in \autoref{eq::mssmpotential} with the soft breaking terms and finally and the kinetic mass terms\cite{Martin:1997ns}:
+
 \begin{eqnarray}
 \mathcal{L}_{\mathrm{soft}}^{\mathrm{MSSM}} &=& -\frac{1}{2}\left(M_3\widetilde{g}\widetilde{g} + M_2 \widetilde{W}\widetilde{W} + M_1\widetilde{B}\widetilde{B} + \mathrm{c.c.}\right)\nonumber\\
 & & -\left(\widetilde{\bar{u}}\mathbf{a_u}\widetilde{Q}H_u - \widetilde{\bar{d}}\mathbf{a_d}\widetilde{Q}H_d  - \widetilde{\bar{e}}\mathbf{a_e}\widetilde{L}H_d + \mathrm{c.c.}\right)\nonumber\\
@@ -724,46 +731,42 @@ electroweak symmetry breaking; this symmetry breaking is only caused by the soft
 \label{eqn:lmssm_soft}
 \end{eqnarray}
 
-Here the Yukawa couplings $\bf{y_f}$ have been replaced by the dimensionful mass matrices $\bf{a_f}$. The parameters $M_1$, $M_2$, and $M_3$ are the bino, wino, and gluino mass terms. If a soft supersymmetry breaking scale of $m_{\mathrm{soft}}$ is assumed, one should have~\cite[p56]{martinsusyprimer97}
+The Yukawa couplings $y_{f}$ are replaced by the mass matrices $a_{f}$. The parameters $M_1$, $M_2$, and $M_3$ are the bino, wino, and gluino mass terms. Assuming this is a soft supersymmetry breaking scale of $m_{\mathrm{soft}}$ \cite{Martin:1997ns} the masses should be of the order of
 
 \begin{eqnarray}
 M_1, M_2, M_3, \mathbf{a_u}, \mathbf{a_d}, \mathbf{a_e} &\sim& m_{\mathrm{soft}}\nonumber\\
 \mathbf{m_Q^2}, \mathbf{m_L^2}, \mathbf{m_{\bar{u}}^2}, \mathbf{m_{\bar{d}}^2}, \mathbf{m_{\bar{e}}}, m_{H_u}^2, m_{H_d}^2, b &\sim& m_{\mathrm{soft}}^2
 \label{eqn:massscalesmssm}
 \end{eqnarray}
-where it was thought that $m_{\mathrm{soft}}$ should not be much larger than 1000 GeV~\cite[p56]{martinsusyprimer97}.
 
+with the only constraint that $m_{\mathrm{soft}}$ should not be much larger than 1000 GeV~\cite{Martin:1997ns}. The introduction of the symmetry breaking mechanism leads to a model build on a total of 105 parameters among masses, phases, and mixing angles that cannot be rotated away by redefinitions, nor have a counterpart in the Standard Model \cite{Dimopoulos:1995ju}. MSSM is the benchmark for the construction of models based on certain assumptions in order to reduce the number of parameters.
 
-This model results in 105 masses, phases, and mixing angles that cannot be rotated away by redefinitions, nor have a counterpart in the Standard Model [62]. Several models have been developed based on certain assumptions in order to reduce the number of parameters
+\subsection{Phenomenological Minimal Supersymmetric Standard Model }
 
-\subsection{Motivations}
+As said before sever other models has been developed starting with the MSSM as initial benchmark. The Phenomenological Minimal Supersymmetric Standard Model (pMSSM) among other important ones takes into account phenomenological constraints in order to significantly reduce the number of free parameters \cite{Djouadi:1998di}. This model reduced the parameter counts to 19 under the following constraints:
+\begin{enumerate}
+	\item \emph{No new source of CP violation}: Experimental limits on neutron and electron magnetic moments as well as in the K system are very tight. All phases of the soft SUSY-breaking potential are assumed to be zero so that all new sources of CP-violation are eliminated.
+	\item \emph{No flavor-changing neutral currents}: Both the matrices for the sfermion masses and the trilinear couplings are assumed diagonal to prevent large violations of flavor-changing neutral current constraints
+	\item \emph{First and second generation universality:} Unless squarks are significantly heavier than 1 TeV, the mass splitting between the first- and second-generation squarks is limited by constraints from experimental data on $K^0-\bar{K}^0$ mixing. The trilinear couplings $A^u$, $A^d$, and $A^l$ are always proportional to the Standard Model fermion masses and therefore important only for the much heavier third generation; they can be assumed to be same and even set to zero for the first two generations of squarks without important phenomenological consequences.
+\end{enumerate}
 
+This leads to the following 19 parameters for the so-called pMSSM~\cite{Djouadi:1998di}:
 \begin{itemize}
-	\item Dark matter candidate
-	\item Higgs corrections \autoref{fig:higgs_loop}
-	\item Gravity inclusion
+	\item 
+	$\tan\beta$: the ratio of the VEVs of the two-Higgs doublet fields;
+	\item
+	$M_A$: the mass of the pseudoscalar Higgs boson;
+	\item
+	$\mu$: the Higgs-higgsino mass parameter;
+	\item
+	$M_1$, $M_2$, $M_3$: the bino, wino and gluino mass parameters;
+	\item
+	$m_{\widetilde{q}}$, $m_{\widetilde{u}_{\mathrm{R}}}$, $m_{\widetilde{d}_{\mathrm{R}}}$,  $m_{\widetilde{l}}$,  $m_{\widetilde{e}_{\mathrm{R}}}$: first/second generation sfermion masses;
+	\item
+	$m_{\widetilde{Q}}$, $m_{\widetilde{t}_{\mathrm{R}}}$, $m_{\widetilde{b}_{\mathrm{R}}}$, $m_{L}$, $m_{\widetilde{\tau}_{\mathrm{R}}}$: third generation sfermion masses
+	\item
+	$A_t$, $A_b$, $A_{\tau}$: third generation trilinear (scalar$^3$, proportional to the Yukawa $\propto \mathbf{y_i}$) couplings.
 \end{itemize}
-
-It results in pair production of supersymmetric particles at colliders and a lightest stable
-particle that is also a candidate for dark matter
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.75\textwidth]{theory/pics/higgs_loop.png}
-	\end{tabular}
-	\caption{In SUSY, the correction to Higgs mass by the top quark (L) is inherently cancelled by the contribution from the top quark's supersymmetric partner, the stop (R).}
-	\label{fig:higgs_loop}
-\end{figure}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.75\textwidth]{theory/pics/SUSY_naturalness.png}
-	\end{tabular}
-	\caption{Cartoon illustration of the mass scales for various sparticles dictated solely by electroweak naturalness with sensitivity parameter $\Delta \lesssim 10$.}
-	\label{fig:SUSY_naturalness}
-\end{figure}
 
 \begin{table}
 		\centering
@@ -773,6 +776,39 @@ particle that is also a candidate for dark matter
 		\caption{SUSY particles in MSSM~\protect\cite{Martin:1997ns}}
 		\label{fig:SUSY_particles_table}
 \end{table}
+
+\subsection{Motivations}
+
+As said before SUSY and all the other models try to explain some of the aspects of Nature that the Standard Model can't include. The following list 
+
+\begin{itemize}
+	\item \textbf{Dark Matter candidate}: The assumpition of R-parity conservation prevents the lightest of the SUSY particles, also called LSP, to decay any further into lighter Standard Model particles. In order to fit into the profile of a Dark Matter candidate this particle can't interact with matter any further, therefore the best choice for the LSP is the lightest neutralino \neutralinoone.  
+	
+	\item \textbf{Hierarchy problem solution}:  the corrections to the Higgs mass are exactly canceled by the symmetric partners of the Standard Model particles with opposite sign. An example of the top quark correction to the Higgs mass being canceled by a supersymmetric scalar top $\tilde{t}$ correction is shown in \autoref{fig:higgs_loop}
+	
+	\begin{figure}[tbh!]
+		\centering
+		\begin{tabular}{cc}
+			\includegraphics[width=0.75\textwidth]{theory/pics/higgs_loop.png}
+		\end{tabular}
+		\caption{In SUSY, the correction to Higgs mass by the top quark (L) is inherently cancelled by the contribution from the top quark's supersymmetric partner, the stop (R).}
+		\label{fig:higgs_loop}
+	\end{figure}
+
+	\item{Naturalness}: Along with the hierarchy problem solution many scientific observation made during the first run of LHC suggest a supersymmetric theory that more naturally explains the weak scale\cite{Craig:2013cxa}. This theory makes some assumptions on. A summary of the SUSY particles mass scales is shown on \autoref{fig:SUSY_naturalness}
+
+	\begin{figure}[tbh!]
+		\centering
+		\begin{tabular}{cc}
+			\includegraphics[width=0.75\textwidth]{theory/pics/SUSY_naturalness.png}
+		\end{tabular}
+		\caption{Cartoon illustration of the mass scales for various sparticles dictated solely by electroweak naturalness with sensitivity parameter $\Delta \lesssim 10$.}
+		\label{fig:SUSY_naturalness}
+	\end{figure}
+	
+	\item \textbf{Gravity and forces unifications}: supersymmetric models , for example minimal supergravity (mSUGRA)\cite{Ellis:2013oxa},can take take into account a gravity-mediated supersymmetry breaking \cite{Martin:1997ns}, leading to unification of the gauge couplings at the GUT scale. Those assumptions redices the numbers of MSSM parameters.
+
+\end{itemize}
 
 
 
