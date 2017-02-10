@@ -22,23 +22,16 @@
 
 
 \section{Object reconstruction}
-\begin{itemize}
-	\item make clear the experiment will gain access to a trigger triggering only on di-jet properties (no MET Lvl 1 seed like for 7 TeV)
-	\item Dijet delta eta cut removed (obsolete because strongly correlated to the $m_{jj}$ cut) 
-	\item $m_{jj}$ cut removed (chosen variable for cuts optimization), be aware of the fact that there's gonna be an online cut coming from the chosen trigger anyway.
-	\item \hadtau isolation requirement has still high impact on statistics
-	\item mention new b-jet and lepton veto used (reference to internal notes if necessary)
-\end{itemize}
 
-During the technical stop the experiment underwent through several updates on both hardware and software side. This	translates also into an updated version of the physical object definition used for this study with respect to the one used in the 7\tev analysis.
+During the technical stop the experiment underwent through several updates on both hardware and software side. This	translates also into an updated version of the physical object definition used for this study with respect to the one used in the 8\tev analysis.
 
-The \hadtau object reconstruction went through a major update with the introduction of new isolation and decay mode discriminators and electron veto \cite{bib:TauID_13tev}. The new \hadtau object reconstruction has been commissioned for $\pt > 20$\gev ad in all $\eta$ ranges. By using the specifications suggested by the Tay POG there's an increase of the overall TauID efficiency of about 10\% for loose isolated \hadtau with respect to the 7\tev specifications, going up to 71\% for $Z \longrightarrow\tau\tau$ events\cite{bib:TauID_13tev}. A detailed list of the \hadtau object selection can be found on Table \ref{table:tauobjdefinition_13TeV}. 
+The \hadtau object reconstruction went through a major update with the introduction of new isolation and decay mode discriminators and electron veto \cite{bib:TauID_13tev}. The new \hadtau object reconstruction has been commissioned for $\pt > 20$\gev ad in all $\eta$ ranges. By using the specifications suggested by the Tau POG there's an increase of the overall TauID efficiency of about 10\% for loose isolated \hadtau with respect to the 8\tev specifications, going up to 71\% for $Z \longrightarrow\tau\tau$ events\cite{bib:TauID_13tev}. A detailed list of the \hadtau object selection can be found on Table \ref{table:tauobjdefinition_13TeV}. 
 
 The Jet object definition remained unchanged.  
 
-With Run 2 the experiment will gain access to a new trigger list. The aim is to use a trigger that is exclusively making an online selection on the di-jet object kinematic properties. Differently with the 7\tev trigger version this trigger can't be seeded by a level one trigger based on \met. The drop of all online selections over the \hadtau properties leads to some important advantages Firstly it is possible to have a lower \hadtau \pt selection. Secondly it is possible to go from a 1-prong to a 3-prong decay selection since this stringent requirement is not part anymore of any level 1 trigger seed. 
+With Run 2 the experiment will gain access to a new trigger list. The aim is to use a trigger that is exclusively making an online selection on the di-jet object kinematic properties. Differently with the 8\tev trigger version this trigger can't be seeded by a level one trigger based on \met. The drop of all online selections over the \hadtau properties leads to some important advantages Firstly it is possible to have a lower \hadtau \pt selection. Secondly it is possible to go from a 1-prong to a 3-prong decay selection since this stringent requirement is not part anymore of any level 1 trigger seed. 
 
-
+The b-tag object reconstruction has now an updated discriminator as suggested by the POG \cite{bib:BJetID_13tev}.
 
 \section{Cross section limit studies}
 
@@ -82,33 +75,74 @@ with $N^{signal}_{passed}$ as the number of signal events passing the selection 
 \subsection{Event selection}
 \label{subsec::event_sel_13tev}
 
-The values for $\epsilon^{signal}$ and $B$ are directly taken from the signal and background samples listed is \autoref{sec::samples_13tev} after applying the event selection. 
+The values for $\epsilon^{signal}$ and $B$ are directly taken from the signal and background samples listed is \autoref{sec::samples_13tev} after applying the event selection. The idea of this 13\tev study is to be as close as possible to the one done in 8\tev, therefore the event selection is the same as described in \autoref{sec:eventselection} with a few updates included.
+
+As previously mentioned the event selection for this study is a function of the reconstructed tau $pt(\hadtau)$,\met and the di-jet candidate invariant mass $m_{jj}$, therefore those cuts are considered as free variables in the event selection. 
+
+The uncertainties on the official 13\tev trigger list and on how good are those triggers simulated in Monte Carlo lead to the decision of removing the trigger requirement in the event selection. In case this study will use 13\tev data is useful to notice that a choice of a VBF-selection-seeded trigger will lead to an online selection over the di-jet canditates invariant mass $m_{jj}$.
+
+Thanks to the improvements done in the \hadtau object reconstruction is now possible to include three-prong decaying taus in the event selection.
+
+The di-jet \deltaeta cut has been removed due to its strong correlation to the di-jet canditates invariant mass $m_{jj}$ as shown in the 8\tev study \cite{Khachatryan:2015kxa}.
+
+For better visualization and understanding all the selection criteria are summarized the following way:
+
+\begin{itemize}
+	\item \textbf{Central selection}
+	\begin{itemize}
+		\item two three-prong hadronically decaying $\tau$ with variable $\pt$
+		\item $\met = \text{variable}$
+		\item at least two jets with $p_{T}^{jet}\geq30~$\gev, $|\eta_{jet}|\leq5$ and loose jetID
+		\item $\Delta R(jet,\tau)\geq0.3$
+		\item b-tag veto
+	\end{itemize}
+	\item \textbf{VBF selection}
+	\begin{itemize}
+		\item $sign(\eta^{jet 1}\cdot\eta^{jet 2})==-1$
+		\item $\mjj = \text{variable}$
+	\end{itemize}
+\end{itemize}
 
 \subsection{Background estimation}
 
-Similarly to the analysis at 8\tev, the hardest challenge for this study is to determine the number of background events in the signal region. In order to face the problematic of a limited statics the number of background events in the signal region is estimated through a two-fold ABCD method. This method involves the usage of two distinct correction factors in order to gradually convert the number of background events, taken from a starting control region with looser cuts, into the signal region ones. 
+Similarly to the analysis at 8\tev, the hardest challenge for this study is to determine the number of background events in the signal region. As described in \autoref{sec::bg_contributions}, the main background contribution is coming from QCD events. The remaining background contributions are considered negligible. Even though this study is characterized by a loosening of the selection cuts with respect to the previous analysis, the limited statistics of the used Monte Carlo samples gives a very scarce number of selected events. The problematic of a limited statistics is solved by estimating the number of background events in the signal region through a two-fold ABCD method. It involves the usage of two distinct correction factors in order to gradually convert the number of background events, taken from a starting control region with looser cuts, into the signal region ones. This method is defined under the same assumptions made for the 8\tev analysis, listed in \autoref{sec:bgestimation}.
 
-Similarly to how is described in \autoref{sec:bgestimation}, the regions are defined by two distinct variables: the isolation of the di-tau candidates and the inversion of the VBF cuts. Three are the regions defined in purpose of this method. The signal region, also called SR, is defined as the region fulfilling all the cuts listed in \autoref{subsec::event_sel_13tev}. Control region two, also called CR2, has the same selection as the one for the signal region but requires the inversion of the VBF-related cuts. Finally control region tree, also called CR3, has the same selection as CR2 but requires the di-tau candidates to have a Loose isolated and a non-isolated \hadtau. 
+With the idea in mind of developing a method similar to the one used for 8\tev, the regions are defined by two distinct variables: the isolation of the di-tau candidates and the inversion of the VBF cuts. Three are the regions defined in purpose of this method. The signal region, also called SR, is defined as the region fulfilling all the cuts listed in \autoref{subsec::event_sel_13tev}. Control region two, also called CR2, has the same selection as the one for the signal region but requires the inversion of the VBF-related cuts. Finally control region tree, also called CR3, has the same selection as CR2 but requires the di-tau candidates to have a Loose isolated and a non-isolated \hadtau.
 
-As previously mentioned two are the conversion factors used in this method. The first conversion factor, named "\textit{NL-to-2T}"
+As previously mentioned two are the conversion factors used in this method. The first factor, named "\textit{NL-to-2T}" or "\textit{None-Loose to two Tight}", allows to convert the number of selected events from CR3 to CR2. This factor is derived from a study over the same QCD sample where the event population is high by only requiring at least four reconstructed jets in the event and is defined as:
 
+\begin{equation}
+\text{NLto2T} = A * B
+\end{equation}
 
+where $A$ and $B$ are ration. Going further in details $A$ has as denominator the number of events with at least four jets where at least one fo these jets is matched with a loose isolated \hadtau. In case this matched \hadtau is also tight isolated the events is counted in the numerator:
 
-\begin{itemize}
-	
-	\item Background prediction in SR: two-fold ABCD method involving 2 different (Schematic rappresentation needed) correction factors
-	\item LtoT conversion factor:
-	\begin{itemize}
-		\item Events with at least 4 jets;
-		\item $NLto2T = A * B$;
-		\item A: (the matched tau is also tight isolated)/(at least one jet matched to a loose tau)
-		\item B: (the matched tau is also tight isolated)/(at least one jet matched to a tau (no iso requirement))
-	\end{itemize}
-		\item VBF conversion factor: same as before (Excluding removed cuts)
-		\item Min cross section for $m_{jj} < 200$ and $130 < \met < 150$;
-		\item Need to show impact of the $Pt_{\tau}$ over the limit.
-		\item Uncertanties over the conversion factors (Taken from sape comparison)
-\end{itemize}
+\begin{equation}
+A = \dfrac{N_{events}(\text{the matched }\hadtau\text{ is also tight isolated })}{N_{events}(\leq 1\text{jet matched to loose }\hadtau)}
+\end{equation}
+
+The definition of $B$ is equal to $A$ with the only difference that the \hadtau matched to a jet in the denominator is non-isolated:
+
+\begin{equation}
+B = \dfrac{N_{events}(\text{the matched }\hadtau\text{ is also tight isolated })}{N_{events}(\leq 1\text{jet matched to non-isolated }\hadtau)}
+\end{equation}
+
+The second conversion factor is identical to the VBF conversion factor defined in \autoref{sec:bgestimation} with the only difference of the updated version of the VBF cuts for the 13\tev study:
+
+\begin{equation}
+\text{VBF} = \frac{\epsilon^{QCD}_{VBF}}{1 - \epsilon^{QCD}_{VBF}}
+\end{equation}
+
+where $\epsilon^{QCD}_{VBF}$ is previously defined in \autoref{eq:vbfeff}. 
+
+Finally the number of predicted events in the signal region is:
+
+\begin{equation}
+N^{QCD}_{SR} = N^{MC}_{CR3}  \cdot \text{NLto2T} \cdot \text{VBF}
+\label{eq::qcdbgpred_13tev}
+\end{equation}
+
+A representation of the regions and the conversion factor used in this two-fold ABCD method is shown in \autoref{fig:crs_13tev}.
 
 \begin{figure}[tbh!]
 	\centering
@@ -118,3 +152,15 @@ As previously mentioned two are the conversion factors used in this method. The 
 	\caption{Definition of Signal and Control Regions using different $\hadtau$ isolation criteria and VBF selection.}
 	\label{fig:crs_13tev}
 \end{figure}
+
+\subsection{Systematic and statistical uncertainties}
+\begin{itemize}
+		\item Uncertanties over the conversion factors (Taken from sape comparison)
+\end{itemize}
+\subsection{Results}
+\begin{itemize}
+\item Min cross section for $m_{jj} < 200$ and $130 < \met < 150$;
+\item Need to show impact of the $Pt_{\tau}$ over the limit.
+\item give numbers of constants used for the cross section limit
+\end{itemize}
+
