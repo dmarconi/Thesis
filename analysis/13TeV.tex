@@ -13,7 +13,7 @@
 
 
 \section{Signal and background samples}
-
+\label{sec::samples_13tev}
 \begin{itemize}
 	\item List of samples used for the studies
 	\item brief details on how the signal samples has been generated and how data is stored now (miniaods), everything on the production chain (if too much refers to appendix)
@@ -68,11 +68,29 @@ S = \epsilon \cdot \sigma_{sec} \cdot L
 with $\epsilon$ as the efficiency for a given selection criteria, $\sigma_{sec}$ as the cross section of the signal process considered and $L$ and the luminosity given by the experiment. Is it possible now to define the efficiency $\epsilon$ as function of variables used in the analysis event selection. Three of the most important variables in the 8\tev analysis has been chosen as variables for the study: $Pt_{\tau}$,\met and $m_{jj}$. The definition of $\epsilon$ given in \autoref{eq::punzi_signal_events} now becomes:
 
 \begin{equation}
-\epsilon ( Pt_{\tau} , m_{jj} ,  \met ) = \dfrac{N_{passed}(Pt_{\tau} , m_{jj} ,  \met)}{N_{total}}
+\epsilon^{signal} ( Pt_{\tau} , m_{jj} ,  \met ) = \dfrac{N^{signal}_{passed}(Pt_{\tau} , m_{jj} ,  \met)}{N^{signal}_{total}}
 \label{eq::punzi_efficiency}
 \end{equation}
 
-with $N_{passed}$ as the number of signal events passing the selection criteria as function of the given variables and $N_{total}$
+with $N^{signal}_{passed}$ as the number of signal events passing the selection criteria as function of the chosen variables and $N^{signal}_{total}$ as the number of total signal events. Is easy to notice that by fixing the significance value as shown on \autoref{eq::significance_xsec_limit} the cross section $\sigma_{sec}$ in \autoref{eq::punzi_signal_events} becomes indeed the cross-section limit $\sigma^{lim}_{sec}$. After merging both \autoref{eq::punzi_signal_events} and \autoref{eq::punzi_efficiency} the cross section limit $\sigma^{lim}_{sec}$ is defined as:
+	
+\begin{equation}
+\sigma^{lim}_{sec}( Pt_{\tau} , m_{jj} ,  \met ) = \dfrac{\dfrac{a}{2} + \sqrt{B( Pt_{\tau} , m_{jj} ,  \met ) + (0.5 \cdot B( Pt_{\tau} , m_{jj} ,  \met ))^{2}}}{\epsilon^{signal} ( Pt_{\tau} , m_{jj} ,  \met ) \cdot L}
+\label{eq::xsec_lim}
+\end{equation}
+
+\subsection{Event selection}
+\label{subsec::event_sel_13tev}
+
+The values for $\epsilon^{signal}$ and $B$ are directly taken from the signal and background samples listed is \autoref{sec::samples_13tev} after applying the event selection. 
+
+\subsection{Background estimation}
+
+Similarly to the analysis at 8\tev, the hardest challenge for this study is to determine the number of background events in the signal region. In order to face the problematic of a limited statics the number of background events in the signal region is estimated through a two-fold ABCD method. This method involves the usage of two distinct correction factors in order to gradually convert the number of background events, taken from a starting control region with looser cuts, into the signal region ones. 
+
+Similarly to how is described in \autoref{sec:bgestimation}, the regions are defined by two distinct variables: the isolation of the di-tau candidates and the inversion of the VBF cuts. Three are the regions defined in purpose of this method. The signal region, also called SR, is defined as the region fulfilling all the cuts listed in \autoref{subsec::event_sel_13tev}. Control region two, also called CR2, has the same selection as the one for the signal region but requires the inversion of the VBF-related cuts. Finally control region tree, also called CR3, has the same selection as CR2 but requires the di-tau candidates to have a Loose isolated and a non-isolated \hadtau. 
+
+As previously mentioned two are the conversion factors used in this method. The first conversion factor, named "\textit{NL-to-2T}"
 
 
 
