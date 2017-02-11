@@ -17,6 +17,7 @@
 \begin{itemize}
 	\item List of samples used for the studies
 	\item brief details on how the signal samples has been generated and how data is stored now (miniaods), everything on the production chain (if too much refers to appendix)
+	\item talk about the signal scans produced
 \end{itemize}
 
 
@@ -58,19 +59,21 @@ S = \epsilon \cdot \sigma_{sec} \cdot L
 \label{eq::punzi_signal_events}
 \end{equation}
 
-with $\epsilon$ as the efficiency for a given selection criteria, $\sigma_{sec}$ as the cross section of the signal process considered and $L$ and the luminosity given by the experiment. Is it possible now to define the efficiency $\epsilon$ as function of variables used in the analysis event selection. Three of the most important variables in the 8\tev analysis has been chosen as variables for the study: $Pt_{\tau}$,\met and $m_{jj}$. The definition of $\epsilon$ given in \autoref{eq::punzi_signal_events} now becomes:
+with $\epsilon$ as the efficiency for a given selection criteria, $\sigma_{sec}$ as the cross section of the signal process considered and $L$ and the luminosity given by the experiment. Is it possible now to define the efficiency $\epsilon$ as function of variables used in the analysis event selection. Three of the most important variables in the 8\tev analysis has been chosen for this study: $\pt(\hadtau)$,\met and $m_{jj}$. The definition of $\epsilon$ given in \autoref{eq::punzi_signal_events} now becomes:
 
 \begin{equation}
-\epsilon^{signal} ( Pt_{\tau} , m_{jj} ,  \met ) = \dfrac{N^{signal}_{passed}(Pt_{\tau} , m_{jj} ,  \met)}{N^{signal}_{total}}
+\epsilon^{signal} ( \pt(\hadtau) , m_{jj} ,  \met ) = \dfrac{N^{signal}_{passed}(\pt(\hadtau) , m_{jj} ,  \met)}{N^{signal}_{total}}
 \label{eq::punzi_efficiency}
 \end{equation}
 
 with $N^{signal}_{passed}$ as the number of signal events passing the selection criteria as function of the chosen variables and $N^{signal}_{total}$ as the number of total signal events. Is easy to notice that by fixing the significance value as shown on \autoref{eq::significance_xsec_limit} the cross section $\sigma_{sec}$ in \autoref{eq::punzi_signal_events} becomes indeed the cross-section limit $\sigma^{lim}_{sec}$. After merging both \autoref{eq::punzi_signal_events} and \autoref{eq::punzi_efficiency} the cross section limit $\sigma^{lim}_{sec}$ is defined as:
 	
 \begin{equation}
-\sigma^{lim}_{sec}( Pt_{\tau} , m_{jj} ,  \met ) = \dfrac{\dfrac{a}{2} + \sqrt{B( Pt_{\tau} , m_{jj} ,  \met ) + (0.5 \cdot B( Pt_{\tau} , m_{jj} ,  \met ))^{2}}}{\epsilon^{signal} ( Pt_{\tau} , m_{jj} ,  \met ) \cdot L}
+\sigma^{lim}_{sec}( \pt(\hadtau) , m_{jj} ,  \met ) = \dfrac{\alpha \cdot\left(\dfrac{a}{2} + \sqrt{B( \pt(\hadtau) , m_{jj} ,  \met ) + (0.5 \cdot B( \pt(\hadtau) , m_{jj} ,  \met ))^{2}}\right)}{\epsilon^{signal} ( \pt(\hadtau) , m_{jj} ,  \met ) \cdot L}
 \label{eq::xsec_lim}
 \end{equation}
+
+
 
 \subsection{Event selection}
 \label{subsec::event_sel_13tev}
@@ -105,6 +108,8 @@ For better visualization and understanding all the selection criteria are summar
 
 \subsection{Background estimation}
 
+\todo{add some CR plots}
+
 Similarly to the analysis at 8\tev, the hardest challenge for this study is to determine the number of background events in the signal region. As described in \autoref{sec::bg_contributions}, the main background contribution is coming from QCD events. The remaining background contributions are considered negligible. Even though this study is characterized by a loosening of the selection cuts with respect to the previous analysis, the limited statistics of the used Monte Carlo samples gives a very scarce number of selected events. The problematic of a limited statistics is solved by estimating the number of background events in the signal region through a two-fold ABCD method. It involves the usage of two distinct correction factors in order to gradually convert the number of background events, taken from a starting control region with looser cuts, into the signal region ones. This method is defined under the same assumptions made for the 8\tev analysis, listed in \autoref{sec:bgestimation}.
 
 With the idea in mind of developing a method similar to the one used for 8\tev, the regions are defined by two distinct variables: the isolation of the di-tau candidates and the inversion of the VBF cuts. Three are the regions defined in purpose of this method. The signal region, also called SR, is defined as the region fulfilling all the cuts listed in \autoref{subsec::event_sel_13tev}. Control region two, also called CR2, has the same selection as the one for the signal region but requires the inversion of the VBF-related cuts. Finally control region tree, also called CR3, has the same selection as CR2 but requires the di-tau candidates to have a Loose isolated and a non-isolated \hadtau.
@@ -138,7 +143,7 @@ where $\epsilon^{QCD}_{VBF}$ is previously defined in \autoref{eq:vbfeff}.
 Finally the number of predicted events in the signal region is:
 
 \begin{equation}
-N^{QCD}_{SR} = N^{MC}_{CR3}  \cdot \text{NLto2T} \cdot \text{VBF}
+B = N^{QCD}_{SR} = N^{MC}_{CR3}  \cdot \text{NLto2T} \cdot \text{VBF}
 \label{eq::qcdbgpred_13tev}
 \end{equation}
 
@@ -157,10 +162,38 @@ A representation of the regions and the conversion factor used in this two-fold 
 \begin{itemize}
 		\item Uncertanties over the conversion factors (Taken from sape comparison)
 \end{itemize}
+
+The systematics
+
 \subsection{Results}
+
+The definition of the cross-section limit $\sigma^{lim}_{sec}$, as given in \autoref{eq::xsec_lim}, allows the scan in a three-dimensional space defined by the variables $\pt(\hadtau)$ , \mjj and \met. The minimum cross-section limit found by the scan gives the optimal event selection cuts for each of the available signal benchmark points. In order to achieve a better reading over the results of the study it is possible to simplify the three-dimensional problem in a "\textit{two plus one}" dimensional one. Following this approach the cross-section limits are calculated and shown in a two-dimensional plot defined in bins of \mjj and \met, the process is repeated for each of the chosen $\pt(\hadtau)$ cuts.
+
+Each of the two-dimensional bins stores a $\sigma^{lim}_{sec}$ for the given $\pt(\hadtau)$ , \mjj and \met cuts setup. The most important input values to \autoref{eq::xsec_lim} are the signal efficiency $\epsilon^{signal}$, as defined in \autoref{eq::punzi_efficiency},  and the number of predicted background events $B$, as defined in \autoref{eq::qcdbgpred_13tev}. The remaining input values are the luminosity $L$ and the confidence level $a$. The predicted luminosity for the 13\tev Run \cite{Bruning:2002yh} is estimated between 75 and 100 \invfb; for the purpose of this study its value has been set to $L = 85\invfb$. The corresponding value in terms of $\sigma$ to a confidence level of 95\%  is $2.5$.
+
+A full list of the study results is given in \autoref{sec::xseclim_results}. The high impact of the $\pt(\hadtau)$ cut over the signal efficiency $\epsilon^{signal}$ is visible, accordingly to what was also shown in the 8\tev analysis. Also important to mention that the cross section limits increases with the increasing \charginopm, \neutralinotwo and LSP masses. Therefore the best cross-section limit scenario is given for a \charginopm and \neutralinotwo mass of 100\gev, a massless LSP and a $\pt(\hadtau)$ cut of 20\gev as shown on \autoref{fig::xsec_lim_selected_results}. The left picture shows the overall cross-section limit map study, the one on the right shows a magnification of the most interesting area. 
+
+The cross-section minimum is:
+
+\begin{equation}
+\sigma_{lim}^{min}\pm(stat.)\pm(MC syst.)\pm(VBF syst.) = 0.0327\pm0.0068^{+0.0031+ 0.0011}_{-0.0036-0.0005}
+\label{eq::xsec_lim_best_result}
+\end{equation}
+
+for the optimal cuts of  $\pt(\hadtau) <  20$,  $ \mjj< 250 $ and $\met < 130$.
+
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi100_lsp000_taupt20.pdf}
+		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi100_lsp000_taupt20_zoom.pdf} 		
+	\end{tabular}
+	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 100 GeV, \neutralinoone = 0 GeV and an offline selection on $\pt(\hadtau) <  20\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
+	\label{fig::xsec_lim_selected_results}
+\end{figure}
+
 \begin{itemize}
-\item Min cross section for $m_{jj} < 200$ and $130 < \met < 150$;
-\item Need to show impact of the $Pt_{\tau}$ over the limit.
-\item give numbers of constants used for the cross section limit
+\item confrontation with 7TeV xsec limits
+\item confrontation with CMS simulated cross sections
 \end{itemize}
 
