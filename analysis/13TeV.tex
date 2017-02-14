@@ -1,14 +1,14 @@
 
 
+After two years of maintenance and upgrades, LHC started the second run phase, also known as \textit{Run2}, in 2015 featuring an increase of the center of mass energy up to 13\tev. The decision to begin the LHC’s second run at 13 TeV has been taken in order to optimize the delivery of particle collisions for physics research, and thereby speed the route to potential new physics. A conspicuous upgrade program has been planned also for the CMS ad ATLAS detectors, featuring the upgrades of many sub-detectors and software technicalities. While waiting for the first analysis results with 13\tev data, is possible to study the capabilities that searches for SUSY events in vector boson fusion events have using the brand new hardware and software setup. This chapter gives details on the sensitivity study of a SUSY VBF search performed using 2015 Monte Carlo simulated data.
+
 \section{Signal and background samples}
-\label{sec::samples_13tev}
-\begin{itemize}
-	\item List of samples used for the studies
-	\item brief details on how the signal samples has been generated and how data is stored now (miniaods), everything on the production chain (if too much refers to appendix)
-	\item talk about the signal scans produced
-\end{itemize}
 
+The signal event samples are generated with the \texttt{MadGraph v5.2.1} program \cite{Alwall:2011uj}, considering pair production of gauginos with two associated partons. The signal events are generated requiring a pseudorapidity gap $|\deltaeta| > 4.2$ between the two partons, with $\pt > 30\gev$ for each parton. Signal cross sections are calculated at leading order using the MadGraph generator. The range of signal cross sections is $3$ fb for \charginopm = \neutralinotwo masses of 100, 200 and 300\gev and \neutralinoone mass of 0 nad 50\gev, for a total of six different benchmark points.
 
+The Montecarlo background events used in for this study refers to the production run labeled as \textit{RunIISpring15MiniAODv2} and incorporate the \texttt{CTEQ10} \cite{Dulat:2013hea} parton distribution functions (PDF).The \texttt{POWHEG} and \texttt{MadGraph} generators are interfaced with the \texttt{PYTHIA v8.5.12} \cite{Sjostrand:2006za} program, which is used in the mathing between the matrix elements and the parton shower, and the hadronization processes. 
+
+All the Monte Carlo samples are store in a new format called \texttt{miniAOD} \cite{bib:WorkBookMiniAOD}. This format is an updated version of the previously used one in order to account new CMS reconstruction features, between the time of the original proposal and the starting of Run2. A comprehensive list of all the samples used in this study il listed in \autoref{sec::sampleslist_13tev}.
 
 \section{Object reconstruction}
 
@@ -66,7 +66,7 @@ with $N^{signal}_{passed}$ as the number of signal events passing the selection 
 \subsection{Event selection}
 \label{subsec::event_sel_13tev}
 
-The values for $\epsilon^{signal}$ and $B$ are directly taken from the signal and background samples listed is \autoref{sec::samples_13tev} after applying the event selection. The idea of this 13\tev study is to be as close as possible to the one done in 8\tev, therefore the event selection is the same as described in \autoref{sec:eventselection} with a few updates included.
+The values for $\epsilon^{signal}$ and $B$ are directly taken from the signal and background samples listed in \autoref{sec::sampleslist_13tev} after applying the event selection. The idea of this 13\tev study is to be as close as possible to the one done in 8\tev, therefore the event selection is the same as described in \autoref{sec:eventselection} with a few updates included.
 
 As previously mentioned the event selection for this study is a function of the reconstructed tau $pt(\hadtau)$,\met and the di-jet candidate invariant mass $m_{jj}$, therefore those cuts are considered as free variables in the event selection. 
 
@@ -95,8 +95,6 @@ For better visualization and understanding all the selection criteria are summar
 \end{itemize}
 
 \subsection{Background estimation}
-
-\todo{add some CR plots}
 
 Similarly to the analysis at 8\tev, the hardest challenge for this study is to determine the number of background events in the signal region. As described in \autoref{sec::bg_contributions}, the main background contribution is coming from QCD events. The remaining background contributions are considered negligible. Even though this study is characterized by a loosening of the selection cuts with respect to the previous analysis, the limited statistics of the used Monte Carlo samples gives a very scarce number of selected events. The problematic of a limited statistics is solved by estimating the number of background events in the signal region through a two-fold ABCD method. It involves the usage of two distinct correction factors in order to gradually convert the number of background events, taken from a starting control region with looser cuts, into the signal region ones. This method is defined under the same assumptions made for the 8\tev analysis, listed in \autoref{sec:bgestimation}.
 
@@ -193,7 +191,7 @@ for the optimal cuts of  $\pt(\hadtau) <  20$,  $ \mjj< 250 $ and $\met < 130$.
 	\label{fig::xsec_lim_selected_results}
 \end{figure}
 
-By comparing the 7\tev cross-section limit values with the ones at 13\tev is possible to see that the previous analysis performs better in terms of limit setting as shown in \autoref{table::xseclim_7tev13tev_comparison}. Is worth to mention however that the 7\tev analysis has stronger selection over for example  $\pt(\hadtau)$ which prevents the comparison in areas of the three-dimensional phase-space where the 13\tev analysis is meant to perform better.
+By comparing the 7\tev cross-section limit values with the ones at 13\tev is possible to see that the previous analysis performs better in terms of limit setting as shown in \autoref{table::xseclim_7tev13tev_comparison}. The high statistical and systematic uncertainties shown in the 13\tev is caused by the cut over the $\pt(\hadtau)$, which dramatically reduces the QCD statistics. Is worth to mention however that the 7\tev analysis has a selection which in general prevents the comparison in areas of the previously defined three-dimensional phase-space where the 13\tev analysis is meant to perform better.
 
 \begin{table}
 \begin{center}
@@ -201,14 +199,13 @@ By comparing the 7\tev cross-section limit values with the ones at 13\tev is pos
 	\toprule
 	\multicolumn{3}{| c | }{For $\pt(\hadtau) <  45\gev$  $\met > $ 30, $\mjj>250~$\gev, m(\neutralinoone) = 50\gev} \\
 	\midrule
-	Scenario  & 8\tev limit [pb] & 13\tev limit [pb] \\
+	m(\charginopm) = m(\neutralinotwo)  & $\sigma_{lim}^{min}\pm(stat.)\pm(syst.)$ [pb] (8\tev) & $\sigma_{lim}^{min}\pm(stat.)\pm(syst.)$ [pb] (13\tev)\\
 	\midrule
-   m(\charginopm) = m(\neutralinotwo) = 100\gev &  0.084 & $0.608058\pm0.692164^{+0.898647 + 0.72253}_{-0.317417-0.55964}$  \\
-   m(\charginopm) = m(\neutralinotwo) = 200\gev &  0.14 & $0.652946\pm0.743278^{+0.964987 + 0.775869}_{-0.34085-0.600954}$ \\
-   m(\charginopm) = m(\neutralinotwo) = 300\gev &  1.43 & $1.19438\pm1.39106^{+1.77863 + 1.42453}_{-0.610103-1.09704}$  \\
+   100\gev &  $0.084\pm0.016^{+0.18}_{-0.01}$ & $0.60\pm0.69^{+1.62}_{-0.87}$  \\
+   200\gev &  $0.14\pm0.02^{+0.03}_{-0.04}$ & $0.65\pm0.74^{+1.74}_{-0.94}$ \\
+   300\gev &  $1.43\pm0.52^{+0.49}_{-0.38}$ & $1.19\pm1.39^{+3.2}_{-1.71}$  \\
 	\bottomrule
-\end{tabular}\caption{Cross-section limit comparison between the 8\tev analysis and the 13\tev sensitivity study. The chosen values corresponds to an identical selection and signal benchmark points.
-Cross section limit minimum reached at the given cuts for $m_{jj}$}
+\end{tabular}\caption{Cross-section limit comparison between the 8\tev analysis and the 13\tev sensitivity study. The chosen values corresponds to an identical selection and signal benchmark points. Cross section limit minimum reached at the given cuts for $\pt(\hadtau) <  45\gev$  $\met > $ 30, $\mjj>250~$\gev, m(\neutralinoone) = 50\gev.}
 \label{table::xseclim_7tev13tev_comparison}
 \end{center}
 \end{table}
