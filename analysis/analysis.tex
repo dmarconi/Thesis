@@ -255,21 +255,32 @@ A more precise description for the simulation are estimated by scaling non-QCD c
 \section{Data Driven method validation}
 \label{QCD_bg_pred_validation}
 
-The data-driven approach previously described gave the prediction of the nember of background events 
+The data-driven background estimation method, as previously shown, offered a possibility to circumvent the scarce statistics of the simulated QCD samples. The results given in \autoref{section:results} can be backed by a simulation based approach which come with two main advantages. First this approach can confirm the assumption made for the data-driven method which states that all control regions and the signal region are indeed dominated by QCD events. Second this approach can show that VBF efficiency $\epsilon^{QCD}_{VBF}$ defined in \autoref{eq:vbfeff} is independent, within the systematic uncertainty, with respect to a selection over \met or \hadtau transverse momentum. This section will give a brief description and results of this simulation based approach as shown in the contribution done by one of the previous members of the University of Hamburg research group working on the same analysis \cite{bib:phdthesis:denis}.
 
-While a data-driven approach with an ABCD method in data is utilizable in order to get a prediction for the number of background events expected in the signal region, there are two advantages of a simulation-based approach. On the one hand, one can ascertain that the control regions contain only QCD. On the other hand, one can provide a closure test for the data-driven prediction, especially regarding the universality of the VBF efficiency with respect to a loosening of the τh isolation or a relaxation of the \met requirement, as stated in Sec. ???.
+\subsection{The simulation-based method}
 
-In order to achieve the goal to ensure QCD purity in the control regions, a straightforward use of the simulation is not possible, due to the low probability of jets to fake \hadtau with any identification (ID), be it tight (T), medium (M), or loose (L). These low rates decrease the number of simulated events with two reconstructed \hadtau leptons passing all selection requirements below any reasonable amount for direct usage. What can be done, is to estimate the probability of one jet to be misidentified as a \hadtau lepton (O ≈ 1 ) of a given exclusive isolation (see Tab. ??? in Sec. ??? for definitions), 100 instead. Using all simulated events with four or more jets, one can determine the chance of each such event to be reconstructed as one event with two \hadtau leptons and at least two jets, translating two jet objects to become \hadtau objects (see Sec. ???). This way, a meaningful study of systematic uncertainties of the background estimation method on data becomes possible and the prerequisite assumptions of QCD purity and stability of the VBF efficiency with respect to \hadtaufake isolation can be tested. Finally, the results of the application of this method and thereby estimated systematic uncertainties will be shown (see Sec. ???). As well, possible future data-driven improvements for this method will be outlined (see Sec. ???).
+A solution to the scarce statistics of the QCD sample in the signal region can be solved by taking all the events with at least four reconstructed jets and properly reweighting each one of them. This weight is a function of the probabilities that two of those four reconstructed jets will fake an \hadtau:
 
-\subsection*{Redefining jets as \hadtau}
+\begin{equation}
+w^{TT}_{\text{event}} = \sum_{i=0}^{N}P(\text{iso}\mid \text{jet}_{i})\left(\sum_{j=0; j\neq i}^{N}P(\text{iso}\mid \text{jet}_{j})\left[\prod_{k=0; k\neq i,j}^{N}(1-P(\text{iso}\mid \text{jet}_{k}))\right]\right)
+\end{equation}
 
-\subsection*{Selection acceptance correction}
+where $P(\text{iso}\mid \text{jet})$ is the probability for a given jet to fake an \hadtau with a given isolation:
 
-\subsection*{parametrization for fake probabilities}
+\begin{equation}
+P(\text{iso}\mid \text{jet}_{i}) = P(\text{iso ID}\mid \text{jet}_{i}) \cdot P(\pt^{\hadtau(\text{fake})} > 45\gev\mid \text{jet}_{i}) \dot \epsilon^{\text{trigger}}(\text{ID})
+\end{equation}
 
-\subsection*{Trigger acceptance correction}
+where $P(\text{iso ID}\mid \text{jet}_{i})$ is the probability for a given jet to fake a \hadtau with a given TauID selection besides the \pt requirement, $P(\pt^{\hadtau(\text{fake})} > 45\gev\mid \text{jet}_{i})$ is the probability for a given jet reconstructed as fake-\hadtau to pass the requirement of $\pt(\hadtau)> 45\gev$ and $\epsilon^{\text{trigger}}(\text{ID})$ is the efficiency of the trigger ,the one used in the analysis, in selecting events with at least four jets.
 
-\subsection*{Fixation of fake \hadtau mass}
+$P(\text{iso ID}\mid \text{jet}_{i})$ 
+
+\begin{itemize}
+	\item Selection acceptance: the jet pt does not translate directly to hadtau pt, a correction factor is needed to correct the pt of the fake hadtaus.
+	\item parametrization for fake probabilities
+	\item Trigger acceptance correction
+	\item Fixation of fake \hadtau mass
+\end{itemize}
 
 \subsection{$\epsilon^{VBF}$-stability with regard to $\tau_{h}$-isolation and $E_{T}^{miss}$-cuts}\label{dihad:subsec:stability}
 To test the stability and estimate the systematics, we determine on the diced MC all possible efficiencies of $\epsilon^{VBF}$ in all even and odd control region pairs for a range of $E_{T}^{miss}$-cuts in table \ref{dihad:tab:stability}.
