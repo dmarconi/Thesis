@@ -58,7 +58,7 @@ There are some differences this analysis has with the other existing VBF searche
 The selected events are required to have at least two \hadtau candidates as defined in Section \ref{subsec::objsel_tau}. The reconstruction of more than two \hadtau is constrained by the trigger. The like sign \hadtau candidates with the highest \pt and separated from each other by a minimum \deltar = 0.3 are then chosen to form a di-\hadtau candidate. 
 Further, to reduce top pair contamination the event is required not to have any jet identified as a b--quark jet by the b--tagging algorithms using the {\textit combined secondary vertex loose} (CSVL) working point. 
 
-Only jets with \pt $\ge 30\gev$ and separated from the taus in the di--\hadtau pairs by $\Delta R \ge 0.3$ are searched for b--tags. The \pt cut of 30\gev on b-jets (a looser veto requirement than other analyses with light leptons) allows to be more efficient with respect to the signal since the higher \pt threshold on taus reduces the contamination of $t\overline{t}$ to a large extent. Further, the event is required to have at least 30\gev of \met. All the selections described above is what will be referred to as \textit{central selections}.
+Only jets with \pt $\ge 30\gev$ and separated from the taus in the di--\hadtau pairs by $\Delta R \ge 0.3$ are searched for b--tags. The \pt cut of 30\gev on b-jets (a looser veto requirement than other analyses with light leptons) allows to be more efficient with respect to the signal since the higher \pt threshold on taus reduces the contamination of $t\overline{t}$ to a large extent. Further, the event is required to have at least 30\gev of \met in order to further reduce QCD contamination. All the selections described above is what will be referred to as \textit{central selections}.
 
 Subsequently, the following event-wide requirements are imposed. The {\textit {VBF selections}} are imposed by requiring at least two jets as defined in Section \ref{subsec::objsel_jet}. Only jets separated from the leptons in the \hadtau\hadtau pair by $\deltar \ge 0.3$ are considered. All jet candidates passing the above requirements and having $\vert \Delta\eta \vert \ge 4.2$ and $\eta_{1}\cdot\eta_{2} < 0$ are combined to form di-jet candidates. The final and the most important of the requirement is an invariant mass of the di-jet candidate, denoted \mjj, above the threshold of 250\gev. In order to increase the event acceptance the analysis code algorithm takes into account every possible di-jet candidate combination and chooses the one that passes the VBF requirements and has the highest \mjj. 
 
@@ -90,7 +90,7 @@ For better visualization and understanding all the selection criteria are summar
 
 
 
-\section {LS di-Tau Data-Driven QCD background determination} \label{sec:bgestimation}
+\section {Data-Driven QCD background determination} \label{sec:bgestimation}
 
 %TODO improve flow of information, e.g.
 %TODO 1. short introduction to the concept
@@ -98,7 +98,7 @@ For better visualization and understanding all the selection criteria are summar
 %TODO 3. assumptions
 %TODO 4. the actual method
 
-The QCD background contribution for the like-sign di-\hadtau channel is done using a ABCD data-driven approach. This method consist in  dividing the analyzed data in different exclusive regions, defined by two variables. The first variable is the \hadtau isolation discriminator used in the object reconstruction, namely:
+The QCD background contribution for the like-sign di-\hadtau channel is done using a ABCD data-driven approach. This method consist in dividing the analyzed data in different exclusive regions, defined by two variables. The first variable is the \hadtau isolation discriminator used in the object reconstruction, namely:
  	
  	%TODO don’t use these funny names here: just use “tight”, “loose” and “medium”, introduced in the object definition, with a reference such that the really interested can find back what you exactly mean. and you have the appendix anyway.
  	
@@ -129,29 +129,11 @@ Each event with a successfully reconstructed LS di-$\hadtau$ pair falls into a e
 The second dimension of exclusivity is based on the VBF cuts described in \ref{sec:eventselection}. The regions are defined the following way:
 	
 	\begin{enumerate}
-		\item VBF region: consisting of all the events that passed all VBF cuts previously mentioned;
-		\item VBF inverted region: consisting of all the events that at least fails one of the VBF cuts previously mentioned;
+		\item VBF region: consisting of all the events that passed all VBF cuts previously mentioned in \autoref{sec:eventselection};
+		\item VBF inverted region: consisting of all the events that at least fails one of the VBF cuts previously mentioned.
 	\end{enumerate} 
 
-Using these definitions one signal region (SR) and seven control regions (CR) are defined as shown in Figure \ref{fig:crs}. The SR falls into the region defined by two tight isolated $\hadtau$ and all the VBF cuts applied, close to it the control region two (CR2) features the same \hadtau isolation requirements but inverted VBF selection requirement. In order to keep the QCD background contribution low in SR and CR2 an additional cut of  \met $ > $ 30\gev is required.
-
-The estimation of the events in the signal region is equivalent to the classic ABCD method consisting in counting the number of events in CR2 and multiplying it with a proper conversion factor. This estimation method has been developed under the following assumptions:
-
-\begin{itemize}
-	\item[1] The VBF selection efficiency is independent from any trigger efficiency concerning $\hadtau$ isolation such that each contribution to the numerator and denominator cancels out;
-	\item[2] The VBF selection efficiency is also independent from any \met cut applied in order to reduce QCD background contributions. 
-\end{itemize}
-
- The number of   in the following equation:
-
-\begin{equation}
-N^{QCD}_{SR} = \left( N^{DATA}_{CR2} - N^{\overline{QCD} BG}_{CR2} \right) * \left[ \frac{\epsilon^{QCD}_{VBF}}{1 - \epsilon^{QCD}_{VBF}} \right]
-\label{eq:qcdbgpred}
-\end{equation}
-
-where $N^{QCD}_{SR}$ is the number of QCD events predicted in the signal region, $N^{DATA}_{CR2}$ is the number of data events in CR2, $N^{\overline{QCD} BG}_{CR2}$ is the number of all non-QCD Monte Carlo samples events in CR2 and $\epsilon^{QCD}_{VBF}$ is the efficiency of VBF cuts in a lower \hadtau isolation region. 
-
-Those  control regions are defined as CR3 (One Tight isolation region), CR5  (Anti Tight isolation region) and CR7 (Anti Medium isolation region) followed by their corresponding VBF-inverted control regions CR4, CR6, CR8. An overview of the defined SR and CRs is shown on Figure \ref{fig:crs}. The $\epsilon^{QCD}_{VBF}$ for each of the different \hadtau isolation region is with the following equation.
+Using these definitions one signal region (SR) and seven control regions (CR) are defined as shown in Figure \ref{fig:crs}. The SR falls into the region defined by two tight isolated $\hadtau$ and all the VBF cuts applied, close to it the control region two (CR2) features the same \hadtau isolation requirements but inverted VBF selection requirement. The remaining control regions are defined as CR3 (One Tight isolation region), CR5  (Anti Tight isolation region) and CR7 (Anti Medium isolation region) followed by their corresponding VBF-inverted control regions CR4, CR6, CR8. An overview of the defined SR and CRs is shown on \autoref{fig:crs}.
 
 \begin{figure}[tbh!]
 	\centering
@@ -162,6 +144,24 @@ Those  control regions are defined as CR3 (One Tight isolation region), CR5  (An
 	\label{fig:crs}
 \end{figure}
 
+The estimation of the events in the signal region is equivalent to the classic ABCD method consisting in counting the number of events in CR2 and multiplying it with a proper conversion factor. This estimation method has been developed under the following assumptions:
+
+\begin{itemize}
+	\item[1] The VBF selection efficiency is independent from any trigger efficiency concerning $\hadtau$ isolation such that each contribution to the numerator and denominator cancels out;
+	\item[2] The VBF selection efficiency is also independent from any \met cut applied in order to reduce QCD background contributions. 
+\end{itemize}
+
+The predicted number of QCD events in the signal region $N^{QCD}_{SR}$ is defined as:
+
+\begin{equation}
+N^{QCD}_{SR} = \left( N^{DATA}_{CR2} - N^{\overline{QCD} BG}_{CR2} \right) * \left[ \frac{\epsilon^{QCD}_{VBF}}{1 - \epsilon^{QCD}_{VBF}} \right]
+\label{eq:qcdbgpred}
+\end{equation}
+
+where $N^{DATA}_{CR2}$ is the number of data events in CR2, $N^{\overline{QCD} BG}_{CR2}$ is the number of all non-QCD Monte Carlo samples events in CR2 and $\epsilon^{QCD}_{VBF}$ is the efficiency of VBF cuts in a lower \hadtau isolation region. 
+
+The $\epsilon^{QCD}_{VBF}$ for each of the different \hadtau isolation region is with the following equation.
+
 \begin{equation}
 \epsilon^{QCD}_{VBF} = \frac {N^{DATA}_{VBF CR} - N^{\overline{QCD} BG}_{VBFCR}}{\left( N^{DATA}_{VBFCR} - N^{\overline{QCD} BG}_{VBFCR} \right) + \left( N^{DATA}_{\overline{VBF}CR} - N^{\overline{QCD} BG}_{\overline{VBF}CR} \right) }
 \label{eq:vbfeff}
@@ -169,31 +169,13 @@ Those  control regions are defined as CR3 (One Tight isolation region), CR5  (An
 
 where $N^{DATA}_{VBF CR}$ is the number of the events in data for a given $ \tau $ isolation region and VBF region, $N^{\overline{QCD} BG}_{VBFCR}$ is the number of all non-QCD Monte Carlo events for a given $ \tau $ isolation region and VBF region, $N^{DATA}_{\overline{VBF}CR}$ is the number of events in data in the same isolation Control Region but inverted VBF region and$N^{\overline{QCD} BG}_{\overline{VBF}CR}$ is the number of all non-QCD Monte Carlo events for a given $ \tau $ isolation region but inverted VBF region.
 
-Using the events in the defined control regions coming from Table \ref{table:CReventcount} as input for equations \ref{eq:qcdbgpred} and \ref{eq:vbfeff} is possible to determine three different predictions for the QCD background contribution, one for each pair of tau isolation control regions below the two-tight isolation region.
+Using the events in the defined control regions coming from \autoref{table:CReventcount} as input for \autoref{eq:qcdbgpred} and \autoref{eq:vbfeff} is possible to determine three independent predictions for the QCD background contribution, one for each pair of tau isolation control regions below the two-tight isolation region. \autoref{table:CReventcount} shows the event counting for all the control regions previously defined for data and all Monte Carlo samples. All the numbers except the ones coming from the QCD sample are used as input for the QCD background estimation method. All the statistical uncertainties are propagated accordingly.  For each of the three different $\tau$ isolation regions out of the signal region (1T, AT, AM) an independent measurements of $\epsilon^{QCD}_{VBF}$  and prediction for $N^{QCD}_{SR}$ is made. A validation of the data-driven background prediction is performed  using a simulation-driven approach. Details and results on this methods are given in \autoref{QCD_bg_pred_validation}.
 
-The estimation of the QCD contamination, in the signal region, as shown on Equation \ref{eq:qcdbgpred}, has three sources of systematics. The first source comes from the generated Monte Carlo samples used in the analysis. The two remaining ones comes from the assumptions about the stability of the $\epsilon^{QCD}_{VBF}$, made when defining the data-driven method, one in regard to the relaxation of the tau-identification and the other in regard to a loosening of the \met cut, since the $\epsilon^{QCD}_{VBF}$ is calculated in CRs where no \met cut is applied.
+Three sources of systematic uncertainty has been considered in the estimation of the QCD contamination in the signal region shown in \autoref{eq:qcdbgpred}. The first source comes from the uncertainty over the generated Monte Carlo samples used in the analysis. The two remaining ones come from the assumptions about the stability of the $\epsilon^{QCD}_{VBF}$, made when defining the data-driven method, one in regard to the relaxation of the tau-identification and the other in regard to a loosening of the \met cut, since the $\epsilon^{QCD}_{VBF}$ is calculated in CRs where no \met cut is applied.
 
-Details and results on the validation process done for all the statements is given in Section \ref{QCD_bg_pred_validation}.
+The uncertainty given by a systematic error in the Monte Carlo simulation is estimated by checking the maximal variation over $\epsilon^{QCD}_{VBF}$ and $N^{QCD}_{SR}$ after scaling non-QCD contributions by $\pm50~\%$. 
 
-The signal and control regions are define under the assumption of central selection being orthogonal to VBF selection. Figure \ref{fig:LS_mjjshapestab_vs_tauiso_data} and \ref{fig:LS_mjjshapestab_vs_tauiso_mc} shows a stability study of $M_{jj}$ shape distribution among different $\tau$ isolation sidebands for Data and Monte Carlo. This study shows that within the statistical uncertainties the distributions are compatible for different control regions. Further studies are shown in Section \ref{dihad:tab:stability}.
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.75\textwidth]{PLOTS/diTauHadLSotherPlots/LS_mjjshapestab_vs_tauiso_data.pdf}
-	\end{tabular}
-	\caption{$M_{jj}$ shape comparisons among different $\tau$ isolation sidebands for Data (CR3, CR5, CR7)}
-	\label{fig:LS_mjjshapestab_vs_tauiso_data}
-\end{figure}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.75\textwidth]{PLOTS/diTauHadLSotherPlots/LS_mjjshapestab_vs_tauiso_mc.pdf}
-	\end{tabular}
-	\caption{$M_{jj}$ shape comparisons among different $\tau$ isolation sidebands for all Monte Carlo contributions (CR3, CR5, CR7)}
-	\label{fig:LS_mjjshapestab_vs_tauiso_mc}
-\end{figure}
+The remaining systematics uncertainties on the $\epsilon^{QCD}_{VBF}$ are estimated using a simulation-based approach as described in \autoref{dihad:subsec:stability}.
 
 \begin{sidewaystable}
 	\centering
@@ -246,16 +228,13 @@ Total nonQCD Monte Carlo  &$ 0.067\pm0.0053$    &$ 0.77\pm0.023 $  \\
 	\label{table:VBFeffBKGprediction} % is used to refer this table in the text
 \end{table}
 
-%TODO replace “systematics” with a more precise description, and motivate the method.
-
-A more precise description for the simulation are estimated by scaling non-QCD contributions by $\pm50~\%$. A systematic error on $\epsilon^{QCD}_{VBF}$ is assigned by using the maximal variation among all $\epsilon^{QCD}_{VBF}$ measurements in different $\tau$ isolation regions with respect to its weighted mean. Similar procedure is done for the assignation of the $\epsilon^{QCD}_{VBF}$ coming from \met cut stability. All the statistical uncertainties are propagated accordingly. Table \ref{table:CReventcount} shows the event counting for all the control regions previously defined for data and all Monte Carlo samples. All the numbers except the ones coming from the QCD sample are used as input for the QCD background estimation method. For each of the three different $\tau$ isolation regions out of the signal region (1T, AT, AM) an independent measurements of $\epsilon^{QCD}_{VBF}$  and prediction for $N^{QCD}_{SR}$ is made. Due to low statistics in the $\tau$ isolation sidebands the final results will include uncertainties coming from the $\epsilon^{QCD}_{VBF}$ stabilities studies shown in section \ref{dihad:subsec:stabilityy}.
-
 \section{Data Driven method validation}
 \label{QCD_bg_pred_validation}
 
-The data-driven background estimation method, as previously shown, offered a possibility to circumvent the scarce statistics of the simulated QCD samples. The results given in \autoref{section:results} can be backed by a simulation based approach which come with two main advantages. First this approach can confirm the assumption made for the data-driven method which states that all control regions and the signal region are indeed dominated by QCD events. Second this approach can show that VBF efficiency $\epsilon^{QCD}_{VBF}$ defined in \autoref{eq:vbfeff} is independent, within the systematic uncertainty, with respect to a selection over \met or \hadtau transverse momentum. This section will give a brief description and results of this simulation based approach as shown in the contribution done by one of the previous members of the University of Hamburg research group working on the same analysis \cite{bib:phdthesis:denis}.
+The data-driven background estimation method, as previously shown, offered a possibility to circumvent the scarce statistics of the simulated QCD samples. The results given in \autoref{section:results} can be backed by a simulation based approach which come with two main advantages. First this it can confirm the assumption made for the data-driven method which states that all control regions and the signal region are indeed dominated by QCD events. Second this approach can show that VBF efficiency $\epsilon^{QCD}_{VBF}$ defined in \autoref{eq:vbfeff} is independent, within the systematic uncertainty, with respect to a selection over \met or \hadtau transverse momentum. This section will give a brief description and results of this simulation based approach as shown in the contribution done by one of the previous members of the University of Hamburg research group working on the same analysis \cite{bib:phdthesis:denis}.
 
 \subsection{The simulation-based method}
+\label{dihad:subsec:eventweight}
 
 A solution to the scarce statistics of the QCD sample in the signal region can be solved by taking all the events with at least four reconstructed jets and properly reweighting each one of them. This weight is a function of the probabilities that two of those four reconstructed jets will fake an \hadtau:
 
@@ -294,57 +273,191 @@ This dicing method is applied for QCD samples and W+jet samples, in the case whe
 \label{dihad:subsec:stability}
 
 The efficiency of the VBF selection $\epsilon^{VBF}$ has been defined under the assumptions that is independent, within statistical uncertainty, from a selection over \met and \hadtau isolation.
+ 
+ A study on the efficiency stability as function of the second leading \hadtau momentum is done over different tau isolation requirements as shown on \autoref{dihad:fig:vbeff_vs_tauiso}. The chosen \hadtau isolation selection is requiring two tight isolated \hadtau (TT) or one tight plus one medium isolated \hadtau ($\text{TM}_{\text{I}}$). This study shows that in the case only two additional jets are required in the event selection a slight disagreement is observed for different isolation selections and is taken into account as systematic uncertainty.
 
-
-
-
-To test the stability and estimate the systematics, we determine on the diced Monte Carlo all possible efficiencies of $\epsilon^{VBF}$ in all even and odd control region pairs for a range of $E_{T}^{miss}$-cuts in table \ref{dihad:tab:stability}.
-\begin{table}[!h]
+ \begin{figure}[!h]
 	\centering
-	\begin{tabular}{|c||c|c|c|}
-		\hline
-		region     & $\epsilon^{VBF}(E_{T}^{miss}\geq0)$ [$\%$]& $\epsilon^{VBF}(E_{T}^{miss}\geq10)$ [$\%$]& $\epsilon^{VBF}(E_{T}^{miss}\geq20)$ [$\%$]\\ \hline \hline
-		LS SR/CR2  & $12.78\pm0.53$ & $12.91\pm0.58$ & $13.06\pm0.67$ \\ \hline
-		LS CR3/CR4 & $12.20\pm0.43$ & $12.48\pm0.47$ & $12.46\pm0.53$ \\ \hline
-		LS CR5/CR6 & $11.61\pm0.41$ & $11.93\pm0.45$ & $11.91\pm0.50$ \\ \hline
-		LS CR7/CR8 & $12.10\pm0.60$ & $12.44\pm0.66$ & $12.75\pm0.83$ \\ \hline \hline
-		OS SR/CR2  & $11.46\pm0.72$ & $11.74\pm0.80$ & $12.23\pm1.04$ \\ \hline
-		OS CR3/CR4 & $10.62\pm0.31$ & $10.66\pm0.33$ & $10.85\pm0.36$ \\ \hline
-		OS CR5/CR6 & $10.98\pm0.48$ & $11.09\pm0.52$ & $11.59\pm0.67$ \\ \hline
-		OS CR7/CR8 & $10.67\pm0.36$ & $10.61\pm0.37$ & $11.12\pm0.47$ \\ \hline \hline
-		WAM        & $11.33\pm0.15$ & $11.43\pm0.16$ & $11.66\pm0.19$ \\ \hline
-		\hline
-		\hline
-		region     & $\epsilon^{VBF}(E_{T}^{miss}\geq30)$ [$\%$]& $\epsilon^{VBF}(E_{T}^{miss}\geq40)$ [$\%$]& $\epsilon^{VBF}(E_{T}^{miss}\geq50)$ [$\%$]\\ \hline \hline
-		LS SR/CR2  & $13.76\pm0.89$ & $14.99\pm1.49$ & $18.09\pm2.93$ \\ \hline
-		LS CR3/CR4 & $13.18\pm0.68$ & $14.54\pm1.11$ & $16.58\pm2.08$ \\ \hline
-		LS CR5/CR6 & $12.20\pm0.56$ & $13.06\pm0.84$ & $13.34\pm1.12$ \\ \hline
-		LS CR7/CR8 & $14.05\pm1.25$ & $15.93\pm2.19$ & $19.26\pm4.14$ \\ \hline \hline
-		OS SR/CR2  & $13.14\pm1.58$ & $16.04\pm2.98$ & $21.23\pm6.13$ \\ \hline
-		OS CR3/CR4 & $11.08\pm0.41$ & $12.61\pm0.69$ & $14.45\pm1.23$ \\ \hline
-		OS CR5/CR6 & $12.19\pm0.95$ & $14.38\pm1.70$ & $18.22\pm3.42$ \\ \hline
-		OS CR7/CR8 & $11.37\pm0.54$ & $13.01\pm0.90$ & $14.76\pm1.62$ \\ \hline \hline
-		WAM        & $11.98\pm0.23$ & $13.43\pm0.39$ & $14.85\pm0.65$ \\ \hline
-	\end{tabular}
-	\caption{Stability of epsilonVBF in regard to $E_{T}^{miss}$, sign and $\tau_{h}$-isolation. LS and OS regions are slightly correlated. Here, events can be the same, but the chosen jets to fake $\tau_{h}$ must differ. For efficiencies of one sign, efficiencies are expected to be highly correlated. This is not accounted for in the weighted arithmetic mean (WAM) values shown.}
-	\label{dihad:tab:stability}
-\end{table}
-We do observe a quadratic dependence on $E_{T}^{miss}$, as seen in fig. \ref{dihad:fig:Stability}.
+	\includegraphics[width=0.5\textwidth]{analysis/pics/vbeff_vs_tauiso.pdf}
+	\caption{Distribution of $\epsilon^{VBF}$ against the second to leading \hadtau momentum in case of two \hadtau passing a tight (TT) or loose ($\text{TM}_{\text{I}}$) isolation requirement. It can be observed $\epsilon^{VBF}$ decreases before stabilizing at high momenta.}
+	\label{dihad:fig:vbeff_vs_tauiso}
+\end{figure}
+
+An additional stability study is performed by considering the deviation of the weighted arithmetic mean of $\epsilon^{VBF}$ with respect to \met as shown in \autoref{dihad:fig:vbeff_vs_met}. A quadratic divergence, caused by the impact of higher jet energy resolution widths over the forward sections of the detector, is observed. An additional systematic uncertainty is derived in order to take this effect into account.
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.5\textwidth]{PLOTS/diTauHadLSQCDPlots/stability/Stability.pdf}
-	\caption{\label{dihad:fig:Stability}Deviation of the weighted arithmetic mean (WAM) of the VBF efficiency of all (LS and OS) control region ratios with respect to $E_{T}^{miss}$. We observe a quadratic dependence of small size at the cut-value of 30 GeV we use in this analysis.}
+	\includegraphics[width=0.5\textwidth]{analysis/pics/vbeff_vs_met.pdf}
+	\caption{Deviation of the weighted arithmetic mean (WAM) of the VBF efficiency of all control region ratios with respect to \met. A slight quadratic divergence is observed for $\met > 30\gev$.}
+	\label{dihad:fig:vbeff_vs_met}
 \end{figure}
+ 
+To summarize, two systematic uncertainties are taken into account in this study:
 
-We derive two systematic errors out of this:
 \begin{enumerate}
-	\item Stability of $\epsilon^{VBF}$ regarding $\tau_{h}$-isolation: Maximum relative difference to weighted arithmetic mean at $E_{T}^{miss}\geq30$. Amounts to $+17.26\%$ and $-7.58\%$.
-	\item Stability of $\epsilon^{VBF}$ regarding $E_{T}^{miss}$-cut: Relative difference to $\epsilon^{VBF}$ within uncertainties of weighted arithmetic
-	mean at no cut on $E_{T}^{miss}$ as seen in fig. \ref{dihad:fig:Stability}. Amounts to $+8.30\%$ on the upper edge and $+3.26\%$ on the lower edge.
+	\item Stability of $\epsilon^{VBF}$ with respect to \hadtau-isolation: Maximum relative difference to weighted arithmetic mean at \met 30\gev. This amounts to $+17.26\%$ and  $-7.58\%$ relative uncertainty.
+	\item Stability of $\epsilon^{VBF}$ with respect to \met-requirement: Relative difference to $\epsilon^{VBF}$ within uncertainties of weighted arithmetic mean at no selection on \met. This amounts to $+8.30\%$ relative uncertainty on the upper edge and $+3.26\%$ on the lower edge.
 \end{enumerate}
+
 
 \clearpage
 
+\section{Signal samples systematic uncertanties}
+\label{sec:systematics}
 
+The following systematics have been considered while considering the signal samples contribution in signal region:
 
+\begin{itemize}
+	\item \textbf{Parton Distribution Functions (PDF):} The systematic effect due to imprecise knowledge of the parton distribution functions is determined by comparing CTEQ6.6L \cite{Nadolsky:2008zw}, MSTW2008nnlo \cite{Martin:2009iq}, and NNPDF20 PDF \cite{Ubiali:2008uk} with the default PDF and variations within the family of parametrization. The maximal deviation from the central value is used the overall systematic due to PDFs. We obtain a value of 16\% on the cross section uncertainty and 23\% on the signal acceptance.
+	
+	\item \textbf{Initial State Radiation (ISR) and Final State Radiation (FSR):} The systematic effect due to imprecise modeling of initial and final state radiation is determined by re-weighting events to account for effects such as missing a terms in the soft-collinear approach \cite{Nanava:2003cg} and missing NLO terms in the parton shower approach \cite{Miu:1998ju}. We obtain uncertainties of 0.9\% and 1.2\% for ISR and FSR respectively.
+	
+	\item \textbf{Luminosity:} We consider a 2.6\% uncertainty on the measured luminosity \cite{CMS:2012rua}.
+	
+	\item \textbf{Trigger, Reconstruction, and Selection:}  An overall uncertainty is applied for the trigger uncertainties determined on the correction factors described in AN-12-321 and which are measured using tag-and-probe methods. We consider 6.8\% uncertainty per hadronic tau leg \cite{CMS:2011msa}. Scale factors for $\tau_{h}$ identification are taken from the tau POG and obtained using a fit of data in a Z$\to\tau\tau$ enhanced region and fixing the cross section to that measured using ee/$\mu\mu$. We consider a 100\% correlation among the 2 tau legs, therefore we consider 13.6\% uncertainty on the signal acceptance.
+	
+	\item \textbf{$b$-Tagging Efficiency:} We consider a 30\% uncertainty on the mis-tag rate as measured by the b-tagging POG \cite{CMS:2011cra}. For the case of our signal, the systematic uncertainty on the requirement of 0 jets mis-tagged as b-jets is determined by propagating the 30\% uncertainty on the mis-tag rate through the following equation (which represents the signal efficiency for requiring 0 jets mis-tagged as b-Jets):
+	
+	\begin{equation}\label{eq:nttbar}
+	\epsilon^{\textrm{NBtag} < 1} = 1 - \sum_{n=1} P(n) \cdot \sum_{m=1}^{n} C(n,m) \cdot f^{m} \cdot (1-f)^{n-m}
+	\end{equation}
+	
+	where $P(n)$ is the probability to obtain $n$ additional jets (non-tau and non-lepton) in the event, $C(n,m)$ the combinatorial of $n$ $choose$ $m$, and $f$ the mis-tag rate. The probability to obtain at least one additional jet in the event is much less than 1\%. Therefore, based on the above equation, the mis-tag rate and uncertainty, and the probability to obtain at least one additional jet we calculate a negligible systematic effect on our signal due to the mis-tag rate.
+	
+	\item \textbf{Tau Energy Scale:} We consider the effect of the 3\% tau energy scale uncertainty measured by the tau POG on the signal acceptance. The tau 4-momentum is scaled by a factor of $k=1.03$ ($p_{smeared} = k \cdot p_{default}$) and variables are recalculated using $p_{smeared}$. We find that by using $p_{smeared}$ calculated with a factor of $k=\pm 1.03$, the signal acceptance fluctuates by 4\%. Therefore, we assign a 4\% systematic on the signal acceptance due to tau energy scale.
+	\item \textbf{Jet Energy Scale:}  The uncertainty on jet energy correction (JEC) is the result of a factorized approach on $Anti­-k_{t}$ jets with $R=0.5$ clustered from Particle Flow (PF) candidates. For MC samples JEC is divided in different steps that take into account several levels of correction. The fist step consist in a single level of corrections (L1) which estimates the $p_{t}$ offset in bins of $\eta$ and $N_{PV}$ for AK5PF jets. The second step, known as MC-Truth Corrections, consists in two level of corrections (L2 and L3) converging into an $\eta$ , $p_{t}$ ­dependent scaling factor fully derived from MC after applying L1­ corrections. The last step takes into account an L5 correction and uncertainties for individual flavors and predefined mixtures inside the reconstructed jets. We assign a 2\% systematic on the signal acceptance due to jet energy scale.
+	\item \textbf{Jet Energy Resolution:}  The measured jet transverse momentum is not necessarily equal to the energy of the original particle due to e.g. a limited detector resolution. This effect is quantified by the jet transverse momentum response R which is defined as $R = p_{T} / p_{T}^{particle}$  where $p_{T}$ denotes the transverse momentum of the jet measured at detector level and $p_{T}^{particle}$ is ￼the transverse momentum of the original particle-level jet. The average response $\langle R \rangle$ is referred to as jet energy scale and calibrated such that $\langle R \rangle = 1$ for fixed $p_{T}^{particle}$. The response usually depends on the jet momenta as well as on the pseudorapidity. This is expected since the quality of the jet measurement is directly related to the detector sub-components and the energy of the particles originating e.g. from the track-reconstruction efficiency or the individual amount of detector material. The core of the response is caused by the intrinsic resolution of the various sub-detector components and the precision of the jet clustering algorithms. The response tails are mainly caused by severe jet-mismeasurements. These can be e.g. detector effects like shower leakage or detector noise. Finally, the relative jet transverse momentum resolution is defined as the width of the response distribution corresponding to the gaussian part and hence is a function of $p_{T}$ and $\eta$ as well as the total response. One possibility to measure the resolution of the jet transverse momenta in data as well as in simulated events is to utilize the dijet asymmetry A. For events with at least two jets it is defined as:
+	
+	\begin{equation}
+	A = \frac{p_{T,1} - p_{T,2}}{p_{T,1} + p_{T,2}}
+	\end{equation}
+	
+	For a sufficient number of events the asymmetry is approximately normally distributed and its standard deviation is $\sigma_{A}$. In an ideal dijet topology the two jets are exactly balanced at particle level which leads to an important relation between the width of the asymmetry $\sigma_{A}$ and the jet-$p_{T}$ resolution $\sigma(p_{T})$:
+	
+	\begin{equation}
+	\frac{\sigma(p_{T})}{\langle p_{T} \rangle} = \sqrt{2} \sigma_{A}
+	\end{equation}
+	
+	Using the latest JER uncertainty collection from \texttt{Summer13\_\-V5\_DATA\_\-Uncertainty\-Sources\_\-AK5PFchs.txt} assign a 4\% systematic on the signal acceptance due to jet energy resolution. 
+	
+	\item \textbf{MET:} The uncertainty on MET for our signal process is driven by the jet energy scale (non-tau jets) (JES), light lepton energy/momentum scale (LES), and unclustered energy (UCE). The systematic effect from MET due to TES, JES and LES is included in the JES, TES, LES systematic uncertainties described above. We find that a 10\% uncertainty on the unclustered energy resultsin at most a 0.5\% fluctuation on the signal acceptance.
+\end{itemize}
+
+\begin{table}[h]
+	\centering{
+		\begin{tabular}{| l | c | c |}
+			\hline\hline
+			Source            & Initial uncertainty & Signal uncertainty\\
+			\hline
+			PDF               & ---                            & 23\%                       \\
+			ISR/FSR           & ---                             & 1\%              \\
+			Luminosity        & 2.6\%                           & 2.6\%                      \\
+			Trigger, ID, Selection & 6.8\%                            & 16\%                       \\
+			Tau Energy Scale  & --                             & 4\%                        \\
+			b-Jet ID          & 30\%                            & 1\%                        \\
+			JES               & 2\% - 10 \%                            & 2\%                      \\
+			JER              & 5\% - 25 \%                            & 4\%                      \\
+			MET               & 10\%                           & 0.5\%  \\
+			\hline\hline                  
+		\end{tabular}
+	}
+	\caption{Summary of systematic uncertainties}
+	\label{table:Uncertainties}
+\end{table}
+
+\autoref{table:Uncertainties} summarizes all the relevant uncertainties that has been considered for the generated signal samples. 
+
+\clearpage
+
+\section{Results}
+\label{section:results}
+
+%TODO it works better to have this as part of the analysis chapter
+
+%TODO 7.1 belongs to 6.4 .the actual result is simply the number of events in data and the confrontation with the background prediction
+
+Following the procedure described in \autoref{sec:bgestimation}, $\epsilon^{QCD}_{VBF}$ is calculated for both the di-\hadtau sign channels: opposite-sign (OS) and like-sign (LS). All the uncertainties described in \autoref{sec:bgestimation} and \autoref{dihad:subsec:stability} have been taken into account and have been properly propagated. The weighted average mean coming from the two different measurements gives the following final result:
+
+\begin{equation}
+\epsilon^{QCD}_{VBF} = 0.067\pm0.0046(stat.)^{-0.00038(MC)+0.0117(\tau iso)+0.0056(MET)}_{+0.00022(MC)-0.0051(\tau iso)+0.0022(MET)}
+\label{eq:vbfefflsresult}
+\end{equation}
+
+Using the following efficiency in Equation \ref{eq:qcdbgpred} gives the final QCD background prediction in signal region:
+
+\begin{equation}
+N^{QCD}_{SR} = 7.59\pm0.92(stat.)^{-0.42(MC)+1.34(\tau iso)+0.20(MET)}_{+0.35(MC)-0.58(\tau iso)-0.20(MET)}
+\label{dihad:eq:QCDbgpredCorrectResult}
+\end{equation}
+
+\section{Final yields for the di-\hadtau like-sign channel}
+
+The like-sign signal region (LS) consist of events satisfying the criteria shown in section \ref{sec:eventselection} with the di-$\tau$ charge requirement. \autoref{table:SReventcount} shows the contributions in the signal region from all MC samples and data. As described in section \ref{dihad:subsec:eventweight}, the QCD and W+jet  background contribution have been properly reweighted. 
+
+QCD is the dominant background and its prediction shown in \autoref{dihad:eq:QCDbgpredCorrectResult} is compatible with the value shown in \autoref{table:SReventcount}. \autoref{fig:LS_SR_h_met_dijetinvariantmass_log}(a) shows the expected and observed signal rate in bins of \met. \autoref{fig:LS_SR_h_met_dijetinvariantmass_log}(b) shows the expected and observed signal rate in bins of $M_{jj}$.
+
+\begin{table}[ht]
+	\centering{
+		
+		%   \tabcolsep=0.05cm
+		\begin{tabular}{| l | c |}
+			\hline\hline
+			Sample     &Events (SR)      \\ [0.5ex] \hline
+			Data &$ 9 $     \\
+			Drell-Yan &$ 0.037\pm0.015$      \\
+			VV &$ 0.11\pm0.065$     \\
+			W+Jets &$ 0.53\pm0.04$        \\
+			Single t &$ 0.036\pm0.0066$    \\
+			TTbar &$ 0.11\pm0.012$    \\
+			Higgs &$ 0.0005\pm7.2e-05$     \\
+			QCD Prediction &$ 7.59\pm0.92(stat.)^{+1.38}_{-0.72}(syst.)$    \\
+			\hline
+			Total nonQCD MC &$ 0.83\pm0.079(stat.)\pm0.41(syst.)$    \\
+			\hline\hline
+		\end{tabular}
+	}
+	\caption{\label{table:SReventcount}Number on events in SR data and all MC samples. The QCD prediction has been corrected for the unidirectional MET-bias described in section \ref{dihad:subsec:stability} for the combination of the systematic errors.}
+	% is used to refer this table in the text
+\end{table}
+
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.40\textwidth]{PLOTS/diTauHadLSQCDPlots/UnblindedUpdate/LS_SR/LS_SignalRegion/h_met_log.pdf}
+		\includegraphics[width=0.40\textwidth]{PLOTS/diTauHadLSQCDPlots/UnblindedUpdate/LS_SR/LS_SignalRegion/h_dijetinvariantmass_log.pdf}
+	\end{tabular}
+	\caption{(a) \met and (b)$M_{jj}$ distributions in signal region for Data and all MC samples}
+	\label{fig:LS_SR_h_met_dijetinvariantmass_log}
+\end{figure}
+
+\clearpage 
+
+\section{Limits}
+
+%TODO i recommend one additional section “combined results” at the very end of the analysis chapter, where you provide an overview of the results of all channels and show the limits for the combination of all results
+
+Upper limits at $95\%$ on the cross sections as function of $m_{\tilde{\chi}_{2}^{0}}=m_{\tilde{\chi}_{1}^{\pm}}$ are set for LS and OS channel. The results are presented using models with a fixed mass for the LSP $m_{\tilde{\chi}_{1}^{0}} = 0 $ GeV, a $\tilde{\chi}_{1}^{\pm}$ mass between $100 \leq m_{\tilde{\chi}_{1}^{\pm}} \leq 300$ GeV and a $\tilde{\tau}$ mass of $m_{\tilde{\tau}} = 0.95 m_{\tilde{\chi}_{1}^{\pm}}$ .
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[angle=0,width=.48\textwidth, height=0.35\textheight]{PLOTS/Limit_VBF_diTau_OS.pdf}
+		\includegraphics[angle=0,width=.48\textwidth, height=0.35\textheight]{PLOTS/Limit_VBF_diTau_LS.pdf}
+		\caption{Upper limit at the 95\% CL on the cross-section as a function of 
+			$m_{\tilde{\chi}_{2}^{0}}=m_{\tilde{\chi}_{1}^{\pm}}$ for the (a) OS 
+			$\tau_{h}\tau_{h} j_{f} j_{f}$, (b) LS $\tau_{h}\tau_{h} j_{f} j_{f}$
+			final states. The bands represent the one and two standard deviations obtained from the background-only hypothesis.}
+		\label{fig:LimitsOSLS}
+	\end{center}
+\end{figure}
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[angle=0,scale=0.75]{PLOTS/Limit_VBF_diTau_combined.pdf}
+		\caption{Upper limit at the 95\% CL on the cross-section as a function of 
+			$m_{\tilde{\chi}_{2}^{0}}=m_{\tilde{\chi}_{1}^{\pm}}$ for the combination of OS and LS $\tau_{h}\tau_{h} j_{f} j_{f}$
+			final states. The bands represent the one and two standard deviations obtained from the background-only hypothesis.}
+		\label{fig:LimitsCombination}
+	\end{center}
+\end{figure}
+
+Figure \ref{fig:LimitsOSLS}(a) \ref{fig:LimitsOSLS}(b) and  shows the upper limit at the 95\% CL on the cross-section for OS and LS channel. A combination of the two channels is shown on Figure \ref{fig:LimitsCombination}. The upper expected limit on $m_{\tilde{\chi}}$ corresponds to the point where the expected limit crosses the theoretical line and is set for  $\tilde{\chi}_{1}^{\pm} /\tilde{\chi}_{2}^{0} $ with masses of 180 GeV. The upper observed limit on $m_{\tilde{\chi}}$ corresponds to the point where the observed limit crosses the theoretical line. We exclude $\tilde{\chi}_{1}^{\pm} /\tilde{\chi}_{2}^{0} $ with masses below 140 GeV in the models considered. The limit results coming from OS and LS $\tau_{h}\tau_{h} j_{f} j_{f}$ final states are combined with other 6 channels documented on AN-12-321 for the final upper limit.
