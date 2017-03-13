@@ -372,10 +372,6 @@ The following systematics have been considered while considering the signal samp
 \section{Results}
 \label{section:results}
 
-%TODO it works better to have this as part of the analysis chapter
-
-%TODO 7.1 belongs to 6.4 .the actual result is simply the number of events in data and the confrontation with the background prediction
-
 Following the procedure described in \autoref{sec:bgestimation}, $\epsilon^{QCD}_{VBF}$ is calculated for both the di-\hadtau sign channels: opposite-sign (OS) and like-sign (LS). All the uncertainties described in \autoref{sec:bgestimation} and \autoref{dihad:subsec:stability} have been taken into account and have been properly propagated. The weighted average mean coming from the two different measurements gives the following final result:
 
 \begin{equation}
@@ -383,7 +379,7 @@ Following the procedure described in \autoref{sec:bgestimation}, $\epsilon^{QCD}
 \label{eq:vbfefflsresult}
 \end{equation}
 
-Using the following efficiency in Equation \ref{eq:qcdbgpred} gives the final QCD background prediction in signal region:
+Using this result as input for \autoref{eq:qcdbgpred} gives the final QCD background prediction in signal region:
 
 \begin{equation}
 N^{QCD}_{SR} = 7.59\pm0.92(stat.)^{-0.42(MC)+1.34(\tau iso)+0.20(MET)}_{+0.35(MC)-0.58(\tau iso)-0.20(MET)}
@@ -392,9 +388,11 @@ N^{QCD}_{SR} = 7.59\pm0.92(stat.)^{-0.42(MC)+1.34(\tau iso)+0.20(MET)}_{+0.35(MC
 
 \section{Final yields for the di-\hadtau like-sign channel}
 
-The like-sign signal region (LS) consist of events satisfying the criteria shown in section \ref{sec:eventselection} with the di-$\tau$ charge requirement. \autoref{table:SReventcount} shows the contributions in the signal region from all MC samples and data. As described in section \ref{dihad:subsec:eventweight}, the QCD and W+jet  background contribution have been properly reweighted. 
+The like-sign signal region (LS) consist of events satisfying the criteria shown in section \ref{sec:eventselection} with the di-$\tau$ charge requirement. \autoref{table:SReventcount} shows the contributions in the signal region from all MC samples and data. As described in section \ref{dihad:subsec:eventweight}, the QCD and W+jet  background contribution have been "diced" and accordingly reweighted. 
 
-QCD is the dominant background and its prediction shown in \autoref{dihad:eq:QCDbgpredCorrectResult} is compatible with the value shown in \autoref{table:SReventcount}. \autoref{fig:LS_SR_h_met_dijetinvariantmass_log}(a) shows the expected and observed signal rate in bins of \met. \autoref{fig:LS_SR_h_met_dijetinvariantmass_log}(b) shows the expected and observed signal rate in bins of $M_{jj}$.
+QCD is the dominant background and its data-driven prediction shown in \autoref{dihad:eq:QCDbgpredCorrectResult} is fully compatible within statistical and systematic uncertainty with the simulation-driven results shown in \autoref{table:SReventcount}. 
+
+\met and \mjj distribution in the signal region (SR) for data and Monte Carlo are shown on \autoref{fig:LS_SR_h_met_dijetinvariantmass_log}.
 
 \begin{table}[ht]
 	\centering{
@@ -416,7 +414,7 @@ QCD is the dominant background and its prediction shown in \autoref{dihad:eq:QCD
 			\hline\hline
 		\end{tabular}
 	}
-	\caption{\label{table:SReventcount}Number on events in SR data and all MC samples. The QCD prediction has been corrected for the unidirectional MET-bias described in section \ref{dihad:subsec:stability} for the combination of the systematic errors.}
+	\caption{\label{table:SReventcount}Number of events for data and all Monte Carlo contribution in the signal region. The QCD prediction has been corrected for the unidirectional MET-bias described in section\ref{dihad:subsec:stability} for the combination of the systematic errors.}
 	% is used to refer this table in the text
 \end{table}
 
@@ -428,15 +426,20 @@ QCD is the dominant background and its prediction shown in \autoref{dihad:eq:QCD
 	\end{tabular}
 	\caption{(a) \met and (b)$M_{jj}$ distributions in signal region for Data and all MC samples}
 	\label{fig:LS_SR_h_met_dijetinvariantmass_log}
-\end{figure}
+\end{figure} 
 
-\clearpage 
+A combination of the opposite and like-sign signal yields coming from all the different search channels is shown on \autoref{fig::mjj_combined} as \mjj distribution \cite{Khachatryan:2015kxa}.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{analysis/pics/mjj_combined.pdf}
+	\caption{The final yields of the like sign di-\hadtau channel. No excess above standard model expectation is observed \cite{Khachatryan:2015kxa}.}
+	\label{fig::mjj_combined}
+\end{figure}
 
 \section{Limits}
 
-%TODO i recommend one additional section “combined results” at the very end of the analysis chapter, where you provide an overview of the results of all channels and show the limits for the combination of all results
-
-Upper limits at $95\%$ on the cross sections as function of $m_{\tilde{\chi}_{2}^{0}}=m_{\tilde{\chi}_{1}^{\pm}}$ are set for LS and OS channel. The results are presented using models with a fixed mass for the LSP $m_{\tilde{\chi}_{1}^{0}} = 0 $ GeV, a $\tilde{\chi}_{1}^{\pm}$ mass between $100 \leq m_{\tilde{\chi}_{1}^{\pm}} \leq 300$ GeV and a $\tilde{\tau}$ mass of $m_{\tilde{\tau}} = 0.95 m_{\tilde{\chi}_{1}^{\pm}}$ .
+Upper limits at $95\%$ on the cross sections as function of $m_{\tilde{\chi}_{2}^{0}}=m_{\tilde{\chi}_{1}^{\pm}}$ are set for like-sign and opposite channel. The results are presented using models with a fixed mass for the LSP $m_{\tilde{\chi}_{1}^{0}} = 0\gev$, a $\tilde{\chi}_{1}^{\pm}$ mass between $100 \leq m_{\tilde{\chi}_{1}^{\pm}} \leq 300\gev$ and a $\tilde{\tau}$ mass of $m_{\tilde{\tau}} = 0.95 m_{\tilde{\chi}_{1}^{\pm}}$ .
 
 \begin{figure}
 	\begin{center}
@@ -460,4 +463,6 @@ Upper limits at $95\%$ on the cross sections as function of $m_{\tilde{\chi}_{2}
 	\end{center}
 \end{figure}
 
-Figure \ref{fig:LimitsOSLS}(a) \ref{fig:LimitsOSLS}(b) and  shows the upper limit at the 95\% CL on the cross-section for OS and LS channel. A combination of the two channels is shown on Figure \ref{fig:LimitsCombination}. The upper expected limit on $m_{\tilde{\chi}}$ corresponds to the point where the expected limit crosses the theoretical line and is set for  $\tilde{\chi}_{1}^{\pm} /\tilde{\chi}_{2}^{0} $ with masses of 180 GeV. The upper observed limit on $m_{\tilde{\chi}}$ corresponds to the point where the observed limit crosses the theoretical line. We exclude $\tilde{\chi}_{1}^{\pm} /\tilde{\chi}_{2}^{0} $ with masses below 140 GeV in the models considered. The limit results coming from OS and LS $\tau_{h}\tau_{h} j_{f} j_{f}$ final states are combined with other 6 channels documented on AN-12-321 for the final upper limit.
+ \autoref{fig:LimitsOSLS}  shows the upper limit at the 95\% CL on the cross-section for opposite and like-sign channel. A combination of the two channels is shown on \autoref{fig:LimitsCombination}. The upper expected limit on $m_{\tilde{\chi}}$ corresponds to the point where the expected limit crosses the theoretical line and is set for  $\tilde{\chi}_{1}^{\pm} /\tilde{\chi}_{2}^{0} $ with masses of 180\gev. The upper observed limit on $m_{\tilde{\chi}}$ corresponds to the point where the observed limit crosses the theoretical line. In the model considered, $\tilde{\chi}_{1}^{\pm} /\tilde{\chi}_{2}^{0} $ with masses below 140\gev are excluded.
+ 
+The limit results coming from opposite and like-sign $\tau_{h}\tau_{h} j_{f} j_{f}$ final states are combined with other 6 channels documented on \cite{Khachatryan:2015kxa} for the final upper limit.
