@@ -88,4 +88,56 @@
 
 \end{tikzpicture}
 
+\bigbreak
+\bigbreak
+\bigbreak
+
+\begin{tikzpicture}
+\begin{feynman}
+	\vertex (a);
+	\vertex [right=of a] (b);
+	\vertex [above right=of b] (c);
+	\vertex [below right=of b] (d);
+	\vertex [above right=of d] (e){\(\tau^{-}\)};
+	\vertex [below right=of d] (f){\(\tau^{+}\)};
+
+
+\diagram* {
+	(a) -- [boson, plain, edge label'=\(\tilde{\chi}^{0}_{2}\)] (b);
+	(b) -- [boson, plain, edge label'=\(\tilde{\chi}^{0}_{1}\)] (c);
+	(b) -- [boson, edge label'=\(Z\)] (d);
+	(f) -- [fermion] (d) -- [fermion] (e);
+	
+};
+
+\end{feynman}
+
+\end{tikzpicture}
+
+\bigbreak
+\bigbreak
+\bigbreak
+
+\begin{tikzpicture}
+\begin{feynman}
+\vertex (a);
+\vertex [right=of a] (b);
+\vertex [above right=of b] (c);
+\vertex [below right=of b] (d);
+\vertex [above right=of d] (e){\(b\)};
+\vertex [below right=of d] (f){\(\bar{b}\)};
+
+
+\diagram* {
+	(a) -- [boson, plain, edge label'=\(\tilde{\chi}^{0}_{2}\)] (b);
+	(b) -- [boson, plain, edge label'=\(\tilde{\chi}^{0}_{1}\)] (c);
+	(b) -- [boson, edge label'=\(Z\)] (d);
+	(f) -- [fermion] (d) -- [fermion] (e);
+	
+};
+
+\end{feynman}
+
+\end{tikzpicture}
+
 \end{document}
