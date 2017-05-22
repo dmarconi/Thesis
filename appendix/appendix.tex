@@ -1,3 +1,232 @@
+\section{Standard Model and the Higgs mechanism}
+\label{sec::SM_appendix}
+
+The electric charge $Q$ is the generator that the massless photon couples to. It is an invariant quantity and is defined as \cite{zee2003quantum}
+
+\begin{equation}
+Q = T_3 + \frac{1}{2}Y
+\label{eqn:electricchargegenerator}
+\end{equation}
+
+Here $T$ denotes the generator of the isospin symmetry group $SU(2)$ and $Y$ denotes the generator of hypercharge symmetry group $U(1)_Y$. The $SU(2)$ generators obey the Lie algebra
+\begin{equation}
+[T^a, T^b] = i\varepsilon^{abc}T_c.
+\label{eqn:su2liealgebr}
+\end{equation}
+
+where $\varepsilon^{abc}$ is the antisymmetric Levi-Civita symbol. Under the fundamental representation the generators of $SU(2)$  becomes the Pauli matrices: $T_a = \sigma_a/2$ \cite{roubillard2005th}. The Standard Model Lagrangian is \cite{noteskooijman11}.
+
+\begin{equation}
+\mathcal L_{SM} = \mathcal L_{kinetic} + \mathcal L_{Higgs} + \mathcal L_{Yukawa},
+\label{eqn:SMLagrangian}
+\end{equation}
+with the kinetic term describing the dynamics of the spinor fields $\psi$
+\begin{equation}
+\mathcal L_{kinetic} = i\overline{\psi}(\partial^\mu\gamma_\mu)\psi,
+\label{eqn:SMLkinetic}
+\end{equation}
+with $\overline{\psi} \equiv \psi^\dag\gamma^0$, and $\psi$ the three fermion generations which will be later represented by an index $i$. 
+
+The gauge invariance under the three symmetry group is imposed by replacing the derivative with a covariant derivative obtaining the fields of the interactions corresponding to the symmetry groups:
+
+\begin{equation}
+\mathcal L_{kinetic} =  i\overline{\psi}(D^\mu\gamma_\mu)\psi \\;
+\label{eqn:newSMLkinetic}
+\end{equation}
+with
+\begin{equation}
+D^\mu = \partial^\mu + i\frac{g_s}{2}G^\mu_aL_a + i\frac{g}{2}W^\mu_b\sigma_b+i\frac{g'}{2}B^\mu Y,
+\label{eqn:SMcovariant}
+\end{equation}
+where $L_a$ are the Gell-Mann matrices which gives the generators of $SU(3)$ so $t_a \equiv L_a/2$, $\sigma_b$ are the Pauli matrices which gives the generators of $SU(2)$ $T_a \equiv i\sigma_b/2$, $g_s$, $g$, and $g'$ are respectively the strong $SU(3)$, the electroweak isospin $SU(2)$, and hypercharge $U(1)$ couplings and $G^\mu_a$, $W^\mu_b$, and $B^\mu$ are respectively the eight gluon fields, the three weak interaction bosons that form a triplet, and the single hypercharge boson.
+
+The fermion fields $\psi$ then transform as 
+\begin{equation}
+\psi(x) \to \mathrm{e}^{i\pi^a\sigma_a/2}\mathrm{e}^{iY\beta(x)}\psi(x),
+\label{eqn:phitransformsagain}
+\end{equation}
+with $Y$ the generator of $U(1)$ and $\pi^a$ the parameters of the $SU(2)$ transformations. The abelian $U(1)_Y$ and the nonabelian $SU(2)_L$ have the Yang-Mills terms $\mathcal{L}_{gauge} = -\frac{1}{4}(G^a_{\mu\nu}G^{a\mu\nu} + H_{\mu\nu}H^{\mu\nu})$ with $H_{\mu\nu} = \partial_\mu B_{\nu} -\partial_\nu B_\mu$ and $G^a_{\mu\nu}= \partial_\mu W^a_\nu -\partial_\nu W^a_\mu + g\varepsilon^{abc}W^b_\mu W^c_\mu$, from which it can be seen that the gauge bosons self-interact \cite{roubillard2005th}.
+
+The $SU(2)_L \times U(1)_Y$ gauge theory is the partially unified theory of the weak and electromagnetic interactions of Glashow, Weinberg, and Salam \cite{peskin1995introduction}. Through spontaneous breaking of the symmetry of these groups to $U(1)_{EM}$, the electromagnetic gauge group, the $W$ and $Z$ bosons gain mass. This works again according to the Higgs mechanism of the previous section; for this to occur, first a Higgs scalar field is to be added to the Lagrangian \cite{quigg1983gauge}:
+\begin{equation}
+\mathcal L_{Higgs} = (D_\mu\phi)^\dag(D^\mu\phi) - \mu^2\phi^\dag\phi - \lambda(\phi^\dag\phi)^2,
+\label{eqn:SMLHiggs}
+\end{equation}
+from which the mass of the bosons comes from the interaction term (which contains a covariant derivative) after spontaneous symmetry breaking. This is a generalization of the abelian Higgs model to a nonabelian gauge group. Each fermion generation is made of five different representations \cite{peskin1995introduction}:
+
+\begin{enumerate}
+	\label{enum:hypercharges}
+	\item Left-handed quarks $Q^I_{Li}$, which are a triplet under $SU(3)$, a doublet $\left(\begin{array}{c} u \\ d \end{array} \right)^I_{Li}$ under $SU(2)$, and have hypercharge $Y = \frac{1}{3}$;
+	\item Right handed ``up'' quarks (i.e. up, charm, top)  $u^I_{Ri}$, which are an $SU(3)$ triplet, $SU(2)$ singlet, and have hypercharge $Y = \frac{4}{3}$;
+	\item Right handed ``down'' quarks (i.e. down, strange, bottom)  $d^I_{Ri}$, which are an $SU(3)$ triplet, $SU(2)$ singlet, and have hypercharge $Y = \frac{-2}{3}$;
+	\item Left-handed leptons  $L^I_{Li}$, which are an $SU(3)$ singlet, $SU(2)$ doublet  $\left(\begin{array}{c} \nu \\ e \end{array} \right)^I_{Li}$, and have hypercharge $Y = -1$;
+	\item Right-handed ``electron'' leptons $L^I_{Ri}$, which are an $SU(3)$ singlet, $SU(2)$ singlet, and have hypercharge $Y = -2$. The name is given because only the electron, muon, and tau are included; right-handed neutrinos are not.
+\end{enumerate}
+
+Contrary to experimental evidence the mass of the right-handed neutrinos is comparable their lepton counterpart, therefore they have not been included in the list.
+
+\subsection{The Bosonic Masses}
+\label{section:bosonicmasses}
+In the case $\phi(x)$  takes a vacuum expectation value of $v =  \sqrt{\frac{-\mu^2}{|\lambda|}}$, which corresponds to the minimum of the potential $V(\phi^\dag\phi) = \mu^2(\phi^\dag\phi) + |\lambda|(\phi^\dag\phi)^2$ only if $\mu^2<0$:
+
+\begin{equation}
+\left( \begin{array}{c}
+\phi^+ \\
+\phi^0 \end{array} \right) \rightarrow \frac{1}{\sqrt{2}}\left( \begin{array}{c}
+0 \\
+v \end{array} \right) \equiv \left<\phi\right>_0.
+\label{eqn:vevphi}
+\end{equation}
+
+For this case , where $\left< 0 | \phi | 0\right> \neq 0$,  electroweak symmetry is spontaneously broken: $SU(2)_L\otimes U(1)_Y \to U(1)_{EM}$.
+The generators of $SU(2)_L \otimes U(1)_Y$ do not leave this vacuum where v is assumed invariant. The generator corresponding to electric charge, however, does leave the vacuum invariant, so that the photon associated with electric charge will not acquire a mass \cite{quigg1983gauge}.
+
+It is possible now to write $\phi$ in terms of fluctuations around its expectation value, as long as the original four degrees of freedom are retained:
+\begin{equation}
+\phi(x) = e^{i\frac{\boldsymbol{\vec{\xi}\cdot\overrightarrow{\sigma}}}{2}}\frac{1}{\sqrt{2}}\left( \begin{array}{c} 0 \\ v + h(x) \end{array} \right).
+\label{eqn:phifluctuations}
+\end{equation}
+Now $\left<0|h(x)|\right> = 0$. Choosing the $U(1)$ gauge in such a way that the Lagrangian stays invariant, and using that $\phi(x)$ transforms as $\phi \rightarrow \phi' = U \phi$ with $U$ a unitary Hermitian matrix:
+\begin{equation}
+\phi \rightarrow \phi' =  e^{-i\frac{\boldsymbol{\vec{\xi}\cdot\vec{\sigma}}}{2}} \phi = \frac{1}{\sqrt{2}}\left( \begin{array}{c} 0 \\ v + h(x) \end{array} \right)
+\label{eqn:trfmphigaugeU}
+\end{equation}
+where $h(x)$ is now the only degree of freedom remaining in this gauge \cite{roubillard2005th}. The gauge fields transform as
+\begin{equation}
+W^\mu_b\sigma_b \rightarrow W^{'\mu}_b\sigma_b \equiv  W^{\mu}_b\sigma_b; \hspace{5mm} B^\mu Y \rightarrow B^\mu Y.
+\label{eqn:trfmWBbosons}
+\end{equation}
+Writing out the Higgs Lagrangian,
+\begin{eqnarray}
+\mathcal L_{Higgs} &=&  ((\partial_\mu + i\frac{g}{2}\sigma_bW_\mu^{'b} + i\frac{g'}{2}YB_\mu)\phi')^\dag \cdot (h.c.) + V(\phi^{'\dag}\phi') \nonumber \\
+&&  \frac{1}{8}g'g \left( \begin{array}{cc} 0 & v + h(x) \end{array} \right) YB_\mu\sigma_aW^{\mu a} \left( \begin{array}{c} 0 \\ v + h(x) \end{array} \right) \nonumber \\
+&& + \mbox{other interactions},
+\label{eqn:LHiggsvaried}
+\end{eqnarray}
+
+the masses terms of the bosons are obtained from the squared terms. The $(W_\mu)^2$-term becomes:
+\begin{eqnarray}
+\frac{1}{8}g^2 (v + h(x))^2 \left[\left(W_\mu^1\right)^2 + \left(W_\mu^2\right)^2 + \left(W_\mu^3\right)^2 \right], 
+\label{eqn:Wsquaredterm}
+\end{eqnarray}
+Now the masses can be derived from the squared terms:
+\begin{itemize}
+	\item $\frac{1}{2}\mu^2h^2 \rightarrow h$ has mass $\mu$ (through self-interaction);
+	\item $\frac{1}{8}g^{'2}Y^2v^2B_\mu B^\mu \rightarrow B_\mu$ has mass $\frac{g'v}{2}$ (since $Y_\phi =1$);
+	\item $\frac{1}{8}g^2 v^2 \left[\left(W_\mu^1\right)^2 + \left(W_\mu^2\right)^2 + \left(W_\mu^3\right)^2 \right] \rightarrow W_\mu $ has mass $\frac{gv}{2}$.
+\end{itemize}
+
+However the observed bosons do not corresponds to the $W_\mu^a$ or $B_\mu$ particles. It is possible however to rearrange the Lagrangian so that the known $W_\mu^+$, $W_\mu^-$, $Z^0$, and $A_\mu$ (corresponding to the photon).
+
+However, the particles that are actually observed are not the $W_\mu^a$ or $B_\mu$ particles. The definitions of the measurable particles, which are the $W_\mu^+$, $W_\mu^-$, $Z^0$, and $A_\mu$ (photon) can be found through rearranging the Lagrangian. The interaction term of $B_\mu$ and $W\mu$ is 
+\begin{equation}
+-\frac{1}{4}(v+h)^2 g'g B_\mu W^{\mu 3},
+\label{eqn:WBinteraction}
+\end{equation}
+so that, combining equations \ref{eqn:LHiggsvaried}, \ref{eqn:Wsquaredterm}, and \ref{eqn:WBinteraction},
+\begin{eqnarray}
+\mathcal L_{Higgs} &=&  \frac{1}{2}\partial_\mu h \partial^\mu h + \frac{1}{8}g^{'2}Y^2B_\mu^2(v+h)^2 + \frac{1}{2}\mu^2(v + h)^2 + \frac{1}{4}|\lambda|(v+h)^4 \nonumber \\
+&\equiv& -\frac{1}{2}\mu^2h^2 + \frac{v^2}{8}\left[2g^2(W_\mu^+W_\mu^-) + (g^{'2} +g^2)Z_\mu^2 \right] + \nonumber \\
+&& \mbox{other interactions}.
+\label{eqn:Lredefined}
+\end{eqnarray}
+From this we can define the observable bosons:
+\begin{eqnarray}
+W^\pm_\mu &=&  \frac{W_\mu^1 \mp iW_\mu^2}{\sqrt{2}};\\
+Z_\mu^0 &=& \frac{-g'B_\mu + gW_\mu^3}{\sqrt{g^2+g^{'2}}};\\
+A_\mu &=&  \frac{gB_\mu + g'W_\mu^3}{\sqrt{g^2+g^{'2}}}.
+\label{eqn:realbosonsdefined}
+\end{eqnarray}
+The zero in $Z_\mu^0$ underlines the fact that it is a neutral boson, as opposed to the charged $W^\pm_\mu$ bosons. The masses of the $W$ and $Z$ bosons finally becomes: $m_W = \frac{gv}{2}$ and $m_Z = \sqrt{g^2 + g^{'2}}\frac{v}{2} \equiv \frac{m_W}{\cos\theta_W}$. The term $\theta_W$ is known as the mixing angle; it is so called because it denotes the mixing of the $W$ and $B$ bosons that are composites of the $Z$ and $A$ bosons. The mixing angle $\theta_W$ is defined as follows:
+\begin{eqnarray}
+\cos\theta_W = \frac{g}{\sqrt{g^2 + g^{'2}}}, \hspace{2mm} \sin\theta_W = \frac{g'}{\sqrt{g^2 + g^{'2}}}.
+\label{eqn:mixingangle}
+\end{eqnarray}
+The relationships between the $W$ and $B$ and $Z$ and $A$ bosons are then
+\begin{equation}
+\left( \begin{array}{c} Z^0 \\ A_\mu \end{array} \right) = \left( \begin{array}{cc} \cos \theta_W & -\sin \theta_W \\ \sin\theta_W & \cos\theta_W \end{array} \right) \left( \begin{array} {c} W^3_\mu \\ B_\mu \end{array} \right);
+\label{eqn:ZAWBmixing}
+\end{equation}
+
+\subsection{The couplings $g$ and $g'$}
+
+The coupling constants $g$ and $g'$ are derived from the interaction term between the $A_\mu$ boson and a lepton in $\mathcal L_{kinetic}$ from equations \ref{eqn:newSMLkinetic} and \ref{eqn:SMcovariant}, using the definition of $A_\mu$ from equation \ref{eqn:realbosonsdefined}, and using $L_L \equiv \left( \begin{array}{cc} \nu \\ e \end{array}\right)_L$ and $L_R \equiv e_R$. In the case of the electron:
+\begin{eqnarray}
+\mathcal L_{A_\mu-electron} &=&  \overline{e}_R\gamma^\mu g' \frac{g}{\sqrt{g^2 + g^{'2}}} A_\mu e_R + \overline{e}_L\gamma^\mu \frac{g'}{2} \frac{g}{\sqrt{g^2 + g^{'2}}} A_\mu e_L + \nonumber \\
+&=&  \frac{gg'}{\sqrt{g^2 + g^{'2}}}\bar{e}\gamma_\mu e A^\mu .\\
+\label{eqn:ALinteraction}
+\end{eqnarray}
+Identifying $A_\mu$ as the photon, it is possible to set the coupling $ e \equiv \frac{gg'}{\sqrt{g^2 + g^{'2}}}$. 
+
+\subsection{Fermion Masses}
+\label{section:fermionmasses}
+
+In order to generate the other fermion masses an interaction between the scalar field $\phi(x)$ and the fermions is needed. The best choice is the interaction of $\phi(x)$ with fermions given by the Yukawa coupling \cite{noteskooijman11} which does obey the necessary symmetries of $SU(3)_C \otimes SU(2)_L \otimes U(1)_H$:
+\begin{eqnarray}
+\mathcal L_{Yukawa} &=& Y_{ij}\overline{\psi_{i}}\phi\psi_{j}\\
+\label{eqn:SMLYukawa}
+\end{eqnarray}
+where $Y$ is the Yukawa coupling constant, and $i$,$j$ are flavor indices that matter for QCD.
+In order for this Lagrangian to be Lorentz invariant, $\phi(x)$is chosen as in \autoref{eqn:phifluctuations} and it transforms as in \autoref{eqn:trfmphigaugeU}. The fermion field transforms as $\psi \rightarrow \psi' = e^{-i\frac{\boldsymbol{\vec{\xi}\cdot\vec{\sigma}}}{2}} \psi$. Then the transformation of the term with the $d$-quark will be as follows:
+\begin{eqnarray}
+\mathcal L_{Yukawa,quarks,d_R}' &=&  Y^d_{ij}\overline{Q^{I'}_{Li}}\phi' d^{I'}_{Rj} + h.c. \nonumber \\
+&=& Y^d_{ij}  \left( \overline{ \begin{array}{cc} u & d \end{array} } \right)^I_{Li}  \frac{1}{\sqrt{2}} \left( \begin{array}{c} 0 \\ v + h(x)\end{array} \right)  d^I_{Rj} + h.c.\nonumber \\
+\mathcal L_{Yukawa,d-quark} &=&  Y^d_{ij}   \overline{d}^I_{Li} \frac{v}{\sqrt{2}} d^I_{Rj}  + h.c. + \mbox{interaction terms} \nonumber \\
+&=& M^d_{ij}\overline{d}^I_{Li}d^I_{Rj} + h.c. + \mbox{interaction terms}.
+\label{eqn:SMLYukawaDquark}
+\end{eqnarray}
+The mass terms can be derived from the diagonal form of the mass matrix $M^d_{ij}$. This diagonal form is obtained with the usage of the unitary matrices $V^d$ which obey the following rules:
+\begin{eqnarray}
+V_L^{d\dag}V_L^d &=&  1,\\
+(V^d_R)_{ij}d^I_{Rj} &\equiv& d_{Ri}, \\
+\overline{d}_{Li}^I (V_L^{d\dag})_{ij} &\equiv& \overline{d}_{Lj}, \\
+V^{d}_L M^d V^{d\dag}_R &=&  M^d_{diag},
+\label{eqn:diagonalizingMmatrix}
+\end{eqnarray}
+with $d_L$ and $d_R$ the down quark in its mass eigenstate. This gives
+\begin{eqnarray}
+\mathcal{L}_{Yukawa,d-quark} &=& M^d_{ij}\overline{d}^I_{Li}M^d_{ij}d^I_{Rj} + h.c. + \mbox{interaction terms} \nonumber \\
+&=& \overline{d}_{Li}V^{d\dag}_LV^d_L(M^d_{ij})V^{d\dag}_R V^d_Rd^I_{Rj} + h.c. + \mbox{interaction terms} \nonumber \\
+&=& \overline{d}_{Li}(M^d_{ij})_{diag}d_{Rj} + h.c. + \mbox{interaction terms}.
+\label{eqn:SMLYukawaDquarkMassEigenstates}
+\end{eqnarray}
+The down quark has finally acquired mass. In order to obtain the mass of the up quark a new definition of the spinor $\phi$ is needed:
+
+\begin{eqnarray}
+\tilde{\phi} &=&  i\sigma_2\phi^* \nonumber \\
+&=&  i \left( \begin{array}{cc} 0 & -i \\ i & 0 \end{array} \right)  \left( \begin{array}{c} \phi^{+*} \\ (\phi^{0})^* \end{array} \right) \nonumber \\
+&=&  \left( \begin{array}{cc} 0 & 1 \\ -1 & 0 \end{array} \right)  \left( \begin{array}{c} \phi^{+*} \\ (\phi^{0})^* \end{array} \right) \nonumber \\
+&=&   \left( \begin{array}{c} (\phi^0)^* \\ -(\phi^+)^* \end{array} \right).
+\label{eqn:SMphitilde}
+\end{eqnarray}
+which gives the proper term in the Yukawa potential. Furthermore $\tilde{\phi}$ is a Lorentz scalar and transforms in the same way as $\phi$ did: 
+
+\begin{eqnarray}
+\tilde{\phi} = i\sigma_2\phi^* &\rightarrow& i\sigma_2\left(e^{\frac{i}{2}\vec{\xi} \cdot \vec{\sigma}} \phi \right)^* \nonumber \\
+&\approx& e^{\frac{i}{2}\vec{\xi} \cdot \vec{\sigma}} \tilde{\phi},
+\label{eqn:trmfphitilde}
+\end{eqnarray}
+$\tilde{\phi}$ can be redefined as:
+\begin{equation}
+\tilde{\phi} = e^{\frac{i}{2}\mathbf{\xi \cdot \sigma}}\left( \begin{array}{c} v+h \\ 0 \end{array} \right)
+\label{eqn:phitildedefined}
+\end{equation}
+where the vacuum expectation value of $\tilde{\phi}$ has been used:
+\begin{equation}
+\left<\tilde{\phi}\right>_0 = \left<i\sigma_2\phi^*\right>_0 = \frac{1}{\sqrt{2}} \left( \begin{array}{c} (v + h)^* \\ 0 \end{array} \right) = \frac{1}{\sqrt{2}} \left( \begin{array}{c} v + h \\ 0 \end{array} \right)
+\label{eqn:vevphitilde}
+\end{equation}
+the up quark term of the Yukawa potential finally becomes:
+\begin{eqnarray}
+\mathcal L_{Yukawa,quarks,u} &=&  Y^u_{ij}\overline{Q^I_{Li}}\tilde{\phi} u^I_{Rj} + h.c. \nonumber \\
+&=& Y^d_{ij}  \left( \overline{ \begin{array}{cc} u & d \end{array} } \right)^I_{Li}  \frac{1}{\sqrt{2}}  \left( \begin{array}{c} v + h \\ 0 \end{array} \right)  u_{Rj} + h.c.\nonumber \\ 
+&=& \overline{u}^I_{Li}M^u_{ij}u^I_{Rj} + h.c. + \mbox{interaction terms} \nonumber \\
+&=& \overline{u}^I_{Li}V^{u\dag}_LV^u_L(M^u_{ij})V^{u\dag}_R V^u_Ru^I_{Rj} + h.c. + \mbox{interaction terms} \nonumber\\
+&=& \overline{u}_{Li}(M^u_{ij})_{diag}u_{Rj} + h.c. + \mbox{interaction terms};
+\label{eqn:SMLYukawaUquark}
+\end{eqnarray}
+and the up quark has acquired a mass.
+
 \section{Physic Object Recostruction}
 
 \subsection{Primary Vertices object definition}
