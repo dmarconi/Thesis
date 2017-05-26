@@ -1,5 +1,5 @@
 
-The following chapter describes the analysis with two same sign \hadtau and two jets performed with 8\tev data. After a brief description of the data and Monte Carlo samples, details follow on the selection used following the strategy suggested in Chapter \ref{sec:VBFSUSY}. The next section motivates and describes the data-driven background estimation technique used for treating QCD background events where two jets get mis-reconstructed as \hadtau and pass the event selection. The validation of the background estimation method is described in the final section.
+The following chapter describes the analysis with two same sign \hadtau and two jets performed with 8\tev data. After a brief description of the data and Monte Carlo samples, details follow on the selection used following the strategy suggested in Chapter \ref{sec:VBFSUSY}. The next section motivates and describes the data-driven background estimation technique used for treating QCD background events where two jets get mis-reconstructed as \hadtau and pass the event selection. Details on the validation method and systematic uncertainties are given in le last two sections.
 
 \section {Data sample and trigger paths}
 
@@ -7,6 +7,32 @@ The analysis is performed using data collected with the CMS detector
 in proton-proton collisions at a centre of mass energy of \CM = 8\tev at the LHC. The data samples correspond to an integrated luminosity of \lumiOld. 
 
 Even though the analysis original concept was relying on the usage of a VBF-based trigger for an online selections on the kinematic properties of the di-jet system resulting from the VBF processes the only unprescaled available alternative is the \texttt{HLT\_\-DoubleMedium\-IsoPFTau35\_\-Trk*\_\-eta2p1\_\-Prong1\_\-v*} trigger. This trigger is the least competitive among all the lepton trigger but is the one with the highest signal acceptance for the \hadtau channel.
+
+------
+The events preselected for this analysis in the τµτhad, τeτµ, and τµτµ final states are required
+to pass the single-muon Level-1 (L1) trigger with a pT threshold of 7 GeV and the single
+muon High Level Trigger (HLT) [15], with a threshold varying from 9 GeV to 15 GeV, depending
+on the instantaneous luminosity. Events in the τeτhad final state are selected using
+the single-electron L1 trigger with a threshold of 8 GeV in the transverse energy, and a
+single-electron HLT trigger with a threshold of 12 GeV at higher instantaneous luminosity.
+At the end of the 2010 data taking period, a combined e+τ trigger was used to maintain
+efficiency as the instantaneous luminosity increased. The trigger has the same L1 requirements
+as the electron trigger, but the HLT requires the presence of an electron of transverse
+energy larger than 12 GeV and a hadronic tau decay with pT larger than 15 GeV, tagged
+with a simplified version of the tau reconstruction algorithm with a less restrictive selection
+than the one used in the offline analysis. The tau reconstruction at HLT is performed
+using PF objects. Jets are reconstructed with an iterative cone algorithm and tracking is
+performed only for jets with ET above 8 GeV. All charged particles are treated as pions,
+e.g. no muon or electron identification was applied. It is required that there is at least one
+track of pT > 1 GeV in a cone of radius 0.2 and no additional charged hadrons (tracks)
+with pT above 1.5 GeV in a cone of ∆R = 0.4. The efficiency of the L1+HLT to trigger on
+τ leptons is measured from data and is found to be ≈ 93% for a τhad identified by the full
+offline algorithm with a reconstructed pT above 15 GeV.
+Offline event selection starts with the requirement of a wel
+
+http://download.springer.com/static/pdf/653/art%253A10.1007%252FJHEP08%25282011%2529117.pdf?originUrl=http%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2FJHEP08%282011%29117&token2=exp=1495810198~acl=%2Fstatic%2Fpdf%2F653%2Fart%25253A10.1007%25252FJHEP08%2525282011%252529117.pdf%3ForiginUrl%3Dhttp%253A%252F%252Flink.springer.com%252Farticle%252F10.1007%252FJHEP08%25282011%2529117*~hmac=d3a839e8124a0e25a7d56a028900b1d84ae37f5774cf28adcc18e24002322230
+
+-----
 
 \section{Signal and background samples}
 
