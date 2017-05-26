@@ -259,13 +259,22 @@ The layout of one quarter of the CMS muon system for the initial luminosity runn
 
 \subsection{The Trigger System}
 
-With a bunch crossing rate of 40 Mhz at design luminosity and the possibility to record the information for $\approx 10^{2}$ crossings-per-sec the CMS experiment needs a trigger system capable of a rejection factor of $10^{3}$.
+With a bunch crossing rate of 40 Mhz at design luminosity and the possibility to record the information for 100 Hz crossings-per-sec the CMS experiment needs a trigger system capable of a high rejection factor.
 
 The CMS trigger and data acquisition system (DAQ) consist of 4 parts: the detector electronics, the hardware-based level 1 trigger, the readout network and and the online event filter system that uses a software-based high level trigger (HLT) \cite{bib:cmstdr:trigger}.
 
-There's a minimum transit time required for the signal to reach the level one trigger hardware based on the service tunnels next to the CMS experiment site, wait for the trigger response to keep or discard the event and send it back to the detectors readout apparatus. The average time needed for a single cycle is 3.2 $\mu$s. During the following time the event information is stored in a buffer waiting for the Level-1 trigger response. The trigger decisional time is less than 1 $\mu$s with a rejection power of around 1 crossing kept every 1000.
+There's a minimum transit time required for the signal to reach the level one trigger hardware based on the service tunnels next to the CMS experiment site, wait for the trigger response to keep or discard the event and send it back to the detectors readout apparatus. The average time needed for a single cycle is 3.2 $\mu$s. During the following time the event information is stored in a buffer waiting for the Level-1 trigger response. The trigger decisional time is less than 1 $\mu$s with a rejection power of around 1 crossing kept every 1000. An overview of the CMS L1 trigger system is shown on \autoref{fig:CMS_trigger}.
 
 The Level-1 decision is based on "trigger primitive" objects such as photons, electrons and muons and jets above thresholds as well as the transverse energy $E_{T}$ and the missing transverse energy \met involving the calorimetry and the muon system and a combination between these detectors. Since the Level-1 trigger is meant to take fast decisions at a high rate (the design value is 100kHz) the trigger objects are reconstructed with reduced resolution and granularity. A safe time margin of a factor of 3 is taken into account in order to cover for possible reconstruction uncertainties as well as beam and detector conditions leading to a rate of 16kHz. The design value of 100 kHz is set by the average time to transfer full detector information through the readout system.
+
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.75\textwidth]{detector/pics/trigger_lvl1.pdf}
+	\end{tabular}
+	\caption{Overview of the CMS L1 trigger system \cite{Khachatryan:2016bia}. Data from the forward (HF) and barrel (HCAL) hadronic calorimeters, and from the electromagnetic calorimeter (ECAL), are processed first regionally (RCT) and then globally (GCT). Energy deposits (hits) from the resistive-plate chambers (RPC), cathode strip chambers (CSC), and drift tubes (DT) are processed either via a pattern comparator or via a system of segment- and track-finders and sent onwards to a global muon trigger (GMT). The information from the GCT and GMT is combined in a global trigger (GT), which makes the final trigger decision. This decision is sent to the tracker (TRK), ECAL, HCAL or muon systems (MU) via the trigger, timing and control (TTC) system. The data acquisition system (DAQ) reads data from various subsystems for offline storage. MIP stands for minimum-ionizing particle.}
+	\label{fig:CMS_trigger}
+\end{figure}
 
 Once an event passes the Level-1 trigger selection the data from the pipelines to the front end readout buffers waiting for a further event reconstruction. After a successful reconstruction the compressed event is sent to one processors of the available farm that runs the High Level Trigger (HLT) software. The main aim of the HLT is to gather all the informations collected in the event in order to trigger over more complex objects such as $\tau$ particles, multiple jets and multiple particle object or event reconstructed quantities in order to further reduce the event rate from 100kHz to 100Hz for mass storage.
 
@@ -282,7 +291,7 @@ The CMS software and computing systems covers a broad range of tasks:
 	\item support of the distributed computing infrastructure and software framework.
 \end{itemize}
 
-The scale of the CMS collaboration in terms of storage capabilities and networking power is orders of magnitude higher that the CERN's infrastructure capabilities. Therefore the CMS computing model is highly distributed, with a primary "Tier-0" centered at CERN with the additional support by "Tier-1" and "Tier-2" computing centers scattered worldwide in several universities and research centers. 
+The scale of the CMS collaboration in terms of storage capabilities and networking power is orders of magnitude higher that the CERN's infrastructure capabilities \cite{CMS:2005aa}. Therefore the CMS computing model is highly distributed, with a primary "Tier-0" centered at CERN with the additional support by "Tier-1" and "Tier-2" computing centers scattered worldwide in several universities and research centers. 
 
 \begin{figure}[tbh!]
 	\centering
