@@ -2,6 +2,7 @@
 The following chapter describes the analysis with two same sign \hadtau and two jets performed with 8\tev data. After a brief description of the data and Monte Carlo samples, details follow on the selection used following the strategy suggested in Chapter \ref{sec:VBFSUSY}. The next section motivates and describes the data-driven background estimation technique used for treating QCD background events where two jets get mis-reconstructed as \hadtau and pass the event selection. Details on the validation method and systematic uncertainties are given in le last two sections.
 
 \section {Data sample and trigger paths}
+\FloatBarrier
 
 The analysis is performed using data collected with the CMS detector
 in proton-proton collisions at a centre of mass energy of \CM = 8\tev at the LHC. The data samples correspond to an integrated luminosity of \lumiOld. 
@@ -24,6 +25,7 @@ The other available trigger strategy was relying on the choice of a double-lepto
 \end{figure}
 
 \section{Signal and background samples}
+\FloatBarrier
 
 %TODO you need to explain more precisely where MC is used: signal prediction, *part* of the bkg prediction, optimization, design of QCD background prediction
 
@@ -55,6 +57,7 @@ For all datasets, a common \texttt{Physics Analysis Toolkit} (\texttt{PAT}) \cit
 
 \section{Event Selection}
 \label{sec:eventselection}
+\FloatBarrier
 
 %TODO one topic per paragraph
 
@@ -86,7 +89,7 @@ For better visualization and understanding all the selection criteria are summar
 	\begin{itemize}
 		\item at least two jets with $p_{T}^{jet}\geq30~$\gev, $|\eta_{jet}|\leq5$ and loose jetID
 		\item $|\Delta\eta(jet,jet)| > 4.2$
-		\item $sign(\eta^{jet 1}\cdot\eta^{jet 2})==-1$
+		\item $sign(\eta^{jet 1}\cdot\eta^{jet 2}) = -1$
 		\item $\mjj>250~$\gev
 	\end{itemize}
 	\item \textbf{Central selection}
@@ -106,6 +109,7 @@ For better visualization and understanding all the selection criteria are summar
 
 
 \section {Data-Driven QCD background determination} \label{sec:bgestimation}
+\FloatBarrier
 
 %TODO improve flow of information, e.g.
 %TODO 1. short introduction to the concept
@@ -137,7 +141,7 @@ Each event with a successfully reconstructed LS di-$\hadtau$ pair falls into a e
  		\begin{tabular}{cc}
  			\includegraphics[width=0.75\textwidth]{PLOTS/diTauHadLSotherPlots/tauisoregions.png}
  		\end{tabular}
- 		\caption{Definitions of the exclusive isolation region depending on the isolation of each of the $\hadtau$ where SR is Signal Region consisting of two tight isolated $\hadtau$, 1T is One Tight isolated Tau region consisting of one tight isolated $\hadtau$ and an additional medium or loose isolated $\hadtau$, AT is Anti Tight isolation region consisting of at least one medium isolated $\hadtau$ and an additional medium or loose isolated $\hadtau$,  AM is Anti Medium isolation region consisting of two loose isolated $\hadtau$}
+ 		\caption{Definitions of the exclusive isolation region depending on the isolation of each of the $\hadtau$ where 2T is Two Tight consists two tight isolated $\hadtau$ (used in the definition of Signal Region), 1T is One Tight isolated Tau region consisting of one tight isolated $\hadtau$ and an additional medium or loose isolated $\hadtau$, AT is Anti Tight isolation region consisting of at least one medium isolated $\hadtau$ and an additional medium or loose isolated $\hadtau$,  AM is Anti Medium isolation region consisting of two loose isolated $\hadtau$}
  		\label{fig:tauisoregions}
  	\end{figure}
  
@@ -245,11 +249,13 @@ Total nonQCD Monte Carlo  &$ 0.067\pm0.0053$    &$ 0.77\pm0.023 $  \\
 
 \section{Validation of the Data Driven method }
 \label{QCD_bg_pred_validation}
+\FloatBarrier
 
 The data-driven background estimation method, as previously shown, offered a possibility to circumvent the scarce statistics of the simulated QCD samples. The results given in \autoref{section:results} can be backed by a simulation based approach which come with two main advantages. First, this it can confirm the assumption made for the data-driven method which states that all control regions and the signal region are indeed dominated by QCD events. Second, this approach can show that VBF efficiency $\epsilon^{QCD}_{VBF}$ defined in \autoref{eq:vbfeff} is independent, within the systematic uncertainty, with respect to a selection over \met or \hadtau transverse momentum. This section will give a brief description and results of this simulation based approach as presented in the PhD thesis of Denis Rathjens \cite{bib:phdthesis:denis}.
 
 \subsection{The simulation-based method}
 \label{dihad:subsec:eventweight}
+\FloatBarrier
 
 A solution to the scarce statistics of the QCD sample in the signal region can be solved by taking all the events with at least four reconstructed jets and properly reweighting each one of them. This weight is a function of the probabilities that two of those four reconstructed jets will fake an \hadtau:
 
@@ -271,7 +277,7 @@ It is not granted that a jet ,with $\pt(\hadtau)> 45\gev$, which gets mis-recons
 
 The last of the corrections is the efficiency of the di-$\tau$ trigger in selecting events with two fake \hadtau , $\epsilon^{\text{trigger}}(\text{ID})$. This efficiency is derived for a single \hadtaufake from a study over W+jets events where one of the jets fakes an \hadtau.
 
-This method, also called "dicing", is applied for QCD samples and W+jet samples, in the case where only one of the jets is reconstructed as \hadtaufake. 	\autoref{fig::CR2_controlplots1} and \autoref{fig::CR2_controlplots2} show a very good agreement between data and Monte Carlo for di-\hadtau and \met distributions in control region 2. All shown QCD distributions are scaled in order to exactly match the difference between the amount of data measured to the amount of non-QCD background events expected in the control region with the exception of the signal region where the scaling is done to the prediction of the ABCD method performed on data \cite{bib:phdthesis:denis}.
+This method, also called "dicing", is applied for QCD samples and W+jet samples, in the case where only one of the jets is reconstructed as \hadtaufake. 	\autoref{fig::CR2_controlplots1} and \autoref{fig::CR2_controlplots2} show a very good agreement between data and Monte Carlo for di-\hadtau and \met distributions in control region 2 for OS channel. All shown QCD distributions are scaled in order to exactly match the difference between the amount of data measured to the amount of non-QCD background events expected in the control region with the exception of the signal region where the scaling is done to the prediction of the ABCD method performed on data \cite{bib:phdthesis:denis}.
 
 
 \begin{figure}[tbh!]
@@ -280,7 +286,7 @@ This method, also called "dicing", is applied for QCD samples and W+jet samples,
 		\includegraphics[width=0.45\textwidth]{PLOTS/diTauHadLSQCDPlots/AllMCdiced/OS_CR2/OS_Central_invertedVBF_2TightIso_CR2/h_ditauinvariantmass_log.pdf}
 		\includegraphics[width=0.45\textwidth]{PLOTS/diTauHadLSQCDPlots/AllMCdiced/OS_CR2/OS_Central_invertedVBF_2TightIso_CR2/h_met_log.pdf} 		
 	\end{tabular}
-	\caption{(Left) di-\hadtau invariant mass and (Right) \met distribution for control region 2.}
+	\caption{(Left) di-\hadtau invariant mass and (Right) \met distribution for control region 2 (OS channel).}
 	\label{fig::CR2_controlplots1}
 \end{figure}
 
@@ -290,12 +296,13 @@ This method, also called "dicing", is applied for QCD samples and W+jet samples,
 		\includegraphics[width=0.45\textwidth]{PLOTS/diTauHadLSQCDPlots/AllMCdiced/OS_CR2/OS_Central_invertedVBF_2TightIso_CR2/h_tau1pt_log.pdf}
 		\includegraphics[width=0.45\textwidth]{PLOTS/diTauHadLSQCDPlots/AllMCdiced/OS_CR2/OS_Central_invertedVBF_2TightIso_CR2/h_jet2pt_log.pdf} 		
 	\end{tabular}
-	\caption{(Left) Leading \hadtau traverse momentum and (Right) next to leading jet transverse momentum for control region 2.}
+	\caption{(Left) Leading \hadtau traverse momentum and (Right) next to leading jet transverse momentum for control region 2 (OS channel).}
 	\label{fig::CR2_controlplots2}
 \end{figure}
 
 \subsection{$\epsilon^{VBF}$-stability with regard to $\tau_{h}$-isolation and $E_{T}^{miss}$-cuts}
 \label{dihad:subsec:stability}
+\FloatBarrier
 
 The efficiency of the VBF selection $\epsilon^{VBF}$ has been defined under the assumptions that is independent, within statistical uncertainty, from a selection over \met and \hadtau isolation.
  
@@ -329,6 +336,7 @@ To summarize, two systematic uncertainties are taken into account in this study:
 
 \section{Signal samples systematic uncertanties}
 \label{sec:systematics}
+\FloatBarrier
 
 The following systematics have been considered while estimating the signal samples contribution in signal region:
 
@@ -396,8 +404,9 @@ The following systematics have been considered while estimating the signal sampl
 
 \section{Results}
 \label{section:results}
+\FloatBarrier
 
-Following the procedure described in \autoref{sec:bgestimation}, $\epsilon^{QCD}_{VBF}$ is calculated for both the di-\hadtau sign channels: opposite-sign (OS) and like-sign (LS). All the uncertainties described in \autoref{sec:bgestimation} and \autoref{dihad:subsec:stability} have been taken into account and have been properly propagated. The weighted average mean coming from the two different measurements gives the following final result:
+Following the procedure described in \autoref{sec:bgestimation}, $\epsilon^{QCD}_{VBF}$ is calculated for both the di-\hadtau sign channels: opposite-sign (OS) and like-sign (LS). All the uncertainties described in \autoref{sec:bgestimation} and \autoref{dihad:subsec:stability} have been taken into account and have been properly propagated. The weighted average mean coming from the three different measurements gives the following final result:
 
 \begin{equation}
 \epsilon^{QCD}_{VBF} = 0.067\pm0.0046(stat.)^{-0.00038(MC)+0.0117(\tau iso)+0.0056(MET)}_{+0.00022(MC)-0.0051(\tau iso)+0.0022(MET)}
@@ -414,8 +423,6 @@ N^{QCD}_{SR} = 7.59\pm0.92(stat.)^{-0.42(MC)+1.34(\tau iso)+0.20(MET)}_{+0.35(MC
 The like-sign signal region consist of events satisfying the criteria shown in section \ref{sec:eventselection} with the di-$\tau$ charge requirement. \autoref{table:SReventcount} shows the contributions in the signal region from all MC samples and data. As described in section \ref{dihad:subsec:eventweight}, the QCD and W+jet  background contribution have been "diced" and accordingly reweighted. 
 
 QCD is the dominant background and its data-driven prediction shown in \autoref{dihad:eq:QCDbgpredCorrectResult} is fully compatible within statistical and systematic uncertainty with the simulation-driven results shown in \autoref{table:SReventcount}. 
-
-\met and \mjj distribution in the signal region (SR) for data and Monte Carlo are shown in \autoref{fig:LS_SR_h_met_dijetinvariantmass_log}.
 
 \begin{table}[ht]
 	\centering{
@@ -441,6 +448,8 @@ QCD is the dominant background and its data-driven prediction shown in \autoref{
 	% is used to refer this table in the text
 \end{table}
 
+\met and \mjj distribution in the signal region (SR) for data and Monte Carlo are shown in \autoref{fig:LS_SR_h_met_dijetinvariantmass_log}.
+
 \begin{figure}[tbh!]
 	\centering
 	\begin{tabular}{cc}
@@ -451,8 +460,6 @@ QCD is the dominant background and its data-driven prediction shown in \autoref{
 	\label{fig:LS_SR_h_met_dijetinvariantmass_log}
 \end{figure} 
 
-A combination of the opposite and like-sign signal yields coming from all the different search channels is shown on \autoref{fig::mjj_combined} as \mjj distribution \cite{Khachatryan:2015kxa}.
-
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.5\textwidth]{analysis/pics/mjj_combined.pdf}
@@ -460,14 +467,37 @@ A combination of the opposite and like-sign signal yields coming from all the di
 	\label{fig::mjj_combined}
 \end{figure}
 
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.75\textwidth]{PLOTS/CMS-SUS-14-005_Table_002.pdf}
+	\end{tabular}
+	\caption{Number of observed events and corresponding background predictions for the OS channels. The uncertainties are statistical, including the ones from the control regions and simulated event samples \cite{Khachatryan:2015kxa}.}
+	\label{table:SReventcount_combinedOS}
+\end{figure} 
+
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.75\textwidth]{PLOTS/CMS-SUS-14-005_Table_003.pdf}
+	\end{tabular}
+	\caption{Number of observed events and corresponding background predictions for the LS channels. The uncertainties are statistical, including the ones from the control regions and simulated event samples \cite{Khachatryan:2015kxa}.}
+	\label{table:SReventcount_combinedLS}
+\end{figure} 
+
+A combination of the opposite and like-sign signal yields coming from all the different search channels is shown on \autoref{fig::mjj_combined} as \mjj distribution \cite{Khachatryan:2015kxa}.
+
+\clearpage
+
 \section{Exclusion limits on chargino/neutralino masses}
+\FloatBarrier
 
 Upper limits at $95\%$ on the cross sections as function of $m_{\tilde{\chi}_{2}^{0}}=m_{\tilde{\chi}_{1}^{\pm}}$ are set for like-sign and opposite channel. The results are presented using models with a fixed mass for the LSP $m_{\tilde{\chi}_{1}^{0}} = 0\gev$, a $\tilde{\chi}_{1}^{\pm}$ mass between $100 \leq m_{\tilde{\chi}_{1}^{\pm}} \leq 300\gev$ and a $\tilde{\tau}$ mass of $m_{\tilde{\tau}} = 0.95 m_{\tilde{\chi}_{1}^{\pm}}$ .
 
 \begin{figure}
 	\begin{center}
-		\includegraphics[angle=0,width=.48\textwidth, height=0.35\textheight]{PLOTS/Limit_VBF_diTau_OS.pdf}
-		\includegraphics[angle=0,width=.48\textwidth, height=0.35\textheight]{PLOTS/Limit_VBF_diTau_LS.pdf}
+		\includegraphics[width=0.49\textwidth]{PLOTS/Limit_VBF_diTau_OS.pdf}
+		\includegraphics[width=0.49\textwidth]{PLOTS/Limit_VBF_diTau_LS.pdf}
 		\caption{Upper limit at the 95\% CL on the cross-section as a function of 
 			$m_{\tilde{\chi}_{2}^{0}}=m_{\tilde{\chi}_{1}^{\pm}}$ for the (a) OS 
 			$\tau_{h}\tau_{h} j_{f} j_{f}$, (b) LS $\tau_{h}\tau_{h} j_{f} j_{f}$
@@ -489,3 +519,19 @@ Upper limits at $95\%$ on the cross sections as function of $m_{\tilde{\chi}_{2}
  \autoref{fig:LimitsOSLS}  shows the upper limit at the 95\% CL on the cross-section for opposite and like-sign channel. A combination of the two channels is shown on \autoref{fig:LimitsCombination}. The upper expected limit on $m_{\tilde{\chi}}$ corresponds to the point where the expected limit crosses the theoretical line and is set for  $\tilde{\chi}_{1}^{\pm} /\tilde{\chi}_{2}^{0} $ with masses of 180\gev. The upper observed limit on $m_{\tilde{\chi}}$ corresponds to the point where the observed limit crosses the theoretical line. In the model considered, $\tilde{\chi}_{1}^{\pm} /\tilde{\chi}_{2}^{0} $ with masses below 140\gev are excluded.
  
 The limit results coming from opposite and like-sign $\tau_{h}\tau_{h} j_{f} j_{f}$ final states are combined with other 6 channels documented on \cite{Khachatryan:2015kxa} for the final upper limit.
+
+%TODO finish to modify WORK IN PROGRESS
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.49\textwidth]{PLOTS/CMS-SUS-14-005_Figure_006-a.pdf}
+		\includegraphics[width=0.49\textwidth]{PLOTS/CMS-SUS-14-005_Figure_006-b.pdf}
+		\caption{Combined 95\% CL upper limits on the cross section as a function of $m(\charginopm) = m(\neutralinotwo)$. The results for the fixed-mass difference assumption, in which $m(\charginopm) - m(\stau) = 5\gev$, for $m(\charginopm) - m(\neutralinoone) = 50\gev$ (compressed-mass spectrum) and $m(\neutralinoone) = 0\gev$ (uncompressed mass spectrum). (right) The corresponding results for the average-mass assumption, in which $m(\stau) = 0.5 m(\charginopm) + 0.5m(\neutralinoone)$.}
+		\label{fig:Limits_combined}
+	\end{center}
+\end{figure}
+
+\autoref{fig:Limits_combined} shows the expected and observed limits as well as the theoretical
+cross section as functions of $m(\charginopm)$ for, respectively, the fixed- and average-mass $m(\stau)$ assumptions. For the fixed-mass assumption with a compressed-mass spectrum ($m(\charginopm) - m(\neutralinoone) = 50\gev$), \neutralinotwo and \charginopm gauginos with masses below 170\gev are excluded, where the previous ATLAS and CMS SUSY searches do not probe. For the average-mass assumption with an uncompressed mass spectrum ($m(\neutralinoone) = 0\gev$ ), the corresponding limit is 300\gev. These mass limits are conservatively determined using the theoretical cross section minus its one standard deviation uncertainty. The m(\charginopm) limits of 320 and 380\gev for $m(\neutralinoone) = 0\gev$ in Refs. [17, 18] can be compared
+to the corresponding result of 300\gev in the present analysis [see the yellow band in Fig. 6
+(right)].
