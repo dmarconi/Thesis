@@ -771,533 +771,183 @@ and the up quark has acquired a mass.
 \section{Signal cross-section limits at 13 TeV}
 \label{sec::xseclim_results}
 
-This section shows the final results for the sensitivity study done on 13\tev simulated samples as function of the invariant mass of the di-jet candidate,  \met and the reconstructed \hadtau \pt. The different benchmark points were choses in term of \charginopm and \neutralinoone masses. As additional constraints the mass of \neutralinotwo is set as equal to \charginopm and mass difference between \stau and \charginopm is set to 5\gev.
+This section shows the final results for the sensitivity study done on 13\tev simulated samples as function of the invariant mass of the di-jet candidate,  \met and the reconstructed \hadtau \pt. The different benchmark points were choses in term of different theoretical assumptions (fixed- and average-\stau-mass) and scenarios (uncompressed mass and compressed mass spectrum) for \charginopm and \neutralinoone masses of 100, 200, 300 400 and 500\gev. Given the trivial assumption that the cross section limit is strictly correlated to the reconstructed \hadtau \pt all the below results are shown considering a cut of 20\gev over this variable.
 
-\subsection*{\charginopm = \neutralinotwo = 100 GeV, \neutralinoone = 0 GeV}
+\todo{explain the table content, the limit plot and the cross section limit comparison}
+
+\subsection*{Uncompressed scenario, fixed-\stau mass}
 
 \FloatBarrier
 
+
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.75\textwidth]{analysis/pics/JetInvMass_vs_MET_xseclim_Chargino400_Stau395_LSP000_taupt20.pdf}
+	\end{tabular}
+	\caption{Cross section limit as function of $m_{jj}$ and \met for m(\charginopm) = m(\neutralinotwo) = 400 GeV,  m(\stau) = 395 GeV, and m(\neutralinoone) = 0 GeV and an offline selection on $\pt(\hadtau) <  20\gev$.}
+	\label{fig::JetInvMass_vs_MET_xseclim_Chargino400_Stau395_LSP000_taupt20}
+\end{figure}
+
 \begin{table}
 	\begin{center}
-
-
+		
 		\begin{tabular}{| c | c | c | c | }
 			\toprule
-			\multicolumn{4}{| c | }{m(\charginopm) = m(\neutralinotwo) = 100\gev; m(\neutralinoone) = 0\gev} \\
+			\multicolumn{4}{| c | }{m(\charginopm) = m(\stau) = 5\gev; m(\neutralinoone) = 0\gev} \\
 			\midrule
-			$\sigma_{lim}^{min}\pm(stat.)\pm(MC syst.)\pm(VBF syst.)$ [pb]  & \pt(\hadtau) [GeV] & \mjj [GeV] & \met [GeV] \\
+			$\sigma_{lim}^{min}\pm(stat.)\pm(MC syst.)\pm(VBF syst.)$ [pb]  & m(\charginopm) = m(\neutralinotwo) [GeV] & \mjj [GeV] & \met [GeV] \\
 			\midrule
-			$0.0327\pm0.0068^{+0.0031 + 0.0011}_{-0.0036-0.0005}$ & $<$ 20 & $<$ 250  & $<$ 130 \\
-			$0.0396\pm0.0062^{+0.0029 + 0.0011}_{-0.0036-0.0005}$ & $<$ 25 & $<$ 500  & $<$ 110 \\
-			$0.0422\pm0.0067^{+0.0032 + 0.0012}_{-0.0038-0.0005}$ & $<$ 30 & $<$ 500  & $<$ 110 \\
-			$0.0428\pm0.0073^{+0.0034 + 0.0013}_{-0.0041-0.0006}$ & $<$ 35 & $<$ 437.5  & $<$ 110 \\
-			$0.0435\pm0.0084^{+0.0039 + 0.0015}_{-0.0046-0.0007}$ & $<$ 40 & $<$ 375  & $<$ 110 \\
-			$0.0438\pm0.0099^{+0.0045 + 0.0018}_{-0.0052-0.0008}$ & $<$ 45 & $<$ 250  & $<$ 120 \\
+			$0.033\pm0.002^{+0.003 + 0.001}_{-0.004-0.001}$ & $<$ 100 & $<$ 250  & $<$ 130 \\ 
+			$0.033\pm0.002^{+0.003 + 0.001}_{-0.004-0.001}$ & $<$ 200 & $<$ 250  & $<$ 130 \\ 
+			$0.034\pm0.002^{+0.003 + 0.001}_{-0.004-0.001}$ & $<$ 300 & $<$ 312.5  & $<$ 120 \\ 
+			$0.030\pm0.001^{+0.002 + 0.001}_{-0.003-0.000}$ & $<$ 400 & $<$ 312.5  & $<$ 130 \\ 
+			$0.030\pm0.001^{+0.003+ 0.001}_{-0.003-0.000}$ & $<$ 500 & $<$ 250  & $<$ 130 \\ 
 			\bottomrule
-		\end{tabular}\caption{Cross section limit minimum reached at the given cuts for $m_{jj}$, \met and an increasing \pt(\hadtau) for \charginopm = \neutralinotwo = 100 GeV, \neutralinoone = 0 GeV benchmark point.}
-		\label{table::xseclimmin_chi100_lsp000}
+		\end{tabular}\caption{Cross section limit minimum reached at the given cuts for $m_{jj}$, \met and an increasing \charginopm = \neutralinotwo for the uncompressed mass spectra and fixed-\stau mass  benchmark point.}
+		\label{table::xseclim_uncompressed_fixedmass}
 	\end{center}
 \end{table}
 
 \begin{figure}[tbh!]
 	\centering
 	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi100_lsp000_taupt20.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi100_lsp000_taupt20_zoom.pdf}
+		\includegraphics[width=0.75\textwidth]{analysis/pics/out_xsecmin_lsp000_stauclose.pdf}
 	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 100 GeV, \neutralinoone = 0 GeV and an offline selection on $\pt(\hadtau) <  20\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi100_lsp000_taupt20}
+	\caption{Comparison between the cross section limit taken from the study over the uncompressed mass spectra and fixed-\stau mass benchmark point and the official CMS cross sections calculated using the \texttt{resummino} code from B. Fuks et al with CTEQ6.6 and MSTW2008nlo90cl PDFs \cite{Fuks:2013vua}.}
+	\label{fig::out_xsecmin_lsp000_stauclose}
 \end{figure}
 
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi100_lsp000_taupt25.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi100_lsp000_taupt25_zoom.pdf}
-	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 100 GeV, \neutralinoone = 0 GeV and an offline selection on $\pt(\hadtau) <  25\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi100_lsp000_taupt25}
-\end{figure}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi100_lsp000_taupt30.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi100_lsp000_taupt30_zoom.pdf}
-	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 100 GeV, \neutralinoone = 0 GeV and an offline selection on $\pt(\hadtau) <  30\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi100_lsp000_taupt30}
-\end{figure}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi100_lsp000_taupt35.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi100_lsp000_taupt35_zoom.pdf}
-	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 100 GeV, \neutralinoone = 0 GeV and an offline selection on $\pt(\hadtau) <  35\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi100_lsp000_taupt35}
-\end{figure}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi100_lsp000_taupt40.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi100_lsp000_taupt40_zoom.pdf}
-	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 100 GeV, \neutralinoone = 0 GeV and an offline selection on $\pt(\hadtau) <  40\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi100_lsp000_taupt40}
-\end{figure}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi100_lsp000_taupt45.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi100_lsp000_taupt45_zoom.pdf}
-	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 100 GeV, \neutralinoone = 0 GeV and an offline selection on $\pt(\hadtau) <  45\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi100_lsp000_taupt45}
-\end{figure}
 
 \FloatBarrier
 
-\subsection*{\charginopm = \neutralinotwo = 200 GeV, \neutralinoone = 0 GeV}
+\subsection*{Compressed scenario, fixed-\stau mass}
 
-\FloatBarrier
+
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.75\textwidth]{analysis/pics/JetInvMass_vs_MET_xseclim_Chargino500_Stau495_LSP050_taupt20.pdf}
+	\end{tabular}
+	\caption{Cross section limit as function of $m_{jj}$ and \met for m(\charginopm) = m(\neutralinotwo) = 500 GeV,  m(\stau) = 495 GeV, and m(\neutralinoone) = 50 GeV and an offline selection on $\pt(\hadtau) <  20\gev$.}
+	\label{fig::JetInvMass_vs_MET_xseclim_Chargino500_Stau495_LSP050_taupt20}
+\end{figure}
 
 \begin{table}
 	\begin{center}
+		
 		\begin{tabular}{| c | c | c | c | }
 			\toprule
-			\multicolumn{4}{| c | }{m(\charginopm) = m(\neutralinotwo) = 200\gev; m(\neutralinoone) = 0\gev} \\
+			\multicolumn{4}{| c | }{m(\charginopm) = m(\stau) = 5\gev; m(\charginopm) - m(\neutralinoone) = 50\gev} \\
 			\midrule
-			$\sigma_{lim}^{min}\pm(stat.)\pm(MC syst.)\pm(VBF syst.)$ [pb]  & \pt(\hadtau) [GeV] & \mjj [GeV] & \met [GeV] \\
+			$\sigma_{lim}^{min}\pm(stat.)\pm(MC syst.)\pm(VBF syst.)$ [pb]  & m(\charginopm) = m(\neutralinotwo) [GeV] & \mjj [GeV] & \met [GeV] \\
 			\midrule
-			$0.0333074\pm0.0069^{+0.0031 + 0.0012}_{-0.0037-0.0005}$ & $<$ 20 & $<$ 250  & $<$ 130 \\
-			$0.0392109\pm0.0086^{+0.0038 + 0.0014}_{-0.0045-0.0007}$ & $<$ 25 & $<$ 312.5  & $<$ 130 \\
-			$0.0417626\pm0.0093^{+0.0041 + 0.0016}_{-0.0049-0.0007}$ & $<$ 30 & $<$ 312.5  & $<$ 130 \\
-			$0.0415464\pm0.0101^{+0.0045 + 0.0017}_{-0.0052-0.0008}$ & $<$ 35 & $<$ 312.5  & $<$ 120 \\
-			$0.0415724\pm0.0080^{+0.0037 + 0.0016}_{-0.0044-0.0007}$ & $<$ 40 & $<$ 312.5  & $<$ 120 \\
-			$0.0428067\pm0.0071^{+0.0033 + 0.0014}_{-0.0041-0.0006}$ & $<$ 45 & $<$ 312.5  & $<$ 120 \\
+			$0.033\pm0.002^{+0.003 + 0.001}_{-0.004-0.001}$ & $<$ 100 & $<$ 250  & $<$ 130 \\ 
+			$0.033\pm0.002^{+0.003 + 0.001}_{-0.004-0.001}$ & $<$ 200 & $<$ 312.5  & $<$ 120 \\ 
+			$0.033\pm0.001^{+0.002 + 0.001}_{-0.003-0.000}$ & $<$ 300 & $<$ 312.5  & $<$ 130 \\ 
+			$0.031\pm0.001^{+0.002 + 0.001}_{-0.003-0.001}$ & $<$ 400 & $<$ 250  & $<$ 130 \\ 
+			$0.030\pm0.001^{+0.002 + 0.001}_{-0.003-0.000}$ & $<$ 500 & $<$ 312.5  & $<$ 130 \\ 
 			\bottomrule
-		\end{tabular}\caption{Cross section limit minimum reached at the given cuts for $m_{jj}$, \met and an increasing \pt(\hadtau) for \charginopm = \neutralinotwo = 200 GeV, \neutralinoone = 0 GeV benchmark point.}
-		\label{table::xseclimmin_chi200_lsp000}
+		\end{tabular}\caption{Cross section limit minimum reached at the given cuts for $m_{jj}$, \met and an increasing \charginopm = \neutralinotwo for the compressed mass spectra and fixed-\stau mass  benchmark point.}
+		\label{table::xseclim_compressed_fixedmass}
 	\end{center}
 \end{table}
 
 \begin{figure}[tbh!]
 	\centering
 	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi200_lsp000_taupt20.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi200_lsp000_taupt20_zoom.pdf}
+		\includegraphics[width=0.75\textwidth]{analysis/pics/out_xsecmin_lsp000_stauclose.pdf}
 	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 200 GeV, \neutralinoone = 0 GeV and an offline selection on $\pt(\hadtau) <  20\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi200_lsp000_taupt20}
+	\caption{Comparison between the cross section limit taken from the study over the compressed mass spectra and fixed-\stau mass benchmark point and the official CMS cross sections calculated using the \texttt{resummino} code from B. Fuks et al with CTEQ6.6 and MSTW2008nlo90cl PDFs \cite{Fuks:2013vua}.}
+	\label{fig::out_xsecmin_lsp050_stauclose}
 \end{figure}
 
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi200_lsp000_taupt25.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi200_lsp000_taupt25_zoom.pdf}
-	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 200 GeV, \neutralinoone = 0 GeV and an offline selection on $\pt(\hadtau) <  25\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi200_lsp000_taupt25}
-\end{figure}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi200_lsp000_taupt30.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi200_lsp000_taupt30_zoom.pdf}
-	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 200 GeV, \neutralinoone = 0 GeV and an offline selection on $\pt(\hadtau) <  30\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi200_lsp000_taupt30}
-\end{figure}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi200_lsp000_taupt35.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi200_lsp000_taupt35_zoom.pdf}
-	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 200 GeV, \neutralinoone = 0 GeV and an offline selection on $\pt(\hadtau) <  35\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi200_lsp000_taupt35}
-\end{figure}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi200_lsp000_taupt40.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi200_lsp000_taupt40_zoom.pdf}
-	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 200 GeV, \neutralinoone = 0 GeV and an offline selection on $\pt(\hadtau) <  40\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi200_lsp000_taupt40}
-\end{figure}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi200_lsp000_taupt45.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi200_lsp000_taupt45_zoom.pdf}
-	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 200 GeV, \neutralinoone = 0 GeV and an offline selection on $\pt(\hadtau) <  45\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi200_lsp000_taupt45}
-\end{figure}
 
 \FloatBarrier
 
-\subsection*{\charginopm = \neutralinotwo = 300 GeV, \neutralinoone = 0 GeV}
+\subsection*{Uncompressed scenario, average-\stau mass}
 
-\FloatBarrier
+
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.75\textwidth]{analysis/pics/JetInvMass_vs_MET_xseclim_Chargino500_Stau250_LSP000_taupt20.pdf}
+	\end{tabular}
+	\caption{Cross section limit as function of $m_{jj}$ and \met for m(\charginopm) = m(\neutralinotwo) = 500 GeV,  m(\stau) = 250 GeV, and m(\neutralinoone) = 0 GeV and an offline selection on $\pt(\hadtau) <  20\gev$.}
+	\label{fig::JetInvMass_vs_MET_xseclim_Chargino500_Stau250_LSP000_taupt20}
+\end{figure}
 
 \begin{table}
 	\begin{center}
-
-
+		
 		\begin{tabular}{| c | c | c | c | }
 			\toprule
-			\multicolumn{4}{| c | }{m(\charginopm) = m(\neutralinotwo) = 300\gev; m(\neutralinoone) = 0\gev} \\
+			\multicolumn{4}{| c | }{m(\stau) = 0.5 m(\neutralinoone) + 0.5 m(\charginopm) ; m(\neutralinoone) = 0\gev} \\
 			\midrule
-			$\sigma_{lim}^{min}\pm(stat.)\pm(MC syst.)\pm(VBF syst.)$ [pb]  & \pt(\hadtau) [GeV] & \mjj [GeV] & \met [GeV] \\
+			$\sigma_{lim}^{min}\pm(stat.)\pm(MC syst.)\pm(VBF syst.)$ [pb]  & m(\charginopm) = m(\neutralinotwo) [GeV] & \mjj [GeV] & \met [GeV] \\
 			\midrule
-			$0.0346\pm0.0071^{+0.0032 + 0.0012}_{-0.0038-0.0005}$ & $<$ 20 & $<$ 312.5  & $<$ 120 \\
-			$0.0412\pm0.0089^{+0.0040 + 0.0016}_{-0.0047-0.0007}$ & $<$ 25 & $<$ 312.5  & $<$ 130 \\
-			$0.0429\pm0.0069^{+0.0033 + 0.0013}_{-0.0039-0.0006}$ & $<$ 30 & $<$ 437.5  & $<$ 120 \\
-			$0.0433\pm0.0055^{+0.0027 + 0.0011}_{-0.0034-0.0005}$ & $<$ 35 & $<$ 437.5  & $<$ 120 \\
-			$0.0441\pm0.0086^{+0.0039 + 0.0016}_{-0.0047-0.0007}$ & $<$ 40 & $<$ 312.5  & $<$ 120 \\
-			$0.0451\pm0.0075^{+0.0036 + 0.0015}_{-0.0043-0.0006}$ & $<$ 45 & $<$ 312.5  & $<$ 120 \\
-
+				$0.083\pm0.005^{+0.007 + 0.003}_{-0.009-0.001}$ & $<$ 100 & $<$ 312.5  & $<$ 120 \\ 
+				$0.036\pm0.002^{+0.003 + 0.001}_{-0.004-0.001}$ & $<$ 200 & $<$ 375  & $<$ 110 \\ 
+				$0.024\pm0.001^{+0.002 + 0.001}_{-0.003-0.000}$ & $<$ 300 & $<$ 250  & $<$ 130 \\ 
+				$0.019\pm0.001^{+0.002 + 0.001}_{-0.002-0.000}$ & $<$ 400 & $<$ 250  & $<$ 130 \\ 
+				$0.017\pm0.001^{+0.002 + 0.001}_{-0.002-0.000}$ & $<$ 500 & $<$ 250  & $<$ 130 \\ 
 			\bottomrule
-		\end{tabular}\caption{Cross section limit minimum reached at the given cuts for $m_{jj}$, \met and an increasing \pt(\hadtau) for \charginopm = \neutralinotwo = 300 GeV, \neutralinoone = 0 GeV benchmark point.}
-		\label{table::xseclimmin_chi300_lsp000}
+		\end{tabular}\caption{Cross section limit minimum reached at the given cuts for $m_{jj}$, \met and an increasing \charginopm = \neutralinotwo for the uncompressed mass spectra and average-\stau mass benchmark point.}
+		\label{table::xseclim_uncompressed_averagemass}
 	\end{center}
 \end{table}
 
 \begin{figure}[tbh!]
 	\centering
 	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi300_lsp000_taupt20.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi300_lsp000_taupt20_zoom.pdf}
+		\includegraphics[width=0.75\textwidth]{analysis/pics/out_xsecmin_lsp000_staufar.pdf}
 	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 300 GeV, \neutralinoone = 0 GeV and an offline selection on $\pt(\hadtau) <  20\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi300_lsp000_taupt20}
-\end{figure}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi300_lsp000_taupt25.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi300_lsp000_taupt25_zoom.pdf}
-	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 300 GeV, \neutralinoone = 0 GeV and an offline selection on $\pt(\hadtau) <  25\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi300_lsp000_taupt25}
-\end{figure}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi300_lsp000_taupt30.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi300_lsp000_taupt30_zoom.pdf}
-	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 300 GeV, \neutralinoone = 0 GeV and an offline selection on $\pt(\hadtau) <  30\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi300_lsp000_taupt30}
-\end{figure}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi300_lsp000_taupt35.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi300_lsp000_taupt35_zoom.pdf}
-	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 300 GeV, \neutralinoone = 0 GeV and an offline selection on $\pt(\hadtau) <  35\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi300_lsp000_taupt35}
-\end{figure}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi300_lsp000_taupt40.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi300_lsp000_taupt40_zoom.pdf}
-	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 300 GeV, \neutralinoone = 0 GeV and an offline selection on $\pt(\hadtau) <  40\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi300_lsp000_taupt40}
-\end{figure}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi300_lsp000_taupt45.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi300_lsp000_taupt45_zoom.pdf}
-	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 300 GeV, \neutralinoone = 0 GeV and an offline selection on $\pt(\hadtau) <  45\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi300_lsp000_taupt45}
+	\caption{Comparison between the cross section limit taken from the study over the uncompressed mass spectra and average-\stau mass benchmark point and the official CMS cross sections calculated using the \texttt{resummino} code from B. Fuks et al with CTEQ6.6 and MSTW2008nlo90cl PDFs \cite{Fuks:2013vua}.}
+	\label{fig::out_xsecmin_lsp000_staufar}
 \end{figure}
 
 \FloatBarrier
 
-\subsection*{\charginopm = \neutralinotwo = 100 GeV, \neutralinoone = 50 GeV}
+\subsection*{Compressed scenario, average-\stau mass}
 
-\FloatBarrier
+
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.75\textwidth]{analysis/pics/JetInvMass_vs_MET_xseclim_Chargino500_Stau475_LSP450_taupt20.pdf}
+	\end{tabular}
+	\caption{Cross section limit as function of $m_{jj}$ and \met for m(\charginopm) = m(\neutralinotwo) = 500 GeV,  m(\stau) = 475 GeV, and m(\neutralinoone) = 450 GeV and an offline selection on $\pt(\hadtau) <  20\gev$.}
+	\label{fig::JetInvMass_vs_MET_xseclim_Chargino500_Stau475_LSP450_taupt20}
+\end{figure}
 
 \begin{table}
 	\begin{center}
-
-
+		
 		\begin{tabular}{| c | c | c | c | }
 			\toprule
-			\multicolumn{4}{| c | }{m(\charginopm) = m(\neutralinotwo) = 100\gev; m(\neutralinoone) = 50\gev} \\
+			\multicolumn{4}{| c | }{m(\stau) = 0.5 m(\neutralinoone) + 0.5 m(\charginopm) ; m(\charginopm) - m(\neutralinoone) = 50\gev} \\
 			\midrule
-			$\sigma_{lim}^{min}\pm(stat.)\pm(MC syst.)\pm(VBF syst.)$ [pb]  & \pt(\hadtau) [GeV] & \mjj [GeV] & \met [GeV] \\
+			$\sigma_{lim}^{min}\pm(stat.)\pm(MC syst.)\pm(VBF syst.)$ [pb]  & m(\charginopm) = m(\neutralinotwo) [GeV] & \mjj [GeV] & \met [GeV] \\
 			\midrule
-			$0.033445\pm0.0069^{+0.00319223 + 0.0012}_{-0.0037-0.0005}$ & $<$ 20 & $<$ 250  & $<$ 130 \\
-			$0.039929\pm0.0063^{+0.00300536 + 0.0012}_{-0.0036-0.0005}$ & $<$ 25 & $<$ 500  & $<$ 110 \\
-			$0.041961\pm0.0091^{+0.00411594 + 0.0016}_{-0.0048-0.0007}$ & $<$ 30 & $<$ 375  & $<$ 120 \\
-			$0.042001\pm0.0075^{+0.00350443 + 0.0014}_{-0.0042-0.0006}$ & $<$ 35 & $<$ 375  & $<$ 120 \\
-			$0.041990\pm0.0081^{+0.00378484 + 0.0015}_{-0.0045-0.0007}$ & $<$ 40 & $<$ 375  & $<$ 110 \\
-			$0.042680\pm0.0069^{+0.00330145 + 0.0013}_{-0.0039-0.0006}$ & $<$ 45 & $<$ 375  & $<$ 110 \\
-
+				$0.153\pm0.011^{+0.012 + 0.005}_{-0.014-0.002}$ & $<$ 100 & $<$ 500  & $<$ 100 \\ 
+				$0.148\pm0.011^{+0.014 + 0.005}_{-0.017-0.002}$ & $<$ 200 & $<$ 375  & $<$ 110 \\ 
+				$0.157\pm0.011^{+0.013 + 0.005}_{-0.015-0.002}$ & $<$ 300 & $<$ 562.5  & $<$ 90 \\ 
+				$0.150\pm0.011^{+0.014 + 0.005}_{-0.016-0.002}$ & $<$ 400 & $<$ 312.5  & $<$ 120 \\ 
+				$0.115\pm0.007^{+0.010 + 0.004}_{-0.012-0.002}$ & $<$ 500 & $<$ 750  & $<$ 60 \\
 			\bottomrule
-		\end{tabular}\caption{Cross section limit minimum reached at the given cuts for $m_{jj}$, \met and an increasing \pt(\hadtau) for \charginopm = \neutralinotwo = 100 GeV, \neutralinoone = 50 GeV benchmark point.}
-		\label{table::xseclimmin_chi100_lsp050}
+		\end{tabular}\caption{Cross section limit minimum reached at the given cuts for $m_{jj}$, \met and an increasing \charginopm = \neutralinotwo for the compressed mass spectra and average-\stau mass benchmark point.}
+		\label{table::xseclim_compressed_averagemass}
 	\end{center}
 \end{table}
 
 \begin{figure}[tbh!]
 	\centering
 	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi100_lsp050_taupt20.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi100_lsp050_taupt20_zoom.pdf}
+		\includegraphics[width=0.75\textwidth]{analysis/pics/out_xsecmin_lspcomp_stauclose.pdf}
 	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 100 GeV, \neutralinoone = 50 GeV and an offline selection on $\pt(\hadtau) <  20\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi100_lsp050_taupt20}
-\end{figure}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi100_lsp050_taupt25.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi100_lsp050_taupt25_zoom.pdf}
-	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 100 GeV, \neutralinoone = 50 GeV and an offline selection on $\pt(\hadtau) <  25\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi100_lsp050_taupt25}
-\end{figure}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi100_lsp050_taupt30.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi100_lsp050_taupt30_zoom.pdf}
-	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 100 GeV, \neutralinoone = 50 GeV and an offline selection on $\pt(\hadtau) <  30\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi100_lsp050_taupt30}
-\end{figure}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi100_lsp050_taupt35.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi100_lsp050_taupt35_zoom.pdf}
-	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 100 GeV, \neutralinoone = 50 GeV and an offline selection on $\pt(\hadtau) <  35\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi100_lsp050_taupt35}
-\end{figure}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi100_lsp050_taupt40.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi100_lsp050_taupt40_zoom.pdf}
-	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 100 GeV, \neutralinoone = 50 GeV and an offline selection on $\pt(\hadtau) <  40\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi100_lsp050_taupt40}
-\end{figure}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi100_lsp050_taupt45.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi100_lsp050_taupt45_zoom.pdf}
-	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 100 GeV, \neutralinoone = 50 GeV and an offline selection on $\pt(\hadtau) <  45\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi100_lsp050_taupt45}
+	\caption{Comparison between the cross section limit taken from the study over the compressed mass spectra and average-\stau mass benchmark point and the official CMS cross sections calculated using the \texttt{resummino} code from B. Fuks et al with CTEQ6.6 and MSTW2008nlo90cl PDFs \cite{Fuks:2013vua}.}
+	\label{fig::out_xsecmin_lspcomp_stauclose}
 \end{figure}
 
 \FloatBarrier
 
-\subsection*{\charginopm = \neutralinotwo = 200 GeV, \neutralinoone = 50 GeV}
-
-\FloatBarrier
-
-\begin{table}
-	\begin{center}
-
-
-		\begin{tabular}{| c | c | c | c | }
-			\toprule
-			\multicolumn{4}{| c | }{m(\charginopm) = m(\neutralinotwo) = 200\gev; m(\neutralinoone) = 50\gev} \\
-			\midrule
-			$\sigma_{lim}^{min}\pm(stat.)\pm(MC syst.)\pm(VBF syst.)$ [pb]  & \pt(\hadtau) [GeV] & \mjj [GeV] & \met [GeV] \\
-			\midrule
-			$0.0336\pm0.0068^{+0.0031 + 0.0012}_{-0.0037-0.0005}$ & $<$ 20 & $<$ 312.5  & $<$ 120 \\
-			$0.0394\pm0.0062^{+0.0029 + 0.0011}_{-0.0036-0.0005}$ & $<$ 25 & $<$ 500  & $<$ 110 \\
-			$0.0415\pm0.0067^{+0.0031 + 0.0012}_{-0.0038-0.0005}$ & $<$ 30 & $<$ 437.5  & $<$ 120 \\
-			$0.0421\pm0.0054^{+0.0027 + 0.0011}_{-0.0033-0.0005}$ & $<$ 35 & $<$ 437.5  & $<$ 120 \\
-			$0.0428\pm0.0083^{+0.0038 + 0.0015}_{-0.0046-0.0007}$ & $<$ 40 & $<$ 312.5  & $<$ 120 \\
-			$0.0437\pm0.0072^{+0.0034 + 0.0014}_{-0.0042-0.0006}$ & $<$ 45 & $<$ 312.5  & $<$ 120 \\
-
-			\bottomrule
-		\end{tabular}\caption{Cross section limit minimum reached at the given cuts for $m_{jj}$, \met and an increasing \pt(\hadtau) for \charginopm = \neutralinotwo = 200 GeV, \neutralinoone = 50 GeV benchmark point.}
-		\label{table::xseclimmin_chi200_lsp050}
-	\end{center}
-\end{table}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi200_lsp050_taupt20.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi200_lsp050_taupt20_zoom.pdf}
-	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 200 GeV, \neutralinoone = 50 GeV and an offline selection on $\pt(\hadtau) <  20\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi200_lsp050_taupt20}
-\end{figure}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi200_lsp050_taupt25.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi200_lsp050_taupt25_zoom.pdf}
-	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 200 GeV, \neutralinoone = 50 GeV and an offline selection on $\pt(\hadtau) <  25\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi200_lsp050_taupt25}
-\end{figure}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi200_lsp050_taupt30.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi200_lsp050_taupt30_zoom.pdf}
-	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 200 GeV, \neutralinoone = 50 GeV and an offline selection on $\pt(\hadtau) <  30\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi200_lsp050_taupt30}
-\end{figure}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi200_lsp050_taupt35.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi200_lsp050_taupt35_zoom.pdf}
-	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 200 GeV, \neutralinoone = 50 GeV and an offline selection on $\pt(\hadtau) <  35\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi200_lsp050_taupt35}
-\end{figure}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi200_lsp050_taupt40.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi200_lsp050_taupt40_zoom.pdf}
-	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 200 GeV, \neutralinoone = 50 GeV and an offline selection on $\pt(\hadtau) <  40\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi200_lsp050_taupt40}
-\end{figure}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi200_lsp050_taupt45.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi200_lsp050_taupt45_zoom.pdf}
-	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 200 GeV, \neutralinoone = 50 GeV and an offline selection on $\pt(\hadtau) <  45\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi200_lsp050_taupt45}
-\end{figure}
-
-\FloatBarrier
-
-\subsection*{\charginopm = \neutralinotwo = 300 GeV, \neutralinoone = 50 GeV}
-
-\FloatBarrier
-
-\begin{table}
-	\begin{center}
-
-
-		\begin{tabular}{| c | c | c | c | }
-			\toprule
-			\multicolumn{4}{| c | }{m(\charginopm) = m(\neutralinotwo) = 300\gev; m(\neutralinoone) = 50\gev} \\
-			\midrule
-			$\sigma_{lim}^{min}\pm(stat.)\pm(MC syst.)\pm(VBF syst.)$ [pb]  & \pt(\hadtau) [GeV] & \mjj [GeV] & \met [GeV] \\
-			\midrule
-			$0.0339\pm0.0051^{+0.0025 + 0.0009}_{-0.0031-0.0004}$ & $<$ 20 & $<$ 312.5  & $<$ 130 \\
-			$0.0395\pm0.0086^{+0.0039 + 0.0015}_{-0.0045-0.0007}$ & $<$ 25 & $<$ 312.5  & $<$ 130 \\
-			$0.0423\pm0.0089^{+0.0041 + 0.0016}_{-0.0048-0.0007}$ & $<$ 30 & $<$ 437.5  & $<$ 110 \\
-			$0.0419\pm0.0072^{+0.0034 + 0.0014}_{-0.0041-0.0006}$ & $<$ 35 & $<$ 437.5  & $<$ 110 \\
-			$0.0426\pm0.0061^{+0.0029 + 0.0012}_{-0.0036-0.0005}$ & $<$ 40 & $<$ 437.5  & $<$ 110 \\
-			$0.0438\pm0.0071^{+0.0034 + 0.0014}_{-0.0041-0.0006}$ & $<$ 45 & $<$ 375  & $<$ 110 \\
-			\bottomrule
-		\end{tabular}\caption{Cross section limit minimum reached at the given cuts for $m_{jj}$, \met and an increasing \pt(\hadtau) for \charginopm = \neutralinotwo = 300 GeV, \neutralinoone = 50 GeV benchmark point.}
-		\label{table::xseclimmin_chi300_lsp050}
-	\end{center}
-\end{table}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi300_lsp050_taupt20.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi300_lsp050_taupt20_zoom.pdf}
-	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 300 GeV, \neutralinoone = 50 GeV and an offline selection on $\pt(\hadtau) <  20\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi300_lsp050_taupt20}
-\end{figure}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi300_lsp050_taupt25.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi300_lsp050_taupt25_zoom.pdf}
-	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 300 GeV, \neutralinoone = 50 GeV and an offline selection on $\pt(\hadtau) <  25\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi300_lsp050_taupt25}
-\end{figure}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi300_lsp050_taupt30.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi300_lsp050_taupt30_zoom.pdf}
-	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 300 GeV, \neutralinoone = 50 GeV and an offline selection on $\pt(\hadtau) <  30\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi300_lsp050_taupt30}
-\end{figure}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi300_lsp050_taupt35.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi300_lsp050_taupt35_zoom.pdf}
-	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 300 GeV, \neutralinoone = 50 GeV and an offline selection on $\pt(\hadtau) <  35\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi300_lsp050_taupt35}
-\end{figure}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi300_lsp050_taupt40.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi300_lsp050_taupt40_zoom.pdf}
-	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 300 GeV, \neutralinoone = 50 GeV and an offline selection on $\pt(\hadtau) <  40\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi300_lsp050_taupt40}
-\end{figure}
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi300_lsp050_taupt45.pdf}
-		\includegraphics[width=0.45\textwidth]{analysis/pics/JetInvMass_vs_MET_xsec_chi300_lsp050_taupt45_zoom.pdf}
-	\end{tabular}
-	\caption{(Left) Cross section limit as function of $m_{jj}$ and \met for \charginopm = \neutralinotwo = 300 GeV, \neutralinoone = 50 GeV and an offline selection on $\pt(\hadtau) <  45\gev$. (Right) Zooming into the minimum cross section limit area for the same benchmark point.}
-	\label{fig::JetInvMass_vs_MET_xsec_chi300_lsp050_taupt45}
-\end{figure}
-
-\FloatBarrier
