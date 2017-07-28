@@ -4,7 +4,7 @@ After two years of maintenance and upgrades, LHC started the second run phase, a
 
 \section{Signal and background samples}
 
-The signal event samples are generated with the \texttt{MadGraph v5.2.1} program \cite{Alwall:2011uj}, considering pair production of gauginos with two associated partons. The signal events are generated requiring a pseudorapidity gap $|\deltaeta| > 4.2$ between the two partons, with $\pt > 30\gev$ for each parton. The signal samples have been generated following all the considerations made for 8\tev analysis for \charginopm = \neutralinotwo masses of 100, 200, 300 and 500\gev. Two are the assumptions made to fix he \stau mass: the fixed-mass and average-mass assumptions. For each of those assumption two different scenarios has been taken into account: the uncompressed mass spectrum and the compressed mass spectrum scenarios.
+The signal event samples are generated with the \texttt{MadGraph v5.2.1} program \cite{Alwall:2011uj}, considering pair production of gauginos with two associated partons. The signal events are generated requiring a pseudorapidity gap $|\deltaeta| > 4.2$ between the two partons, with $\pt > 30\gev$ for each parton. The signal samples have been generated following all the considerations made for 8\tev analysis for \charginopm = \neutralinotwo masses of 100, 200, 300 and 500\gev. Two are the assumptions made to fix the \stau mass: the fixed-mass and average-mass assumptions. For each of those assumption two different scenarios has been taken into account: the uncompressed mass spectrum and the compressed mass spectrum scenarios.
 
 The Monte Carlo background events used in this study refer to the production run labeled as \texttt{RunIISpring15MiniAODv2} and incorporate the \texttt{CTEQ10} \cite{Dulat:2013hea} parton distribution functions (PDF).The \texttt{POWHEG} and \texttt{MadGraph} generators are interfaced with the \texttt{PYTHIA v8.5.12} \cite{Sjostrand:2006za} program, which is used in the matching between the matrix elements, the parton shower, and the hadronization processes. 
 
@@ -12,9 +12,9 @@ All the Monte Carlo samples are stored in a new format called \texttt{miniAOD} \
 
 \section{Object reconstruction}
 
-The upgrade plan commissioned for the CMS detectior translates also into an updated version of the physical object definition used for this study with respect to the one used in the 8\tev analysis.
+The upgrade plan commissioned for the CMS detector translates also into an updated version of the physical object definition used for this study with respect to the one used in the 8\tev analysis.
 
-The \hadtau object reconstruction went through a major update with the introduction of new isolation and decay mode discriminators and electron veto \cite{bib:TauID_13tev}. Its reconstruction has been commissioned for $\pt > 20$\gev in all $\eta$ ranges. Using the specifications suggested by the Tau POG, an increase of the overall TauID efficiency of about 10\% for loose isolated \hadtau with respect to the 8\tev specifications is achieved, with the recontructon efficiency going up to 71\% for $Z \longrightarrow\tau\tau$ events\cite{bib:TauID_13tev}. A detailed list of the \hadtau object selection can be found in Table \ref{table:tauobjdefinition_13TeV}. 
+The \hadtau object reconstruction went through a major update with the introduction of new isolation and decay mode discriminators and electron veto \cite{bib:TauID_13tev}. Its reconstruction has been commissioned for $\pt > 20$\gev in all $\eta$ ranges. Using the specifications suggested by the Tau POG, an increase of the overall TauID efficiency of about 10\% for loose isolated \hadtau with respect to the 8\tev specifications is achieved, with the reconstruction efficiency going up to 71\% for $Z \longrightarrow\tau\tau$ events\cite{bib:TauID_13tev}. A detailed list of the \hadtau object selection can be found in Table \ref{table:tauobjdefinition_13TeV}. 
 
 The Jet object definition remained unchanged with respect to the one used in the 8\tev analysis.  
 
@@ -24,7 +24,7 @@ The b-tag object reconstruction has an updated discriminator as suggested by the
 
 \section{Cross section limit studies}
 
-The aim of this study is to optimize the event cuts is order to exclude signal at the lowest cross section measurable. A cross section limit is made by setting the so called significance $\alpha$ to:
+The aim of this study is to optimize the event cuts is order to exclude signal at the lowest cross section measurable. A cross section limit is made by requiring the so called significance $\alpha$ to:
 
 \begin{equation}
 \alpha = 2
@@ -80,7 +80,6 @@ For better visualization and understanding, all the selection criteria are summa
 	\item \textbf{Central selection}
 	\begin{itemize}
 		\item two one-prong hadronically decaying $\tau$ with $\pt = 20,25,30,35,40,45\gev$
-		\item $0 < \met < 240\gev$
 		\item at least two jets with $p_{T}^{jet}\geq30~$\gev, $|\eta_{jet}|\leq5$ and loose jetID
 		\item $\Delta R(jet,\tau)\geq0.3$
 		\item b-tag veto
@@ -88,7 +87,6 @@ For better visualization and understanding, all the selection criteria are summa
 	\item \textbf{VBF selection}
 	\begin{itemize}
 		\item $\text{sign}(\eta^{jet 1}\cdot\eta^{jet 2})=-1$
-		\item $ 0 < \mjj < 2500\gev$
 	\end{itemize}
 \end{itemize}
 
@@ -144,11 +142,7 @@ A representation of the regions and the conversion factor used in this two-fold 
 
 \subsection{Systematic and statistical uncertainties}
 
-As in the 8\tev analysis, two different sources of systematics have been taken into account for this study. 
-
-The first source is the uncertainty originating from the simulated samples. Following the strategy used in the previous analysis this systematic uncertainty is estimated from the variation on the cross-section limit result after considering a $\pm 50\%$ variation of the Monte Carlo statistics.
-
-The second source of the uncertainty is the instability on the VBF efficiency $\epsilon^{QCD}_{VBF}$ over different \hadtau isolation regions. Again, this uncertainty is calculated by taking into account the maximal variation of the VBF conversion factor in the previously defined control regions, CR2 and CR3.
+The uncertainty consider for this study originates from the simulated samples. Following the strategy used in the previous analysis this systematic uncertainty is estimated from the variation on the cross-section limit result after considering a $\pm 50\%$ variation of the Monte Carlo statistics.
 
 \section{Results}
 
@@ -251,7 +245,7 @@ Another important result from this cross section limit study features the most i
 \end{figure}
 
 
-To conclude the list of results shown in this chapter an additional study over this last signal benchmark point has been performed. The aim of this apply a more realistic event selection too see how strong is its impact over the cross section limit. In order to achieve that four different event selection scenarios has been considered. Those scenarios are meant to apply on top of the original event selection, described in \autoref{subsec::event_sel_13tev}, a stronger cut over the most important variable of the analysis. The first scenario simply adds a cut over the \pt of the \hadtau of 50 \gev. The second scenario adds a cut over \met of 200\gev. The third scenario combines the requirement of $\met > 150\gev$  with some cuts over the most important variables of the VBF part of the event such as $\mjj > 700\gev$, the angular distance between the two VBF jets candidates $|\Delta\eta(jet,jet)| > 3.6$ and their \pt set to 90\gev. The fourth and final scenario is similar to the third but requires a cut on  $\mjj > 1000\gev$ and removed any requirement over \met. For a better visualization those different scenarios are summarised the following way:
+To conclude the list of results shown in this chapter an additional study over this last signal benchmark point has been performed. The aim of this apply a more realistic event selection too see how strong is its impact over the cross section limit. In order to achieve that four different event selection scenarios has been considered. Those scenarios are meant to apply on top of the original event selection, described in \autoref{subsec::event_sel_13tev}, a stronger cut over the most important variable of the analysis. The first scenario simply adds a cut over the \pt of the \hadtau of 50 \gev. The second scenario adds a cut over \met of 200\gev. The third scenario combines the requirement of $\met > 150\gev$  with some cuts over the most important variables of the VBF part of the event such as $\mjj > 700\gev$, the angular distance between the two VBF jets candidates $|\Delta\eta(jet,jet)| > 3.6$ and their \pt set to 90\gev. The fourth and final scenario is similar to the third but requires a cut on  $\mjj > 1000\gev$ and removed any requirement over \met. For a better visualization those different scenarios are summarized the following way:
 
 \begin{enumerate}
 	\item \textbf{Cut scenario 1}: 
@@ -291,5 +285,5 @@ Comparison between multiple cross section limits coming from the different cut s
 	\label{fig:xsec_confront_cut_var13tev}
 \end{figure}
 
-The correlation between signal efficiency and the selection over \pt(\hadtau) is once again confirmed by the drop on the cross section limit down to a chargino mass of 230\gev. The introduction of strong cut over \mjj combined with a requrement over \met (cut scenario 3) greatly impacts the limit setting by scaling down the original one down to a chargino mass of 270\gev. Similar performance in shown instead in the case where the cuts over those important variables get dissociated as shown for cut set number 2 and 4 with a cross section limit between a chargino mass of 280 and 300\gev.
+The correlation between signal efficiency and the selection over \pt(\hadtau) is once again confirmed by the drop on the cross section limit down to a chargino mass of 230\gev. The introduction of strong cut over \mjj combined with a requirement over \met (cut scenario 3) greatly impacts the limit setting by scaling down the original one down to a chargino mass of 270\gev. Similar performance in shown instead in the case where the cuts over those important variables get dissociated as shown for cut set number 2 and 4 with a cross section limit between a chargino mass of 280 and 300\gev.
 
