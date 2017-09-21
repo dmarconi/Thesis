@@ -24,6 +24,13 @@ The final aim of the CMS detector is the study of collision final states and sev
 
 The raw data collected by the CMS experiment is the input of a detailed offline reconstructions of the collision final states. CMS developed over the years an algorithm, called the Particle Flow (PF) \cite{CMS:2009nxa,CMS:2010byl}, that attempts to identify and to reconstruct the kinematic properties of each of the particles in the final states. For this purpose all the information coming from each of the CMS subdetectors is combined. This algorithm heavily relies on the precise measurement of the momenta of charged particles with the silicon tracker, and the precise measurement of photon and electron energies with the highly granular and hermetic ECAL, to overcome the coarser granularity of the HCAL. The reconstructed particles are then used to reconstruct jets, \hadtau candidates, and the vector imbalance in transverse momentum in the event, referred to as \ptvecmiss, as well as to quantify the isolation of leptons. 
 
+\subsection{Primary Vertices}
+\label{subsec::objsel_vertex}
+
+%TODO{belongs to event reconstruction in the CMS chapter}
+
+The determination of collisions Primary Vertices (PV) for each of the bunch crossing is critical for reducing pile up effects and to detect long lived particles such as specific mesons. CMS reconstructs PVs starting from the vertices of all well reconstructed charged particle tracks in the event \cite{CMS-PAS-TRK-10-005}. The first step consist on clustering the tracks according to the position on the z-axis of their closest track segment with respect to the beam line \cite{CMS-IN-2011-014}. Then, a PV is reconstructed from each cluster with two or more constituents using a dedicated fit procedure. Which PV corresponds to the hardest interaction in the event is determined based on the tracks associated to the PV. The transverse momenta of all tracks associated to the PV are summed and the vertex with the highest sum is chosen. Every event used in this analysis requires at least a reconstructed PV. Table~\ref{table:vertexobjdefinition} shows the detailed selection criteria for such requirement.
+
 \subsection{Electrons reconstruction}
 
 Electrons are reconstructed by matching tracks in the inner detector with energy depositions in the ECAL \cite{CMS:2009nxa,Baffioni2007}. The tracks of electron candidates are reconstructed using a Gaussian sum filter \cite{Adam:2005bya} algorithm, which accounts for the emission of bremsstrahlung photons along the electron trajectory. Energy loss in bremsstrahlung is reconstructed by searching for energy depositions in the ECAL located in directions tangential to the electron track. A multivariate approach based on boosted decision trees (BDT) \cite{Hocker:2007ht} is employed for electron identification \cite{1748-0221-10-06-P06005}.
@@ -33,6 +40,8 @@ Electrons are reconstructed by matching tracks in the inner detector with energy
  The identification of muons is based on linking track segments reconstructed in the silicon tracking detector and in the muon system \cite{Chatrchyan:2012xi}. The matching between track segments is done outside-in, starting from a track in the muon system, and inside-out, starting from a track reconstructed in the inner detector. In case a link can be established, the track parameters are refitted using the combined hits in the inner and outer detectors, with the resulting track referred to as a global muon track. Quality criteria are applied on the multiplicity of hits, on the number of matched segments, and on the fit quality of the global muon track, quantified through a \ensuremath{\chisquare}.
 
 \subsection {The Jet reconstruction}
+\label{subsec::objsel_bjet}
+\label{subsec::objsel_jet}
 
 %TODO{Jet reconstruction does not belong to the particle flow algorithm. Probably you want to have the section about jets in the object definition section of your analysis chapter. You might want a few words and figures about jets in the particle reconstruction section of the CMS section}
 
@@ -40,7 +49,12 @@ Jets within the range \ensuremath{|\eta| < 4.7} are reconstructed using the anti
 
 The energy of reconstructed jets is calibrated as a function of jet \pt and \ensuremath{\eta} \cite{1748-0221-6-11-P11002}. The contribution of pileup to the energy of jets originating from the hard scattering is compensated by determining a median transverse momentum density (\ensuremath{\rho}) for each event, and subtracting the product of (\ensuremath{\rho}) times the area of the jet, computed in the \ensuremath{\eta-\Phi} plane, from there constructed jet \pt \cite{Cacciari:2008gn, Cacciari:2007fd}. 
 
-Jets originating from the hadronization of b quarks are identified through the combined secondary vertex (CSV) algorithm \cite{Chatrchyan:2012jua}, which exploits observables related to the long lifetime of b hadrons and the higher particle multiplicity and mass of b jets compared to light-quark and gluon jets.
+Particle Flow jets (PFJets) are used in this analysis. The \antikt clustering algorithm with a reconstruction cone of \ensuremath{R = 0.5} is used, defined in \ensuremath{\eta-\phi (R = \sqrt{{\Delta \eta}^2 + {\Delta \phi}^{2}})} \cite{1126-6708-2008-04-063}. 
+
+The PF jets used in this analysis are corrected using L1 FastJet, L2 Relative, and L3 Absolute corrections. The L1 FastJet corrections use the event-by-event UE/PU (Underlining Events / Pile Up) densities to remove the additional contributions to the measured jet energies due to underlying event and pile-up particles. The L2 and L3 corrections use jet balancing and \ensuremath{\gamma} + jets events to improve and provide a better energy response as a function of \pt and \ensuremath{\eta}. This analysis uses the "loose" working point Jet-Id selection criteria jets \pt = 30 \gev and absolute pseudorapidity $|\eta| \le 5.0$. Table~\ref{table:bjetobjdefinition} shows the detailed selection criteria used for the recommended loose working point. The efficiency is $> 98$ for the entire $\eta$ and \pt range. The "loose'' working point has been validated in other studies.
+
+Jets originating from the hadronization of b quarks are identified through the combined secondary vertex (CSV) algorithm \cite{Chatrchyan:2012jua}, which exploits observables related to the long lifetime of b hadrons and the higher particle multiplicity and mass of b jets compared to light-quark and gluon jets. This analysis uses the loose working point of the combined secondary vertex algorithm \cite{CMS:2011cra}. The EPS13 prescription is used for the b-tagging and mis-tagging scale factors and efficiencies. They are applied using the method called ``Event reweighing using scale factors only" \cite{Ferencek:btag2015}. Table~\ref{table:bjetobjdefinition} shows the detailed selection criteria.
+
 
 %TODO{MET and MET-like variables belong to the object definition section of the analysis chapter} 
 	
@@ -49,12 +63,32 @@ Jets originating from the hadronization of b quarks are identified through the c
 %TODO{	do you use the multivariate technique in [26]? if not don’t mention it}
 
 \subsection {\met reconstruction}
+\label{subsec::objsel_met}
 
 Two algorithms are used to reconstruct \ptvecmiss, the imbalance in transverse momentum in the event, whose magnitude is referred to as \met. The standard algorithm computes the negative vectorial sum of all particle momenta reconstructed using the PF algorithm. In addition, a multivariate regression algorithm \cite{Khachatryan:2014gga} has been developed to reduce the effect of pileup on the resolution in \met. The algorithm utilizes the fact that pileup predominantly produces jets of low \pt, while leptons and high-\pt jets are produced almost exclusively in the hard-scatter.
+
+Detection of weakly interacting particles is crucial both for SM measurements and searches for new physics. Although such particles leave no trace in any of CMS’s subdetectors, their transverse momenta can be estimated as the missing transverse energy in the event, making use of momentum conservation:
+
+\begin{equation}
+\met =  - \sum_{j} \pt^{j}
+\end{equation}
+
+where \ensuremath{\pt^{j}} is the transverse momentum of PF particle j. Figure \ref{fig:true_met} shows the energy and \ensuremath{\phi} resolution of the reconstructed \met in simulation versus the true \met. Again, the PF approach is compared to the calorimetric-based approach and performs substantially better. Table~\ref{table:metobjdefinition} shows the detailed selection criteria.
+
+\begin{figure}[tbh!]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.48\textwidth]{objreconstruction/pics/true_met-a.png}
+		\includegraphics[width=0.48\textwidth]{objreconstruction/pics/true_met-b.png} 		
+	\end{tabular}
+	\caption{The energy and \ensuremath{\phi} resolution of the \met in simulation. Red triangles show the resolution for the PF approach. Blue squares show the resolution for the calorimetric approach. The full lines show the results of fits of the data points and the dashed lines show the results of fits of an alternative resolution measure \cite{CMS:2009nxa}}
+	\label{fig:true_met}
+\end{figure}
 
 \clearpage
 
 \section {Tau lepton reconstruction}
+\label{subsec::objsel_tau}
 
 The $\tau$ lepton was discovered between 1974 and 1977 by the team under Martin Perl at SLAC/SPEAR while studying the $e^{+}+e^{-}\longrightarrow e^{\pm}+\mu^{\mp}$ \cite{Perl:1975bf}. With a mean lifetime of $2.9\times10^{-13}$ s and a mass of 1776.82 \mev \cite{Agashe:2014kda} it is the heaviest of the leptons, enough to decay into hadrons, and it does so in about two thirds of the cases, typically into either one, three or five charged pions or kaons and up to four neutral pions \ensuremath{\pi^{0}}, and one neutrino \ensuremath{\nu_{\tau}}. The \ensuremath{\pi^{0}} meson decays almost exclusively into \ensuremath{\gamma\gamma}. Among all the possible hadronic decays as shown on Table \ref{table:tau_hdecay} the ones called "one-prong", where only one charged hadron is produced, are the most frequent. The $\tau$ decays also leptonically, with a branching ratio of $17\%$ for each channel, via the following decay $\tau\longrightarrow\nu_{\tau}W^{*}\longrightarrow\nu_{\tau}l\nu_{l}$.
 
@@ -131,74 +165,11 @@ Requiring reconstructed \hadtau candidates to pass strict isolation requirements
 Electrons and muons have a sizable probability to get reconstructed in the \ensuremath{h^{\pm}} decay mode. Electrons radiating a bremsstrahlung photon that subsequently converts may also get reconstructed in the \ensuremath{h^{\pm}\pi^{0}s} decay mode. In particular, electrons and muons originating from decays of W and Z bosons, which are produced with cross sections of \ensuremath{\approx100} nb at the LHC at \ensuremath{\sqrt{s} = 8} \tev have a high chance to pass isolation-based \hadtau identification criteria. Dedicated discriminants have been developed to separate \hadtau from electrons and muons \cite{Khachatryan:2015dfa}. The separation of \hadtau from electrons is based on an MVA approach, with an efficiency and \ensuremath{e\to \tau} misidentification rate going from \ensuremath{93.3\%} and \ensuremath{2.38 \times 10^{-2}} (Very loose) to \ensuremath{72.1\%} and \ensuremath{3.54 \times 10^{-4}} (Very tight) in \ensuremath{Z/\gamma^{*} \longrightarrow \tau\tau} events.
 A cut based and an MVA based discriminant are used to separate \hadtau from muons. The expected efficiency of the \hadtau against muon discriminants in \ensuremath{Z/\gamma^{*} \longrightarrow \tau\tau} events goes from \ensuremath{99.3\%} (Loose) to \ensuremath{99.1}\% (Tight) for the cutoff-based approach and \ensuremath{99.5\%} (Loose) to \ensuremath{98\%} (Tight) for the MVA one. The \ensuremath{\mu \to \tau} misidentification rate efficiency of the \hadtau isolation discriminants in \ensuremath{Z/\gamma^{*} \longrightarrow \mu\mu} events ranges from \ensuremath{1.77 \times 10^{-3}} (Loose) to \ensuremath{7.74 \times 10^{-4}} (Tight) for the cutoff-based approach and \ensuremath{5.20 \times 10^{-4}} (Loose) to \ensuremath{3.18 \times 10^{-4}} (Tight) for the MVA one.
 
-\section{Primary Vertices}
-\label{subsec::objsel_vertex}
-
-%TODO{belongs to event reconstruction in the CMS chapter}
-
-The determination of collisions Primary Vertices (PV) for each of the bunch crossing is critical for reducing pile up effects and to detect long lived particles such as specific mesons. CMS reconstructs PVs starting from the vertices of all well reconstructed charged particle tracks in the event \cite{CMS-PAS-TRK-10-005}. The first step consist on clustering the tracks according to the position on the z-axis of their closest track segment with respect to the beam line \cite{CMS-IN-2011-014}. Then, a PV is reconstructed from each cluster with two or more constituents using a dedicated fit procedure. Which PV corresponds to the hardest interaction in the event is determined based on the tracks associated to the PV. The transverse momenta of all tracks associated to the PV are summed and the vertex with the highest sum is chosen. Every event used in this analysis requires at least a reconstructed PV. Table~\ref{table:vertexobjdefinition} shows the detailed selection criteria for such requirement.
-
-\section{Tau}
-\label{subsec::objsel_tau}
-
-%TODO{hm, you write 4.3.2 as if 4.2 does not exist}
-	
-%TODO{	refer back to the section about taus (4.2)}
-	
-%TODO{	4.2 and 4.3.2 are not in sync}
-	
-%TODO{	avoid words like DecayModeFindingNewDMs(you can have them in an appendix) if you really need them here, they should already be introduced in 4.2}
-%TODO{	this should move to the object definitions of the analysis chapter}
-
-The challenge in identifying \hadtau candidates is discriminating against generic quark and gluon QCD jets which are produced with a cross section several orders of magnitude larger. CMS has developed several algorithms to reconstruct and identify \hadtau based on Particle Flow (PF) objects. For this analysis, the Tau POG recommended Hadron Plus Strips algorithm (HPS) is used. 
-
 \hadtau candidates are required to have a \pt of 45 \gev and a pseudo-rapidity of $|\eta| \le 2.1$ in order to ensure that both tracks are reconstructed fully within the acceptance of the tracking system. In addition, a \hadtau is required to have exactly one signal charged hadron with \pt = 5 \gev and must not reside in the ECAL cracks.
 
 One-prong \hadtau candidates are selected using the \texttt{Decay\-Mode\-Finding\-New\-DMs} discriminator. In order to discriminate against muons, HPS taus are required to pass the \texttt{against\-Muon\-Loose3} rejection discriminator which requires the lead track of the tau not be associated with a global muon signature. In order to discriminate against electrons, HPS taus are required to pass the \texttt{against\-Electron\-Medium\-MVA5} discriminator which uses the amount of HCAL energy associated to the tau with respect to the measured momentum of the track. Additionally, the MVA discriminator considers the amount of electromagnetic energy in a narrow strip around the leading track with respect to the total electromagnetic energy of the tau. 
 
 The isolation discriminator is a BDT \cite{Hocker:2007ht} discriminator based on isolation, \pt and \hadtau lifetime information and defines the different TauID working points starting from the loose one with (\texttt{byLoose\-Isolation\-MVA3\-newDMwLT}) to the tighter one (\texttt{byTight\-Isolation\-MVA3new\-DMwLT}). Table~\ref{table:bjetobjdefinition} shows the detailed selection criteria for an \hadtau candidate.
 
-\subsection{Jets}
-\label{subsec::objsel_jet}
-
-%TODO{hm, written as if the earlier section about jets does not exist}
-	
-%TODO{	reference back (unless you give up the earlier section about jets)}
-%TODO{ should become part of the object definition section of the analysis chapter}
-
-Particle Flow jets (PFJets) are used in this analysis. The \antikt clustering algorithm with a reconstruction cone of \ensuremath{R = 0.5} is used, defined in \ensuremath{\eta-\phi (R = \sqrt{{\Delta \eta}^2 + {\Delta \phi}^{2}})} \cite{1126-6708-2008-04-063}. 
-
-The PF jets used in this analysis are corrected using L1 FastJet, L2 Relative, and L3 Absolute corrections. The L1 FastJet corrections use the event-by-event UE/PU (Underlining Events / Pile Up) densities to remove the additional contributions to the measured jet energies due to underlying event and pile-up particles. The L2 and L3 corrections use jet balancing and \ensuremath{\gamma} + jets events to improve and provide a better energy response as a function of \pt and \ensuremath{\eta}. This analysis uses the "loose" working point Jet-Id selection criteria jets \pt = 30 \gev and absolute pseudorapidity $|\eta| \le 5.0$. Table~\ref{table:bjetobjdefinition} shows the detailed selection criteria used for the recommended loose working point. The efficiency is $> 98$ for the entire $\eta$ and \pt range. The "loose'' working point has been validated in other studies.
-
-\subsection{b-Jets} 
-\label{subsec::objsel_bjet}
-
-%TODO{again written, as if you didn’t write about b-jets earlier.}
-	
-	%TODO{refer back, unless you decide to give up the earlier description of b-jets, as I suggested,}
-%TODO{should become part of “object definitions” in analysis chapter}
-
-This analysis uses the loose working point of the combined secondary vertex algorithm \cite{CMS:2011cra}. The EPS13 prescription is used for the b-tagging and mis-tagging scale factors and efficiencies. They are applied using the method called ``Event reweighing using scale factors only" \cite{Ferencek:btag2015}. Table~\ref{table:bjetobjdefinition} shows the detailed selection criteria.
-
-\subsection{Missing Transverse Energy}
-\label{subsec::objsel_met}
-
-Detection of weakly interacting particles is crucial both for SM measurements and searches for new physics. Although such particles leave no trace in any of CMS’s subdetectors, their transverse momenta can be estimated as the missing transverse energy in the event, making use of momentum conservation:
-
-\begin{equation}
-\met =  - \sum_{j} \pt^{j}
-\end{equation}
- 
-where \ensuremath{\pt^{j}} is the transverse momentum of PF particle j. Figure \ref{fig:true_met} shows the energy and \ensuremath{\phi} resolution of the reconstructed \met in simulation versus the true \met. Again, the PF approach is compared to the calorimetric-based approach and performs substantially better. Table~\ref{table:metobjdefinition} shows the detailed selection criteria.
-
-\begin{figure}[tbh!]
-	\centering
-	\begin{tabular}{cc}
-		\includegraphics[width=0.48\textwidth]{objreconstruction/pics/true_met-a.png}
-		\includegraphics[width=0.48\textwidth]{objreconstruction/pics/true_met-b.png} 		
-	\end{tabular}
-	\caption{The energy and \ensuremath{\phi} resolution of the \met in simulation. Red triangles show the resolution for the PF approach. Blue squares show the resolution for the calorimetric approach. The full lines show the results of fits of the data points and the dashed lines show the results of fits of an alternative resolution measure \cite{CMS:2009nxa}}
-	\label{fig:true_met}
-\end{figure}
 
 \clearpage
