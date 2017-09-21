@@ -1,17 +1,12 @@
 
-The following chapter describes the analysis with two same sign \hadtau and two jets performed with 8\tev data. After a brief description of the data and Monte Carlo samples, details follow on the selection used following the strategy suggested in Chapter \ref{sec:VBFSUSY}. The next section motivates and describes the data-driven background estimation technique used for treating QCD background events where two jets get mis-reconstructed as \hadtau and pass the event selection. Details on the validation method and systematic uncertainties are given in le last two sections.
+The following chapter describes the analysis with two same sign \hadtau and two jets performed with 8\tev data. After a brief description of the data and Monte Carlo samples, details follow on the selection used following the strategy suggested in Chapter \ref{sec:VBFSUSY}. The next section motivates and describes the data-driven background estimation technique used for treating QCD background events where two jets get mis-reconstructed as \hadtau and pass the event selection. Details on the validation method and systematic uncertainties are given in the last two sections.
 
 \section {Data sample and trigger paths}
 \FloatBarrier
 
 The analysis is performed using data collected with the CMS detector
 in proton-proton collisions at a centre of mass energy of \CM = 8\tev at the LHC. The data samples correspond to an integrated luminosity of \lumiOld. 
-
-The first analysis concept was relying on the usage of a VBF-based trigger for online selection. By doing its online selction  over the properties of the di-jet system
-
-The original analysis design considered the usage of a VBF-based trigger. By doing the online selection over the properties of the hard jets coming from VBF processes, this trigger would a given a great freedom on the offline selection of the \hadtau properties and on \met.
-
-However the available HLT trigger was seeded by \met L1 trigger that was fully efficient at roughly $\met > 250\gev$. Implementing such value in the offline event selection would have had a drastic impact on signal events statistics as previously shown on \autoref{fig:VBF_met_pttau}.
+The original analysis design considered the usage of a VBF-based trigger. By doing the online selection over the properties of the hard jets coming from VBF processes, this trigger would a given a great freedom on the offline selection of the \hadtau properties and on \met. However the available HLT trigger was seeded by \met L1 trigger that was fully efficient at roughly $\met > 250\gev$. Implementing such value in the offline event selection would have had a drastic impact on signal events statistics as previously shown on \autoref{fig:VBF_met_pttau}.
 
 The other available trigger strategy was relying on the choice of a double-lepton trigger for each of the different search channel. In case of the \hadtau\hadtau channel the only unprescaled available alternative is the \texttt{HLT\_\-DoubleMedium\-IsoPFTau35\_\-Trk*\_\-eta2p1\_\-Prong1\_\-v*} trigger. This trigger is the least competitive among all the lepton trigger but is the one with the highest signal acceptance for the \hadtau channel. An efficiency study on the selected trigger is shown on \autoref{fig::trigger_turnon}.
 
@@ -31,21 +26,21 @@ The other available trigger strategy was relying on the choice of a double-lepto
 
 %TODO you use “normalize” for 2 different things. Rephrase to make clear  - that you *normalize* the MC yields to the integrated luminosity of the data (quote number) - *by using* cross sections predicted with …  
 
-All the background yields, except for QCD, are taken from simulation. Simulated samples of signal and background events are generated using Monte Carlo event generators.
+All the background yields, except for the dominant QCD, are taken from simulation. Simulated samples of signal and background events are generated using Monte Carlo event generators.
 
 The signal event samples are generated with the \texttt{MadGraph v5.1.5} program \cite{Alwall:2011uj}, considering pair production of gauginos with two associated partons. The signal events are generated requiring a pseudorapidity gap $|\deltaeta| > 4.2$ between the two partons, with $\pt > 25\gev$ for each parton. Signal cross sections are calculated at leading order using the MadGraph generator. The range of signal cross sections is $50^{-1}$ fb for \charginopm = \neutralinotwo masses is 100 to 400\gev. Two different assumption has been taken into account to fix the \stau mass: the fixed-mass assumption, where the mass is fixed to a value close to the \charginopm mass ($m_{\charginopm} - m_{\stau} = 5\gev$) and the average-mass assumption, where is fixed in between the \charginopm and \neutralinoone masses ($m_{\stau} = 0.5 m_{\neutralinoone} + 0.5 m_{\charginopm} $). For each of those assumption two different scenarios has been taken into account: the uncompressed mass spectrum scenario, where the \neutralinoone is considered massless ($m_{\neutralinoone} = 0\gev$ ), and the compressed mass spectrum scenario, where the \neutralinoone mass is fixed to a value close to the \charginopm ($m_{\charginopm} - m_{\neutralinoone} = 50\gev$).
 
 Background event samples with a Higgs boson produced through VBF processes, and single top are generated with the \texttt{POWHEG v1.0r1380} program \cite{Frixione:2007vw}. 
-The \texttt{MadGraph v5.1.3} generator is used to describe Z+jets, W+jets, tt, di-boson, and VBF Z boson production. The Monte Carlo background and signal yields are normalized to the integrated luminosity of the data. 
+The \texttt{MadGraph v5.1.3} generator is used to describe Z+jets, W+jets, t$\bar{\text{t}}$, di-boson, and VBF Z boson production. The Monte Carlo background and signal yields are normalized to the integrated luminosity of the data. 
 The \ttbar background is normalized to the next-to-next-to-leading-logarithm level using the calculations presented in references \cite{Czakon:2013goa,Melnikov:2006kv}. 
 The Z+jets and W+jets processes are normalized to next-to-next-to-leading-order using the results from the \texttt{FEWZ v2.1} \cite{Gavin:2010az} generator. 
 The di-boson background processes are normalized to next-to-leading-order using the \texttt{MCFM v5.8} \cite{Campbell:2010ff} generator, while the VBF Z boson events are normalized to next-to-leading order using the \texttt{VBFNLO v2.6} \cite{Arnold:2008rz,Arnold:2011wj}program. 
 The single-top and VBF Higgs boson background yields are taken from the \texttt{POWHEG} program, where the next-to-leading order effects are incorporated.
 
-All Monte Carlo samples incorporate the \texttt{CTEQ6L1} \cite{Pumplin:2002vw} or \texttt{CTEQ6M} \cite{Nadolsky:2008zw} parton distribution functions (PDF). The corresponding evaluation of uncertainties in the signal cross sections is discussed in Section \ref{sec:systematics}. The \texttt{POWHEG} and \texttt{MadGraph} generators are interfaced with the \texttt{PYTHIA v6.4.22} \cite{Sjostrand:2006za} program, which is used in the mathing between the matrix elements and the parton shower, and the hadronization processes. 
+All Monte Carlo samples incorporate the \texttt{CTEQ6L1} \cite{Pumplin:2002vw} or \texttt{CTEQ6M} \cite{Nadolsky:2008zw} parton distribution functions (PDF). The corresponding evaluation of uncertainties in the signal cross sections is discussed in Section \ref{sec:systematics}. The \texttt{POWHEG} and \texttt{MadGraph} generators are interfaced with the \texttt{PYTHIA v6.4.22} \cite{Sjostrand:2006za} program, which is used in the matching between the matrix elements and the parton shower, and the hadronization processes. 
 
 
-The decays of $\tau$ leptons are simulated using the \texttt{tauola (27.1215)} \cite{Davidson:2010rw} program. The background samples are processed with a detailed simulation of the CMS apparatus using the \texttt{Geant4} package \cite{Agostinelli:2002hh}, while the response for signal samples is modeled with the CMS fast simulation program \cite{Abdullin:2011zz}. For the signal acceptance and \mjj shapes based on the fast simulation, the differences with respect to the \texttt{Geant4}-based results are found to be small ($< 5\%$). Corrections are applied to account for the differences. 
+The decays of $\tau$ leptons are simulated using the \texttt{tauola (27.1215)} \cite{Davidson:2010rw} program. The background samples are processed with a detailed simulation of the CMS apparatus using the \texttt{Geant4} package \cite{Agostinelli:2002hh}, while the response for signal samples is modeled with the CMS fast simulation program \cite{Abdullin:2011zz}. For the signal acceptance and \mjj shapes based on the fast simulation, the differences with respect to the \texttt{Geant4}-based results are found to be small ($< 5\%$). 
 
 For all Monte Carlo samples, multiple proton-proton interactions are superimposed on the primary collision process, and events are reweighted such that the distribution of reconstructed collision vertices matches that in data. The distribution of the number of pileup interactions per event has a mean of 21 and a root-mean-square of 5.5. 
 
@@ -68,8 +63,6 @@ As mentioned in Section \ref{section::search_strategy} the di-\hadtau channel's 
 All the collision data events passing the requirements of the triggers shown in Table \ref{table:triggerdefinition} are considered for offline analysis. 
 
 As previously introduced in Section \ref{section::search_strategy}, the event selection criteria is divided in two distinct parts: the central part, which takes into account the LSP and the decay products of the multiple \hadtau, and the VBF part, which cuts on the kinematic properties of the jets coming from a VBF process. 
-
-The main differences with the other VBF SUSY searches with final states including light leptons, are the substantially tighter \hadtau requirements targeting at the suppression of QCD jet background and the looser missing transverse energy (\met) requirement, to recover some of the signal acceptance lost due to the larger discriminator based on isolation $\hadtau$ \pt thresholds needed to stay efficient with respect to the trigger. 
 
 There are some differences this analysis has with the other existing VBF searches with final states to light leptons. The most important ones are the substantially tighter requirements on the \hadtau isolation and \pt, which allows a good QCD background suppression while remaining efficient with the trigger online requirements. However those requirements leads also to a reduction in the signal acceptance, for that reason a looser \met cut is introduced.
 
@@ -147,12 +140,12 @@ Each event with a successfully reconstructed LS di-$\hadtau$ pair falls into a e
  
 The second dimension of exclusivity is based on the VBF cuts described in \ref{sec:eventselection}. The regions are defined the following way:
 	
-	\begin{enumerate}
+	\begin{itemize}
 		\item VBF region: consisting of all the events that passed all VBF cuts previously mentioned in \autoref{sec:eventselection};
 		\item VBF inverted region: consisting of all the events that at least fails one of the VBF cuts previously mentioned.
-	\end{enumerate} 
+	\end{itemize} 
 
-Using these definitions one signal region (SR) and seven control regions (CR) are defined as shown in Figure \ref{fig:crs}. The SR falls into the region defined by two tight isolated $\hadtau$ and all the VBF cuts applied, close to it the control region two (CR2) features the same \hadtau isolation requirements but inverted VBF selection requirement. The remaining control regions are defined as CR3 (One Tight isolation region), CR5  (Anti Tight isolation region) and CR7 (Anti Medium isolation region) followed by their corresponding VBF-inverted control regions CR4, CR6, CR8. An overview of the defined SR and CRs is shown on \autoref{fig:crs}.
+Using these definitions one signal region (SR) and seven control regions (CR) are defined as shown in Figure \ref{fig:crs}. The SR falls into the region defined by two tight isolated $\hadtau$ and all the VBF cuts applied, close to it the control region two (CR2) features the same \hadtau isolation requirements but inverted VBF selection requirement. The remaining control regions are defined as CR3 (One Tight isolation region), CR5  (Anti Tight isolation region) and CR7 (Anti Medium isolation region) followed by their corresponding VBF-inverted control regions CR4, CR6, CR8.
 
 \begin{figure}[tbh!]
 	\centering
@@ -190,7 +183,7 @@ where $N^{DATA}_{VBF CR}$ is the number of the events in data for a given $ \tau
 
 Using the events in the defined control regions coming from \autoref{table:CReventcount} as input for \autoref{eq:qcdbgpred} and \autoref{eq:vbfeff} is possible to determine three independent predictions for the QCD background contribution, one for each pair of tau isolation control regions below the two-tight isolation region. \autoref{table:CReventcount} shows the event counting for all the control regions previously defined for data and all Monte Carlo samples. All the numbers except the ones coming from the QCD sample are used as input for the QCD background estimation method. All the statistical uncertainties are propagated accordingly.  For each of the three different $\tau$ isolation regions out of the signal region (1T, AT, AM) an independent measurements of $\epsilon^{QCD}_{VBF}$  and prediction for $N^{QCD}_{SR}$ is made. A validation of the data-driven background prediction is performed  using a simulation-driven approach. Details and results on this methods are given in \autoref{QCD_bg_pred_validation}.
 
-Three sources of systematic uncertainty has been considered in the estimation of the QCD contamination in the signal region shown in \autoref{eq:qcdbgpred}. The first source comes from the uncertainty over the generated Monte Carlo samples used in the analysis. The two remaining ones come from the assumptions about the stability of the $\epsilon^{QCD}_{VBF}$, made when defining the data-driven method, one in regard to the relaxation of the tau-identification and the other in regard to a loosening of the \met cut, since the $\epsilon^{QCD}_{VBF}$ is calculated in CRs where no \met cut is applied.
+Three sources of systematic uncertainty have been considered in the estimation of the QCD contamination in the signal region shown in \autoref{eq:qcdbgpred}. The first source comes from the uncertainty over the generated Monte Carlo samples used in the analysis. The two remaining ones come from the assumptions about the stability of the $\epsilon^{QCD}_{VBF}$, made when defining the data-driven method, one in regard to the relaxation of the tau-identification and the other in regard to a loosening of the \met cut, since the $\epsilon^{QCD}_{VBF}$ is calculated in CRs where no \met cut is applied.
 
 The uncertainty given by a systematic error in the Monte Carlo simulation is estimated by checking the maximal variation over $\epsilon^{QCD}_{VBF}$ and $N^{QCD}_{SR}$ after scaling non-QCD contributions by $\pm50~\%$. 
 
@@ -266,7 +259,7 @@ w^{TT}_{\text{event}} = \sum_{i=0}^{N}P(\text{iso}\mid \text{jet}_{i})\left(\sum
 where $P(\text{iso}\mid \text{jet})$ is the probability for a given jet to fake an \hadtau with a given isolation:
 
 \begin{equation}
-P(\text{iso}\mid \text{jet}_{i}) = P(\text{iso ID}\mid \text{jet}_{i}) \cdot P(\pt^{\hadtau(\text{fake})} > 45\gev\mid \text{jet}_{i}) \dot \epsilon^{\text{trigger}}(\text{ID})
+P(\text{iso}\mid \text{jet}_{i}) = P(\text{iso ID}\mid \text{jet}_{i}) \cdot P(\pt^{\hadtau(\text{fake})} > 45\gev\mid \text{jet}_{i}) \cdot  \epsilon^{\text{trigger}}(\text{ID})
 \end{equation}
 
 where $P(\text{iso ID}\mid \text{jet}_{i})$ is the probability for a given jet to fake a \hadtau with a given TauID selection besides the \pt requirement, $P(\pt^{\hadtau(\text{fake})} > 45\gev\mid \text{jet}_{i})$ is the probability for a given jet reconstructed as fake-\hadtau to pass the requirement of $\pt(\hadtau)> 45\gev$ and $\epsilon^{\text{trigger}}(\text{ID})$ is the efficiency of the trigger ,the one used in the analysis, in selecting events with at least four jets.
@@ -315,7 +308,7 @@ The efficiency of the VBF selection $\epsilon^{VBF}$ has been defined under the 
 	\label{dihad:fig:vbeff_vs_tauiso}
 \end{figure}
 
-An additional stability study is performed by considering the deviation of the weighted arithmetic mean of $\epsilon^{VBF}$ with respect to \met as shown in \autoref{dihad:fig:vbeff_vs_met}. A quadratic divergence, caused by the impact of higher jet energy resolution widths over the forward sections of the detector, is observed. An additional systematic uncertainty is derived in order to take this effect into account.
+An additional stability study is performed by considering the deviation of the weighted arithmetic mean of $\epsilon^{VBF}$ with respect to \met as shown in \autoref{dihad:fig:vbeff_vs_met}. A dependence on \met, caused by the impact of higher jet energy resolution in the forward sections of the detector, is observed. An additional systematic uncertainty is derived in order to take this effect into account.
 
 \begin{figure}[!h]
 	\centering
