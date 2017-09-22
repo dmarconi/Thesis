@@ -108,30 +108,32 @@
 
 \begin{tikzpicture}
 	\begin{feynman}
-		\vertex (a) {\(u\)};
+		\vertex (a);
 		\vertex [right=of a](b);
-		\vertex [above right=of b](c){\(u\)};
+		\vertex [above right=of b](c){\(\bar{q}\)};
 		\vertex [below=of b] (d);
 		\vertex [below=of d] (e);
 		\vertex [below=of e] (f);
-		\vertex [left=of f] (g) {\(u\)};
-		\vertex [below right=of f] (h) {\(d\)};
+		\vertex [left=of f] (g);
+		\vertex [below right=of f] (h) {\(q\)};
 		\vertex [right=of d] (i);
-		\vertex [above right=of i] (l){\(\tau\)};
-		\vertex [right=of i] (m){\(\bar{\tau}\)};
+		\vertex [above right=of i] (l){\(\nu_{\tau}\)};
+		\vertex [right=of i] (m){\(\tilde{\tau}^{+}\)};
 		\vertex [right=of e] (o);
-		\vertex [right=of o] (p){\(\tau\)};
-		\vertex [below right=of o] (q){\(\bar{\nu_{\tau}}\)};
+		\vertex [right=of o] (p){\(\tilde{\tau}^{-}\)};
+		\vertex [below right=of o] (q){\(\nu_{\tau}\)};
 		
 		
 		\diagram* {
-			(a) -- [fermion] (b) -- [fermion] (c),
-			(b) -- [boson, edge label'=\(Z^{0}\)] (d) -- [boson, edge label'=\(Z^{0}\)] (e) -- [boson, edge label'=\(W^{-}\)] (f);
-			(g) -- [fermion] (f) -- [fermion] (h);
-			(d) -- [boson, edge label'=\(Z^{0}\)] (i);
-			(m) -- [fermion] (i) -- [fermion] (l);
-			(e) -- [boson, edge label'=\(W^{-}\)] (o);
-			(q) -- [fermion] (o) -- [fermion] (p);
+			(a) -- [gluon, edge label'=\(g\)] (b),
+			(c) -- [fermion] (b) -- [fermion, edge label'=\(q\)] (d) -- [boson, plain, edge label'=\(\tilde{q}\)](e) -- [fermion, edge label'=\(\bar{q}\)](f) -- [fermion](h);
+			(g) -- [gluon, edge label'=\(g\)] (f) ;
+			(d) -- [boson, plain,edge label'=\(\tilde{\chi}^{0}_{2}\)] (i);
+			(i) -- [double] (m);
+			(i)-- [fermion] (l);
+			(e) -- [boson, plain, edge label'=\(\tilde{\chi}^{0}_{2}\)] (o);
+			(o) -- [fermion] (q);
+			(o) -- [double] (p);
 		};
 	\end{feynman}
 \end{tikzpicture}

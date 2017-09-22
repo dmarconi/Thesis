@@ -28,7 +28,7 @@ The other available trigger strategy was relying on the choice of a double-lepto
 
 All the background yields, except for the dominant QCD, are taken from simulation. Simulated samples of signal and background events are generated using Monte Carlo event generators.
 
-The signal event samples are generated with the \texttt{MadGraph v5.1.5} program \cite{Alwall:2011uj}, considering pair production of gauginos with two associated partons. The signal events are generated requiring a pseudorapidity gap $|\deltaeta| > 4.2$ between the two partons, with $\pt > 25\gev$ for each parton. Signal cross sections are calculated at leading order using the MadGraph generator. The range of signal cross sections is $50^{-1}$ fb for \charginopm = \neutralinotwo masses is 100 to 400\gev. Two different assumption has been taken into account to fix the \stau mass: the fixed-mass assumption, where the mass is fixed to a value close to the \charginopm mass ($m_{\charginopm} - m_{\stau} = 5\gev$) and the average-mass assumption, where is fixed in between the \charginopm and \neutralinoone masses ($m_{\stau} = 0.5 m_{\neutralinoone} + 0.5 m_{\charginopm} $). For each of those assumption two different scenarios has been taken into account: the uncompressed mass spectrum scenario, where the \neutralinoone is considered massless ($m_{\neutralinoone} = 0\gev$ ), and the compressed mass spectrum scenario, where the \neutralinoone mass is fixed to a value close to the \charginopm ($m_{\charginopm} - m_{\neutralinoone} = 50\gev$).
+The signal event samples are generated with the \texttt{MadGraph v5.1.5} program \cite{Alwall:2011uj}, considering pair production of gauginos with two associated partons. The signal events are generated requiring a pseudorapidity gap $|\deltaeta| > 4.2$ between the two partons, with $\pt > 25\gev$ for each parton. Signal cross sections are calculated at leading order using the MadGraph generator. The range of signal cross sections is $50^{-1}$ fb for \charginopm = \neutralinotwo masses is 100 to 400\gev. Two different assumption has been taken into account to fix the \stau mass: the fixed-mass assumption, where the mass is fixed to a value close to the \charginopm mass ($m_{\charginopm} - m_{\stau} = 5\gev$) and the average-mass assumption, where is fixed in between the \charginopm and \neutralinoone masses ($m_{\stau} = 0.5 m_{\neutralinoone} + 0.5 m_{\charginopm} $). For each of those assumption two different scenarios has been taken into account: the uncompressed mass spectrum scenario, where the \neutralinoone is considered massless ($m_{\neutralinoone} = 0\gev$ ), and the compressed mass spectrum scenario, where the \neutralinoone mass is fixed to a value close to the \charginopm ($m_{\charginopm} - m_{\neutralinoone} = 50\gev$). In order to minimize the contribution of all the QCD produced chargino/neutralino pair production as previosly shown on \autoref{fig:background_QCDchichi} the masses of the squarks are set to high values.  
 
 Background event samples with a Higgs boson produced through VBF processes, and single top are generated with the \texttt{POWHEG v1.0r1380} program \cite{Frixione:2007vw}. 
 The \texttt{MadGraph v5.1.3} generator is used to describe Z+jets, W+jets, t$\bar{\text{t}}$, di-boson, and VBF Z boson production. The Monte Carlo background and signal yields are normalized to the integrated luminosity of the data. 
@@ -179,7 +179,7 @@ The $\epsilon^{QCD}_{VBF}$ for each of the different \hadtau isolation region is
 \label{eq:vbfeff}
 \end{equation}
 
-where $N^{DATA}_{VBF CR}$ is the number of the events in data for a given $ \tau $ isolation region and VBF region, $N^{\overline{QCD} BG}_{VBFCR}$ is the number of all non-QCD Monte Carlo events for a given $ \tau $ isolation region and VBF region, $N^{DATA}_{\overline{VBF}CR}$ is the number of events in data in the same isolation Control Region but inverted VBF region and$N^{\overline{QCD} BG}_{\overline{VBF}CR}$ is the number of all non-QCD Monte Carlo events for a given $ \tau $ isolation region but inverted VBF region.
+where $N^{DATA}_{VBF CR}$ is the number of the events in data for a given $ \tau $ isolation region and VBF region, $N^{\overline{QCD} BG}_{VBFCR}$ is the number of all non-QCD Monte Carlo events for a given $ \tau $ isolation region and VBF region, $N^{DATA}_{\overline{VBF}CR}$ is the number of events in data in the same isolation Control Region but inverted VBF region and$N^{\overline{QCD} BG}_{\overline{VBF}CR}$ is the number of all non-QCD Monte Carlo events for a given $ \tau $ isolation region but inverted VBF region. In order to increase statistics the \met cut has been removed for CR3 to CR7.
 
 Using the events in the defined control regions coming from \autoref{table:CReventcount} as input for \autoref{eq:qcdbgpred} and \autoref{eq:vbfeff} is possible to determine three independent predictions for the QCD background contribution, one for each pair of tau isolation control regions below the two-tight isolation region. \autoref{table:CReventcount} shows the event counting for all the control regions previously defined for data and all Monte Carlo samples. All the numbers except the ones coming from the QCD sample are used as input for the QCD background estimation method. All the statistical uncertainties are propagated accordingly.  For each of the three different $\tau$ isolation regions out of the signal region (1T, AT, AM) an independent measurements of $\epsilon^{QCD}_{VBF}$  and prediction for $N^{QCD}_{SR}$ is made. A validation of the data-driven background prediction is performed  using a simulation-driven approach. Details and results on this methods are given in \autoref{QCD_bg_pred_validation}.
 
@@ -264,7 +264,7 @@ P(\text{iso}\mid \text{jet}_{i}) = P(\text{iso ID}\mid \text{jet}_{i}) \cdot P(\
 
 where $P(\text{iso ID}\mid \text{jet}_{i})$ is the probability for a given jet to fake a \hadtau with a given TauID selection besides the \pt requirement, $P(\pt^{\hadtau(\text{fake})} > 45\gev\mid \text{jet}_{i})$ is the probability for a given jet reconstructed as fake-\hadtau to pass the requirement of $\pt(\hadtau)> 45\gev$ and $\epsilon^{\text{trigger}}(\text{ID})$ is the efficiency of the trigger ,the one used in the analysis, in selecting events with at least four jets.
 
-The most optimal way to represent $P(\text{iso ID}\mid \text{jet}_{i})$ is through a parametrization of the most significant jet variables. Closure studies done over different types of parametrization shows that the best parameters choice is the jet candidate \pt and the its charged hadron fraction $F_{q}$.
+The most optimal way to represent $P(\text{iso ID}\mid \text{jet}_{i})$ is through a parametrization of the most significant jet variables. Closure studies done over different types of parametrization shows that the best parameters choice is the jet candidate \pt and the its charged hadron fraction $F_{q}$, defined as the momentum of all charged jet components relative to the overall jet momentum.
 
 It is not granted that a jet ,with $\pt(\hadtau)> 45\gev$, which gets mis-reconstructed offline as \hadtau passes also the TauID \pt selection. Several are the reasons behind this effect. The most important one is that jets have energy corrections while \hadtaufake do not, which directly translates into slight deviations of the reconstructed object directions. It is possible to correct the \hadtau transverse momentum by a factor to match the \pt from the original jet. It is also important to correct the mass of the \hadtaufake by a factor which takes into account the difference in size of the reconstruction cone used for the jet and \hadtau objects.
 
@@ -334,7 +334,7 @@ To summarize, two systematic uncertainties are taken into account in this study:
 The following systematics have been considered while estimating the signal samples contribution in signal region:
 
 \begin{itemize}
-	\item \textbf{Parton Distribution Functions (PDF):} The systematic effect due to imprecise knowledge of the parton distribution functions is determined by comparing CTEQ6.6L \cite{Nadolsky:2008zw}, MSTW2008nnlo \cite{Martin:2009iq}, and NNPDF20 PDF \cite{Ubiali:2008uk} with the default PDF and variations within the family of parametrization. The maximal deviation from the central value is used as the overall systematic uncertainty due to PDFs. We obtain a value of 16\% on the cross section uncertainty and 23\% on the signal acceptance.
+	\item \textbf{Parton Distribution Functions (PDF):} The systematic effect due to imprecise knowledge of the parton distribution functions is determined by comparing CTEQ6.6L \cite{Nadolsky:2008zw}, MSTW2008nnlo \cite{Martin:2009iq}, and NNPDF20 PDF \cite{Ubiali:2008uk} with the default PDF and variations within the family of parametrization. The maximal deviation from the central value is used as the overall systematic uncertainty due to PDFs. We obtain a value of 16\% on the cross section uncertainty and 23\% on the signal acceptance \cite{Botje:2011sn}.
 	
 	\item \textbf{Initial State Radiation (ISR) and Final State Radiation (FSR):} The systematic effect due to imprecise modeling of initial and final state radiation is determined by re-weighting events to account for effects such as missing a terms in the soft-collinear approach \cite{Nanava:2003cg} and missing NLO terms in the parton shower approach \cite{Miu:1998ju}. We obtain uncertainties of 0.9\% and 1.2\% for ISR and FSR respectively.
 	
@@ -399,7 +399,7 @@ The following systematics have been considered while estimating the signal sampl
 \label{section:results}
 \FloatBarrier
 
-Following the procedure described in \autoref{sec:bgestimation}, $\epsilon^{QCD}_{VBF}$ is calculated for both the di-\hadtau sign channels: opposite-sign (OS) and like-sign (LS). All the uncertainties described in \autoref{sec:bgestimation} and \autoref{dihad:subsec:stability} have been taken into account and have been properly propagated. The weighted average mean coming from the three different measurements gives the following final result for the like-sign channel:
+Following the procedure described in \autoref{sec:bgestimation}, $\epsilon^{QCD}_{VBF}$ is calculated for both the opposite-sign (OS) and like-sign (LS) channels. All the uncertainties described in \autoref{sec:bgestimation} and \autoref{dihad:subsec:stability} have been taken into account and have been properly propagated. The weighted average mean coming from the three different measurements gives the following final result for the like-sign channel:
 
 \begin{equation}
 \epsilon^{QCD}_{VBF} = 0.067\pm0.0046(stat.)^{-0.00038(MC)+0.0117(\tau iso)+0.0056(MET)}_{+0.00022(MC)-0.0051(\tau iso)+0.0022(MET)}
@@ -413,7 +413,7 @@ N^{QCD}_{SR} = 7.59\pm0.92(stat.)^{-0.42(MC)+1.34(\tau iso)+0.20(MET)}_{+0.35(MC
 \label{dihad:eq:QCDbgpredCorrectResult}
 \end{equation}
 
-The like-sign signal region consist of events satisfying the criteria shown in section \ref{sec:eventselection} with the di-$\tau$ charge requirement. \autoref{table:SReventcount} shows the contributions in the signal region from all MC samples and data. As described in section \ref{dihad:subsec:eventweight}, the QCD and W+jet  background contribution have been "diced" and accordingly reweighted. 
+The like-sign signal region consist of events satisfying the criteria shown in section \ref{sec:eventselection} with the di-$\tau$ charge requirement. \autoref{table:SReventcount} shows the contributions in the signal region from all MC samples and data. As described in section \ref{dihad:subsec:eventweight}, the statistical power of QCD and W+jet  background contribution have been increased by "dicing". 
 
 QCD is the dominant background and its data-driven prediction shown in \autoref{dihad:eq:QCDbgpredCorrectResult} is fully compatible within statistical and systematic uncertainty with the simulation-driven results shown in \autoref{table:SReventcount}. The \mjj invariant mass distribution in the like-sign (LS) \hadtau \hadtau signal regions is shown in \autoref{fig::mjj_combined_ditau}.
 
@@ -448,7 +448,7 @@ QCD is the dominant background and its data-driven prediction shown in \autoref{
 	\label{fig::mjj_combined_ditau}
 \end{figure}
 
-A combination of the opposite and like-sign signal yields coming from all the different search channels is shown on \autoref{table:SReventcount_combinedOS} and \autoref{table:SReventcount_combinedLS}. The combined contribution of all the different search channels to the \mjj distribution is shown in \autoref{fig::mjj_combined_allchannels}\cite{Khachatryan:2015kxa}. The observed numbers of events are seen to be consistent with the expected Standard Model background in all search regions. Therefore no excess above the Standard Model is observed.
+A combination of the opposite and like-sign signal yields coming from all the different search channels is shown on \autoref{table:SReventcount_combinedOS} and \autoref{table:SReventcount_combinedLS}. The added contribution of all the different search channels to the \mjj distribution is shown in \autoref{fig::mjj_combined_allchannels}\cite{Khachatryan:2015kxa}. The observed numbers of events are seen to be consistent with the expected Standard Model background in all search regions. Therefore no excess above the Standard Model is observed.
 
 \begin{table}[tbh!]
 	\centering
@@ -482,7 +482,7 @@ A combination of the opposite and like-sign signal yields coming from all the di
 \section{Exclusion limits on chargino/neutralino masses}
 \FloatBarrier
 
-Upper limits at $95\%$ on the cross sections as function of $m_{\neutralinotwo}=m_{\charginopm}$ are set for the \hadtau\hadtau like-sign and opposite channel. The results are presented using models with uncompressed mass spectrum scenario ($m_{\neutralinoone} = 0\gev$), a fixed-\stau-mass assumption ($m_{\stau} =  m_{\charginopm} - 5\gev$) and
+Upper limits at $95\%$ CL on the cross sections as function of $m_{\neutralinotwo}=m_{\charginopm}$ are set for the \hadtau\hadtau like-sign and opposite channel. The results are presented using models with uncompressed mass spectrum scenario ($m_{\neutralinoone} = 0\gev$), a fixed-\stau-mass assumption ($m_{\stau} =  m_{\charginopm} - 5\gev$) and
 a $\charginopm$ mass between $100 \leq m_{\charginopm} \leq 400\gev$.
 
 \begin{figure}
