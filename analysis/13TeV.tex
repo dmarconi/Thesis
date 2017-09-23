@@ -114,16 +114,16 @@ As previously mentioned, two conversion factors are used in this method. The fir
 where $A$ and $B$ are ratios. Further, $A$ has as denominator the number of events with at least four jets where at least one of these jets is matched with a loose isolated \hadtau. In case this matched \hadtau is also tight isolated the events are counted in the numerator:
 
 \begin{equation}
-A = \dfrac{N_{events}(\text{the matched }\hadtau\text{ is also tight isolated })}{N_{events}(\leq 1\text{jet matched to loose }\hadtau)}
+A = \dfrac{N_{events}(\text{the matched }\hadtau\text{ is also tight isolated })}{N_{events}(= 1\text{jet matched to loose }\hadtau)}
 \end{equation}
 
 The definition of $B$ is equal to $A$ with the only difference that the \hadtau matched to a jet in the denominator is non-isolated:
 
 \begin{equation}
-B = \dfrac{N_{events}(\text{the matched }\hadtau\text{ is also tight isolated })}{N_{events}(\leq 1\text{jet matched to non-isolated }\hadtau)}
+B = \dfrac{N_{events}(\text{the matched }\hadtau\text{ is also tight isolated })}{N_{events}(= 1\text{jet matched to non-isolated }\hadtau)}
 \end{equation}
 
-The second conversion factor is identical to the VBF conversion factor defined in \autoref{sec:bgestimation} with the only difference of the updated version of the VBF cuts for the 13\tev study:
+The second conversion factor is identical to the VBF conversion factor defined in \autoref{sec:bgestimation} with the only difference of the updated version of the VBF cuts for the 13\tev study. This factor is derived from the control regions with a lower \hadtau isolation requirements such as CR3 and CR4:
 
 \begin{equation}
 \text{VBF} = \frac{\epsilon^{QCD}_{VBF}}{1 - \epsilon^{QCD}_{VBF}}
@@ -192,7 +192,7 @@ For an easier reading over the results of the cross-section limit study, it is p
 \end{figure}
 
 
-Each of the two-dimensional bins stores a $\sigma^{lim}_{sec}$ for the given $\pt(\hadtau)$ , \mjj and \met cuts setup. The most important input values to \autoref{eq::xsec_lim} are the signal efficiency $\epsilon^{signal}$, as defined in \autoref{eq::punzi_efficiency},  and the number of predicted background events $B$, as defined in \autoref{eq::qcdbgpred_13tev}. The remaining input values are the luminosity $L$ and the confidence level $a$. The predicted luminosity for the 13\tev Run \cite{Bruning:2002yh} is estimated between 75 and 100\invfb; for the purpose of this study its value has been set to $L = 85\invfb$. The corresponding value in terms of $\sigma$ with respect to a confidence level of 95\%  is $2.5$.
+Each of the two-dimensional bins stores a $\sigma^{lim}_{sec}$ for the given $\pt(\hadtau)$ , \mjj and \met cuts setup. The most important input values to \autoref{eq::xsec_lim} are the signal efficiency $\epsilon^{signal}$, as defined in \autoref{eq::punzi_efficiency},  and the number of predicted background events $B$, as defined in \autoref{eq::qcdbgpred_13tev}. The remaining input values are the luminosity $L$ and the confidence level $a$. The predicted luminosity for the 13\tev Run \cite{Bruning:2002yh} is estimated between 75 and 100\invfb; for the purpose of this study its value has been set to $L = 85\invfb$. The corresponding value as units of $\sigma$ with respect to a confidence level of 95\%  is $2$.
 
 A full list of the study results is given as appendix in \autoref{sec::xseclim_results}. Similarly to what shown in the 8\tev analysis the cut over the $\pt(\hadtau)$ has an high impact on the signal efficiency $\epsilon^{signal}$; for an easier understanding of the final results this cut has been set to its allowed minimum of 20\gev.
 
@@ -214,7 +214,7 @@ for the optimal cuts of  $\pt(\hadtau) <  20\gev$,  $ \mjj< 500\gev $ and $\met 
 	\label{fig::xsec_lim_selected_results}
 \end{figure}
 
-By comparing the 8\tev cross-section limit values with the ones at 13\tev it is possible to see that the previous analysis performs better in terms of limit setting as shown in \autoref{table::xseclim_7tev13tev_comparison}. The high statistical and systematic uncertainties shown for 13\tev are caused by the cut over the $\pt(\hadtau)$, which dramatically reduces the QCD statistics. It is worth to mention, however, that the 8\tev analysis has a selection which in general prevents the comparison in areas of the previously defined three-dimensional phase-space where the 13\tev analysis is meant to perform better.
+By comparing the 8\tev cross-section limit values with the ones at 13\tev it is possible to see that the previous analysis performs better in terms of limit setting as shown in \autoref{table::xseclim_7tev13tev_comparison}. The high statistical and systematic uncertainties shown for 13\tev are caused by the cut over the $\pt(\hadtau)$, which dramatically reduces the QCD statistics. It is worth to mention, however, that the 8\tev analysis has a selection which in general prevents the comparison in areas of the previously defined three-dimensional phase-space where the 13\tev analysis is meant to perform better thanks to the more gentle \hadtau candidate selection.
 
 \begin{table}
 \begin{center}
@@ -233,7 +233,7 @@ By comparing the 8\tev cross-section limit values with the ones at 13\tev it is 
 \end{center}
 \end{table}
 
-Another important result from this cross section limit study features the most important signal benchmark point among the ones available that originally gave reason to this analysis design, the one considering a compressed sparticles scenario and the average-\stau-mass assumption.  A comparison between the cross-section limit values coming from this study and the cross-section limit granted by the CMS collaboration \cite{bib:SUSYCrossSections13TeVn2x1wino_13tev} as function of the chargino \charginopm massis shown in \autoref{fig:xsec_confront_13tev}. Given the previously described setup, this analysis is capable of excluding models with chargino masses below $m(\charginopm) = 380\gev$. 
+Another important result from this cross section limit study features the most important signal benchmark point among the ones available that originally gave reason to this analysis design, the one considering a compressed sparticles scenario and the average-\stau-mass assumption.  A comparison between the cross-section limit values coming from this study and the cross-section limit granted by the CMS collaboration \cite{bib:SUSYCrossSections13TeVn2x1wino_13tev} as function of the chargino \charginopm masses shown in \autoref{fig:xsec_confront_13tev}. Given the previously described setup, this analysis is capable of excluding models with chargino masses below $m(\charginopm) = 380\gev$ improving by 80\gev the limit set by the analysis with 8\tev data. 
 
 \begin{figure}[tbh!]
 	\centering
@@ -245,7 +245,21 @@ Another important result from this cross section limit study features the most i
 \end{figure}
 
 
-To conclude the list of results shown in this chapter an additional study over this last signal benchmark point has been performed. The aim of this apply a more realistic event selection too see how strong is its impact over the cross section limit. In order to achieve that four different event selection scenarios has been considered. Those scenarios are meant to apply on top of the original event selection, described in \autoref{subsec::event_sel_13tev}, a stronger cut over the most important variable of the analysis. The first scenario simply adds a cut over the \pt of the \hadtau of 50 \gev. The second scenario adds a cut over \met of 200\gev. The third scenario combines the requirement of $\met > 150\gev$  with some cuts over the most important variables of the VBF part of the event such as $\mjj > 700\gev$, the angular distance between the two VBF jets candidates $|\Delta\eta(jet,jet)| > 3.6$ and their \pt set to 90\gev. The fourth and final scenario is similar to the third but requires a cut on  $\mjj > 1000\gev$ and removed any requirement over \met. For a better visualization those different scenarios are summarized the following way:
+To conclude the list of results shown in this chapter an additional study over this last signal benchmark point has been performed. The aim of this final study is to apply a more realistic event selection too see how strong is the impact over the cross section limit. In order to achieve that four different event selection scenarios has been considered. Those scenarios are meant to apply on top of the original event selection a stronger cut over the most important variable of the analysis. The first scenario simply adds a cut over the \pt of the \hadtau of 50 \gev. The second scenario adds a cut over \met of 200\gev. The third scenario combines the requirement of $\met > 150\gev$  with some cuts over the most important variables of the VBF part of the event such as $\mjj > 700\gev$, the angular distance between the two VBF jets candidates $|\Delta\eta(jet,jet)| > 3.6$ and their \pt set to 90\gev. The fourth and final scenario is similar to the third but requires a cut on  $\mjj > 1000\gev$ and removed any requirement over \met. For a better visualization those different scenarios are summarized the following way:
+
+\begin{itemize}
+	\item \textbf{Central selection (All scenarios)}
+	\begin{itemize}
+		\item two one-prong hadronically decaying $\tau$ with $\pt = 20\gev$
+		\item at least two jets with $p_{T}^{jet}\geq30~$\gev, $|\eta_{jet}|\leq5$ and loose jetID
+		\item $\Delta R(jet,\tau)\geq0.3$
+		\item b-tag veto
+	\end{itemize}
+	\item \textbf{VBF selection (All scenarios)}
+	\begin{itemize}
+		\item $\text{sign}(\eta^{jet 1}\cdot\eta^{jet 2})=-1$
+	\end{itemize}
+\end{itemize}
 
 \begin{enumerate}
 	\item \textbf{Cut scenario 1}: 
@@ -263,7 +277,7 @@ To conclude the list of results shown in this chapter an additional study over t
 		\item $\met > 150\gev$,
 		\item $\mjj > 700\gev$, 
 		\item $|\Delta\eta(jet,jet)| > 3.6$,
-		\item $pt (jet_{1},jet_{2}) = 90 GeV$;
+		\item $\pt(jet_{1},jet_{2}) = 90\gev$;
 	\end{itemize}
 	
 	\item \textbf{Cut scenario 4}: 			
