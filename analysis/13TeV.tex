@@ -245,7 +245,7 @@ Another important result from this cross section limit study features the most i
 \end{figure}
 
 
-To conclude the list of results shown in this chapter an additional study over this last signal benchmark point has been performed. The aim of this final study is to apply a more realistic event selection too see how strong is the impact over the cross section limit. In order to achieve that four different event selection scenarios has been considered. Those scenarios are meant to apply on top of the original event selection a stronger cut over the most important variable of the analysis. The first scenario simply adds a cut over the \pt of the \hadtau of 50 \gev. The second scenario adds a cut over \met of 200\gev. The third scenario combines the requirement of $\met > 150\gev$  with some cuts over the most important variables of the VBF part of the event such as $\mjj > 700\gev$, the angular distance between the two VBF jets candidates $|\Delta\eta(jet,jet)| > 3.6$ and their \pt set to 90\gev. The fourth and final scenario is similar to the third but requires a cut on  $\mjj > 1000\gev$ and removed any requirement over \met. For a better visualization those different scenarios are summarized the following way:
+To conclude the list of results shown in this chapter an additional study over this last signal benchmark point has been performed. The aim of this final study is to apply a more realistic event selection too see how strong is the impact over the cross section limit. In order to achieve that four different event selection scenarios has been considered. Those scenarios are meant to be apply on top of the original event selection a stronger cut over the most important variable of the analysis. The first scenario simply adds a cut over the \pt of the \hadtau of 50 \gev, reintroducing a selection over the \hadtau similarly to the one used for the 8\tev analysis. The second scenario attempts to suppress the most of the QCD irreducible background by adding a strong cut over \met of 200\gev. The third scenario studies the impact of a selection that cuts harder on the central and VBF part by combining the requirement of $\met > 150\gev$  with $\mjj > 700\gev$, the angular distance between the two VBF jets candidates $|\Delta\eta(jet,jet)| > 3.6$ and their \pt set to 90\gev. The fourth and final scenario puts the focus on a harder VBF selection cut buy requiring the same selection of the third but dropping the requirement over \met and increasing the cut on \mjj up to 1000\gev. For a better visualization those different scenarios are summarized the following way:
 
 \begin{itemize}
 	\item \textbf{Central selection (All scenarios)}
@@ -299,5 +299,32 @@ Comparison between multiple cross section limits coming from the different cut s
 	\label{fig:xsec_confront_cut_var13tev}
 \end{figure}
 
-The correlation between signal efficiency and the selection over \pt(\hadtau) is once again confirmed by the drop on the cross section limit down to a chargino mass of 230\gev. The introduction of strong cut over \mjj combined with a requirement over \met (cut scenario 3) greatly impacts the limit setting by scaling down the original one down to a chargino mass of 270\gev. Similar performance in shown instead in the case where the cuts over those important variables get dissociated as shown for cut set number 2 and 4 with a cross section limit between a chargino mass of 280 and 300\gev.
+The correlation between signal efficiency and the selection over \pt(\hadtau) is once again confirmed by the drop on the cross section limit down to a chargino mass of 230\gev for cut scenario 1. The introduction of strong cut over \mjj combined with a requirement over \met (cut scenario 3) greatly impacts the limit setting by scaling down the original one down to a chargino mass of 270\gev. Similar performance in shown instead in the case where the cuts over those important variables get dissociated as shown for cut set number 2 and 4 with a cross section limit between a chargino mass of 280 and 300\gev. A summary of the cross section limits for each of the considered scenario is shown on \autoref{table::xseclim_scenarios_comparison}.
 
+\begin{table}
+	\begin{center}
+		\begin{tabular}{| c | c | c|}
+			\toprule
+			\multicolumn{3}{| c | }{For $m(\tilde{\tau}^{\pm}) = m(\tilde{\chi}^{\pm}_{1})/2 + m(\tilde{\chi}^{0}_{1})/2$ and $m(\tilde{\chi}^{0}_{1}) = 0\gev$} \\
+			\midrule
+			Scenario  & Cut & Limit \\
+			\midrule
+			Original Scenario & Central + VBF selection & 380\gev \\
+			\midrule
+			Cut Scenario 1 & $\pt(\hadtau) > 50\gev$&230\gev \\
+			\midrule			
+			Cut Scenario 2 & $\met > 200\gev$ &300\gev \\
+			\midrule
+			& $\met > 150\gev$  & \\
+			Cut Scenario 3 &$\mjj > 700\gev$&270\gev\\
+			&$|\Delta\eta(jet,jet)| > 3.6$&\\
+			&$\pt(jet_{1},jet_{2}) = 90\gev$&\\
+			\midrule
+			& $\mjj > 1000\gev$ & \\
+			Cut Scenario 4 &$|\Delta\eta(jet,jet)| > 3.6$& 300\gev\\
+			&$pt (jet_{1},jet_{2}) = 90\gev$&\\
+			\bottomrule
+		\end{tabular}\caption{Cross-section limit comparison between the 8\tev analysis and the 13\tev sensitivity study. The chosen values corresponds to an identical selection and signal benchmark points. Cross section limit minimum reached at the given cuts for $\pt(\hadtau) <  45\gev$  $\met > $ 30, $\mjj>250~$\gev, m(\neutralinoone) = 50\gev.}
+		\label{table::xseclim_scenarios_comparison}
+	\end{center}
+\end{table}
