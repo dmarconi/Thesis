@@ -1,6 +1,6 @@
 
 
-After two years of maintenance and upgrades, LHC started the second run phase, also known as \textit{Run2}, in 2015 featuring an increase of the center of mass energy up to 13\tev. The goal of this run is to increase the delivery of particle collisions for physics research, and thereby speed the route to potential new physics. A considerable upgrade program has been planned also for the CMS ad ATLAS detectors, featuring the upgrades of many sub-detectors and software tools. It is possible to study the capabilities that searches for SUSY events in vector boson fusion events have using the new hardware and software setup. This chapter describes a sensitivity study of a SUSY VBF search performed using 13\tev simulated data.
+In 2015, After two years of maintenance and upgrades, LHC started the second run phase, also known as \textit{Run2}, featuring an increase of the center of mass energy up to 13\tev. The goal of this run is to increase the delivery of particle collisions for physics research, and thereby speed the route to potential new physics. A considerable upgrade program has been planned also for the CMS ad ATLAS detectors, featuring the upgrades of many sub-detectors and software tools. It is possible to study the capabilities that searches for SUSY events in vector boson fusion events have using the new hardware and software setup. This chapter describes a sensitivity study of a SUSY VBF search performed using 13\tev simulated data.
 
 \section{Signal and background samples}
 
@@ -8,7 +8,7 @@ The signal event samples are generated with the \texttt{MadGraph v5.2.1} program
 
 The Monte Carlo background events used in this study refer to the production run labeled as \texttt{RunIISpring15MiniAODv2} and incorporate the \texttt{CTEQ10} \cite{Dulat:2013hea} parton distribution functions (PDF).The \texttt{POWHEG} and \texttt{MadGraph} generators are interfaced with the \texttt{PYTHIA v8.5.12} \cite{Sjostrand:2006za} program, which is used in the matching between the matrix elements, the parton shower, and the hadronization processes. 
 
-All the Monte Carlo samples are stored in a new format called \texttt{miniAOD} \cite{bib:WorkBookMiniAOD}. This format is an updated version of the previously used one and includes the new CMS reconstruction features developed between the time of the original analysis and the starting of Run2. A comprehensive list of all the samples used in this study is listed in \autoref{sec::sampleslist_13tev}.
+All Monte Carlo samples are stored in a new format called \texttt{miniAOD} \cite{bib:WorkBookMiniAOD}. This format is an updated version of the previously used one and includes the new CMS reconstruction features developed between the time of the original analysis and the starting of Run2. A comprehensive list of all the samples used in this study is listed in \autoref{sec::sampleslist_13tev}.
 
 \section{Object reconstruction}
 
@@ -220,9 +220,9 @@ By comparing the 8\tev cross-section limit values with the ones at 13\tev it is 
 \begin{center}
 \begin{tabular}{| c | c | c | }
 	\toprule
-	\multicolumn{3}{| c | }{For $\pt(\hadtau) <  45\gev$  $\met > $ 30, $\mjj>250~$\gev, m(\neutralinoone) = 50\gev} \\
+	\multicolumn{3}{| c | }{For $\pt(\hadtau) >  45\gev$  $\met > $ 30, $\mjj>250~$\gev, m(\neutralinoone) = 50\gev} \\
 	\midrule
-	m(\charginopm) = m(\neutralinotwo)  & $\sigma_{lim}^{min}\pm(stat.)\pm(syst.)$ [pb] (8\tev) & $\sigma_{lim}^{min}\pm(stat.)\pm(syst.)$ [pb] (13\tev)\\
+	m(\charginopm) = m(\neutralinotwo)  & $\sigma_{lim}^{min}\pm(stat.)\pm(syst.)$ [pb] (\textbf{8\tev}) & $\sigma_{lim}^{min}\pm(stat.)\pm(syst.)$ [pb] (\textbf{13\tev})\\
 	\midrule
    100\gev &  $0.084\pm0.016^{+0.18}_{-0.01}$ & $0.60\pm0.69^{+1.62}_{-0.87}$  \\
    200\gev &  $0.14\pm0.02^{+0.03}_{-0.04}$ & $0.65\pm0.74^{+1.74}_{-0.94}$ \\
@@ -245,7 +245,9 @@ Another important result from this cross section limit study features the most i
 \end{figure}
 
 
-To conclude the list of results shown in this chapter an additional study over this last signal benchmark point has been performed. The aim of this final study is to apply a more realistic event selection too see how strong is the impact over the cross section limit. In order to achieve that four different event selection scenarios has been considered. Those scenarios are meant to be apply on top of the original event selection a stronger cut over the most important variable of the analysis. The first scenario simply adds a cut over the \pt of the \hadtau of 50 \gev, reintroducing a selection over the \hadtau similarly to the one used for the 8\tev analysis. The second scenario attempts to suppress the most of the QCD irreducible background by adding a strong cut over \met of 200\gev. The third scenario studies the impact of a selection that cuts harder on the central and VBF part by combining the requirement of $\met > 150\gev$  with $\mjj > 700\gev$, the angular distance between the two VBF jets candidates $|\Delta\eta(jet,jet)| > 3.6$ and their \pt set to 90\gev. The fourth and final scenario puts the focus on a harder VBF selection cut buy requiring the same selection of the third but dropping the requirement over \met and increasing the cut on \mjj up to 1000\gev. For a better visualization those different scenarios are summarized the following way:
+To conclude the list of results shown in this chapter an additional study over this last signal benchmark point has been performed. The aim of this final study is to apply a more realistic event selection to see how strong the impact is on the cross section limit. In order to achieve that four different event selection scenarios has been considered, which are meant to resemble the different trigger scenario that can be used in analysis. The first scenario simply adds a cut on the \pt of the \hadtau of 50 \gev, resembling a $\tau$ trigger selection as the 8\tev analysis. The second scenario instead resembles a generous  version of a \met trigger that is fully efficient at 200\gev. The third scenario combines a MET trigger with a VBF one by adding the requirement of $\met > 150\gev$  with $\mjj > 700\gev$, the angular distance between the two VBF jets candidates $|\Delta\eta(jet,jet)| > 3.6$ and their \pt set to 90\gev.  The fourth and final scenario simulates a VBF only trigger by requiring the same selection of the third but dropping the requirement over \met and increasing the cut on \mjj up to 1000\gev. 
+
+For a better visualization those different scenarios are summarized the following way:
 
 \begin{itemize}
 	\item \textbf{Central selection (All scenarios)}
@@ -324,7 +326,7 @@ The correlation between signal efficiency and the selection over \pt(\hadtau) is
 			Cut Scenario 4 &$|\Delta\eta(jet,jet)| > 3.6$& 300\gev\\
 			&$pt (jet_{1},jet_{2}) = 90\gev$&\\
 			\bottomrule
-		\end{tabular}\caption{Cross-section limit comparison between the 8\tev analysis and the 13\tev sensitivity study. The chosen values corresponds to an identical selection and signal benchmark points. Cross section limit minimum reached at the given cuts for $\pt(\hadtau) <  45\gev$  $\met > $ 30, $\mjj>250~$\gev, m(\neutralinoone) = 50\gev.}
+		\end{tabular}\caption{Cross-section limit comparison between the 8\tev analysis and the 13\tev sensitivity study. The chosen values corresponds to an identical selection and signal benchmark points. Cross section limit minimum reached at the given cuts for $\pt(\hadtau) >  45\gev$  $\met > $ 30, $\mjj>250~$\gev, m(\neutralinoone) = 50\gev.}
 		\label{table::xseclim_scenarios_comparison}
 	\end{center}
 \end{table}
