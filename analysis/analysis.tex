@@ -20,7 +20,6 @@ The other available trigger strategy was relying on the choice of a double-lepto
 \end{figure}
 
 \section{Signal and background samples}
-\FloatBarrier
 
 %TODO you need to explain more precisely where MC is used: signal prediction, *part* of the bkg prediction, optimization, design of QCD background prediction
 
@@ -69,7 +68,7 @@ There are some differences this analysis has with the other existing VBF searche
 The selected events are required to have at least two \hadtau candidates as defined in Section \ref{subsec::objsel_tau}. The reconstruction of more than two \hadtau is constrained by the trigger. The like sign \hadtau candidates with the highest \pt and separated from each other by a minimum \deltar = 0.3 are then chosen to form a di-\hadtau candidate. 
 Further, to reduce top pair contamination the event is required not to have any jet identified as a b--quark jet by the b--tagging algorithms using the {\textit combined secondary vertex loose} (CSVL) working point. 
 
-Only jets with \pt $\ge 30\gev$ and separated from the taus in the di--\hadtau pairs by $\Delta R \ge 0.3$ are searched for b--tags. The \pt cut of 30\gev on b-jets (a looser veto requirement than other analyses with light leptons) allows to be more efficient with respect to the signal since the higher \pt threshold on taus reduces the contamination of $t\overline{t}$ to a large extent. Further, the event is required to have at least 30\gev of \met in order to further reduce QCD contamination. All the selections described above is what will be referred to as \textit{central selections}.
+Reconstructed jets are required not to overlap with identified electrons, muons, or \hadtau within \ensuremath{\deltar < 0.5}, and to pass two levels of jet identification criteria: (i) misidentified jets, mainly generating from calorimeter noise, are rejected by requiring reconstructed jets to pass a set of loose jet identification criteria \cite{CMS:2010xta} and (ii) jets originating from pileup interactions are rejected through an MVA-based jet identification discriminant, based on information about the vertex and energy distribution within the jet \cite{CMS:2013wea}. Only jets with \pt $\ge 30\gev$ and separated from the taus in the di--\hadtau pairs by $\Delta R \ge 0.3$ are searched for b--tags. The \pt cut of 30\gev on b-jets (a looser veto requirement than other analyses with light leptons) allows to be more efficient with respect to the signal since the higher \pt threshold on taus reduces the contamination of $t\overline{t}$ to a large extent. Further, the event is required to have at least 30\gev of \met in order to further reduce QCD contamination. All the selections described above is what will be referred to as \textit{central selections}.
 
 Subsequently, the following event-wide requirements are imposed. The {\textit {VBF selections}} are imposed by requiring at least two jets as defined in Section \ref{subsec::objsel_jet}. Only jets separated from the leptons in the \hadtau\hadtau pair by $\deltar \ge 0.3$ are considered. All jet candidates passing the above requirements and having $\vert \Delta\eta \vert \ge 4.2$ and $\eta_{1}\cdot\eta_{2} < 0$ are combined to form di-jet candidates. The final and the most important of the requirement is an invariant mass of the di-jet candidate, denoted \mjj, above the threshold of 250\gev. In order to increase the event acceptance the analysis code algorithm takes into account every possible di-jet candidate combination and chooses the one that passes the VBF requirements and has the highest \mjj. 
 
@@ -96,9 +95,6 @@ For better visualization and understanding all the selection criteria are summar
 \end{itemize}
 
 %todo (LOW PRIORITY) you need a cutflow table here, and a discussion about how event yields for data and MC samples reduces with cuts.
-
-\clearpage
-
 
 
 \section {Data-Driven QCD background determination} \label{sec:bgestimation}
@@ -249,7 +245,7 @@ The data-driven background estimation method, as previously shown, offered a pos
 \label{dihad:subsec:eventweight}
 \FloatBarrier
 
-A solution to the scarce statistics of the QCD sample in the signal region can be solved by taking all the events with at least four reconstructed jets and properly reweighting each one of them. This weight is a function of the probabilities that two of those four reconstructed jets will fake an \hadtau:
+A solution to the scarce statistics of the QCD sample in the signal region can be solved by taking all the events with at least four reconstructed jets and assigning to each one of them an event weight . This weight is a function of the probabilities that two of those four reconstructed jets will fake an \hadtau:
 
 \begin{equation}
 w^{TT}_{\text{event}} = \sum_{i=0}^{N}P(\text{iso}\mid \text{jet}_{i})\left(\sum_{j=0; j\neq i}^{N}P(\text{iso}\mid \text{jet}_{j})\left[\prod_{k=0; k\neq i,j}^{N}(1-P(\text{iso}\mid \text{jet}_{k}))\right]\right)
@@ -298,7 +294,7 @@ This method, also called "dicing", is applied for QCD samples and W+jet samples,
 
 The efficiency of the VBF selection $\epsilon^{VBF}$ has been defined under the assumptions that is independent, within statistical uncertainty, from a selection over \met and \hadtau isolation.
  
- A study on the efficiency stability as function of the second leading \hadtau momentum is done over different tau isolation requirements as shown on \autoref{dihad:fig:vbeff_vs_tauiso}. The chosen \hadtau isolation selection is requiring two tight isolated \hadtau (TT) or one tight plus one medium isolated \hadtau ($\text{TM}_{\text{I}}$). This study shows that in the case only two additional jets are required in the event selection a slight disagreement is observed for different isolation selections and is taken into account as systematic uncertainty.
+ A study on the efficiency stability as function of the second leading \hadtau momentum is done using the "diced" QCD sample over different tau isolation requirements as shown on \autoref{dihad:fig:vbeff_vs_tauiso}. The chosen \hadtau isolation selection is requiring two tight isolated \hadtau (TT) or one tight plus one medium isolated \hadtau ($\text{TM}_{\text{I}}$). This study shows that in the case only two additional jets are required in the event selection a slight disagreement is observed for different isolation selections and is taken into account as systematic uncertainty.
 
  \begin{figure}[!h]
 	\centering
@@ -307,7 +303,7 @@ The efficiency of the VBF selection $\epsilon^{VBF}$ has been defined under the 
 	\label{dihad:fig:vbeff_vs_tauiso}
 \end{figure}
 
-An additional stability study is performed by considering the deviation of the weighted arithmetic mean of $\epsilon^{VBF}$ with respect to \met as shown in \autoref{dihad:fig:vbeff_vs_met}. A dependence on \met, caused by the impact of higher jet energy resolution in the forward sections of the detector, is observed. An additional systematic uncertainty is derived in order to take this effect into account.
+An additional stability study is performed over the "diced" QCD sample by considering the deviation of the weighted arithmetic mean of $\epsilon^{VBF}$ with respect to \met as shown in \autoref{dihad:fig:vbeff_vs_met}. A dependence on \met, caused by the impact of higher jet energy resolution in the forward sections of the detector, is observed. An additional systematic uncertainty is derived in order to take this effect into account.
 
 \begin{figure}[!h]
 	\centering
@@ -329,7 +325,7 @@ To summarize, two systematic uncertainties are taken into account in this study:
 \section{Signal samples systematic uncertanties}
 \label{sec:systematics}
 
-The following systematics have been considered while estimating the signal samples contribution in signal region:
+The following systematics have been considered while estimating the signal samples contribution in the signal region:
 
 \begin{itemize}
 	\item \textbf{Parton Distribution Functions (PDF):} The systematic effect due to imprecise knowledge of the parton distribution functions is determined by comparing CTEQ6.6L \cite{Nadolsky:2008zw}, MSTW2008nnlo \cite{Martin:2009iq}, and NNPDF20 PDF \cite{Ubiali:2008uk} with the default PDF and variations within the family of parametrization. The maximal deviation from the central value is used as the overall systematic uncertainty due to PDFs. We obtain a value of 16\% on the cross section uncertainty and 23\% on the signal acceptance \cite{Botje:2011sn}.
@@ -350,7 +346,7 @@ The following systematics have been considered while estimating the signal sampl
 	
 	\item \textbf{Tau Energy Scale:} We consider the effect of the 3\% tau energy scale uncertainty measured by the tau POG on the signal acceptance. The tau 4-momentum is scaled by a factor of $k=1.03$ ($p_{scaled} = k \cdot p_{default}$) and variables are recalculated using $p_{scaled}$. We find that by using $p_{scaled}$ calculated with a factor of $k=\pm 1.03$, the signal acceptance fluctuates by 4\%. Therefore, we assign a 4\% systematic on the signal acceptance due to tau energy scale.
 	\item \textbf{Jet Energy Scale:}  The uncertainty on jet energy correction (JEC) is the result of a factorized approach on $Anti­-k_{t}$ jets with $R=0.5$ clustered from Particle Flow (PF) candidates. For MC samples JEC is divided in different steps that take into account several levels of correction. The fist step consist in a single level of corrections (L1) which estimates the $p_{t}$ offset in bins of $\eta$ and $N_{PV}$ for AK5PF jets. The second step, known as MC-Truth Corrections, consists in two level of corrections (L2 and L3) converging into an $\eta$ , $p_{t}$ ­dependent scaling factor fully derived from MC after applying L1­ corrections. The last step takes into account an L5 correction and uncertainties for individual flavors and predefined mixtures inside the reconstructed jets. We assign a 2\% systematic on the signal acceptance due to jet energy scale.
-	\item \textbf{Jet Energy Resolution:}  The measured jet transverse momentum is never equal to the energy of the original particle due to e.g. a limited detector resolution. This effect is quantified by the jet transverse momentum response R which is defined as $R = p_{T} / p_{T}^{particle}$  where $p_{T}$ denotes the transverse momentum of the jet measured at detector level and $p_{T}^{particle}$ is ￼the transverse momentum of the original particle-level jet. The average response $\langle R \rangle$ is referred to as jet energy scale and calibrated such that $\langle R \rangle = 1$ for fixed $p_{T}^{particle}$. The response usually depends on the jet momenta as well as on the pseudorapidity. This is expected since the quality of the jet measurement is directly related to the detector sub-components and the energy of the particles originating e.g. from the track-reconstruction efficiency or the individual amount of detector material. The core of the response is caused by the intrinsic resolution of the various sub-detector components and the precision of the jet clustering algorithms. The response tails are mainly caused by severe jet-mismeasurements. These can be e.g. detector effects like shower leakage or detector noise. Finally, the relative jet transverse momentum resolution is defined as the width of the response distribution corresponding to the gaussian part and hence is a function of $p_{T}$ and $\eta$ as well as the total response. One possibility to measure the resolution of the jet transverse momenta in data as well as in simulated events is to utilize the dijet asymmetry A. For events with at least two jets it is defined as:
+	\item \textbf{Jet Energy Resolution:}  The measured jet transverse momentum is never equal to the energy of the original particle due to e.g. a limited detector resolution. This effect is quantified by the jet transverse momentum response R which is defined as $R = p_{T} / p_{T}^{particle}$  where $p_{T}$ denotes the transverse momentum of the jet measured at detector level and $p_{T}^{particle}$ is ￼the transverse momentum of the original particle-level jet. The average response $\langle R \rangle$ is referred to as jet energy scale and calibrated such that $\langle R \rangle = 1$ for fixed $p_{T}^{particle}$. The response usually depends on the jet momenta as well as on the pseudorapidity. This is expected since the quality of the jet measurement is directly related to the detector sub-components and the energy of the particles originating e.g. from the track-reconstruction efficiency or the individual amount of detector material. The core of the response is caused by the intrinsic resolution of the various sub-detector components and the precision of the jet clustering algorithms. The response tails are mainly caused by severe jet-mismeasurements \cite{Khachatryan:2016kdb}. These can be e.g. detector effects like shower leakage or detector noise. Finally, the relative jet transverse momentum resolution is defined as the width of the response distribution corresponding to the gaussian part and hence is a function of $p_{T}$ and $\eta$ as well as the total response. One possibility to measure the resolution of the jet transverse momenta in data as well as in simulated events is to utilize the dijet asymmetry A. For events with at least two jets it is defined as:
 	
 	\begin{equation}
 	A = \frac{p_{T,1} - p_{T,2}}{p_{T,1} + p_{T,2}}
@@ -480,7 +476,7 @@ A combination of the opposite and like-sign signal yields coming from all the di
 \section{Exclusion limits on chargino/neutralino masses}
 \FloatBarrier
 
-Upper limits at $95\%$ CL on the cross sections as function of $m_{\neutralinotwo}=m_{\charginopm}$ are set for the \hadtau\hadtau like-sign and opposite channel. The results are presented using models with uncompressed mass spectrum scenario ($m_{\neutralinoone} = 0\gev$), a fixed-\stau-mass assumption ($m_{\stau} =  m_{\charginopm} - 5\gev$) and
+Upper limits at $95\%$ CL on the cross sections as function of $m_{\neutralinotwo}=m_{\charginopm}$ are set for the \hadtau\hadtau like-charge and opposite-charge channel. The results are presented using models with uncompressed mass spectrum scenario ($m_{\neutralinoone} = 0\gev$), a fixed-\stau-mass assumption ($m_{\stau} =  m_{\charginopm} - 5\gev$) and
 a $\charginopm$ mass between $100 \leq m_{\charginopm} \leq 400\gev$.
 
 \begin{figure}

@@ -1,23 +1,4 @@
 
-%TODO{connect your sentences (look up sentence connectors)}
-	
-%TODO{browse the web about how to write introductions}
-	
-	%TODO{you have too much text per page :-)}
-	%TODO{For a more professional look and a better reading experience: make your font large enough, make the distance between lines large enough, put some extra distance between paragraphs.}
-
-%TODO{where do you cover track reconstruction, local calorimeter reconstruction, local muon reconstruction?}
-
-%TODO{I recommend to move the information of this chapter as follows:}
-	
-%TODO{	- General information about particle reconstruction, (reconstruction algorithms and reconstruction quality) belongs to the chapter about CMS. }
-	
-%TODO{	The description of the specific object definitions you employed belong to the analysis chapter.}
-	
-%TODO{	A simpler title would simply be: particle reconstruction}
-
-%TODO{start this chapter section by explaining what is to be accomplished, like studying final states of collisions, and what the strategy is, like reconstruction of all particles in the final state, which allows doing jets, letpon isolation, …}
-
 The final aim of the CMS detector is the study of collision final states and several are the steps needed to transform the raw detector hits into useful information for an high energy physics analysis. The CMS collaboration converged its effort into a complex software algorithm, called Particle Flow, that combines all the information coming from all the experiments sub-detectors and reconstructs all the final state basic objects. Those reconstructed object ranges from simple particles such as electrons and muons to complex ones such as jets and hadronic taus. Particle Flow also reconstructs variables useful in the analysis selection such as jets imbalance and missing tranverse momentum. After a brief introduction on the Particle flow algorithm this chapter will give further information on the reconstruction on the most important objects used in the analysis described in this thesis.
 
 \section{The Particle Flow Algorithm}
@@ -45,15 +26,15 @@ Electrons are reconstructed by matching tracks in the inner detector with energy
 
 %TODO{Jet reconstruction does not belong to the particle flow algorithm. Probably you want to have the section about jets in the object definition section of your analysis chapter. You might want a few words and figures about jets in the particle reconstruction section of the CMS section}
 
-Jets within the range \ensuremath{|\eta| < 4.7} are reconstructed using the anti-\ensuremath{k_{T}} algorithm \cite{antikt} with a distance parameter of 0.5. As mentioned previously, the particles reconstructed by the PF algorithm are used as input to the jet reconstruction. Reconstructed jets are required not to overlap with identified electrons, muons, or \hadtau within \ensuremath{\deltar < 0.5}, and to pass two levels of jet identification criteria: (i) misidentified jets, mainly generating from calorimeter noise, are rejected by requiring reconstructed jets to pass a set of loose jet identification criteria \cite{CMS:2010xta} and (ii) jets originating from pileup interactions are rejected through an MVA-based jet identification discriminant, based on information about the vertex and energy distribution within the jet \cite{CMS:2013wea}. 
+Jets within the range \ensuremath{|\eta| < 4.7} are reconstructed using the anti-\ensuremath{k_{T}} algorithm \cite{antikt} with a distance parameter of 0.5. As mentioned previously, the particles reconstructed by the PF algorithm are used as input to the jet reconstruction. Charged hadrons which are not coming from primary vertexes are discarded in the object reconstruction phase.
 
-The energy of reconstructed jets is calibrated as a function of jet \pt and \ensuremath{\eta} \cite{1748-0221-6-11-P11002}. The contribution of pileup to the energy of jets originating from the hard scattering is compensated by determining a median transverse momentum density (\ensuremath{\rho}) for each event, and subtracting the product of (\ensuremath{\rho}) times the area of the jet, computed in the \ensuremath{\eta-\Phi} plane, from there constructed jet \pt \cite{Cacciari:2008gn, Cacciari:2007fd}. 
+The energy of reconstructed jets is calibrated as a function of jet \pt and \ensuremath{\eta} \cite{1748-0221-6-11-P11002}.
 
 Particle Flow jets (PFJets) are used in this analysis. The \antikt clustering algorithm with a reconstruction cone of \ensuremath{R = 0.5} is used, defined in \ensuremath{\eta-\phi (R = \sqrt{{\Delta \eta}^2 + {\Delta \phi}^{2}})} \cite{1126-6708-2008-04-063}. 
 
-The PF jets used in this analysis are corrected using L1 FastJet, L2 Relative, and L3 Absolute corrections. The L1 FastJet corrections use the event-by-event UE/PU (Underlining Events / Pile Up) densities to remove the additional contributions to the measured jet energies due to underlying event and pile-up particles. The L2 and L3 corrections use jet balancing and \ensuremath{\gamma} + jets events to improve and provide a better energy response as a function of \pt and \ensuremath{\eta}. This analysis uses the "loose" working point Jet-Id selection criteria jets \pt = 30 \gev and absolute pseudorapidity $|\eta| \le 5.0$. Table~\ref{table:bjetobjdefinition} shows the detailed selection criteria used for the recommended loose working point. The efficiency is $> 98$ for the entire $\eta$ and \pt range. The "loose'' working point has been validated in other studies.
+The PF jets used in this analysis are corrected using L1 FastJet, L2 Relative, and L3 Absolute corrections. The L1 FastJet corrections use the event-by-event UE/PU (Underlining Events / Pile Up) densities to remove the additional contributions to the measured jet energies due to underlying event and pile-up particles \cite{Cacciari:2008gn, Cacciari:2007fd}. The L2 and L3 corrections use jet balancing and \ensuremath{\gamma} + jets events to improve and provide a better energy response as a function of \pt and \ensuremath{\eta}. This analysis uses the "loose" working point Jet-Id selection criteria jets \pt = 30 \gev and absolute pseudorapidity $|\eta| \le 5.0$. Table~\ref{table:bjetobjdefinition} shows the detailed selection criteria used for the recommended loose working point. The efficiency is $> 98$ for the entire $\eta$ and \pt range. The "loose'' working point has been validated in other studies.
 
-Jets originating from the hadronization of b quarks are identified through the combined secondary vertex (CSV) algorithm \cite{Chatrchyan:2012jua}, which exploits observables related to the long lifetime of b hadrons and the higher particle multiplicity and mass of b jets compared to light-quark and gluon jets. This analysis uses the loose working point of the combined secondary vertex algorithm \cite{CMS:2011cra}. The EPS13 prescription is used for the b-tagging and mis-tagging scale factors and efficiencies. They are applied using the method called ``Event reweighing using scale factors only" \cite{Ferencek:btag2015}. Table~\ref{table:bjetobjdefinition} shows the detailed selection criteria.
+Jets originating from the hadronization of b quarks are identified through the combined secondary vertex (CSV) algorithm \cite{Chatrchyan:2012jua}, which exploits observables related to the long lifetime of b hadrons and the higher particle multiplicity and mass of b jets compared to light-quark and gluon jets. This analysis uses the loose working point of the combined secondary vertex algorithm \cite{CMS:2011cra}. The EPS13 prescription is used for the b-tagging and mis-tagging scale factors and efficiencies \cite{CMS-PAS-BTV-07-001}. They are applied using the method called ``Event reweighing using scale factors only" \cite{Ferencek:btag2015}. Table~\ref{table:bjetobjdefinition} shows the detailed selection criteria.
 
 
 %TODO{MET and MET-like variables belong to the object definition section of the analysis chapter} 
@@ -167,7 +148,7 @@ A cut based and an MVA based discriminant are used to separate \hadtau from muon
 
 \hadtau candidates are required to have a \pt of 45 \gev and a pseudo-rapidity of $|\eta| \le 2.1$ in order to ensure that both tracks are reconstructed fully within the acceptance of the tracking system. In addition, a \hadtau is required to have exactly one signal charged hadron with \pt = 5 \gev and must not reside in the ECAL cracks.
 
-One-prong \hadtau candidates are selected using the \texttt{Decay\-Mode\-Finding\-New\-DMs} discriminator. In order to discriminate against muons, HPS taus are required to pass the \texttt{against\-Muon\-Loose3} rejection discriminator which requires the lead track of the tau not be associated with a global muon signature. In order to discriminate against electrons, HPS taus are required to pass the \texttt{against\-Electron\-Medium\-MVA5} discriminator which uses the amount of HCAL energy associated to the tau with respect to the measured momentum of the track. Additionally, the MVA discriminator considers the amount of electromagnetic energy in a narrow strip around the leading track with respect to the total electromagnetic energy of the tau. 
+One-prong \hadtau candidates are selected using the \texttt{Decay\-Mode\-Finding\-New\-DMs} discriminator. In order to discriminate against muons, HPS taus are required to pass the \texttt{against\-Muon\-Loose3} rejection discriminator which requires the leading track of the tau not be associated with a global muon signature. In order to discriminate against electrons, HPS taus are required to pass the \texttt{against\-Electron\-Medium\-MVA5} discriminator which uses the amount of HCAL energy associated to the tau with respect to the measured momentum of the track. Additionally, the MVA discriminator considers the amount of electromagnetic energy in a narrow strip around the leading track with respect to the total electromagnetic energy of the tau. 
 
 The isolation discriminator is a BDT \cite{Hocker:2007ht} discriminator based on isolation, \pt and \hadtau lifetime information and defines the different TauID working points starting from the loose one with (\texttt{byLoose\-Isolation\-MVA3\-newDMwLT}) to the tighter one (\texttt{byTight\-Isolation\-MVA3new\-DMwLT}). Table~\ref{table:bjetobjdefinition} shows the detailed selection criteria for an \hadtau candidate.
 

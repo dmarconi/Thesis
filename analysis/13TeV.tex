@@ -38,7 +38,7 @@ There are several definitions of significance $\alpha$ available in literature, 
 \label{eq::punzi_formula}
 \end{equation}
 
-with $a$ the confidence level expressed in terms of $\sigma$, and $S$ and $B$ the number of signal and background vents for a given selection. One of the most important features of \autoref{eq::punzi_formula} that it is non-diverging in case of $B = 0$.
+with $a$ the confidence level expressed in terms of $\sigma$, and $S$ and $B$ the number of signal and background events for a given selection. One of the most important features of \autoref{eq::punzi_formula} that it is non-diverging in case of $B = 0$.
 
 The number of signal events can be defined as:
 
@@ -77,17 +77,18 @@ The di-jet \deltaeta cut has been removed due to its strong correlation to the d
 For better visualization and understanding, all the selection criteria are summarized below:
 
 \begin{itemize}
+	\item \textbf{VBF selection}
+	\begin{itemize}
+		\item at least two jets with $p_{T}^{jet}\geq30~$\gev, $|\eta_{jet}|\leq5$ and loose jetID
+		\item $\text{sign}(\eta^{jet 1}\cdot\eta^{jet 2})=-1$
+	\end{itemize}
 	\item \textbf{Central selection}
 	\begin{itemize}
-		\item two one-prong hadronically decaying $\tau$ with $\pt = 20,25,30,35,40,45\gev$
-		\item at least two jets with $p_{T}^{jet}\geq30~$\gev, $|\eta_{jet}|\leq5$ and loose jetID
+		\item two one-prong or three-prong hadronically decaying $\tau$ with $\pt = 20,25,30,35,40,45\gev$
 		\item $\Delta R(jet,\tau)\geq0.3$
 		\item b-tag veto
 	\end{itemize}
-	\item \textbf{VBF selection}
-	\begin{itemize}
-		\item $\text{sign}(\eta^{jet 1}\cdot\eta^{jet 2})=-1$
-	\end{itemize}
+	
 \end{itemize}
 
 \subsection{Background estimation}
@@ -203,7 +204,7 @@ The best cross-section limit scenario is given for a \charginopm and \neutralino
 \label{eq::xsec_lim_best_result}
 \end{equation}
 
-for the optimal cuts of  $\pt(\hadtau) <  20\gev$,  $ \mjj< 500\gev $ and $\met < 250\gev$.
+for the optimal cuts of  $\pt(\hadtau) > 20\gev$,  $ \mjj> 500\gev $ and $\met > 120\gev$.
 
 \begin{figure}[tbh!]
 	\centering
@@ -245,7 +246,7 @@ Another important result from this cross section limit study features the most i
 \end{figure}
 
 
-To conclude the list of results shown in this chapter an additional study over this last signal benchmark point has been performed. The aim of this final study is to apply a more realistic event selection to see how strong the impact is on the cross section limit. In order to achieve that four different event selection scenarios has been considered, which are meant to resemble the different trigger scenario that can be used in analysis. The first scenario simply adds a cut on the \pt of the \hadtau of 50 \gev, resembling a $\tau$ trigger selection as the 8\tev analysis. The second scenario instead resembles a generous  version of a \met trigger that is fully efficient at 200\gev. The third scenario combines a MET trigger with a VBF one by adding the requirement of $\met > 150\gev$  with $\mjj > 700\gev$, the angular distance between the two VBF jets candidates $|\Delta\eta(jet,jet)| > 3.6$ and their \pt set to 90\gev.  The fourth and final scenario simulates a VBF only trigger by requiring the same selection of the third but dropping the requirement over \met and increasing the cut on \mjj up to 1000\gev. 
+To conclude the list of results shown in this chapter an additional study over this last signal benchmark point has been performed. The aim of this final study is to apply a more realistic event selection to see how strong the impact is on the cross section limit. In order to achieve that four different event selection scenarios has been considered, which are meant to resemble the different trigger scenario that can be used in analysis. The first scenario simply adds a cut on the \pt of the \hadtau of 50 \gev, resembling a $\tau$ trigger selection as the 8\tev analysis. The second scenario instead resembles a generic version of a \met trigger that is fully efficient at 200\gev. The third scenario combines a MET trigger with a VBF one by adding the requirement of $\met > 150\gev$  with $\mjj > 700\gev$, the angular distance between the two VBF jets candidates $|\Delta\eta(jet,jet)| > 3.6$ and their \pt set to 90\gev.  The fourth and final scenario simulates a VBF only trigger by requiring the same selection of the third but dropping the requirement over \met and increasing the cut on \mjj up to 1000\gev. 
 
 For a better visualization those different scenarios are summarized the following way:
 
